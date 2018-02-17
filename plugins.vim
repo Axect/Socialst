@@ -7,6 +7,7 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'jpalardy/vim-slime'
 
 " Elixir
+Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 
 " Vim-Latex
@@ -18,6 +19,9 @@ Plug 'mattn/emmet-vim'
 
 " Java Script
 Plug 'pangloss/vim-javascript'
+
+" Vue.js
+Plug 'posva/vim-vue'
 
 " Code Completion
 Plug 'Raimondi/delimitMate'
