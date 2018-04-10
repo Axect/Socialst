@@ -23,6 +23,8 @@ filetype plugin indent on
 
 " Tab to Space
 set expandtab
+set shiftwidth=2
+set tabstop=2
 
 let base16colorspace=256
 
@@ -43,9 +45,14 @@ Plug 'autozimu/LanguageClient-neovim', {
 " -- Require : Brittany
 Plug 'sbdchd/neoformat'
 Plug 'itchyny/vim-haskell-indent'
+Plug 'mpickering/hlint-refactor-vim'
 
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
+
+" Markdown
+Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/markdown-preview.vim'
 
 " Python
 Plug 'vim-scripts/indentpython.vim'
@@ -67,9 +74,10 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'whatyouhide/vim-gotham'
 Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'KeitaNakamura/neodark.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Indent
-Plug 'junegunn/vim-easy-align'
+"Plug 'junegunn/vim-easy-align'
 Plug 'godlygeek/tabular'
 
 " Tmux
@@ -109,14 +117,10 @@ call plug#end()
 " -------------------------------
 
 " Color
-colorscheme neodark
-
-" Neodark
-let g:neodark#terminal_transparent = 1 " default: 0
-let g:neodark#use_256color = 1
+colorscheme dracula
 
 " Airline Theme
-let g:airline_theme='neodark'
+let g:airline_theme='dracula'
 
 " Easy Align
 nmap ga <Plug>(EasyAlign)
@@ -147,4 +151,13 @@ let g:LanguageClient_serverCommands = {
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
+
+" Markdown Preview
+let g:mkdp_path_to_chrome = "firefox"
+let g:mkdp_browserfunc = 'MKDP_browserfunc_default'
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_open = 1
+let g:mkdp_auto_close = 1
+let g:mkdp_refresh_slow = 0
+let g:mkdp_command_for_global = 0
 """""""""""""""""""""""""""""""""
