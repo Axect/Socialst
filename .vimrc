@@ -21,6 +21,12 @@ set cursorline
 syntax on
 filetype plugin indent on
 
+" Tab to Space
+set expandtab
+set shiftwidth=2
+set tabstop=2
+
+let base16colorspace=256
 
 " -------------------------------
 " Plug Management
@@ -28,35 +34,55 @@ filetype plugin indent on
 call plug#begin('~/.vim/plugged')
 
 " Haskell
-Plug 'itchyny/vim-haskell-indent'
 Plug 'enomsg/vim-haskellconcealplus'
-"Plug 'neovimhaskell/haskell-vim'
-Plug 'urso/haskell_syntax.vim'
-
+Plug 'neovimhaskell/haskell-vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'itchyny/vim-haskell-indent'
+Plug 'mpickering/hlint-refactor-vim'
 
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
 
+" Markdown
+Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/markdown-preview.vim'
+
 " Python
 Plug 'vim-scripts/indentpython.vim'
+
+" Go
+Plug 'fatih/vim-go'
+
+" Rust
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 
 " Interface
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Code Completion
+Plug 'maralla/completor.vim'
+"Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
-Plug 'Shougo/neocomplete.vim'
+
+" Language Server
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
 
 " ColorScheme
-Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'jacoborus/tender.vim'
-Plug 'sjl/badwolf'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'whatyouhide/vim-gotham'
+"Plug 'kristijanhusak/vim-hybrid-material'
+"Plug 'jacoborus/tender.vim'
+"Plug 'sjl/badwolf'
+"Plug 'NLKNguyen/papercolor-theme'
+"Plug 'whatyouhide/vim-gotham'
+"Plug 'tyrannicaltoucan/vim-quantum'
+"Plug 'KeitaNakamura/neodark.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Indent
 Plug 'junegunn/vim-easy-align'
+Plug 'godlygeek/tabular'
 
 " Tmux
 Plug 'jpalardy/vim-slime'
@@ -75,10 +101,17 @@ Plug 'yuttie/comfortable-motion.vim'
 " LaTeX
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 
+" fzf
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+" Git
+Plug 'tpope/vim-fugitive'
+
 " ETC
 Plug 'mhinz/vim-startify'
 Plug 'mhinz/vim-signify'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 call plug#end()
 """""""""""""""""""""""""""""""""
@@ -88,11 +121,10 @@ call plug#end()
 " -------------------------------
 
 " Color
-set background=dark
-colors gotham256
+colorscheme dracula
 
 " Airline Theme
-let g:airline_theme='atomic'
+let g:airline_theme='dracula'
 
 " Easy Align
 nmap ga <Plug>(EasyAlign)
@@ -106,15 +138,28 @@ let g:qs_highlight_on_keys = ['f', 'F']
 " Comfortable Motion
 let g:comfortable_motion_no_default_key_mappings = 1
 
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+" Super tab
+let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
-" Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
-endif
+" Tabularize
+let g:haskell_tabular = 1
+
+vmap a= :Tabularize /=<CR>
+vmap a; :Tabularize /::<CR>
+vmap a- :Tabularize /-><CR>
+
+" Markdown Preview
+let g:mkdp_path_to_chrome = "firefox"
+let g:mkdp_browserfunc = 'MKDP_browserfunc_default'
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_open = 1
+let g:mkdp_auto_close = 1
+let g:mkdp_refresh_slow = 0
+let g:mkdp_command_for_global = 0
+
+" Rust
+let g:autofmt_autosave = 1
+set hidden
+let g:racer_cmd = "/home/kavis/.cargo/bin/racer/bin"
+let g:completor_racer_binary="/home/kavis/.cargo/bin/racer"
 """""""""""""""""""""""""""""""""
