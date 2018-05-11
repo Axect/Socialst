@@ -128,6 +128,9 @@ let g:airline_theme='dracula'
 
 " Easy Align
 nmap ga <Plug>(EasyAlign)
+let g:easy_align_delimiters = {
+      \  ';': { 'pattern': '::', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0 }
+      \}
 
 " Vim Slime
 let g:slime_target="tmux"
