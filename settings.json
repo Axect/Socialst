@@ -1,0 +1,87 @@
+{
+    // 64-bit cmd if available, otherwise 32-bit
+    // "terminal.integrated.shell.windows": "C:\\Windows\\sysnative\\cmd.exe",
+    //"terminal.integrated.shell.windows": "C:\\Windows\\sysnative\\bash.exe"
+    "git.enableSmartCommit": true,
+    "go.inferGopath": true,
+    "go.lintOnSave": "package",
+    "go.lintTool": "golint",
+    "go.vetOnSave": "package",
+    "julia.executablePath": "/usr/bin/julia",
+    // "workbench.colorTheme": "Feather",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.fontWeight": "500",
+    "editor.autoClosingBrackets": true,
+    // "workbench.colorCustomizations": {
+    //     "activityBar.foreground": "#10c4ed",
+    //     "badge.background": "#10c4ed",
+    //     "editor.background": "#e8fdff",
+    //     "tab.activeForeground": "#0c72f7",
+    //     "activityBar.background": "#ddfffd",
+    //     "list.hhttps://github.com/Shougo/neocomplete.vim#installationoverBackground": "#f2fffe",
+    //     "editor.lineHighlightBackground": "#bff0ff",
+    //     "editor.selectionBackground": "#97def4",
+    //     "list.activeSelectionBackground": "#bff0ff",
+    //     "list.inactiveSelectionBackground": "#bff0ff",
+    //     "scrollbarSlider.background": "#97def4",
+    //     "statusBar.background": "#10c4ed",
+    //     "sideBar.background": "#f2fffe",
+    //     "terminal.background": "#f2fbff",
+    //     "terminal.foreground": "#10c4ed",
+    //     "tab.activeBackground": "#ddfffd",
+    //     "tab.inactiveBackground": "#f2fbff",
+    //     "activityBarBadge.background": "#10c4ed",
+    // },
+    "workbench.colorCustomizations": {
+        "activityBar.foreground": "#ff0734",
+        "badge.background": "#ff0734",
+        "scrollbarSlider.background": "#ff0734",
+        "terminal.foreground": "#ff0734",
+        "activityBarBadge.background": "#ff0734"
+    },
+    "window.menuBarVisibility": "toggle",
+    "material-icon-theme.showUpdateMessage": false,
+    "workbench.colorTheme": "One Dark Pro",
+    "git.autofetch": true,
+    // Better Align
+    "alignment.operatorPadding": "right",
+    "alignment.surroundSpace": {
+        "colon": [
+            0,
+            1
+        ],
+        "assignment": [
+            1,
+            1
+        ],
+        "arrow": [
+            1,
+            1
+        ],
+        "comment": 2
+    },
+    "haskell.hlint.executablePath": "/home/kavis/.local/bin/hlint",
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "files.associations": {
+        "*.hs": "haskell",
+    },
+    "rust.mode": "legacy",
+    "rust.cargoHomePath": "/home/kavis/.cargo/",
+    "rust.rustup": {
+        "toolchain": "nightly-x86_64-unknown-linux-gnu"
+    },
+    "explorer.confirmDragAndDrop": false
+}

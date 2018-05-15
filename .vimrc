@@ -39,9 +39,13 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'itchyny/vim-haskell-indent'
 Plug 'mpickering/hlint-refactor-vim'
+Plug 'lspitzner/brittany'
 
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
+
+" Nim
+Plug 'zah/nim.vim'
 
 " Markdown
 Plug 'iamcco/mathjax-support-for-mkdp'
@@ -49,6 +53,9 @@ Plug 'iamcco/markdown-preview.vim'
 
 " Python
 Plug 'vim-scripts/indentpython.vim'
+
+" Prolog
+Plug 'adimit/prolog.vim'
 
 " Go
 Plug 'fatih/vim-go'
@@ -165,4 +172,7 @@ let g:autofmt_autosave = 1
 set hidden
 let g:racer_cmd = "/home/kavis/.cargo/bin/racer/bin"
 let g:completor_racer_binary="/home/kavis/.cargo/bin/racer"
+
+" Prolog
+au FileType perl set filetype=prolog
 """""""""""""""""""""""""""""""""
