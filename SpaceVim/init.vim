@@ -39,6 +39,17 @@ call SpaceVim#layers#load('shell',
         \ 'default_height' : 30,
         \ }
         \ )
+" call SpaceVim#layers#load('lsp',
+"         \ {
+"         \ 'filetypes' : [
+"                         \ 'haskell',
+"                         \ 'rust',
+"                       \ ],
+"         \ 'override_cmd' : {
+"                          \ 'haskell' : ['hie', '--lsp'], 
+"                          \ }
+"         \ }
+"         \ )
 call SpaceVim#layers#load('lang#go')
 call SpaceVim#layers#load('lang#haskell')
 call SpaceVim#layers#load('lang#rust')
@@ -52,6 +63,7 @@ call SpaceVim#layers#load('tmux')
 call SpaceVim#layers#load('git')
 call SpaceVim#layers#load('lang#markdown')
 call SpaceVim#layers#load('lang#toml')
+call SpaceVim#layers#load('lang#prolog')
 " }}}
 
 " SpaceVim Plugins: {{{
@@ -59,6 +71,7 @@ let g:spacevim_custom_plugins = [
       \['jpalardy/vim-slime'],
       \['zah/nim.vim'],
       \['tpope/vim-markdown'],
+      \['meck/vim-brittany'],
       \]
 let g:slime_target = "tmux"
 
