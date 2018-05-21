@@ -127,6 +127,9 @@ alias rh='runhaskell'
 # For convenience - Function for compilaion
 
 haskell() {
+	if [ ! -d "./bin" ]; then
+		mkdir "./bin"
+	fi
 	ghc -O2 -outputdir cache -o "bin/$1" "$1.hs" 
 }
 
@@ -135,6 +138,9 @@ rust() {
 }
 
 chapel() {
+	if [ ! -d "./bin" ]; then
+		mkdir "./bin"
+	fi
 	chpl -O -o "bin/$1" "$1.chpl" 
 }
 
