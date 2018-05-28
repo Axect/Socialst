@@ -148,3 +148,6 @@ chapel() {
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /home/kavis/.npm-global/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/kavis/.npm-global/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
 . /home/kavis/.nix-profile/etc/profile.d/nix.sh
+
+# OPAM configuration
+. /home/kavis/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

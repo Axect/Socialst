@@ -16,15 +16,20 @@ set nu
 
 " Highlight
 set cursorline
+set showmatch
+set noswapfile
+set nobackup
 
 " On
 syntax on
+filetype on
 filetype plugin indent on
 
 " Tab to Space
-set expandtab
 set shiftwidth=2
 set tabstop=2
+set softtabstop=2
+set expandtab
 
 let base16colorspace=256
 
@@ -32,12 +37,6 @@ let base16colorspace=256
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
-set bomb
-set binary
-set ttyfast
-
-" Enable hidden buffers
-set hidden
 
 " -------------------------------
 " Plug Management
@@ -98,6 +97,9 @@ Plug 'vim-scripts/indentpython.vim'
 " Rust
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
+
+" XML
+Plug 'sukima/xmledit'
 
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 " ETC Tools
@@ -161,6 +163,7 @@ Plug 'mhinz/vim-startify'
 Plug 'mhinz/vim-signify'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'Shougo/vimshell.vim'
 
 call plug#end()
 """""""""""""""""""""""""""""""""
@@ -217,6 +220,9 @@ let g:completor_racer_binary="/home/kavis/.cargo/bin/racer"
 
 " Prolog
 au FileType perl set filetype=prolog
+
+" Idirs
+let g:idris_conceal = 1
 
 " Haskell & Rust
 if has('nvim')
