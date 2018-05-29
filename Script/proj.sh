@@ -55,6 +55,10 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}FPfS"
   git clone "${AXECT}FP-Lecture"
   git clone "${AXECT}THLecture"
+
+  cd "../Server"
+  git clone "${AXECT}HEP_Web_Django"
+  git clone "${AXECT}HEP-COSMO"
 fi
 
 
