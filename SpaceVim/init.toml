@@ -39,6 +39,9 @@ default_height = 30
 name = 'lang#haskell'
 
 [[layers]]
+name = 'lang#scala'
+
+[[layers]]
 name = 'lang#vim'
 
 [[layers]]
