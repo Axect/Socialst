@@ -48,6 +48,9 @@ name = 'lang#vim'
 name = 'lang#rust'
 
 [[layers]]
+name = 'lang#c'
+
+[[layers]]
 name = 'lang#r'
 
 [[layers]]
@@ -85,3 +88,9 @@ name = 'zah/nim.vim'
 
 [[custom_plugins]]
 name = 'tpope/vim-markdown'
+
+[[custom_plugins]]
+name = 'junegunn/vim-easy-align'
+
+[[custom_plugins]]
+name = 'pbrisbin/vim-syntax-shakespeare'
