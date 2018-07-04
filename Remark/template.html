@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3, h4, h5 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      #tab01 {
+        border-collapse: collapse;
+        width: 80%;
+      }
+
+      #tab01 td, #tab01 th {
+        border: 2px solid #ddd;
+        padding: 8px;
+      }
+
+      #tab01 tr:nth-child(even){
+        background-color: #f2f2f2;
+      }
+
+      #tab01 tr:hover {background-color: #ddd;}
+
+      #tab01 th {
+        padding-top: 12px;
+        padding-bottom:12px;
+        text-align: center;
+        background: #528ae5;
+      }
+
+      #tab01 td {
+        text-align:center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Basic Template
+
+<h3 style="color: gray">Presented by Tae Geun Kim</h3>
+
+---
+
+# Table of Contents
+
+1. Types of Machine Learning
+2. Scoring Machine Learning Algorithm
+3. Data as Probability
+4. Basic Statistics
+5. Bias-Variance Tradeoff
+
+---
+
+class: center, middle
+
+# Types of Machine Learning
+
+---
+
+## Types of Machine Learning
+
+--
+
+* Supervised Learning
+
+--
+
+* Unsupervised Learning
+
+--
+
+* Reinforcement Learning
+
+--
+
+* Evolutionary Learning
+
+---
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+
+    <script>
+      var slideshow = remark.create();
+
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
