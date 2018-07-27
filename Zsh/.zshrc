@@ -92,62 +92,41 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-plugins=(git alias-tips)
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
+export SPARK_HOME="$HOME/zbin/spark-2.3.0-bin-hadoop2.7/"
+export CHPL_HOME="$HOME/zbin/chapel-1.17.1"
 
-export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/.npm-global/bin
-export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:$HOME/.nimble/bin
-export PATH=$PATH:$HOME/.gem/ruby/2.5.0/bin
-export PATH=$PATH:$HOME/.stack/programs/x86_64-linux/ghc-tinfo6-nopie-8.2.2/bin
-export PATH=$PATH:$HOME/zbin/chapel-1.17.1/bin/linux64
-export PATH=$PATH:$HOME/zbin/chapel-1.17.1/util
+export PATH="$PATH:$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$SPARK_HOME/bin"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.npm-global/bin"
+export PATH="$PATH:$CHPL_HOME/bin/linux64"
+export PATH="$PATH:$CHPL_HOME/util"
+export PATH="$PATH:/usr/lib64/openmpi/bin/"
 
-export MANPATH=$MANPATH:$HOME/zbin/chapel-1.17.1/man
+export MANPATH="$MANPATH:$CHPL_HOME/man"
 
-export JDK_HOME="$HOME/zlib/jre-9.0.4"
-export GOPATH=$HOME/zbin/Go
-export CHPL_HOME=$HOME/zbin/chapel-1.17.1
+alias HNumeric="cd /home/kavis/Documents/Project/Haskell_Project/HNumeric/"
 
-alias STATS="source $HOME/zbin/stats/bin/activate"
+source ~/.nix-profile/etc/profile.d/nix.sh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FILEID="1N6dVOW45onvrHtm-KIG6j_Ysst22iu0J"
 
-alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
-alias rmCache='rm ~/.local/share/nvim/swap/*'
-alias removeCache='rm ~/.cache/SpaceVim/swap/*'
-alias rusti='cd /home/kavis/zbin/rusti/ && cargo run'
-alias sghc='stack ghc -- -O2 -outputdir cache'
-alias sghci='stack ghci'
-
-alias euler='cd ~/Documents/Project/Euler'
-alias gitlab='cd ~/Documents/Project/Lectures/axect.gitlab.io'
-alias rh='runhaskell'
-
-# For convenience - Function for compilaion
-
-haskell() {
-	if [ ! -d "./bin" ]; then
-		mkdir "./bin"
-	fi
-	ghc -O2 -outputdir cache -o "bin/$1" "$1.hs" 
+function gdrive_download () {
+  CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$1" -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')
+  wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$CONFIRM&id=$1" -O $2
+  rm -rf /tmp/cookies.txt
 }
 
-rust() {
-	rustc -O -o "bin/$1" "$1.rs"
-}
+alias SSHFORWARDLIST="ps aux | grep ssh"
+alias NVIDIATorch='ssh -N -f -L localhost:8401:localhost:8401 axect@Hive'
 
-chapel() {
-	if [ ! -d "./bin" ]; then
-		mkdir "./bin"
-	fi
-	chpl -O -o "bin/$1" "$1.chpl" 
-}
+alias ArchInit="docker run -it --name Arch --net=host archlinux/base /bin/sh"
+alias ITorch="docker run -it --rm --net=host -v ~/Documents/Project/ML_Project/Lecture/1st:/root/dev/WorkSpace dhunter/itorch-notebook"
 
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /home/kavis/.npm-global/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/kavis/.npm-global/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
-. /home/kavis/.nix-profile/etc/profile.d/nix.sh
+. /home/kavis/torch/install/bin/torch-activate
 
-# OPAM configuration
-. /home/kavis/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+alias md2pdf="pandoc ${MDNAME}.md -o ${MDNAME}.pdf --from markdown --template eisvogel --listings"
+alias remarkinit="git clone https://github.com/Axect/Remark_Template && mv Remark_Template/* ./ && rm -rf Remark_Template"
+alias eisvogelinit="git clone https://github.com/Axect/Eisvogel_Template && mv Eisvogel_Template/* ./ && rm -rf Eisvogel_Template"

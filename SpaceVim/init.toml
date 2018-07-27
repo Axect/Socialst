@@ -80,6 +80,9 @@ name = 'lang#go'
 [[layers]]
 name = 'lang#html'
 
+[[layers]]
+name = 'lang#lua'
+
 [[custom_plugins]]
 name = 'jpalardy/vim-slime'
 
