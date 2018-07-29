@@ -1,12 +1,13 @@
 #!/bin/sh
-PROGRAMMING="$HOME/Documents/Programming"
-PROJECT="$HOME/Documents/Project"
+PROGRAMMING="$HOME/Programming"
+PROJECT="$HOME/Project"
 AXECT="https://github.com/Axect/"
 
 if [ ! -d "$PROGRAMMING" ]; then
   mkdir $PROGRAMMING
   cd $PROGRAMMING
   git clone "${AXECT}Haskell"
+  git clone "${AXECT}D"
   git clone "${AXECT}Rust"
   git clone "${AXECT}Go"
   git clone "${AXECT}Scala"
@@ -24,6 +25,7 @@ if [ ! -d "$PROJECT" ]; then
   mkdir $PROJECT
   cd $PROJECT
   mkdir "Haskell_Project"
+  mkdir "D_Project"
   mkdir "Rust_Project"
   mkdir "Go_Project"
   mkdir "Lectures"
@@ -31,6 +33,7 @@ if [ ! -d "$PROJECT" ]; then
 
   git clone "${AXECT}Euler"
   git clone "${AXECT}Academy"
+  git clone "${AXECT}ML_Project"
 
   cd "Haskell_Project"
   git clone "${AXECT}HNumeric"
@@ -40,6 +43,9 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}HWord"
   git clone "${AXECT}Lorentz-Test"
   git clone "${AXECT}Vim-Haskell-Manual"
+
+  cd "../D_Project"
+  git clone "${AXECT}DNumeric"
 
   cd "../Rust_Project"
   git clone "${AXECT}Peroxide"
@@ -55,10 +61,13 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}FPfS"
   git clone "${AXECT}FP-Lecture"
   git clone "${AXECT}THLecture"
+  git clone "${AXECT}QFT2018"
 
   cd "../Server"
   git clone "${AXECT}HEP_Web_Django"
   git clone "${AXECT}HEP-COSMO"
+
+  cd ".."
 fi
 
 
