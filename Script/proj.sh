@@ -1,6 +1,6 @@
 #!/bin/sh
-PROGRAMMING="$HOME/Programming"
-PROJECT="$HOME/Project"
+PROGRAMMING="$HOME/Documents/Programming"
+PROJECT="$HOME/Documents/Project"
 AXECT="https://github.com/Axect/"
 
 if [ ! -d "$PROGRAMMING" ]; then
@@ -44,30 +44,30 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}Lorentz-Test"
   git clone "${AXECT}Vim-Haskell-Manual"
 
-  cd "../D_Project"
+  cd "$PROJECT/D_Project"
   git clone "${AXECT}DNumeric"
 
-  cd "../Rust_Project"
+  cd "$PROJECT/Rust_Project"
   git clone "${AXECT}Peroxide"
 
-  cd "../Go_Project"
+  cd "$PROJECT/Go_Project"
   git clone "${AXECT}RGE"
   git clone "${AXECT}Numeric"
   git clone "${AXECT}HEP_CS"
   git clone "${AXECT}check"
 
-  cd "../Lectures"
+  cd "$PROJECT/Lectures"
   git clone "${AXECT}MLStudy"
   git clone "${AXECT}FPfS"
   git clone "${AXECT}FP-Lecture"
   git clone "${AXECT}THLecture"
   git clone "${AXECT}QFT2018"
 
-  cd "../Server"
+  cd "$PROJECT/Server"
   git clone "${AXECT}HEP_Web_Django"
   git clone "${AXECT}HEP-COSMO"
 
-  cd ".."
+  cd "$PROJECT"
 fi
 
 
