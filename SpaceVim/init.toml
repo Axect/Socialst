@@ -23,6 +23,7 @@
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     statusline_display_mode = false
+    clipboard = "unnamedplus"
 
 # Enable autocomplete layer
 [[layers]]
