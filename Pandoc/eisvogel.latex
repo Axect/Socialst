@@ -57,6 +57,7 @@ $if(fontfamily)$
 $else$
 \usepackage{lmodern}
 \usepackage[cjk]{kotex}
+\usepackage{tcolorbox}
 %\usepackage[mj=utbt]{CJKutf8}
 $endif$
 $if(linestretch)$
