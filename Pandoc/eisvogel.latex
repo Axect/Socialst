@@ -58,6 +58,7 @@ $else$
 \usepackage{lmodern}
 \usepackage[cjk]{kotex}
 \usepackage{tcolorbox}
+\usepackage{cancel}
 %\usepackage[mj=utbt]{CJKutf8}
 $endif$
 $if(linestretch)$
