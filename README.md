@@ -43,3 +43,67 @@ Setting file. Copy to your vs code setting file directory.
 ### Script
 
 To copy my whole github.
+
+### Pandoc
+
+To use Eisvogel pandoc template.
+
+First, you should install pandoc and texlive
+
+```sh
+# Arch
+yaourt -S pandoc
+yaourt -S texlive-most texlive-lang
+
+# Fedora
+sudo dnf install pandoc
+sudo dnf install texlive-scheme-full
+
+# Ubuntu
+sudo apt-get install pandoc
+sudo apt-get install texlive-full
+```
+
+Second, you need this repository
+
+```sh
+git clone https://github.com/Axect/Socialst
+
+# if you already have,
+cd ~/Socialst
+git pull
+```
+
+Third, you should make pandoc template directory
+
+```sh
+cd ~
+mkdir -p .pandoc/templates
+```
+
+Fourth, copy my `eisvogel.latex` file (it includes kotex)
+
+```sh
+cp ~/Socialst/Pandoc/eisvogel.latex ~/.pandoc/templates/./
+```
+
+Fiveth, copy my `.zshrc` file or just copy `eisvogelinit` and `md2pdf`
+
+```sh
+cp ~/Socialst/Zsh/.zshrc ~/.zshrc
+```
+
+Finally, source zshrc
+
+```sh
+source ~/.zshrc
+```
+
+**Usage**
+
+1. Go to Folder
+2. `eisvogelinit`
+3. Change file name (template.md to other)
+4. `export MDNAME=<filename>`
+5. `source ~/.zshrc`
+6. `md2pdf`
