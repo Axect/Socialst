@@ -64,6 +64,9 @@ name = 'lang#julia'
 name = 'lang#python'
 
 [[layers]]
+name = 'lang#kotlin'
+
+[[layers]]
 name = 'git'
 
 [[layers]]
