@@ -3,7 +3,7 @@ SOCIALST="$HOME/Socialst"
 AXECT="https://github.com/Axect"
 
 # Socialst
-if [ ! -d "$SOCIALST"]; then
+if [ ! -d "$SOCIALST" ]; then
   cd $HOME
   git clone "${AXECT}/Socialst"
 fi
@@ -16,7 +16,7 @@ if [ ! -d "$HOME/.zshrc" ]; then
 fi
 
 # Spacevim
-if [ ! -d "$HOME/.SpaceVim"]; then
+if [ ! -d "$HOME/.SpaceVim" ]; then
   curl -sLf https://spacevim.org/install.sh | bash
   mkdir $HOME/.SpaceVim.d
   ln -s $SOCIALST/SpaceVim/init.toml $HOME/.SpaceVim.d/init.toml
