@@ -1,35 +1,35 @@
 %%
-% Copyright (c) 2018, Pascal Wagler;  
+% Copyright (c) 2018, Pascal Wagler;
 % Copyright (c) 2014--2018, John MacFarlane
-% 
+%
 % All rights reserved.
-% 
-% Redistribution and use in source and binary forms, with or without 
-% modification, are permitted provided that the following conditions 
+%
+% Redistribution and use in source and binary forms, with or without
+% modification, are permitted provided that the following conditions
 % are met:
-% 
-% - Redistributions of source code must retain the above copyright 
+%
+% - Redistributions of source code must retain the above copyright
 % notice, this list of conditions and the following disclaimer.
-% 
-% - Redistributions in binary form must reproduce the above copyright 
-% notice, this list of conditions and the following disclaimer in the 
+%
+% - Redistributions in binary form must reproduce the above copyright
+% notice, this list of conditions and the following disclaimer in the
 % documentation and/or other materials provided with the distribution.
-% 
-% - Neither the name of John MacFarlane nor the names of other 
-% contributors may be used to endorse or promote products derived 
+%
+% - Neither the name of John MacFarlane nor the names of other
+% contributors may be used to endorse or promote products derived
 % from this software without specific prior written permission.
-% 
-% THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 
-% "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
-% LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS 
-% FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE 
-% COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, 
+%
+% THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+% "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+% LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+% FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+% COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
 % INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-% BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
-% LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER 
-% CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT 
-% LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN 
-% ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+% BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+% LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+% CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+% LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+% ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 % POSSIBILITY OF SUCH DAMAGE.
 %%
 
@@ -60,6 +60,32 @@ $else$
 \usepackage{tcolorbox}
 \usepackage{cancel}
 %\usepackage[mj=utbt]{CJKutf8}
+
+\newcommand{\OOD}[2]{\dfrac{d^2 #1}{d #2^2}}
+\newcommand{\PD}[2]{\dfrac{\partial #1}{\partial #2}}
+\newcommand{\PPD}[2]{\dfrac{\partial^2 #1}{\partial #2^2}}
+
+\newcommand{\Sbk}[1]{\left( #1 \right)}
+\newcommand{\Mbk}[1]{\left\{ #1 \right\}}
+\newcommand{\Bbk}[1]{\left[ #1 \right]}
+
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rational}{\mathbb{Q}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Natural}{\mathbb{N}}
+
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\HOT}[1]{\O\Sbk{#1}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\Exist}[2]{\tensor[^\exists]{#1}{#2}}
+
+\newcommand{\Commutator}[2]{\left[ #1, #2 \right]}
+\newcommand{\ACommutator}[2]{\left\{ #1, #2 \right\}}
+\newcommand{\PB}[2]{\left\{ #1, #2 \right\}}
+\newcommand{\IntX}{\int{d^3x}\hs}
+\newcommand{\IntP}{\int{d^3p}\hs}
+
 $endif$
 $if(linestretch)$
 \usepackage{setspace}
@@ -458,7 +484,7 @@ $if(titlepage)$
 $endif$
 
 %
-% TOC depth and 
+% TOC depth and
 % section numbering depth
 %
 \setcounter{tocdepth}{3}
@@ -481,7 +507,7 @@ $endif$
 \PassOptionsToPackage{hyphens}{url}
 
 %
-% When using babel or polyglossia with biblatex, loading csquotes is recommended 
+% When using babel or polyglossia with biblatex, loading csquotes is recommended
 % to ensure that quoted texts are typeset according to the rules of your main language.
 %
 \usepackage{csquotes}
@@ -508,7 +534,7 @@ $endif$
 % Source Sans Pro as the de­fault font fam­ily
 % Source Code Pro for monospace text
 %
-% 'default' option sets the default 
+% 'default' option sets the default
 % font family to Source Sans Pro, not \sfdefault.
 %
 $if(mainfont)$
@@ -522,7 +548,7 @@ $endif$
 %
 \definecolor{heading-color}{RGB}{40,40,40}
 \addtokomafont{section}{\color{heading-color}}
-% When using the classes report, scrreprt, book, 
+% When using the classes report, scrreprt, book,
 % scrbook or memoir, uncomment the following line.
 %\addtokomafont{chapter}{\color{heading-color}}
 
@@ -557,8 +583,8 @@ $if(tables)$
 \endoldlongtable
 \global\rownum=0\relax}
 
-% Unfortunately the colored cells extend beyond the edge of the 
-% table because pandoc uses @-expressions (@{}) like so: 
+% Unfortunately the colored cells extend beyond the edge of the
+% table because pandoc uses @-expressions (@{}) like so:
 %
 % \begin{longtable}[]{@{}ll@{}}
 % \end{longtable}

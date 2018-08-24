@@ -98,7 +98,7 @@ EDITOR=vim
 
 #export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 #export SPARK_HOME="$HOME/zbin/spark-2.3.0-bin-hadoop2.7/"
-#export CHPL_HOME="$HOME/zbin/chapel-1.17.1"
+export CHPL_HOME="$HOME/zbin/chapel-1.17.1"
 
 export PATH="$PATH:$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
@@ -107,11 +107,11 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.sage/local/bin"
 export PATH="$PATH:$HOME/.npm-global/bin"
 export PATH="$PATH:$HOME/.nimble/bin"
-#export PATH="$PATH:$CHPL_HOME/bin/linux64"
-#export PATH="$PATH:$CHPL_HOME/util"
-#export PATH="$PATH:/usr/lib64/openmpi/bin/"
+export PATH="$PATH:$CHPL_HOME/bin/linux64"
+export PATH="$PATH:$CHPL_HOME/util"
+export PATH="$PATH:/usr/lib64/openmpi/bin/"
 
-#export MANPATH="$MANPATH:$CHPL_HOME/man"
+export MANPATH="$MANPATH:$CHPL_HOME/man"
 
 alias HNumeric="cd /home/kavis/Documents/Project/Haskell_Project/HNumeric/"
 export DNUM="$HOME/Documents/Project/D_Project/DNumeric/"
