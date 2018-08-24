@@ -61,30 +61,64 @@ $else$
 \usepackage{cancel}
 %\usepackage[mj=utbt]{CJKutf8}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% CUSTOM COMMAND %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -----------------------------------------
+% ----------- 1. SPACING ------------------
+% -----------------------------------------
+\newcommand{\hs}{\hspace{0.1cm}}
+\newcommand{\HS}{\hspace{0.3cm}}
+\newcommand{\vs}{\vspace{0.1cm}}
+\newcommand{\VS}{\vspace{0.3cm}}
+\newcommand{\Com}{,\hs}
+\newcommand{\HL}{\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}}
+% -----------------------------------------
+% ----------- 3. FONT SIZE ----------------
+% -----------------------------------------
+\newcommand{\SM}{\fontsize{8}{7.2}\selectfont}
+\newcommand{\NM}{\fontsize{9}{7.2}\selectfont}
+\newcommand{\BM}{\fontsize{11}{7.2}\selectfont}
+\newcommand{\code}[1]{{\ttfamily #1}}
+% -----------------------------------------
+% ----------- 4. MATHEMATICS --------------
+% -----------------------------------------
+%% - New Operator
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\Var}{Var}
+
+%% - Diffrential Equation
+%\newcommandtwoopt{\OD}[2][][t]{\dfrac{d #1}{d #2}}
 \newcommand{\OOD}[2]{\dfrac{d^2 #1}{d #2^2}}
 \newcommand{\PD}[2]{\dfrac{\partial #1}{\partial #2}}
 \newcommand{\PPD}[2]{\dfrac{\partial^2 #1}{\partial #2^2}}
 
+%% - Brackets
 \newcommand{\Sbk}[1]{\left( #1 \right)}
 \newcommand{\Mbk}[1]{\left\{ #1 \right\}}
 \newcommand{\Bbk}[1]{\left[ #1 \right]}
 
+%% - Numbers
 \newcommand{\Real}{\mathbb{R}}
 \newcommand{\Complex}{\mathbb{C}}
 \newcommand{\Rational}{\mathbb{Q}}
 \newcommand{\Integer}{\mathbb{Z}}
 \newcommand{\Natural}{\mathbb{N}}
 
+%% - Symbols
 \renewcommand{\O}{\mathcal{O}}
 \newcommand{\HOT}[1]{\O\Sbk{#1}}
 \newcommand{\eps}{\epsilon}
 \newcommand{\Exist}[2]{\tensor[^\exists]{#1}{#2}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\M}{\{1,\cdots,M\}}
+\newcommand{\Data}{\{(X_i, Y_i)\}^n_{i=1}}
 
-\newcommand{\Commutator}[2]{\left[ #1, #2 \right]}
-\newcommand{\ACommutator}[2]{\left\{ #1, #2 \right\}}
-\newcommand{\PB}[2]{\left\{ #1, #2 \right\}}
-\newcommand{\IntX}{\int{d^3x}\hs}
-\newcommand{\IntP}{\int{d^3p}\hs}
+%% - Stats
+\renewcommand{\P}{\mathbf{P}}
+\newcommand{\E}{\mathbf{E}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\B}{\mathcal{B}}
 
 $endif$
 $if(linestretch)$
