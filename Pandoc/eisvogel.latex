@@ -84,8 +84,8 @@ $else$
 % ----------- 4. MATHEMATICS --------------
 % -----------------------------------------
 %% - New Operator
-\DeclareMathOperator*{\argmin}{arg\,min}
-\DeclareMathOperator*{\Var}{Var}
+%\DeclareMathOperator*{\argmin}{arg\,min}
+%\DeclareMathOperator*{\Var}{Var}
 
 %% - Diffrential Equation
 %\newcommandtwoopt{\OD}[2][][t]{\dfrac{d #1}{d #2}}
