@@ -104,6 +104,4 @@ source ~/.zshrc
 1. Go to Folder
 2. `eisvogelinit`
 3. Change file name (template.md to other)
-4. `export MDNAME=<filename>`
-5. `source ~/.zshrc`
-6. `md2pdf`
+4. `md2pdf file_name` (no .md needed)
