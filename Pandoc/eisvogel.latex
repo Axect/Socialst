@@ -60,7 +60,7 @@ $else$
 \usepackage{tcolorbox}
 \usepackage{cancel}
 %\usepackage[mj=utbt]{CJKutf8}
-
+\usepackage[shortlabels]{enumitem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%% CUSTOM COMMAND %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

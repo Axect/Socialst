@@ -118,6 +118,9 @@ export DNUM="$HOME/Documents/Project/D_Project/DNumeric/"
 
 alias SSHFORWARDLIST="ps aux | grep ssh"
 
-alias md2pdf="pandoc ${MDNAME}.md -o ${MDNAME}.pdf --from markdown --template eisvogel --listings"
+md2pdf() {
+  pandoc $1.md -o $1.pdf --from markdown --template eisvogel --listings
+}
+
 alias remarkinit="git clone https://github.com/Axect/Remark_Template && mv Remark_Template/* ./ && rm -rf Remark_Template"
 alias eisvogelinit="git clone https://github.com/Axect/Eisvogel_Template && mv Eisvogel_Template/* ./ && rm -rf Eisvogel_Template"
