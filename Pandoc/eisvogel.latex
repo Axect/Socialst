@@ -42,7 +42,7 @@
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames*,table}{xcolor}
 %
-\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$else$a4paper,$endif$$if(beamer)$ignorenonframetext,$if(handout)$handout,$endif$$if(aspectratio)$aspectratio=$aspectratio$,$endif$$endif$$for(classoption)$$classoption$$sep$,$endfor$,tablecaptionabove]{scrartcl}
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$else$a4paper,$endif$$if(beamer)$ignorenonframetext,$if(handout)$handout,$endif$$if(aspectratio)$aspectratio=$aspectratio$,$endif$$endif$$for(classoption)$$classoption$$sep$,$endfor$,tablecaptionabove]{scrbook}
 $if(beamer)$
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
@@ -55,7 +55,10 @@ $endif$
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
 $else$
-\usepackage{lmodern}
+%\usepackage{lmodern}
+$endif$
+
+%\usepackage[T1]{fontenc}
 \usepackage[cjk]{kotex}
 \usepackage{tcolorbox}
 \usepackage{cancel}
@@ -120,7 +123,6 @@ $else$
 \newcommand{\F}{\mathcal{F}}
 \newcommand{\B}{\mathcal{B}}
 
-$endif$
 $if(linestretch)$
 \usepackage{setspace}
 \setstretch{$linestretch$}
