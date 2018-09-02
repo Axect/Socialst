@@ -43,3 +43,16 @@ if [ ! -d "$HOME/.config/zathura" ]; then
   mkdir -p "$HOME/.config/zathura"
   ln -s $SOCIALST/Zathura/zathurarc $HOME/.config/zathura/zathurarc
 fi
+
+# Code
+if [ ! -d "$HOME/.config/Code" ]; then
+  mkdir -p "$HOME/.config/Code"
+fi
+
+if [ ! -d "$HOME/.config/Code/User/snippets/" ]; then
+  mkdir -p "$HOME/.config/Code/User/snippets"
+fi
+
+if [ ! -d "$HOME/.config/Code/User/snippets/socialst.code-snippets" ]; then
+  ln -s $SOCIALST/Code/socialst.code-snippets $HOME/.config/Code/User/snippets/socialst.code-snippets
+fi
