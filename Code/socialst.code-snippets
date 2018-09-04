@@ -16,13 +16,23 @@
 	// 	"description": "Log output to console"
 	// }
 	"TCOLORBOX": {
-		"prefix": "color",
-		"scope": "Markdown,latex",
+		"prefix": "tcolor",
+		"scope": "markdown,latex",
 		"body": [
 			"\\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\\textbf{$1 \\hs $2}]",
 			"\t$0",
 			"\\end{tcolorbox}"
 		],
 		"description": "tcolorbox"
+	},
+	"PROOFBOX": {
+		"prefix": "proof",
+		"scope": "markdown,latex",
+		"body": [
+			"\\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\\textbf{$1}]",
+			"\t$0",
+			"\\end{tcolorbox}"
+		],
+		"description": "tcolorbox for proof"
 	}
 }

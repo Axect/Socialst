@@ -109,6 +109,7 @@ $endif$
 
 %% - Symbols
 \renewcommand{\O}{\mathcal{O}}
+\newcommand{\mcu}{\mathcal{U}}
 \newcommand{\HOT}[1]{\O\Sbk{#1}}
 \newcommand{\eps}{\epsilon}
 \newcommand{\Exist}[2]{\tensor[^\exists]{#1}{#2}}
