@@ -57,6 +57,8 @@ $if(fontfamily)$
 $else$
 %\usepackage{lmodern}
 $endif$
+\usepackage{hyperref}
+\hypersetup{colorlinks=true}
 \usepackage[utf8]{inputenc}
 \usepackage[cjk]{kotex}
 \usepackage{tcolorbox}
