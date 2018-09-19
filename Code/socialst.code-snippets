@@ -34,5 +34,86 @@
 			"\\end{tcolorbox}"
 		],
 		"description": "tcolorbox for proof"
+	},
+	// ============================================================================
+ 	// Asymptote
+ 	// ============================================================================
+	"SETTING": {
+		"prefix": "settings",
+		"scope": "asymptote",
+		"body": [
+			"settings.outformat=\"$1\";",
+			"$0"
+		],
+		"description": "PDF Output format"
+	},
+	"UNITSIZE": {
+		"prefix": "unit",
+		"scope": "asymptote",
+		"body": [
+			"unitsize($1);",
+			"$0"
+		],
+		"description": "Set unitsize"
+	},
+	"DRAW": {
+		"prefix": "draw",
+		"scope": "asymptote",
+		"body": "draw($0);",
+		"description": "Draw"
+	},
+	"ARROW": {
+		"prefix": "arrow",
+		"scope": "asymptote",
+		"body": "arrow=Arrow($0)",
+		"description": "Arrow"
+	},
+	"LINE": {
+		"prefix": "line",
+		"scope": "asymptote",
+		"body": "($1,$2) -- ($3,$4)$0",
+		"description": "Line"
+	},
+	"CURVE": {
+		"prefix": "curve",
+		"scope": "asymptote",
+		"body": "($1,$2) .. ($3,$4)$0",
+		"description": "Curve"
+	},
+	"ADDLINE": {
+		"prefix": "addline",
+		"scope": "asymptote",
+		"body": " -- ($1,$2)$0",
+		"description": "Add one line"
+	},
+	"ADDCURVE": {
+		"prefix": "addcurve",
+		"scope": "asymptote",
+		"body": " .. ($1,$2)$0",
+		"description": "Add one curve"
+	},
+	"CIRCLE": {
+		"prefix": "circle",
+		"scope": "asymptote",
+		"body": "circle(($1,$2),$3)$0",
+		"description": "unitcircle - circle(center, radius)"
+	},
+	"ELLIPSE": {
+		"prefix": "ellipse",
+		"scope": "asymptote",
+		"body": "ellipse(($1,$2),$3,$4)$0",
+		"description": "ellipse - ellipse(center, long, short)"
+	},
+	"BOX": {
+		"prefix": "box",
+		"scope": "asymptote",
+		"body": "box(($1,$2), ($3, $4))$0",
+		"description": "rectangle - box(pair a, pair b)"
+	},
+	"POLYGON": {
+		"prefix": "polygon",
+		"scope": "asymptote",
+		"body": "polygon($1)$0",
+		"description": "polygon - polygon(int n)"
 	}
 }

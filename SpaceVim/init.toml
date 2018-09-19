@@ -46,6 +46,9 @@ name = 'lang#d'
 name = 'lang#scala'
 
 [[layers]]
+name = 'lang#fortran'
+
+[[layers]]
 name = 'lang#vim'
 
 [[layers]]
