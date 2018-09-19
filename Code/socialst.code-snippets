@@ -107,7 +107,7 @@
 	"BOX": {
 		"prefix": "box",
 		"scope": "asymptote",
-		"body": "box(($1,$2), ($3, $4))$0",
+		"body": "box(($1,$2), ($3,$4))$0",
 		"description": "rectangle - box(pair a, pair b)"
 	},
 	"POLYGON": {
@@ -115,5 +115,80 @@
 		"scope": "asymptote",
 		"body": "polygon($1)$0",
 		"description": "polygon - polygon(int n)"
-	}
+	},
+	"FOR": {
+		"prefix": "for",
+		"scope": "asymptote",
+		"body": [
+			"for (int n = $1; n <= $2; ++n) {",
+			"\t$0",
+			"}"
+		],
+		"description": "for loop"
+	},
+	"PATH": {
+		"prefix": "path",
+		"scope": "asymptote",
+		"body": "path $1 = $2;$0",
+		"description": "Path function"
+	},
+	"SHIFT": {
+		"prefix": "shift",
+		"scope": "asymptote",
+		"body": "shift($1, $2)$0",
+		"description": "Shift function"
+	},
+	"SIZE": {
+		"prefix": "size",
+		"scope": "asymptote",
+		"body": "size($1);\n$0",
+		"description": "size function"
+	},
+	"XSCALE": {
+		"prefix": "xscale",
+		"scope": "asymptote",
+		"body": "xscale($1)$0"
+	},
+	"YSCALE": {
+		"prefix": "yscale",
+		"scope": "asymptote",
+		"body": "yscale($1)$0"
+	},
+	"SCALE": {
+		"prefix": "scale",
+		"scope": "asymptote",
+		"body": "scale($1)$0"
+	},
+	"ROTATE": {
+		"prefix": "rotate",
+		"scope": "asymptote",
+		"body": "rotate($1)$0"
+	},
+	"ARC": {
+		"prefix": "arc",
+		"scope": "asymptote",
+		"body": "arc(($1,$2), r=$3, angle1=$4, angle2=$5)$0",
+		"description": "arc function"
+	},
+	"ARC_COORD": {
+		"prefix": "arc_explicit",
+		"scope": "asymptote",
+		"body": "arc(($1,$2), ($3,$4), ($5,$6), direction=$7)$0",
+		"description": "explicit arc function"
+	},
+	"DOT": {
+		"prefix": "dot",
+		"scope": "asymptote",
+		"body": "dot(($1,$2));$0"
+	},
+	"FILL": {
+		"prefix": "fill",
+		"scope": "asymptote",
+		"body": "fill($0);"
+	},
+	"BRA": {
+		"prefix": "bra",
+		"scope": "asymptote",
+		"body": "($1,$2)$0"
+	},
 }
