@@ -201,5 +201,5 @@
 		"prefix": "bra",
 		"scope": "asymptote",
 		"body": "($1,$2)$0"
-	},
+	}
 }
