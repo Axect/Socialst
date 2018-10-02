@@ -62,6 +62,8 @@ $endif$
 \usepackage[utf8]{inputenc}
 \usepackage[cjk]{kotex}
 \usepackage{tcolorbox}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
 \usepackage{cancel}
 %\usepackage[mj=utbt]{CJKutf8}
 \usepackage[shortlabels]{enumitem}

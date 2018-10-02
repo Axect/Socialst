@@ -78,7 +78,8 @@
     "files.associations": {
         "*.hs": "haskell",
         "*.md": "latex",
-        "*.F": "FortranFreeForm"
+        "*.F": "FortranFreeForm",
+        "*.latex": "pdf"
     },
     "rust.mode": "legacy",
     "rust.cargoHomePath": "/home/kavis/.cargo/",
@@ -101,5 +102,6 @@
     ],
     "typescript.locale": "ko",
     "explorer.confirmDelete": false,
-    "editor.snippetSuggestions": "top"
+    "editor.snippetSuggestions": "top",
+    "terminal.integrated.rendererType": "dom"
 }

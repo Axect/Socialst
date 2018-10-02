@@ -125,3 +125,8 @@ md2pdf() {
 alias latexinit="git clone https://github.com/Axect/LaTeX_template && mv LaTeX_template/* ./ && rm -rf LaTeX_template"
 alias remarkinit="git clone https://github.com/Axect/Remark_Template && mv Remark_Template/* ./ && rm -rf Remark_Template"
 alias eisvogelinit="git clone https://github.com/Axect/Eisvogel_Template && mv Eisvogel_Template/* ./ && rm -rf Eisvogel_Template"
+
+javawrapper() {
+  export JAVA_HOME=$1; shift
+  PATH=${JAVA_HOME}/bin:$PATH
+}
