@@ -79,7 +79,8 @@
         "*.hs": "haskell",
         "*.md": "latex",
         "*.F": "FortranFreeForm",
-        "*.latex": "pdf"
+        "*.latex": "pdf",
+        "*.ladot": "dot"
     },
     "rust.mode": "legacy",
     "rust.cargoHomePath": "/home/kavis/.cargo/",
