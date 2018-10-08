@@ -63,7 +63,7 @@ $endif$
 \usepackage[cjk]{kotex}
 \usepackage{tcolorbox}
 \usepackage{cancel}
-\usepackage{psfrag}
+\usepackage{tensor}
 %\usepackage[mj=utbt]{CJKutf8}
 \usepackage[shortlabels]{enumitem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -91,6 +91,8 @@ $endif$
 %% - New Operator
 %\DeclareMathOperator*{\argmin}{arg\,min}
 %\DeclareMathOperator*{\Var}{Var}
+\renewcommand{\dim}{\text{dim }}
+\newcommand{\rank}[1]{\text{rk}\left( #1 \right)}
 
 %% - Diffrential Equation
 %\newcommandtwoopt{\OD}[2][][t]{\dfrac{d #1}{d #2}}
