@@ -92,7 +92,7 @@ $endif$
 %\DeclareMathOperator*{\argmin}{arg\,min}
 %\DeclareMathOperator*{\Var}{Var}
 \renewcommand{\dim}{\text{dim }}
-\newcommand{\rank}[1]{\text{rk}\left( #1 \right)}
+\newcommand{\rank}[1]{\text{rank}\left( #1 \right)}
 
 %% - Diffrential Equation
 %\newcommandtwoopt{\OD}[2][][t]{\dfrac{d #1}{d #2}}
