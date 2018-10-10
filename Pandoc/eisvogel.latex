@@ -63,6 +63,7 @@ $endif$
 \usepackage[cjk]{kotex}
 \usepackage{tcolorbox}
 \usepackage{cancel}
+\usepackage{booktabs}
 \usepackage{tensor}
 \usepackage{amsmath}
 %\usepackage[mj=utbt]{CJKutf8}
@@ -79,6 +80,8 @@ $endif$
 \newcommand{\VS}{\vspace{0.3cm}}
 \newcommand{\Com}{,\hs}
 \newcommand{\HL}{\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}}
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
 % -----------------------------------------
 % ----------- 3. FONT SIZE ----------------
 % -----------------------------------------
@@ -95,6 +98,7 @@ $endif$
 \renewcommand{\dim}{\text{dim }}
 \newcommand{\rank}[1]{\text{rank}\left( #1 \right)}
 \newcommand{\bigzero}{\mbox{\normalfont\Large\bfseries 0}}
+%\renewcommand*{\arraystretch}{1.5}
 
 %% - Diffrential Equation
 %\newcommandtwoopt{\OD}[2][][t]{\dfrac{d #1}{d #2}}
