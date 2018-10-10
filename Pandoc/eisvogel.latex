@@ -64,6 +64,7 @@ $endif$
 \usepackage{tcolorbox}
 \usepackage{cancel}
 \usepackage{tensor}
+\usepackage{amsmath}
 %\usepackage[mj=utbt]{CJKutf8}
 \usepackage[shortlabels]{enumitem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -93,6 +94,7 @@ $endif$
 %\DeclareMathOperator*{\Var}{Var}
 \renewcommand{\dim}{\text{dim }}
 \newcommand{\rank}[1]{\text{rank}\left( #1 \right)}
+\newcommand{\bigzero}{\mbox{\normalfont\Large\bfseries 0}}
 
 %% - Diffrential Equation
 %\newcommandtwoopt{\OD}[2][][t]{\dfrac{d #1}{d #2}}
