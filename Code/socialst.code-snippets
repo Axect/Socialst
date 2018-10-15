@@ -38,6 +38,18 @@
 		],
 		"description": "tcolorbox for proof"
 	},
+	"FRAC": {
+		"prefix": "frac",
+		"scope": "latex",
+		"body": "\\frac{$1}{$2}$0",
+		"description": "Frac"
+	},
+	"PD": {
+		"prefix": "pd",
+		"scope": "latex",
+		"body": "\\frac{\\partial $1}{\\partial $2}$0",
+		"description": "partial derivatives"
+	},
 	// ============================================================================
  	// MARKDOWN - Remark
 	// ============================================================================
