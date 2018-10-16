@@ -42,7 +42,7 @@
 		"prefix": "note",
 		"scope": "markdown,latex",
 		"body": [
-			"\\begin{tcolorbox}[colback=white!5!white,colframe=black!30!green, title=\\textbf{$1}]",
+			"\\begin{tcolorbox}[colback=white!5!white,colframe=black!50!green, title=\\textbf{$1}]",
 			"\t$0",
 			"\\end{tcolorbox}"
 		],
