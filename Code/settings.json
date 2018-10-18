@@ -90,7 +90,7 @@
     "explorer.confirmDragAndDrop": false,
     "liveServer.settings.donotShowInfoMsg": true,
     "d.servedPath": "/home/kavis/.local/share/code-d/bin/serve-d",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     // fortran
     "fortran.gfortranExecutable": "/usr/bin/gfortran",
     "fortran.includePaths": [
