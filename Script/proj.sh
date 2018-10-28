@@ -6,6 +6,8 @@ AXECT="https://github.com/Axect/"
 if [ ! -d "$PROGRAMMING" ]; then
   mkdir $PROGRAMMING
   cd $PROGRAMMING
+  git clone "${AXECT}Asymptote"
+  git clone "${AXECT}Crystal"
   git clone "${AXECT}Haskell"
   git clone "${AXECT}D"
   git clone "${AXECT}Rust"
@@ -19,6 +21,9 @@ if [ ! -d "$PROGRAMMING" ]; then
   git clone "${AXECT}Prolog"
   git clone "${AXECT}Elm"
   git clone "${AXECT}Elixir"
+  git clone "${AXECT}Lua"
+  git clone "${AXECT}Cpp"
+  git clone "${AXECT}C"
 fi
 
 if [ ! -d "$PROJECT" ]; then
@@ -30,10 +35,13 @@ if [ ! -d "$PROJECT" ]; then
   mkdir "Go_Project"
   mkdir "Lectures"
   mkdir "Server"
+  mkdir "Study"
+  mkdir "Machine_Learning"
+  mkdir "R_Project"
+  mkdir "Nim_Project"
 
   git clone "${AXECT}Euler"
   git clone "${AXECT}Academy"
-  git clone "${AXECT}ML_Project"
 
   cd "Haskell_Project"
   git clone "${AXECT}HNumeric"
@@ -46,9 +54,11 @@ if [ ! -d "$PROJECT" ]; then
 
   cd "$PROJECT/D_Project"
   git clone "${AXECT}DNumeric"
+  git clone "${AXECT}FPTools"
 
   cd "$PROJECT/Rust_Project"
   git clone "${AXECT}Peroxide"
+  git clone "${AXECT}Bench"
 
   cd "$PROJECT/Go_Project"
   git clone "${AXECT}RGE"
@@ -66,6 +76,18 @@ if [ ! -d "$PROJECT" ]; then
   cd "$PROJECT/Server"
   git clone "${AXECT}HEP_Web_Django"
   git clone "${AXECT}HEP-COSMO"
+
+  cd "$PROJECT/Study"
+  git clone "${AXECT}Physics2018"
+  
+  cd "$PROJECT/Machine_Learning"
+  git clone "${AXECT}ML_Project"
+
+  cd "$PROJECT/R_Project"
+  git clone "${AXECT}R_Yeji"
+
+  cd "$PROJECT/Nim_Project"
+  git clone "${AXECT}NiMusic"
 
   cd "$PROJECT"
 fi
