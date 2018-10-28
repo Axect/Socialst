@@ -1,0 +1,364 @@
+<application>
+  <component name="ActionsCollector">
+    <counts>
+      <entry action="$Cut" count="1" />
+      <entry action="$Delete" count="2" />
+      <entry action="$Paste" count="1" />
+      <entry action="$Redo" count="1" />
+      <entry action="$SelectAll" count="4" />
+      <entry action="$Undo" count="162" />
+      <entry action="ActivateTerminalToolWindow" count="3" />
+      <entry action="Annotate" count="2" />
+      <entry action="AutoIndentLines" count="1" />
+      <entry action="AutoShowProcessWindow" count="2" />
+      <entry action="Back" count="3" />
+      <entry action="CPP.CreateCMakeProject" count="4" />
+      <entry action="CheckinProject" count="6" />
+      <entry action="CodeCompletion" count="1" />
+      <entry action="CollapseAllRegions" count="18" />
+      <entry action="CollapseRegion" count="42" />
+      <entry action="CommentByBlockComment" count="1" />
+      <entry action="CommentByLineComment" count="15" />
+      <entry action="DebugClass" count="2" />
+      <entry action="DialogOkAction Enter" count="25" />
+      <entry action="EditorBackSpace" count="5067" />
+      <entry action="EditorChooseLookupItem" count="8" />
+      <entry action="EditorChooseLookupItemReplace" count="135" />
+      <entry action="EditorCompleteStatement" count="5" />
+      <entry action="EditorCopy" count="29" />
+      <entry action="EditorCut" count="22" />
+      <entry action="EditorDelete" count="270" />
+      <entry action="EditorDown" count="1102" />
+      <entry action="EditorDownWithSelection" count="2" />
+      <entry action="EditorEnter" count="1161" />
+      <entry action="EditorEscape" count="28" />
+      <entry action="EditorIndentSelection" count="6" />
+      <entry action="EditorLeft" count="2220" />
+      <entry action="EditorLeftWithSelection" count="2" />
+      <entry action="EditorLineEnd" count="5" />
+      <entry action="EditorNextWord" count="2" />
+      <entry action="EditorPageDown" count="5" />
+      <entry action="EditorPageUp" count="5" />
+      <entry action="EditorPaste" count="78" />
+      <entry action="EditorRight" count="3348" />
+      <entry action="EditorRightWithSelection" count="5" />
+      <entry action="EditorScrollDown" count="2" />
+      <entry action="EditorScrollUp" count="2" />
+      <entry action="EditorSplitLine" count="6" />
+      <entry action="EditorStartNewLine" count="22" />
+      <entry action="EditorTab" count="184" />
+      <entry action="EditorUnindentSelection" count="5" />
+      <entry action="EditorUp" count="882" />
+      <entry action="EditorUpWithSelection" count="2" />
+      <entry action="ExpandAllRegions" count="11" />
+      <entry action="ExpandLiveTemplateByTab" count="10" />
+      <entry action="ExpandRegion" count="13" />
+      <entry action="ExportSettings" count="1" />
+      <entry action="Find" count="3" />
+      <entry action="FindUsages" count="1" />
+      <entry action="Git.Commit.And.Push.Executor" count="2" />
+      <entry action="GotoAction" count="3" />
+      <entry action="GotoBookmark1" count="1" />
+      <entry action="GotoClass" count="1" />
+      <entry action="GotoDeclaration" count="3" />
+      <entry action="GotoImplementation" count="1" />
+      <entry action="HideAllWindows" count="1" />
+      <entry action="ImportSettings" count="1" />
+      <entry action="ManageRecentProjects" count="1" />
+      <entry action="MethodDown" count="1" />
+      <entry action="MethodUp" count="1" />
+      <entry action="Move" count="1" />
+      <entry action="MoveLineDown" count="7" />
+      <entry action="MoveLineUp" count="1" />
+      <entry action="MoveStatementDown" count="4" />
+      <entry action="MoveStatementUp" count="4" />
+      <entry action="NewDir" count="3" />
+      <entry action="NewFile" count="1" />
+      <entry action="NextTemplateVariable" count="32" />
+      <entry action="OpenFile" count="5" />
+      <entry action="PasteMultiple" count="2" />
+      <entry action="RenameElement" count="7" />
+      <entry action="RenameFile" count="4" />
+      <entry action="Replace" count="5" />
+      <entry action="Rerun" count="1" />
+      <entry action="Run" count="2" />
+      <entry action="RunClass" count="1" />
+      <entry action="Rust.Build" count="13" />
+      <entry action="Rust.NewRustFile" count="10" />
+      <entry action="SafeDelete" count="1" />
+      <entry action="SaveAll" count="596" />
+      <entry action="ScopeView.EditScopes" count="3" />
+      <entry action="SearchEverywhere" count="2" />
+      <entry action="ShowFilePath" count="1" />
+      <entry action="ShowSettings" count="31" />
+      <entry action="SmartTypeCompletion" count="2" />
+      <entry action="SplitVertically" count="1" />
+      <entry action="Switcher" count="10" />
+      <entry action="ToggleBookmark" count="1" />
+      <entry action="ToggleBookmark1" count="1" />
+      <entry action="ToggleLineBreakpoint" count="4" />
+      <entry action="editRunConfigurations" count="4" />
+      <entry action="third.party.plugin.action" count="9" />
+      <entry action="tooltip.actions.show.description.morelink" count="11" />
+      <entry action="tooltip.actions.show.description.shortcut" count="1" />
+    </counts>
+  </component>
+  <component name="FUSApplicationUsageTrigger">
+    <session id="655482535">
+      <usages-collector id="statistics.lifecycle.app">
+        <counts>
+          <entry key="ide.close" value="29" />
+          <entry key="ide.close.restart" value="9" />
+          <entry key="ide.error" value="1535" />
+          <entry key="ide.start" value="31" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.ui.tips">
+        <counts>
+          <entry key="shown.automatically" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.ide.self.update">
+        <counts>
+          <entry key="dialog.shown" value="1" />
+          <entry key="dialog.update.started" value="1" />
+          <entry key="notification.clicked" value="1" />
+          <entry key="notification.shown" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.json.schema" />
+      <usages-collector id="statistics.oc" />
+      <usages-collector id="statistics.deployment.serverSettingsUI" />
+      <usages-collector id="statistics.vcs.log.trigger" />
+      <usages-collector id="statistics.oc.clangd.crash" />
+    </session>
+  </component>
+  <component name="FeatureUsageStatistics" first-run="1537514047892" have-been-shown="false" show-in-other="true" show-in-compilation="true">
+    <feature id="refactoring.moveTopLevel" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.introduceTypedef" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.rename" count="11" last-shown="0" last-used="1540554820035" shown-count="0" />
+    <feature id="refactoring.pushDown" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.inlineMacro" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.changeSignature" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="codeassists.quickFix" count="21" last-shown="0" last-used="1540200701741" shown-count="0" />
+    <feature id="codeassists.altInsert" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="codeassists.complete.statement" count="5" last-shown="0" last-used="1540206333223" shown-count="0" />
+    <feature id="refactoring.inlineTypedef" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="navigation.goto.inspection" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.introduceConstant" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.pullUp" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="navigation.popup.class" count="1" last-shown="0" last-used="1539933763577" shown-count="0" />
+    <feature id="codeassists.overrideimplement" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="codeassists.parameterInfo" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.inlineParameter" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="codeassists.quickdefinition" count="0" last-shown="1539936667975" last-used="0" shown-count="1" />
+    <feature id="editing.completion.basic" count="130" last-shown="0" last-used="1540601179692" shown-count="0" />
+    <feature id="refactoring.inlineConst" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="tag.name.completion" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="generate.definitions" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.extractMethod" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.introduceDefine" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="codeassists.surroundwith.expression" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="editing.select.word" count="107" last-shown="0" last-used="1540602646529" shown-count="0" />
+    <feature id="refactoring.extractSuperclass" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="navigation.goto.declaration" count="3" last-shown="0" last-used="1540346413053" shown-count="0" />
+    <feature id="refactoring.inlineMethod" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.extractSubclass" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="editing.completion.smarttype.general" count="2" last-shown="0" last-used="1540205657179" shown-count="0" />
+    <feature id="navigation.popup.file.structure" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="codeassists.liveTemplates" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="navigation.select.in" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="navigation.goto.usages" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="codeassists.quickjavadoc" count="0" last-shown="1539936667975" last-used="0" shown-count="1" />
+    <feature id="refactoring.introduceParameter" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.inlineLocalVar" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="editing.completion.changeSorting" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.appCodeIntroduceVariable" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.moveMembers" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <completionStatsTag>
+      <option name="sparedCharacters" value="609" />
+      <option name="invocations" value="112" />
+      <option name="startDate" value="1537455600000" />
+      <option name="dayCount" value="8" />
+      <option name="lastDate" value="1540566000000" />
+    </completionStatsTag>
+    <fixesStatsTag>
+      <option name="invocations" value="21" />
+      <option name="startDate" value="1537455600000" />
+      <option name="dayCount" value="5" />
+      <option name="lastDate" value="1540134000000" />
+    </fixesStatsTag>
+  </component>
+  <component name="IntentionsCollector">
+    <Intentions>
+      <entry name="Rust [!]org.rust.ide.intentions.AddCurlyBracesIntention" count="1" />
+      <entry name="Rust [!]org.rust.ide.intentions.AddDeriveIntention" count="4" />
+      <entry name="Rust [!]org.rust.ide.intentions.RemoveParenthesesFromExprIntention" count="1" />
+      <entry name="Rust [!]org.rust.ide.intentions.RsShowRecursiveMacroExpansionIntention" count="2" />
+      <entry name="Rust [!]org.rust.ide.intentions.RsShowSingleStepMacroExpansionIntention" count="3" />
+      <entry name="Rust [!]org.rust.ide.intentions.SpecifyTypeExplicitlyIntention" count="1" />
+      <entry name="Rust [!]org.rust.ide.intentions.UnElideLifetimesIntention" count="2" />
+      <entry name="Rust [!]org.rust.lang.refactoring.implementMembers.ImplementMembersFix" count="1" />
+      <entry name="Rust daemon.impl.GutterIntentionAction" count="1" />
+      <entry name="Rust openapi.editor.actions.FlipCommaIntention" count="2" />
+      <entry name="Rust spellchecker.quickfixes.RenameTo" count="1" />
+      <entry name="Rust spellchecker.quickfixes.SaveTo" count="2" />
+    </Intentions>
+  </component>
+  <component name="MainMenuCollector">
+    <counts>
+      <entry path="Code -&gt; Completion -&gt; Basic" count="1" />
+      <entry path="Code -&gt; Completion -&gt; SmartType" count="2" />
+      <entry path="File -&gt; Export Settings..." count="1" />
+      <entry path="File -&gt; Import Settings..." count="1" />
+      <entry path="File -&gt; New Project..." count="4" />
+      <entry path="File -&gt; Open Recent -&gt; Manage Projects..." count="1" />
+      <entry path="File -&gt; Open Recent -&gt; Reopen Project" count="4" />
+      <entry path="File -&gt; Open..." count="5" />
+      <entry path="File -&gt; Settings..." count="31" />
+    </counts>
+  </component>
+  <component name="ShortcutsCollector">
+    <counts>
+      <entry shortcut="Alt+Down" count="1" />
+      <entry shortcut="Alt+F12" count="3" />
+      <entry shortcut="Alt+Left" count="1" />
+      <entry shortcut="Alt+Right" count="1" />
+      <entry shortcut="Alt+Shift+Down" count="7" />
+      <entry shortcut="Alt+Shift+Up" count="1" />
+      <entry shortcut="Alt+Up" count="1" />
+      <entry shortcut="Backspace" count="6775" />
+      <entry shortcut="Ctrl+1" count="1" />
+      <entry shortcut="Ctrl+A" count="4" />
+      <entry shortcut="Ctrl+Alt+K" count="1" />
+      <entry shortcut="Ctrl+C" count="29" />
+      <entry shortcut="Ctrl+Down" count="2" />
+      <entry shortcut="Ctrl+Enter" count="6" />
+      <entry shortcut="Ctrl+Equals" count="13" />
+      <entry shortcut="Ctrl+F" count="3" />
+      <entry shortcut="Ctrl+F1" count="1" />
+      <entry shortcut="Ctrl+Left" count="3" />
+      <entry shortcut="Ctrl+Minus" count="42" />
+      <entry shortcut="Ctrl+N" count="1" />
+      <entry shortcut="Ctrl+R" count="5" />
+      <entry shortcut="Ctrl+Right" count="5" />
+      <entry shortcut="Ctrl+S" count="604" />
+      <entry shortcut="Ctrl+Shift+1" count="1" />
+      <entry shortcut="Ctrl+Shift+A" count="3" />
+      <entry shortcut="Ctrl+Shift+Down" count="4" />
+      <entry shortcut="Ctrl+Shift+Enter" count="5" />
+      <entry shortcut="Ctrl+Shift+Equals" count="11" />
+      <entry shortcut="Ctrl+Shift+Minus" count="18" />
+      <entry shortcut="Ctrl+Shift+Slash" count="1" />
+      <entry shortcut="Ctrl+Shift+Up" count="4" />
+      <entry shortcut="Ctrl+Shift+V" count="2" />
+      <entry shortcut="Ctrl+Shift+Z" count="1" />
+      <entry shortcut="Ctrl+Slash" count="15" />
+      <entry shortcut="Ctrl+Tab" count="10" />
+      <entry shortcut="Ctrl+Up" count="2" />
+      <entry shortcut="Ctrl+V" count="79" />
+      <entry shortcut="Ctrl+X" count="22" />
+      <entry shortcut="Ctrl+Z" count="162" />
+      <entry shortcut="Delete" count="277" />
+      <entry shortcut="Down" count="2618" />
+      <entry shortcut="End" count="6" />
+      <entry shortcut="Enter" count="1492" />
+      <entry shortcut="Escape" count="240" />
+      <entry shortcut="F11" count="1" />
+      <entry shortcut="Left" count="3023" />
+      <entry shortcut="Page Down" count="7" />
+      <entry shortcut="Page Up" count="7" />
+      <entry shortcut="Right" count="4750" />
+      <entry shortcut="Shift+Backspace" count="37" />
+      <entry shortcut="Shift+Down" count="2" />
+      <entry shortcut="Shift+Enter" count="22" />
+      <entry shortcut="Shift+Left" count="2" />
+      <entry shortcut="Shift+Right" count="5" />
+      <entry shortcut="Shift+Shift" count="2" />
+      <entry shortcut="Shift+Tab" count="5" />
+      <entry shortcut="Shift+Up" count="2" />
+      <entry shortcut="Tab" count="379" />
+      <entry shortcut="Up" count="2155" />
+    </counts>
+  </component>
+  <component name="StatisticsApplicationUsages">
+    <group name="vcs">
+      <project id="Peroxide" values="Git" collectionTime="1540556346158" />
+    </group>
+    <group name="vcs-stats">
+      <project id="Peroxide" values="active.changelists.count.1,ignored.files.count.1,has.default.vcs.root.mapping.disabled,unversioned.files.count.0,vcs.roots.count.1" collectionTime="1540556346157" />
+    </group>
+    <group name="images.ide.background">
+      <project id="Peroxide" values="editor" collectionTime="1540556346163" />
+    </group>
+    <group name="file-type">
+      <project id="Peroxide" values="PLAIN_TEXT,YAML,TOML file,Rust,Markdown" collectionTime="1540556346161" />
+    </group>
+    <group name="vcs-options">
+      <project id="Peroxide" values="commit.before.check.code.cleanup.disabled,offer.remove.empty.changelist.show_confirmation,perform.edit.in.background.enabled,offer.move.failed.committed.do_nothing_silently,commit.before.check.todo.enabled,perform.rollback.in.background.disabled,commit.show.unversioned.enabled,perform.add_remove.in.background.enabled,commit.before.check.non.empty.comment.disabled,perform.commit.in.background.enabled,offer.move.partially.committed.disabled,commit.use.right.margin.enabled,changelist.make.new.active.disabled,perform.update.in.background.enabled,changelist.preselect.existing.disabled,commit.clear.initial.comment.disabled,commit.before.rearrange.disabled,commit.before.check.code.smell.enabled,commit.before.reformat.project.disabled,show.changes.preview.disabled,perform.checkout.in.background.enabled,include.text.into.shelf.enabled,check.conflicts.in.background.disabled,commit.before.optimize.imports.disabled" collectionTime="1540556346156" />
+    </group>
+    <group name="module type">
+      <project id="Peroxide" values="CPP_MODULE" collectionTime="1540556346162" />
+    </group>
+    <group name="javaScript Scope Usages">
+      <project id="Peroxide" values="Project" collectionTime="1540556346226" />
+    </group>
+  </component>
+  <component name="ToolWindowCollector">
+    <counts>
+      <entry toolWindow="Debug by Activation" count="1" />
+      <entry toolWindow="Event Log by Activation" count="13" />
+      <entry toolWindow="Find by Activation" count="1" />
+      <entry toolWindow="Project by Activation" count="47" />
+      <entry toolWindow="R Graphics by Activation" count="3" />
+      <entry toolWindow="R Packages by Activation" count="3" />
+      <entry toolWindow="Run by Activation" count="26" />
+      <entry toolWindow="TODO by Activation" count="2" />
+      <entry toolWindow="Terminal by Activation" count="53" />
+    </counts>
+  </component>
+  <component name="ToolbarClicksCollector">
+    <counts>
+      <entry action="CheckinProject@NavBarToolbar" count="6" />
+      <entry action="Rerun@RunnerToolbar" count="1" />
+      <entry action="Run@NavBarToolbar" count="2" />
+      <entry action="RunConfiguration@NavBarToolbar" count="6" />
+      <entry action="Rust.Build@NavBarToolbar" count="13" />
+      <entry action="com.intellij.application.options.schemes.AbstractSchemesPanel$ShowSchemesActionsListAction@NavBarToolbar" count="2" />
+      <entry action="com.intellij.find.EditorSearchSession$ReplaceAction@EditorToolbar" count="28" />
+      <entry action="com.intellij.find.SearchTextArea$NewLineAction@unknown" count="1" />
+      <entry action="com.intellij.find.editorHeaderActions.NextOccurrenceAction@EditorToolbar" count="11" />
+      <entry action="com.intellij.find.editorHeaderActions.PrevOccurrenceAction@EditorToolbar" count="3" />
+      <entry action="com.intellij.ide.plugins.AvailablePluginsManagerMain$MyFilterCategoryAction@PluginManager" count="12" />
+      <entry action="com.intellij.ide.plugins.InstalledPluginsManagerMain$MyFilterEnabledAction@PluginManager" count="2" />
+      <entry action="com.intellij.openapi.wm.impl.ToolWindowHeader$HideAction@ToolwindowTitle" count="19" />
+      <entry action="com.intellij.ui.AnActionButton$AnActionButtonWrapper@ToolbarDecorator" count="3" />
+      <entry action="com.intellij.ui.CommonActionsPanel$MyActionButton@ToolbarDecorator" count="7" />
+      <entry action="org.jetbrains.plugins.terminal.TerminalView$CloseSession@Terminal" count="1" />
+    </counts>
+  </component>
+  <component name="UsageTrigger">
+    <counts>
+      <entry feature="AbstractNewProjectStep.Rust" count="1" />
+      <entry feature="AbstractNewProjectStep.new D Project" count="2" />
+      <entry feature="CreateFile.CreateFileAction" count="1" />
+      <entry feature="execute.CargoCommandRunConfiguration.Debug" count="1" />
+      <entry feature="execute.CargoCommandRunConfiguration.Run" count="19" />
+      <entry feature="execute.DlangRunDubConfiguration.Run" count="2" />
+      <entry feature="execute.RRunConfigurationType.Debug" count="1" />
+      <entry feature="ide.settings.Appearance" count="3" />
+      <entry feature="ide.settings.Color Scheme" count="5" />
+      <entry feature="ide.settings.D Tools" count="1" />
+      <entry feature="ide.settings.File Types" count="1" />
+      <entry feature="ide.settings.Font" count="2" />
+      <entry feature="ide.settings.Live Templates" count="1" />
+      <entry feature="ide.settings.Plugins" count="2" />
+      <entry feature="ideaapp.started" count="31" />
+      <entry feature="terminal.linux" count="25" />
+      <entry feature="welcome.screen.WelcomeScreen.Configure" count="2" />
+      <entry feature="welcome.screen.WelcomeScreen.Plugins" count="1" />
+      <entry feature="welcome.screen.null" count="1" />
+    </counts>
+  </component>
+  <component name="UsagesStatistic" time="1540539013064" />
+</application>

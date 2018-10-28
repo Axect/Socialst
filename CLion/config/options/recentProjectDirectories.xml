@@ -1,0 +1,80 @@
+<application>
+  <component name="RecentDirectoryProjectsManager">
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$/Documents/Project/Bench" />
+        <option value="$USER_HOME$/Documents/Project/Rust_Project/Peroxide" />
+        <option value="$USER_HOME$/CLionProjects/Peroxide" />
+        <option value="$USER_HOME$/Documents/Project/R_Project/Plot" />
+        <option value="$USER_HOME$/CLionProjects/EulerD" />
+      </list>
+    </option>
+    <option name="openPaths">
+      <list>
+        <option value="$USER_HOME$/Documents/Project/Bench" />
+      </list>
+    </option>
+    <option name="lastPath" value="$USER_HOME$/Documents/Project/Bench" />
+    <option name="pid" value="" />
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/CLionProjects/EulerD">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="CL-182.4505.18" />
+              <option name="productionCode" value="CL" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1539851043859" />
+              <option name="buildTimestamp" value="1537187441969" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/CLionProjects/Peroxide">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="CL-182.4892.24" />
+              <option name="productionCode" value="CL" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1540601288621" />
+              <option name="buildTimestamp" value="1539704858814" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/Project/Bench">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="CL-182.4892.24" />
+              <option name="productionCode" value="CL" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1540602699638" />
+              <option name="buildTimestamp" value="1539704876969" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/Project/R_Project/Plot">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="CL-182.4892.24" />
+              <option name="productionCode" value="CL" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1540450009037" />
+              <option name="buildTimestamp" value="1539704820912" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/Project/Rust_Project/Peroxide">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="CL-182.4892.24" />
+              <option name="productionCode" value="CL" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1540601316352" />
+              <option name="buildTimestamp" value="1539704858814" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastProjectLocation" value="$USER_HOME$/CLionProjects" />
+  </component>
+</application>

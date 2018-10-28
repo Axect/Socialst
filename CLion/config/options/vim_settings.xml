@@ -1,0 +1,141 @@
+<application>
+  <component name="VimSettings">
+    <state version="4" enabled="true" />
+    <globalmarks />
+    <filemarks>
+      <file name="/Dummy.txt" timestamp="1539947681637">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/Rust_Project/Peroxide/.gitignore" timestamp="1539946257415">
+        <mark key="[" line="4" column="5" />
+        <mark key="]" line="5" column="6" />
+        <mark key="^" line="5" column="6" />
+        <mark key="." line="5" column="6" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/Rust_Project/Peroxide/RELEASES.md" timestamp="1540048890063">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="4" column="40" />
+        <mark key="^" line="4" column="40" />
+        <mark key="." line="4" column="40" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/Rust_Project/Peroxide/README.md" timestamp="1539948625873">
+        <mark key="[" line="2" column="5" />
+        <mark key="]" line="2" column="68" />
+        <mark key="^" line="2" column="68" />
+        <mark key="." line="2" column="68" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/Rust_Project/Peroxide/src/bin/oxide.rs" timestamp="1540112707977">
+        <mark key="[" line="42" column="16" />
+        <mark key="]" line="47" column="30" />
+        <mark key="^" line="47" column="30" />
+        <mark key="." line="47" column="30" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/Rust_Project/Peroxide/src/matrix.rs" timestamp="1540116688695">
+        <mark key="'" line="165" column="10" />
+        <mark key="[" line="155" column="16" />
+        <mark key="]" line="157" column="16" />
+        <mark key="." line="157" column="16" />
+        <mark key="^" line="157" column="16" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/Rust_Project/Peroxide/Cargo.toml" timestamp="1540048945900">
+        <mark key="[" line="2" column="16" />
+        <mark key="]" line="2" column="15" />
+        <mark key="^" line="2" column="15" />
+        <mark key="." line="2" column="15" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/Rust_Project/Peroxide/.travis.yml" timestamp="1539948459558">
+        <mark key="[" line="12" column="0" />
+        <mark key="]" line="12" column="0" />
+        <mark key="^" line="10" column="1" />
+        <mark key="." line="12" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/Rust_Project/Peroxide/.travis.yml.old" timestamp="1539948386090">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/Rust_Project/Peroxide/src/vector.rs" timestamp="1540116905516">
+        <mark key="[" line="131" column="8" />
+        <mark key="]" line="137" column="9" />
+        <mark key="^" line="129" column="11" />
+        <mark key="." line="129" column="12" />
+      </file>
+      <file name="$USER_HOME$/Documents/Project/Rust_Project/Peroxide/src/lib.rs" timestamp="1540111486584">
+        <mark key="[" line="7" column="24" />
+        <mark key="]" line="1" column="11" />
+        <mark key="^" line="1" column="11" />
+        <mark key="." line="1" column="11" />
+      </file>
+    </filemarks>
+    <jumps>
+      <jump line="555" column="0" filename="$USER_HOME$/Documents/Project/Rust_Project/Peroxide/src/matrix.rs" />
+      <jump line="335" column="47" filename="$USER_HOME$/Documents/Project/Rust_Project/Peroxide/src/matrix.rs" />
+      <jump line="126" column="0" filename="$USER_HOME$/Documents/Project/Rust_Project/Peroxide/src/matrix.rs" />
+      <jump line="108" column="10" filename="$USER_HOME$/Documents/Project/Rust_Project/Peroxide/src/matrix.rs" />
+    </jumps>
+    <registers>
+      <register name="&quot;" type="4">
+        <text encoding="base64">YXNzZXJ0IShlID4gcyk7CgogICAgICAgIGxldCBmYWN0b3I6IGY2NCA9IChlIC0gcykgLyBzdGVwOwogICAgICAgIGxldCBsOiB1c2l6ZSA9IGZhY3RvciBhcyB1c2l6ZSArIDE7CiAgICAgICAgbGV0IG11dCB2OiBWZWM8ZjY0PiA9IFZlYzo6bmV3KCk7CgogICAgICAgIGZvciBpIGluIDAgLi4gbCB7CiAgICAgICAgICAgIHYucHVzaChzICsgc3RlcCAqIChpIGFzIGY2NCkpOwogICAgICAgIH0=</text>
+      </register>
+      <register name="/" type="4">
+        <text>seq</text>
+      </register>
+      <register name="0" type="4">
+        <text encoding="base64">YXNzZXJ0IShlID4gcyk7CgogICAgICAgIGxldCBmYWN0b3I6IGY2NCA9IChlIC0gcykgLyBzdGVwOwogICAgICAgIGxldCBsOiB1c2l6ZSA9IGZhY3RvciBhcyB1c2l6ZSArIDE7CiAgICAgICAgbGV0IG11dCB2OiBWZWM8ZjY0PiA9IFZlYzo6bmV3KCk7CgogICAgICAgIGZvciBpIGluIDAgLi4gbCB7CiAgICAgICAgICAgIHYucHVzaChzICsgc3RlcCAqIChpIGFzIGY2NCkpOwogICAgICAgIH0=</text>
+      </register>
+      <register name="1" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="2" type="2">
+        <text encoding="base64">ICAgCg==</text>
+      </register>
+      <register name="3" type="4">
+        <text encoding="base64">ICggJHN0YXJ0OmV4cHI7JGVuZDpleHByLCRyb3c6ZXhwciwkY29sOmV4cHIsJHNoYXBlOmV4cHIgKSA9PiB7CiAgICAgICAgewogICAgICAgICAgICBsZXQgczogdTMyID0gJHN0YXJ0OwogICAgICAgICAgICBsZXQgZTogdTMyID0gJGVuZDsKICAgICAgICAgICAgbGV0IHI6IHVzaXplID0gJHJvdzsKICAgICAgICAgICAgbGV0IGM6IHVzaXplID0gJGNvbDsKICAgICAgICAgICAgYXNzZXJ0X2VxISgoZSAtIHMpIGFzIGY2NCArIDFmNjQsIChyICogYykgYXMgZjY0KTsKICAgICAgICAgICAgTWF0cml4Ojpmcm9tX3ZlY3RvcigKICAgICAgICAgICAgICAgIHNlcShzLCBlLCAxKSwKICAgICAgICAgICAgICAgIHIsCiAgICAgICAgICAgICAgICBjLAogICAgICAgICAgICAgICAgJHNoYXBlCiAgICAgICAgICAgICkKICAgICAgICB9CiAgICB9Ow==</text>
+      </register>
+      <register name="4" type="4">
+        <text encoding="base64">KCAkdjpleHByLCRyb3c6ZXhwciwkY29sOmV4cHIsJHNoYXBlOmV4cHIgKSA9PiB7CiAgICAgICAgewogICAgICAgICAgICBNYXRyaXg6OmZyb21fdmVjdG9yKAogICAgICAgICAgICAgICAgJHJvdywKICAgICAgICAgICAgICAgICRjb2wsCiAgICAgICAgICAgICAgICAkc2hhcGUKICAgICAgICAgICAgKQogICAgICAgIH0KICAgIH07</text>
+      </register>
+      <register name="5" type="4">
+        <text encoding="base64">cHViIHRyYWl0IENvbmNhdGVuYXRlIHsKICAgIGZuIGNfdmVjKCZzZWxmLCB2MjogVmVjdG9yKSAtPiBWZWN0b3I7Cn0KCmltcGwgQ29uY2F0ZW5hdGUgZm9yIFZlY3RvciB7CiAgICBmbiBjX3ZlYygmc2VsZiwgdjI6IFZlY3RvcikgLT4gVmVjdG9yIHsKICAgICAgICBsZXQgbXV0IHYgPSBzZWxmLmRhdGEuY2xvbmUoKTsKICAgICAgICB2LmV4dGVuZCgmdjIuZGF0YSk7CiAgICAgICAgVmVjdG9yIHsKICAgICAgICAgICAgZGF0YTogdiwKICAgICAgICAgICAgbGVuOiBzZWxmLmxlbiArIHYyLmxlbiwKICAgICAgICB9CiAgICB9Cn0=</text>
+      </register>
+      <register name="6" type="2">
+        <text encoding="base64">ICAgICAgICAgICAgbGV0IG11dCB2OiBWZWM6Om5ldygpOwo=</text>
+      </register>
+      <register name="7" type="2">
+        <text encoding="base64">fQo=</text>
+      </register>
+      <register name="8" type="2">
+        <text encoding="base64">ICAgIH07Cg==</text>
+      </register>
+      <register name="9" type="2">
+        <text encoding="base64">ICAgICAgICAK</text>
+      </register>
+      <register name=":" type="4">
+        <text>w</text>
+      </register>
+    </registers>
+    <search>
+      <last-search>seq</last-search>
+      <last-offset />
+      <last-pattern>seq</last-pattern>
+      <last-dir>1</last-dir>
+      <show-last>false</show-last>
+    </search>
+    <history>
+      <history-search>
+        <entry>seq</entry>
+      </history-search>
+      <history-cmd>
+        <entry>w</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+    <shortcut-conflicts>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed S</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed V</text>
+      </shortcut-conflict>
+    </shortcut-conflicts>
+  </component>
+</application>

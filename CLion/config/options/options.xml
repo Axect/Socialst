@@ -1,0 +1,36 @@
+<application>
+  <component name="PropertiesComponent">
+    <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.62889165" />
+    <property name="Default.savedEditorTheme" value="_@user_Default" />
+    <property name="ExpandBeforeRunStepsPanel" value="true" />
+    <property name="ExpandRunDashboardTypesPanel" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="PLUGIN_FILTER" value="R&#10;vim&#10;D Lang&#10;D&#10;Rust" />
+    <property name="SettingsSearchHistory" value="file type" />
+    <property name="dcd-clientFlags" value="" />
+    <property name="dcd-clientPath" value="/usr/bin/dcd-client" />
+    <property name="dcd-serverFlags" value="" />
+    <property name="dcd-serverPath" value="/usr/bin/dcd-server" />
+    <property name="dfixFlags" value="" />
+    <property name="dfixPath" value="" />
+    <property name="dfmtFlags" value="" />
+    <property name="dfmtPath" value="/usr/bin/dfmt" />
+    <property name="dscannerFlags" value="" />
+    <property name="dscannerPath" value="/usr/bin/dscanner" />
+    <property name="dubFlags" value="" />
+    <property name="dubPath" value="/usr/bin/dub" />
+    <property name="evlsprt3.182" value="17" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/Documents/Project/R_Project/Plot&#10;/home/kavis/Documents/Project/R_Project&#10;/home/kavis/Documents/Project/Bench&#10;/home/kavis/Pictures/23601.jpg&#10;/home/kavis/Pictures/23489.jpg&#10;/home/kavis/Pictures/23460.jpg&#10;/home/kavis/Pictures/Wallpapers/2732x1536-px-coding-logo-Mozilla-Firefox-programming-language-rust-1270633-wallhere.com.jpg&#10;/home/kavis/Documents/Project/Rust_Project/Peroxide" />
+    <property name="file.gist.reindex.count" value="10" />
+    <property name="fileTypeChangedCounter" value="4" />
+    <property name="gdbFlags" value="" />
+    <property name="gdbPath" value="/usr/bin/gdb" />
+    <property name="idea.background.editor" value="$USER_HOME$/Pictures/23601.jpg,40,scale,center" />
+    <property name="ideavim.statistics.timestamp" value="1540045728843" />
+    <property name="lastTip" value="1" />
+    <property name="org.intellij.images.editor.actions.BackgroundImageDialog#recent" value="$USER_HOME$/Pictures/Wallpapers/2732x1536-px-coding-logo-Mozilla-Firefox-programming-language-rust-1270633-wallhere.com.jpg&#10;/home/kavis/Pictures/23460.jpg&#10;/home/kavis/Pictures/23489.jpg" />
+    <property name="org.rust.LAST_UPDATE" value="1540707255722" />
+    <property name="ts.lib.d.ts.version" value="3.0.1" />
+  </component>
+</application>

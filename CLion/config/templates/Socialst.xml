@@ -1,0 +1,10 @@
+<templateSet group="Socialst">
+  <template name="fn" value="pub fn $function$($input$) -&gt; $output$ {&#10;    $END$&#10;}" description="function" toReformat="false" toShortenFQNames="true">
+    <variable name="function" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="input" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="output" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="RUST_FILE" value="true" />
+    </context>
+  </template>
+</templateSet>
