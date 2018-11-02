@@ -109,6 +109,9 @@ name = 'junegunn/vim-easy-align'
 name = 'pbrisbin/vim-syntax-shakespeare'
 
 [[custom_plugins]]
+name = 'junegunn/goyo.vim'
+
+[[custom_plugins]]
 name = 'fsouza/chapel.vim'
 
 [[custom_plugins]]
