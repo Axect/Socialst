@@ -10,7 +10,7 @@ yaourt -S vim uim\
   julia sagemath visual-studio-code-bin dlang --noconfirm
 
 # Rust
-curl https://sh.rustup.rs -sSf | sh
+#curl https://sh.rustup.rs -sSf | sh
 
 # Nim
-curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+#curl https://nim-lang.org/choosenim/init.sh -sSf | sh
