@@ -70,6 +70,9 @@ name = 'lang#python'
 name = 'lang#kotlin'
 
 [[layers]]
+name = 'lang#octave'
+
+[[layers]]
 name = 'git'
 
 [[layers]]
