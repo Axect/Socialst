@@ -9,11 +9,12 @@ if [ ! -d "$SOCIALST" ]; then
 fi
 
 # zshrc
-#if [ ! -d "$HOME/.zshrc" ]; then
-#  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-#  ln -s $SOCIALST/Zsh/.zshrc $HOME/.zshrc
-#  echo "Complete zsh Setup!"
-#fi
+if [ ! -d "$HOME/.zshrc" ]; then
+ #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+ chsh -s `which zsh`
+ ln -s $SOCIALST/Zsh/.zshrc $HOME/.zshrc
+ echo "Complete zsh Setup!"
+fi
 
 # Spacevim
 if [ ! -d "$HOME/.SpaceVim" ]; then
