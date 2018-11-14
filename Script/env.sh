@@ -58,3 +58,7 @@ fi
 if [ ! -d "$HOME/.config/Code/User/snippets/socialst.code-snippets" ]; then
   ln -s $SOCIALST/Code/socialst.code-snippets $HOME/.config/Code/User/snippets/socialst.code-snippets
 fi
+
+if [ ! -d "$HOME/.xprofile" ]; then
+  ln -s $SOCIALST/UIM/xprofile $HOME/.xprofile
+fi
