@@ -16,6 +16,7 @@
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
     guicolors = true
+    guifont="Fira Code Retina"
     # Disable statusline separator, if you want to use other value, please
     # install nerd fonts
     statusline_separator = "arrow"
@@ -23,6 +24,7 @@
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     statusline_display_mode = false
+    modifiable = true
     clipboard = "unnamedplus"
 
 # Enable autocomplete layer
@@ -71,6 +73,36 @@ name = 'lang#kotlin'
 
 [[layers]]
 name = 'lang#octave'
+
+[[layers]]
+name = 'lang#racket'
+
+[[layers]]
+name = 'lang#scheme'
+
+[[layers]]
+name = 'lang#crystal'
+
+[[layers]]
+name = 'lang#latex'
+
+[[layers]]
+name = 'lang#nim'
+
+[[layers]]
+name = 'lang#sh'
+
+[[layers]]
+name = 'lang#lisp'
+
+[[layers]]
+name = 'lang#elixir'
+
+[[layers]]
+name = 'lang#dart'
+
+[[layers]]
+name = 'lang#fsharp'
 
 [[layers]]
 name = 'git'

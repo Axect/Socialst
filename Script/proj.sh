@@ -24,6 +24,10 @@ if [ ! -d "$PROGRAMMING" ]; then
   git clone "${AXECT}Lua"
   git clone "${AXECT}Cpp"
   git clone "${AXECT}C"
+  git clone "${AXECT}Sage"
+  git clone "${AXECT}JS"
+  git clone "${AXECT}Scheme"
+  git clone "${AXECT}Racket"
 fi
 
 if [ ! -d "$PROJECT" ]; then
@@ -59,6 +63,9 @@ if [ ! -d "$PROJECT" ]; then
   cd "$PROJECT/Rust_Project"
   git clone "${AXECT}Peroxide"
   git clone "${AXECT}Bench"
+  git clone "${AXECT}Music_Tournament"
+  git clone "${AXECT}RGE_Peroxide"
+  git clone "${AXECT}Example_Peroxide"
 
   cd "$PROJECT/Go_Project"
   git clone "${AXECT}RGE"
