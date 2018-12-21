@@ -289,3 +289,5 @@ gcam() {
   git commit -am $1
 }
 alias gp="git push"
+
+export TERMINAL="/usr/bin/hyper"
