@@ -246,7 +246,7 @@ esac
 
 #export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 #export SPARK_HOME="$HOME/zbin/spark-2.3.0-bin-hadoop2.7/"
-export CHPL_HOME="$HOME/zbin/chapel-1.17.1"
+export CHPL_HOME="$HOME/zbin/chapel-1.18.0"
 
 export PATH="$PATH:$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
@@ -291,3 +291,13 @@ gcam() {
 alias gp="git push"
 
 export TERMINAL="/usr/bin/hyper"
+
+chpllin() {
+  chpl --set blasImpl=none --set lapackImpl=none -O -o bin/$1 $1.chpl
+}
+
+###-tns-completion-start-###
+if [ -f /home/kavis/.tnsrc ]; then 
+    source /home/kavis/.tnsrc 
+fi
+###-tns-completion-end-###

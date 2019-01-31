@@ -223,5 +223,36 @@
 		"prefix": "bra",
 		"scope": "asymptote",
 		"body": "($1,$2)$0"
+	},
+	// ============================================================================
+ 	// Chapel
+	// ============================================================================
+	"writeln": {
+		"prefix": "writeln",
+		"scope": "chapel",
+		"body": "writeln($1);$0"
+	},
+	// ============================================================================
+ 	// R markdown
+ 	// ============================================================================
+	"SBK": {
+		"prefix": "sbk",
+		"scope": "R Markdown",
+		"body": "\\left($1\\right)$0"
+	},
+	"MBK": {
+		"prefix": "mbk",
+		"scope": "R Markdown",
+		"body": "\\left\\{$1\\right\\}$0"
+	},
+	"BBK": {
+		"prefix": "bbk",
+		"scope": "R Markdown",
+		"body": "\\left[$1\\right\\]$0"
+	},
+	"PROBABILITY": {
+		"prefix": "prob",
+		"scope": "R Markdown",
+		"body": "\\mathbf{P}\\left\\{$1\\right\\}$0"
 	}
 }
