@@ -2,7 +2,8 @@
 sudo pamac install uim texlive-most texlive-lang tk gcc-fortran r jupyter-notebook\
   python-pip python-numpy python-scipy python-matplotlib npm zathura-ps zathura-pdf-poppler zathura-djvu zathura-cb\
   julia sagemath dlang pandoc\
-  zsh-history-substring-search zsh-autosuggestions
+  zsh-history-substring-search zsh-autosuggestions\
+  cmus filezilla easytag youtube-dl
 sudo pamac install sagemath-jupyter
   
 # AUR
