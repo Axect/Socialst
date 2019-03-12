@@ -301,3 +301,7 @@ if [ -f /home/kavis/.tnsrc ]; then
     source /home/kavis/.tnsrc 
 fi
 ###-tns-completion-end-###
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /home/kavis/.npm-global/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/kavis/.npm-global/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
