@@ -23,8 +23,8 @@ filetype plugin indent on
 
 " Tab to Space
 set expandtab
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 
 let base16colorspace=256
 
@@ -120,6 +120,12 @@ Plug 'mhinz/vim-signify'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
+" Nerdtree
+Plug 'scrooloose/nerdtree'
+
+" Buffer
+Plug 'ap/vim-buftabline'
+
 call plug#end()
 """""""""""""""""""""""""""""""""
 
@@ -159,13 +165,18 @@ vmap a; :Tabularize /::<CR>
 vmap a- :Tabularize /-><CR>
 
 " Markdown Preview
-let g:mkdp_path_to_chrome = "firefox"
+let g:mkdp_path_to_chrome = "google-chrome-stable"
 let g:mkdp_browserfunc = 'MKDP_browserfunc_default'
 let g:mkdp_auto_start = 1
 let g:mkdp_auto_open = 1
 let g:mkdp_auto_close = 1
 let g:mkdp_refresh_slow = 0
 let g:mkdp_command_for_global = 0
+
+" Nerdtree
+silent! nmap <F4> :NERDTreeToggle<CR>
+silent! map <F3> :NERDTreeFind<CR>
+let g:NERDTreeMapActivateNode="<F3>"
 
 " Rust
 let g:autofmt_autosave = 1
@@ -175,4 +186,9 @@ let g:completor_racer_binary="/home/kavis/.cargo/bin/racer"
 
 " Prolog
 au FileType perl set filetype=prolog
+
+" Buftabline
+set hidden
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<cr>
 """""""""""""""""""""""""""""""""

@@ -26,12 +26,15 @@
     statusline_display_mode = false
     modifiable = true
     clipboard = "unnamedplus"
+    tabstop = 4
+    shiftwidth = 4
+    expandtab = true
 
 # Enable autocomplete layer
-[[layers]]
-name = 'autocomplete'
-auto-completion-return-key-behavior = "complete"
-auto-completion-tab-key-behavior = "smart"
+#[[layers]]
+#name = 'autocomplete'
+#auto-completion-return-key-behavior = "complete"
+#auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
 name = 'shell'

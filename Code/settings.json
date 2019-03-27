@@ -90,7 +90,6 @@
     "explorer.confirmDragAndDrop": false,
     "liveServer.settings.donotShowInfoMsg": true,
     "d.servedPath": "/home/kavis/.local/share/code-d/bin/serve-d",
-    "window.zoomLevel": 1,
     // fortran
     "fortran.gfortranExecutable": "/usr/bin/gfortran",
     "fortran.includePaths": [
@@ -104,5 +103,6 @@
     "typescript.locale": "ko",
     "explorer.confirmDelete": false,
     "editor.snippetSuggestions": "top",
-    "terminal.integrated.rendererType": "dom"
+    "terminal.integrated.rendererType": "dom",
+    "[markdown]": {}
 }
