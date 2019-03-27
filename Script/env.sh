@@ -17,11 +17,21 @@ if [ ! -d "$HOME/.zshrc" ]; then
 fi
 
 # Spacevim
-if [ ! -d "$HOME/.SpaceVim" ]; then
-  curl -sLf https://spacevim.org/install.sh | bash
-  mkdir $HOME/.SpaceVim.d
-  ln -s $SOCIALST/SpaceVim/init.toml $HOME/.SpaceVim.d/init.toml
-  echo "Complete vim Setup!"
+echo "What kinds of vim do you want to use?"
+echo "1. Vim, 2. Spacevim"
+
+read vim
+
+if [ $vim -eq 2 ]; then
+    if [ ! -d "$HOME/.SpaceVim" ]; then
+        curl -sLf https://spacevim.org/install.sh | bash
+        mkdir $HOME/.SpaceVim.d
+        ln -s $SOCIALST/SpaceVim/init.toml $HOME/.SpaceVim.d/init.toml
+        echo "Complete spacevim Setup!"
+    fi
+elif [ $vim -eq 1 ]; then
+    ln -s $SOCIALST/Vim/.vimrc $HOME/.vimrc
+    echo "Complete vim setup!"
 fi
 
 # tmux
