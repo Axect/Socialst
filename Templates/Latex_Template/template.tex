@@ -1,0 +1,120 @@
+\documentclass[final]{IEEEphot}
+
+\usepackage{Socialst}
+\renewcommand{\baselinestretch}{1.2}
+\jvol{xx}
+\jnum{xx}
+\jmonth{May}
+\pubyear{2018}
+
+\begin{document}
+
+\title{Axect's LaTeX Template}
+
+\author{Axect}
+
+\affil{\textbf{M.S.}: Dept of Physics, Yonsei University \\
+\textbf{B.S.}: Dept of Astronomy, Yonsei University }
+
+\maketitle
+
+
+\begin{abstract}
+  Here is abstract
+\end{abstract}
+
+\tableofcontents
+
+\newpage
+
+\section[Introduction]{Introduction}
+
+Definition Template:
+
+\begin{definition}[Measure]
+ Let $(S, \F)$ be measurable space and let $\mu\,:\, \F \rightarrow [0,\infty)$ be a function. $\mu$ is measure on $\F$ if
+
+ i) \[\mu(\emptyset) = 0\]
+
+ ii) $\mu$ is $\sigma$-additive. That is, for disjoint family $\{A_i\}_{i=1}^\infty \in \F, $
+
+ \begin{equation*}
+  \mu\Sbk{\bigcup_{i=1}^\infty A_i} = \sum_{i=1}^\infty \mu(A_i)
+ \end{equation*}
+
+ \HL
+\end{definition}
+
+Property Template :
+
+\begin{property}[Simple function with Indicator function]
+	\label{prop:1}
+	If $\varphi:\chi \rightarrow \R$ is simple function then we can write
+	$$\varphi = \sum_{i=1}^{n}a_iI_{E_i}$$
+	where $\{a_i\}$ is image of $\varphi$ and $E_i = \varphi^{-1}(\{a_i\})$.
+
+	\HL
+\end{property}
+
+Example Template :
+
+\begin{example}[Example of Lebesgue Integral for simple function]
+	$f$ is a simple function given as:
+
+	$$ f =
+	\begin{cases}
+		1 & \text{if} 0 \leq x < 1 \\
+		2 & \text{if} 1 \leq x < 3 \\
+		3 & \text{if} 3 \leq x < 4 \\
+		0 & \text{otherwise}
+	\end{cases}
+	$$
+
+	then find integral of $f$ in $\R$.
+
+	\HL
+\end{example}
+
+Figure Template :
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}{.6\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, height=9.5cm]{simple.png}
+	\end{subfigure}
+	\caption{Simple Function Example}
+\end{figure}
+
+Theorem Template :
+
+\begin{theorem}[Beppo - Levy Theorem]
+	If $f_n \rightarrow f~(mod~\mu)$ in a monotone increasing way then
+	$$\int \lim_{n\rightarrow\infty}f_n d\mu = \lim_{n\rightarrow\infty}\int f_n d\mu$$
+
+	\HL
+\end{theorem}
+
+\begin{theorem}[Fatou's Lemma]
+	Let $(S, \F, \mu)$ be a measure space and $\forall n \in \mathbb{N}$, $f_n : S \rightarrow [0,\infty)$ be measurable function. Then
+	$$\int_S \liminf_{n\rightarrow\infty}f_n d\mu \leq \liminf_{n\rightarrow\infty} \int_S f_n d\mu$$
+
+	\HL
+\end{theorem}
+
+
+%% \ackrule
+
+%\bibliographystyle{IEEEtran}
+%\bibliography{thesis}
+
+%\section*{Biographies}
+
+%\textbf{P. W. Wachulak} received the degree${\ldots}$ \\[6pt]
+%\textbf{M. C. Marconi} received the degree${\ldots}$ \\[6pt]
+%\textbf{R. A. Bartels} received the degree${\ldots}$ \\[6pt]
+%\textbf{C. S. Menoni} received the degree${\ldots}$ \\[6pt]
+%\textbf{J. J. Rocca} received the degree${\ldots}$
+
+
+\end{document}
