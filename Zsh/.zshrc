@@ -280,9 +280,10 @@ md2report() {
 }
 
 
-alias latexinit="git clone https://github.com/Axect/LaTeX_template && mv LaTeX_template/* ./ && rm -rf LaTeX_template"
-alias remarkinit="git clone https://github.com/Axect/Remark_Template && mv Remark_Template/* ./ && rm -rf Remark_Template"
-alias eisvogelinit="git clone https://github.com/Axect/Eisvogel_Template && mv Eisvogel_Template/* ./ && rm -rf Eisvogel_Template"
+alias latexinit="cp $HOME/Socialst/Templates/Latex_Template/* ./"
+alias remarkinit="cp -r $HOME/Socialst/Templates/Remark_Template/* ./"
+alias eisvogelinit="cp $HOME/Socialst/Templates/Eisvogel_Template/template.md ./"
+alias pylabinit="cp $HOME/Socialst/Templates/Pylab_Template/plot.py ./"
 
 javawrapper() {
   export JAVA_HOME=$1; shift
