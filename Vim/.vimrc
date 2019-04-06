@@ -126,6 +126,12 @@ Plug 'scrooloose/nerdtree'
 " Buffer
 Plug 'ap/vim-buftabline'
 
+" Tagbar
+Plug 'majutsushi/tagbar'
+
+" Webapi
+Plug 'mattn/webapi-vim'
+
 call plug#end()
 """""""""""""""""""""""""""""""""
 
@@ -183,12 +189,15 @@ let g:autofmt_autosave = 1
 set hidden
 let g:racer_cmd = "/home/kavis/.cargo/bin/racer/bin"
 let g:completor_racer_binary="/home/kavis/.cargo/bin/racer"
+let g:rust_clip_command = 'xclip -selection clipboard'
 
 " Prolog
 au FileType perl set filetype=prolog
 
 " Buftabline
-set hidden
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<cr>
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
 """""""""""""""""""""""""""""""""
