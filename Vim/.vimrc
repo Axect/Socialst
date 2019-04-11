@@ -1,6 +1,8 @@
 " ------------------------------
 " Basic Setting
 " ------------------------------
+" No swap file
+set noswapfile
 
 " Syntax Highlighting
 if has("syntax")

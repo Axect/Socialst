@@ -104,5 +104,6 @@
     "explorer.confirmDelete": false,
     "editor.snippetSuggestions": "top",
     "terminal.integrated.rendererType": "dom",
-    "[markdown]": {}
+    "[markdown]": {},
+    "liveServer.settings.donotVerifyTags": true
 }

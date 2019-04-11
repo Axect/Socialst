@@ -56,10 +56,10 @@ bindsym $mod+Ctrl+m exec termite -e 'alsamixer'
 
 # Start Applications
 bindsym $mod+Ctrl+b exec termite -e 'bmenu'
-bindsym $mod+F2 exec firefox-nightly
-bindsym $mod+F3 exec pcmanfm
+bindsym $mod+F2 exec google-chrome-stable
+bindsym $mod+F3 exec thunar
 # bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec gksu pcmanfm
+bindsym $mod+Shift+F3 exec gksu thunar
 bindsym $mod+F5 exec termite -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
@@ -287,7 +287,7 @@ exec --no-startup-id insync start
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 20 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
