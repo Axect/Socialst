@@ -4,11 +4,11 @@ sudo pamac install uim texlive-most texlive-lang tk gcc-fortran r jupyter-notebo
   julia sagemath dlang pandoc\
   zsh-history-substring-search zsh-autosuggestions\
   cmus filezilla easytag youtube-dl
-sudo pamac install sagemath-jupyter
+sudo pamac install sagemath-jupyter dropbox flameshot eog google-chrome
   
 # AUR
 pamac build slack-desktop grive ttf-nanum mailspring\
-  rstudio-desktop-bin visual-studio-code-bin
+  rstudio-desktop-bin acroread
 
 # Rust
 curl https://sh.rustup.rs -sSf | sh
