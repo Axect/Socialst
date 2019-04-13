@@ -1,6 +1,7 @@
 #!/bin/sh
 PROGRAMMING="$HOME/Documents/Programming"
 PROJECT="$HOME/Documents/Project"
+TEMPLATE="$HOME/Documents/Template"
 AXECT="https://github.com/Axect/"
 
 if [ ! -d "$PROGRAMMING" ]; then
@@ -99,4 +100,11 @@ if [ ! -d "$PROJECT" ]; then
   cd "$PROJECT"
 fi
 
-
+if [ ! -d "$TEMPLATE" ]; then
+    mkdir $TEMPLATE
+    cd $TEMPLATE
+    git clone "${AXECT}Eisvogel_Template"
+    git clone "${AXECT}Latex_Template"
+    git clone "${AXECT}Remark_Template"
+    cd "$HOME/Documents"
+fi
