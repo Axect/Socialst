@@ -42,18 +42,6 @@ function zsrc() {
 }
 [[ ! -e ${ZDOTDIR:-$HOME}/.zshrc.zwc ]] && zsrc &>/dev/null
 
-# aliases
-alias l='ls'
-alias la='ls -A'
-alias ll='ls -lA'
-alias ls='ls --color=auto'
-alias upd='sudo pacman -Syyu'
-alias pac='sudo pacman --color auto'
-alias merge='xrdb -merge ~/.Xresources'
-alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias mirrors='sudo reflector --score 100 --fastest 25 \
-    --sort rate --save /etc/pacman.d/mirrorlist --verbose'
-
 #al-info
 
 EDITOR="vim"
@@ -100,12 +88,6 @@ bindkey '^[[1;5C' forward-word                                  #
 bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
-## Alias section 
-alias cp="cp -i"                                                # Confirm before overwriting something
-alias df='df -h'                                                # Human-readable sizes
-alias free='free -m'                                            # Show sizes in MB
-alias gitu='git add . && git commit && git push'
-
 # Theming section  
 autoload -U compinit colors zcalc
 compinit -d
@@ -119,7 +101,7 @@ setopt prompt_subst
 # Maia prompt
 PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b " # Print some system information when the shell is first started
 # Print a greeting message when shell is started
-echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
+#echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
 ## Prompt on right side:
 #  - shows status of git when in git repository (code adapted from https://techanic.net/2012/12/30/my_git_prompt_for_zsh.html)
 #  - shows exit status of previous command (if previous command finished with an error)
@@ -181,23 +163,6 @@ git_prompt_string() {
   [ ! -n "$git_where" ] && echo "%{$fg[red]%} %(?..[%?])"
 }
 
-# Right prompt with exit status of previous command if not successful
- #RPROMPT="%{$fg[red]%} %(?..[%?])" 
-# Right prompt with exit status of previous command marked with ✓ or ✗
- #RPROMPT="%(?.%{$fg[green]%}✓ %{$reset_color%}.%{$fg[red]%}✗ %{$reset_color%})"
-
-
-# Color man pages
-#export LESS_TERMCAP_mb=$'\E[01;32m'
-#export LESS_TERMCAP_md=$'\E[01;32m'
-#export LESS_TERMCAP_me=$'\E[0m'
-#export LESS_TERMCAP_se=$'\E[0m'
-#export LESS_TERMCAP_so=$'\E[01;47;34m'
-#export LESS_TERMCAP_ue=$'\E[0m'
-#export LESS_TERMCAP_us=$'\E[01;36m'
-#export LESS=-r
-
-
 ## Plugins section: Enable fish style features
 # Use syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -243,11 +208,38 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
     ;;
 esac
 
+# ==============================================================================
+# Aliases
+# ==============================================================================
+alias l='ls'
+alias la='ls -A'
+alias ll='ls -lA'
+alias ls='ls --color=auto'
+alias upd='sudo pacman -Syyu'
+alias pac='sudo pacman --color auto'
+alias merge='xrdb -merge ~/.Xresources'
+alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias mirrors='sudo reflector --score 100 --fastest 25 \
+    --sort rate --save /etc/pacman.d/mirrorlist --verbose'
+alias cp="cp -i"                                                # Confirm before overwriting something
+alias df='df -h'                                                # Human-readable sizes
+alias free='free -m'                                            # Show sizes in MB
+alias SSHFORWARDLIST="ps aux | grep ssh"
 
+# Git
+alias gaa="git add --all"
+gcam() {
+  git commit -am $1
+}
+alias gp="git push"
+alias gitu='git add . && git commit && git push'
+
+# ==============================================================================
+# Environment
+# ==============================================================================
 #export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 #export SPARK_HOME="$HOME/zbin/spark-2.3.0-bin-hadoop2.7/"
-export CHPL_HOME="$HOME/zbin/chapel-1.18.0"
-
+#export CHPL_HOME="$HOME/zbin/chapel-1.18.0"
 export PATH="$PATH:$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 #export PATH="$PATH:$SPARK_HOME/bin"
@@ -259,44 +251,33 @@ export PATH="$PATH:$CHPL_HOME/bin/linux64"
 export PATH="$PATH:$CHPL_HOME/util"
 export PATH="$PATH:/usr/lib64/openmpi/bin/"
 export PATH="$PATH:$HOME/go/bin/"
-export PATH="$PATH:$HOME/.pub-cache/bin"
-export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin/"
+#export PATH="$PATH:$HOME/.pub-cache/bin"
+#export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin/"
+#export MANPATH="$MANPATH:$CHPL_HOME/man"
+#export CARP_DIR="$HOME/zbin/Carp"
 
-export MANPATH="$MANPATH:$CHPL_HOME/man"
-
-export CARP_DIR="$HOME/zbin/Carp"
-
-alias HNumeric="cd /home/kavis/Documents/Project/Haskell_Project/HNumeric/"
-export DNUM="$HOME/Documents/Project/D_Project/DNumeric/"
-
-alias SSHFORWARDLIST="ps aux | grep ssh"
-
-md2book() {
-  pandoc $1.md -o $1.pdf --from markdown --template eisvogel --listings --top-level-division=chapter
-}
-
-md2report() {
-  pandoc $1.md -o $1.pdf --from markdown --template eisvogel --listings
-}
-
-
+# ==============================================================================
+# Templates
+# ==============================================================================
 alias latexinit="cp $HOME/Socialst/Templates/Latex_Template/* ./"
 alias remarkinit="cp -r $HOME/Socialst/Templates/Remark_Template/* ./"
 alias eisvogelinit="cp $HOME/Socialst/Templates/Eisvogel_Template/template.md ./"
 alias pylabinit="cp $HOME/Socialst/Templates/Pylab_Template/plot.py ./"
 
+# ==============================================================================
+# Eisvogel
+# ==============================================================================
+md2book() {
+  pandoc $1.md -o $1.pdf --from markdown --template eisvogel --listings --top-level-division=chapter
+}
+md2report() {
+  pandoc $1.md -o $1.pdf --from markdown --template eisvogel --listings
+}
+
 javawrapper() {
   export JAVA_HOME=$1; shift
   PATH=${JAVA_HOME}/bin:$PATH
 }
-
-alias gaa="git add --all"
-gcam() {
-  git commit -am $1
-}
-alias gp="git push"
-
-export TERMINAL="/usr/bin/hyper"
 
 chpllin() {
   chpl --set blasImpl=none --set lapackImpl=none -O -o bin/$1 $1.chpl
@@ -307,8 +288,3 @@ if [ -f /home/kavis/.tnsrc ]; then
     source /home/kavis/.tnsrc 
 fi
 ###-tns-completion-end-###
-
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /home/kavis/.npm-global/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/kavis/.npm-global/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

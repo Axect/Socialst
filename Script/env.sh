@@ -9,11 +9,29 @@ if [ ! -d "$SOCIALST" ]; then
 fi
 
 # zshrc
-if [ ! -d "$HOME/.zshrc" ]; then
- #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
- chsh -s `which zsh`
- ln -s $SOCIALST/Zsh/.zshrc $HOME/.zshrc
- echo "Complete zsh Setup!"
+echo "What kinds of zsh do you want to use?"
+echo "1. Custom zsh, 2. oh-my-zsh"
+
+read choose_zsh
+
+if [ $choose_zsh -eq 1 ]; then
+    if [ ! -d "$HOME/.zshrc" ]; then
+        echo "Create .zshrc file"
+    elif [ -d "$HOME/.zshrc" ]; then
+        echo "Backup original .zshrc to .zshrc.old"
+        mv $HOME/.zshrc $HOME/.zshrc.old
+    fi
+    ln -s $SOCIALST/Zsh/.zshrc $HOME/.zshrc
+    chsh -s `which zsh`
+    echo "Complete zsh Setup!"
+elif [ $choose_zsh -eq 2 ]; then
+    if [ -d "$HOME/.zshrc" ]; then
+        echo "Backup original .zshrc to .zshrc.old"
+        mv $HOME/.zshrc $HOME/.zshrc.old
+    fi
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    ln -s $SOCIALST/Zsh/ohmyzshrc $HOME/.zshrc
+    echo "Complete zsh Setup!"
 fi
 
 # Spacevim
@@ -71,6 +89,18 @@ if [ ! -d "$HOME/.config/Code/User/snippets/socialst.code-snippets" ]; then
   ln -s $SOCIALST/Code/socialst.code-snippets $HOME/.config/Code/User/snippets/socialst.code-snippets
 fi
 
-if [ ! -d "$HOME/.xprofile" ]; then
-  ln -s $SOCIALST/UIM/xprofile $HOME/.xprofile
+# Xprofile
+echo "What kinds of input method do you want to use?"
+echo "1. ibus, 2. uim"
+
+read input_method
+
+if [ $input_method -eq 1 ]; then
+    if [ ! -d "$HOME/.xprofile" ]; then
+        ln -s $SOCIALST/IBUS/xprofile $HOME/.xprofile
+    fi
+elif [ $input_method -eq 2 ]; then
+    if [ ! -d "$HOME/.xprofile" ]; then
+        ln -s $SOCIASLT/UIM/xprofile $HOME/.xprofile
+    fi
 fi

@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="bureau"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -68,38 +68,42 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 neofetch
 
 EDITOR=vim
 
+# ==============================================================================
+# Aliases
+# ==============================================================================
+alias l='ls'
+alias la='ls -A'
+alias ll='ls -lA'
+alias ls='ls --color=auto'
+alias upd='sudo pacman -Syyu'
+alias pac='sudo pacman --color auto'
+alias merge='xrdb -merge ~/.Xresources'
+alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias mirrors='sudo reflector --score 100 --fastest 25 \
+    --sort rate --save /etc/pacman.d/mirrorlist --verbose'
+alias cp="cp -i"                                                # Confirm before overwriting something
+alias df='df -h'                                                # Human-readable sizes
+alias free='free -m'                                            # Show sizes in MB
+alias SSHFORWARDLIST="ps aux | grep ssh"
+
+# Git
+alias gaa="git add --all"
+gcam() {
+  git commit -am $1
+}
+alias gp="git push"
+alias gitu='git add . && git commit && git push'
+
+# ==============================================================================
+# Environment
+# ==============================================================================
 #export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 #export SPARK_HOME="$HOME/zbin/spark-2.3.0-bin-hadoop2.7/"
-export CHPL_HOME="$HOME/zbin/chapel-1.17.1"
-
+#export CHPL_HOME="$HOME/zbin/chapel-1.18.0"
 export PATH="$PATH:$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 #export PATH="$PATH:$SPARK_HOME/bin"
@@ -110,23 +114,42 @@ export PATH="$PATH:$HOME/.nimble/bin"
 export PATH="$PATH:$CHPL_HOME/bin/linux64"
 export PATH="$PATH:$CHPL_HOME/util"
 export PATH="$PATH:/usr/lib64/openmpi/bin/"
+export PATH="$PATH:$HOME/go/bin/"
+#export PATH="$PATH:$HOME/.pub-cache/bin"
+#export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin/"
+#export MANPATH="$MANPATH:$CHPL_HOME/man"
+#export CARP_DIR="$HOME/zbin/Carp"
 
-export MANPATH="$MANPATH:$CHPL_HOME/man"
+# ==============================================================================
+# Templates
+# ==============================================================================
+alias latexinit="cp $HOME/Socialst/Templates/Latex_Template/* ./"
+alias remarkinit="cp -r $HOME/Socialst/Templates/Remark_Template/* ./"
+alias eisvogelinit="cp $HOME/Socialst/Templates/Eisvogel_Template/template.md ./"
+alias pylabinit="cp $HOME/Socialst/Templates/Pylab_Template/plot.py ./"
 
-alias HNumeric="cd /home/kavis/Documents/Project/Haskell_Project/HNumeric/"
-export DNUM="$HOME/Documents/Project/D_Project/DNumeric/"
-
-alias SSHFORWARDLIST="ps aux | grep ssh"
-
-md2pdf() {
+# ==============================================================================
+# Eisvogel
+# ==============================================================================
+md2book() {
   pandoc $1.md -o $1.pdf --from markdown --template eisvogel --listings --top-level-division=chapter
 }
+md2report() {
+  pandoc $1.md -o $1.pdf --from markdown --template eisvogel --listings
+}
 
-alias latexinit="git clone https://github.com/Axect/LaTeX_template && mv LaTeX_template/* ./ && rm -rf LaTeX_template"
-alias remarkinit="git clone https://github.com/Axect/Remark_Template && mv Remark_Template/* ./ && rm -rf Remark_Template"
-alias eisvogelinit="git clone https://github.com/Axect/Eisvogel_Template && mv Eisvogel_Template/* ./ && rm -rf Eisvogel_Template"
 
 javawrapper() {
   export JAVA_HOME=$1; shift
   PATH=${JAVA_HOME}/bin:$PATH
 }
+
+chpllin() {
+  chpl --set blasImpl=none --set lapackImpl=none -O -o bin/$1 $1.chpl
+}
+
+###-tns-completion-start-###
+if [ -f $HOME/.tnsrc ]; then 
+    source $HOME/.tnsrc 
+fi
+###-tns-completion-end-###
