@@ -12,7 +12,7 @@ yay -S --noconfirm --needed \
 echo "Do you want to install common programs in Official Repo? [y/n]"
 read common
 
-if [ $common -eq "y" ]; then
+if [ $common = "y" ]; then
     echo "Install common programs"
     yay -S --noconfirm --needed \
         uim \
@@ -22,7 +22,7 @@ if [ $common -eq "y" ]; then
         easytag \
         flameshot \
         shotwell
-elif [ $common -eq "n" ]; then
+elif [ $common = "n" ]; then
     echo "Skip common programs"
 fi
   
@@ -30,13 +30,13 @@ fi
 echo "Do you want to install common programs in AUR> [y/n]"
 read aur
 
-if [ $aur -eq "y" ]; then
+if [ $aur = "y" ]; then
     yay -S --noconfirm --needed \
         slack-desktop grive ttf-nanum \
         acroread \
         hiri \
         insync
-elif [ $aur -eq "n" ]; then
+elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
 
