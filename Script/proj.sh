@@ -65,8 +65,7 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}Peroxide"
   git clone "${AXECT}Bench"
   git clone "${AXECT}Music_Tournament"
-  git clone "${AXECT}RGE_Peroxide"
-  git clone "${AXECT}Example_Peroxide"
+  git clone "${AXECT}Peroxide_Gitbook"
 
   cd "$PROJECT/Go_Project"
   git clone "${AXECT}RGE"
@@ -87,6 +86,8 @@ if [ ! -d "$PROJECT" ]; then
 
   cd "$PROJECT/Study"
   git clone "${AXECT}Physics2018"
+  git clone "${AXECT}Grad2019"
+  git clone "${AXECT}Physics2019"
   
   cd "$PROJECT/Machine_Learning"
   git clone "${AXECT}ML_Project"
