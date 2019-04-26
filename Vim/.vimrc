@@ -4,6 +4,8 @@
 " No swap file
 set noswapfile
 
+set clipboard=unnamedplus
+
 " Syntax Highlighting
 if has("syntax")
     syntax on
