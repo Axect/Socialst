@@ -3,7 +3,7 @@
 echo "Install Necessary programs"
 yay -S --noconfirm --needed \
     texlive-most texlive-lang tk gcc-fortran r jupyter-notebook \
-    python-pip python-numpy python-scipy python-matplotlib npm zathura-ps zathura-pdf-poppler zathura-djvu zathura-cb \
+    python-pip python-numpy python-scipy python-matplotlib npm \
     julia sagemath dlang pandoc pandoc-citeproc \
     zsh-history-substring-search zsh-autosuggestions lsb-release \
     youtube-dl sagemath-jupyter fd\
@@ -33,9 +33,8 @@ read aur
 if [ $aur = "y" ]; then
     yay -S --noconfirm --needed \
         slack-desktop grive ttf-nanum \
-        acroread \
         hiri \
-        insync
+        pcloud-drive
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
