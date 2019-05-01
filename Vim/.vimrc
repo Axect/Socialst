@@ -4,6 +4,7 @@
 " No swap file
 set noswapfile
 
+" Set clipboard
 set clipboard=unnamedplus
 
 " Syntax Highlighting

@@ -208,7 +208,7 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
     ;;
 esac
 
-export TERMINAL="/usr/bin/alacritty"
+export TERMINAL="/usr/bin/gnome-terminal"
 
 # ==============================================================================
 # Aliases

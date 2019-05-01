@@ -32,9 +32,10 @@ read aur
 
 if [ $aur = "y" ]; then
     yay -S --noconfirm --needed \
-        slack-desktop grive ttf-nanum \
+        slack-desktop ttf-nanum \
         hiri \
-        pcloud-drive
+        pcloud-drive \
+        youtube-dl-gui-git
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
