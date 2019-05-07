@@ -27,7 +27,7 @@ elif [ $common = "n" ]; then
 fi
   
 # AUR
-echo "Do you want to install common programs in AUR> [y/n]"
+echo "Do you want to install common programs in AUR? [y/n]"
 read aur
 
 if [ $aur = "y" ]; then
@@ -38,6 +38,18 @@ if [ $aur = "y" ]; then
         youtube-dl-gui-git
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
+fi
+
+
+# MATLAB
+echo "Do you want to install matlab jupyter kernel? [y/n]"
+read mlab
+
+if [ $mlab = "y" ]; then
+    echo "Install matlab jupyter kernel..."
+    yay -S --noconfirm --needed \
+        matlab-engine-for-python
+    pip install --user matlab_kernel
 fi
 
 # Rust
