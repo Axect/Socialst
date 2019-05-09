@@ -33,6 +33,8 @@ set tabstop=4
 
 let base16colorspace=256
 
+vmap r "_dP
+
 " -------------------------------
 " Plug Management
 " -------------------------------
