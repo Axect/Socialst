@@ -6,19 +6,35 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
 @import url('https://fonts.googleapis.com/css?family=Caveat');
 @import url('https://fonts.googleapis.com/css?family=Kalam');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Economica');
+
+@font-face{
+    font-family:"Bebas Neue W01 Regular";
+    src:url("bebas_neue/Fonts/1444649/3d9ec9a9-76a2-4cfe-b376-76e7340c3b50.eot?#iefix");
+    src:url("bebas_neue/Fonts/1444649/3d9ec9a9-76a2-4cfe-b376-76e7340c3b50.eot?#iefix") format("eot"),url("bebas_neue/Fonts/1444649/e0d6f852-5401-4bbf-9672-47a50c5c87c6.woff2") format("woff2"),url("Fonts/1444649/7fedd582-6ae3-4850-be2f-4acae2e74fa5.woff") format("woff"),url("Fonts/1444649/d6e08ef3-40db-4ac3-82df-f062f55a72f5.ttf") format("truetype");
+}
 
 body { 
-    font-family: 'Kalam'; 
+    font-family: 'Slabo 27px'; 
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Caveat';
+  font-family: 'Righteous';
   font-weight: normal;
   text-shadow: 1px 2px 2px grey;
 }
 
 .remark-code, .remark-inline-code { 
     font-family: 'Ubuntu Mono'; 
+}
+
+.remark-slide-number {
+  font-size: 12pt;
+  margin-bottom: 12px;
+  margin-right: 10px;
+  color: #555555; /* white */
+  opacity: 0.7; /* default: 0.5 */
 }
 
 #tab01 {
@@ -68,7 +84,7 @@ div.my-header {
 div.my-header p {
     top: -7px;
     position: relative;
-    font-family: 'EB Garamond';
+    font-family: 'Caveat';
     font-size: 10pt;
     color: white;
     margin-right:10px;
@@ -91,10 +107,10 @@ div.my-footer {
 
 div.my-footer p {
     font-size: 10pt;
-    font-family: 'EB Garamond';
+    font-family: 'Caveat';
     color: white;
     position: relative;
-    bottom: 11px;
+    bottom: 12px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -105,4 +121,75 @@ div.my-footer p {
 
 .align_right {
     float: right;
+}
+
+
+/* ========================================================================== */
+/* Multi Column */
+/* ========================================================================== */
+
+.left-column {float:left}
+.right-column {float:right}
+
+.split-30 .left-column {width: 30%}
+.split-30 .right-column {width: 70%}
+.split-40 .left-column {width: 40%}
+.split-40 .right-column {width: 60%}
+.split-50 .left-column {width: 50%}
+.split-50 .right-column {width: 50%}
+.split-60 .left-column {width: 60%}
+.split-60 .right-column {width: 40%}
+.split-70 .left-column {width: 70%}
+.split-70 .right-column {width: 30%}
+
+/* ========================================================================== */
+/*  Box Shadow */
+/* ========================================================================== */
+
+#boxshadow {
+  position: relative;
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  padding: 10px;
+  background: white;
+}
+
+/* Make the image fit the box */
+#boxshadow img {
+  width: 100%;
+  /* border: 1px solid #8a4419;
+  border-style: inset; */
+}
+
+#boxshadow::after {
+  content: '';
+  position: absolute;
+  z-index: -1; /* hide shadow behind image */
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);        
+  width: 70%; 
+  left: 15%; /* one half of the remaining 30% */
+  height: 100px;
+  bottom: 0;
+}
+
+.small-font {
+    font-size: 10pt;
+}
+
+@page {
+  size: 1024px 768px;
+  margin: 0;
+}
+
+@media print {
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
 }
