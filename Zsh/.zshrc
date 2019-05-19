@@ -249,7 +249,7 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.sage/local/bin"
 export PATH="$PATH:$HOME/.npm-global/bin"
 export PATH="$PATH:$HOME/.nimble/bin"
-export PATH="$PATH:$CHPL_HOME/bin/linux64"
+export PATH="$PATH:$CHPL_HOME/bin/linux64-x86_64"
 export PATH="$PATH:$CHPL_HOME/util"
 export PATH="$PATH:/usr/lib64/openmpi/bin/"
 export PATH="$PATH:$HOME/go/bin/"
@@ -282,7 +282,7 @@ javawrapper() {
 }
 
 chpllin() {
-  chpl --set blasImpl=none --set lapackImpl=none -O -o bin/$1 $1.chpl
+  chpl -O -o bin/$1 $1.chpl
 }
 
 ###-tns-completion-start-###

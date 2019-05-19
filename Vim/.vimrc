@@ -71,6 +71,9 @@ Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 
+" Chapel
+Plug '~/zbin/chapel-1.19.0/highlight/vim'
+
 " Interface
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'

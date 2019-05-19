@@ -6,7 +6,7 @@ yay -S --noconfirm --needed \
     python-pip python-numpy python-scipy python-matplotlib npm \
     julia sagemath dlang pandoc pandoc-citeproc \
     zsh-history-substring-search zsh-autosuggestions lsb-release \
-    youtube-dl sagemath-jupyter fd\
+    youtube-dl sagemath-jupyter fd tree\
 
 ## Common Programs
 echo "Do you want to install common programs in Official Repo? [y/n]"
@@ -39,7 +39,6 @@ if [ $aur = "y" ]; then
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
-
 
 # MATLAB
 echo "Do you want to install matlab jupyter kernel? [y/n]"
