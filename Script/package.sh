@@ -5,8 +5,10 @@ yay -S --noconfirm --needed \
     texlive-most texlive-lang tk gcc-fortran r jupyter-notebook \
     python-pip python-numpy python-scipy python-matplotlib npm \
     julia sagemath dlang pandoc pandoc-citeproc \
-    zsh-history-substring-search zsh-autosuggestions lsb-release \
+    zsh-history-substring-search zsh-autosuggestions \
     youtube-dl sagemath-jupyter fd tree\
+    ttf-fira-code ttf-ubuntu-font-family\
+    la-capitane-icon-theme
 
 ## Common Programs
 echo "Do you want to install common programs in Official Repo? [y/n]"
@@ -56,7 +58,8 @@ if [ $aur = "y" ]; then
         slack-desktop ttf-nanum \
         hiri \
         pcloud-drive \
-        youtube-dl-gui-git
+        youtube-dl-gui-git \
+        gnome-terminal-transparency
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
