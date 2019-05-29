@@ -14,7 +14,7 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
     "editor.fontWeight": "500",
-    "editor.autoClosingBrackets": true,
+    "editor.autoClosingBrackets": "languageDefined",
     // "workbench.colorCustomizations": {
     //     "activityBar.foreground": "#10c4ed",
     //     "badge.background": "#10c4ed",
@@ -44,7 +44,7 @@
     },
     "window.menuBarVisibility": "toggle",
     "material-icon-theme.showUpdateMessage": false,
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Atom One Dark",
     "git.autofetch": true,
     // Better Align
     "alignment.operatorPadding": "right",
