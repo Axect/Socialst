@@ -28,6 +28,27 @@ elif [ $common = "n" ]; then
     echo "Skip common programs"
 fi
   
+# HEP
+echo "Do you want to install High energy physics related programs? [y/n]"
+read hep
+
+if [ $common = "y" ]; then
+    echo "Install HEP programs"
+    yay -S --noconfirm --needed \
+        root \
+        hepmc \
+        fastjet \
+        pythia8 \
+        cern-vdt \
+        lhapdf
+elif [ $common = "n" ]; then
+    echo "Skip hep programs"
+fi
+
+echo "Install ROOT jupyter kernel.."
+cp -r $HOME/.rootnb/kernels/root $HOME/.local/share/jupyter/kernels/./
+echo "Successfully installed!"
+
 # AUR
 echo "Do you want to install common programs in AUR? [y/n]"
 read aur

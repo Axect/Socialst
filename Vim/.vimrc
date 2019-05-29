@@ -40,6 +40,9 @@ vmap r "_dP
 " -------------------------------
 call plug#begin('~/.vim/plugged')
 
+" C++
+Plug 'WolfgangMehner/c-support'
+
 " Haskell
 Plug 'enomsg/vim-haskellconcealplus'
 Plug 'neovimhaskell/haskell-vim'
