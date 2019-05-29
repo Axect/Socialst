@@ -79,6 +79,7 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}FP-Lecture"
   git clone "${AXECT}THLecture"
   git clone "${AXECT}QFT2018"
+  git clone "${AXECT}Cpp_Lecture"
 
   cd "$PROJECT/Server"
   git clone "${AXECT}HEP_Web_Django"
