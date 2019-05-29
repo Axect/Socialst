@@ -44,7 +44,7 @@
     },
     "window.menuBarVisibility": "toggle",
     "material-icon-theme.showUpdateMessage": false,
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "One Dark Pro",
     "git.autofetch": true,
     // Better Align
     "alignment.operatorPadding": "right",
