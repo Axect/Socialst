@@ -41,7 +41,7 @@ vmap r "_dP
 call plug#begin('~/.vim/plugged')
 
 " C++
-Plug 'WolfgangMehner/c-support'
+Plug 'kracejic/snippetinabox.vim'
 
 " Haskell
 Plug 'enomsg/vim-haskellconcealplus'

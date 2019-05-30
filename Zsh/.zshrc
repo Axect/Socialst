@@ -290,3 +290,5 @@ if [ -f /home/kavis/.tnsrc ]; then
     source /home/kavis/.tnsrc 
 fi
 ###-tns-completion-end-###
+
+. /opt/miniconda3/etc/profile.d/conda.sh
