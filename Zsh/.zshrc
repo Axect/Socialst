@@ -292,3 +292,8 @@ fi
 ###-tns-completion-end-###
 
 . /opt/miniconda3/etc/profile.d/conda.sh
+
+# ==============================================================================
+# SSH Portforwarding
+# ==============================================================================
+alias eleden_jupyter="ssh -N -f -L localhost:8407:localhost:8407 kavis@Eleden"
