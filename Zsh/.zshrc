@@ -258,6 +258,15 @@ export PATH="$PATH:$HOME/go/bin/"
 export MANPATH="$MANPATH:$CHPL_HOME/man"
 #export CARP_DIR="$HOME/zbin/Carp"
 
+
+# ==============================================================================
+# HEP
+# ==============================================================================
+export ROOTSYS=/usr
+export PATH=$PATH:$ROOTSYS/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROOTSYS/lib
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ROOTSYS/lib
+
 # ==============================================================================
 # Templates
 # ==============================================================================
