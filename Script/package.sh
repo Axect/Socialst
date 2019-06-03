@@ -23,7 +23,8 @@ if [ $common = "y" ]; then
         filezilla \
         easytag \
         flameshot \
-        shotwell
+        shotwell \
+        pdfsam gscan2pdf
 elif [ $common = "n" ]; then
     echo "Skip common programs"
 fi
@@ -59,7 +60,8 @@ if [ $aur = "y" ]; then
         hiri \
         pcloud-drive \
         youtube-dl-gui-git \
-        gnome-terminal-transparency
+        gnome-terminal-transparency \
+        masterpdfeditor
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
