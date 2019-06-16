@@ -16,17 +16,32 @@ Environment Settings for below programs :
 * zsh
 * Oh-my-zsh
 * Npm
-* Nix
 * Java
-* Go
 * Chapel
 * Rust
 * Haskell
 * Nim
 * Stack
 * fzf
-* Neovim
-* Nix
+* Heptools
+    * ROOT
+* miniconda
+
+And there are auto template generators
+
+* `latexinit` : Latex template
+* `remarkinit` : RemarkJS template
+* `eisvogelinit` : Eisvogel template
+* `pylabinit` : Matplotlib template
+
+There are useful aliases for Arch linux
+
+* `upd` : `sudo pacman -Syyu`
+* `pac` : `sudo pacman --color auto`
+* `mirrors` : `sudo reflector --score 100 --fastest 25 --sort rate --save /etc/pacman.d/mirrorlist --verbose`
+* `cp` : `cp -i`
+* `df` : `df -h`
+* `ls` : `ls -lA`
 
 ### LaTeX
 
@@ -104,4 +119,5 @@ source ~/.zshrc
 1. Go to Folder
 2. `eisvogelinit`
 3. Change file name (template.md to other)
-4. `md2pdf file_name` (no .md needed)
+4. `md2report file_name` (no .md needed)
+    * or `md2book file_name` : Book scheme
