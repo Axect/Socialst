@@ -13,7 +13,7 @@ plt.rc('font', family='serif')
 # Plot
 plt.figure(figsize=(10,6), dpi=300)
 plt.title(r"Title", fontsize=16)
-plt.xlabel(r'$x', fontsize=14)
+plt.xlabel(r'$x$', fontsize=14)
 plt.ylabel(r'$y$', fontsize=14)
 
 x = data[0]
