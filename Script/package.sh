@@ -8,7 +8,8 @@ yay -S --noconfirm --needed \
     zsh-history-substring-search zsh-autosuggestions \
     youtube-dl sagemath-jupyter fd tree\
     ttf-fira-code ttf-ubuntu-font-family\
-    la-capitane-icon-theme
+    la-capitane-icon-theme \
+    open-vm-tools
 
 ## Common Programs
 echo "Do you want to install common programs in Official Repo? [y/n]"
@@ -61,7 +62,8 @@ if [ $aur = "y" ]; then
         pcloud-drive \
         youtube-dl-gui-git \
         gnome-terminal-transparency \
-        masterpdfeditor
+        masterpdfeditor \
+        vmware-workstation
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
