@@ -284,6 +284,9 @@ md2book() {
 md2report() {
   pandoc $1.md -o $1.pdf --from markdown --template eisvogel --listings
 }
+md2pdf() {
+    pandoc $1.md -o PDF/$1.pdf --from markdown --template eisvogel --listings
+}
 
 javawrapper() {
   export JAVA_HOME=$1; shift
