@@ -7,6 +7,11 @@
 @import url('https://fonts.googleapis.com/css?family=Economica');
 @import url('https://fonts.googleapis.com/css?family=Lora');
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=East+Sea+Dokdo');
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+@import url('https://fonts.googleapis.com/css?family=Song+Myung');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR');
+@import url('https://fonts.googleapis.com/css?family=Gugi');
 
 html {
 	font-size: 19px;
@@ -17,7 +22,7 @@ html, body {
 	background: #fefefe;
 }
 body {
-	font-family: "Fira Sans";
+	font-family: "Fira Sans", "Noto Serif KR";
 	color: #333;
 	line-height: 1.4;
 	text-align: justify;
@@ -51,15 +56,18 @@ h2 {
 
 h3 {
 	font-weight: normal;
-	font-style: italic;
 	margin-top: 3em;
 }
 
 h1, 
 h2, 
 h3{
-	text-align: center;
-	font-family: "Righteous";
+	font-family: "Righteous", "Do Hyeon";
+}
+
+h1,
+h2 {
+ text-align: center;
 }
 
 h2:after{
