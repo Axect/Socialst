@@ -1,6 +1,6 @@
 # Official Repository
 ## Necessary
-echo "Install Necessary programs"
+echo "Install Necessary programs for CLI environment"
 yay -S --noconfirm --needed \
     texlive-most texlive-lang tk gcc-fortran r jupyter-notebook \
     python-pip python-numpy python-scipy python-matplotlib npm \
@@ -10,6 +10,18 @@ yay -S --noconfirm --needed \
     ttf-fira-code ttf-ubuntu-font-family\
     la-capitane-icon-theme \
     open-vm-tools
+
+echo "Do you want to install packages for Linux laptop?"
+read laptop
+
+if [ $laptop = "y" ]; then
+    echo "Install packages for laptop"
+    yay -S --noconfirm --needed \
+        la-capitane-icon-theme \
+        open-vm-tools
+elif [ $laptop = "n" ]; then
+    echo "Skip laptop packages"
+fi
 
 ## Common Programs
 echo "Do you want to install common programs in Official Repo? [y/n]"
@@ -24,7 +36,7 @@ if [ $common = "y" ]; then
         filezilla \
         easytag \
         flameshot \
-        shotwell \
+        eog \
         pdfsam gscan2pdf
 elif [ $common = "n" ]; then
     echo "Skip common programs"

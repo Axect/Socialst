@@ -44,12 +44,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'kracejic/snippetinabox.vim'
 
 " Haskell
-Plug 'enomsg/vim-haskellconcealplus'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'vim-syntastic/syntastic'
-Plug 'itchyny/vim-haskell-indent'
-Plug 'mpickering/hlint-refactor-vim'
-Plug 'lspitzner/brittany'
+"Plug 'enomsg/vim-haskellconcealplus'
+"Plug 'neovimhaskell/haskell-vim'
+"Plug 'vim-syntastic/syntastic'
+"Plug 'itchyny/vim-haskell-indent'
+"Plug 'mpickering/hlint-refactor-vim'
+"Plug 'lspitzner/brittany'
 
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
@@ -65,7 +65,7 @@ Plug 'iamcco/markdown-preview.vim'
 Plug 'vim-scripts/indentpython.vim'
 
 " Prolog
-Plug 'adimit/prolog.vim'
+"Plug 'adimit/prolog.vim'
 
 " Go
 Plug 'fatih/vim-go'
