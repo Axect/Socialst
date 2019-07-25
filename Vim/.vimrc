@@ -35,6 +35,7 @@ let base16colorspace=256
 
 vmap r "_dP
 
+
 " -------------------------------
 " Plug Management
 " -------------------------------
@@ -216,4 +217,6 @@ nnoremap <C-P> :bprev<cr>
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
+
+hi Normal guibg=NONE ctermbg=NONE
 """""""""""""""""""""""""""""""""

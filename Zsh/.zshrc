@@ -311,3 +311,5 @@ fi
 alias eleden_jupyter="ssh -N -f -L localhost:8407:localhost:8407 kavis@Eleden"
 
 alias perox_doc="RUSTDOCFLAGS='--html-in-header katex-header.html' cargo doc --no-deps"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
