@@ -41,6 +41,7 @@ if [ ! -d "$PROJECT" ]; then
   mkdir "Lectures"
   mkdir "Server"
   mkdir "Study"
+  mkdir "Research"
   mkdir "Machine_Learning"
   mkdir "R_Project"
   mkdir "Nim_Project"
@@ -89,7 +90,10 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}Physics2018"
   git clone "${AXECT}Grad2019"
   git clone "${AXECT}Physics2019"
-  
+
+  cd "$PROJECT/Research"
+  git clone "${AXECT}NSCool"
+
   cd "$PROJECT/Machine_Learning"
   git clone "${AXECT}ML_Project"
 
