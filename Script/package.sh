@@ -74,7 +74,7 @@ if [ $aur = "y" ]; then
         gnome-terminal-transparency \
         masterpdfeditor \
         vmware-workstation \
-        typora
+        typora miniconda3
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
