@@ -35,7 +35,7 @@ if [ $common = "y" ]; then
         easytag \
         flameshot \
         eog \
-        pdfsam gscan2pdf
+        pdfsam gscan2pdf \
 elif [ $common = "n" ]; then
     echo "Skip common programs"
 fi
@@ -73,7 +73,8 @@ if [ $aur = "y" ]; then
         youtube-dl-gui-git \
         gnome-terminal-transparency \
         masterpdfeditor \
-        vmware-workstation
+        vmware-workstation \
+        typora
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
