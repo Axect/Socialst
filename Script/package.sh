@@ -5,11 +5,9 @@ yay -S --noconfirm --needed \
     texlive-most texlive-lang tk gcc-fortran r jupyter-notebook \
     python-pip python-numpy python-scipy python-matplotlib npm \
     julia sagemath dlang pandoc pandoc-citeproc \
-    zsh-history-substring-search zsh-autosuggestions \
+    zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting \
     youtube-dl sagemath-jupyter fd tree\
-    ttf-fira-code ttf-ubuntu-font-family\
-    la-capitane-icon-theme \
-    open-vm-tools
+    ttf-fira-code ttf-ubuntu-font-family
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
@@ -17,7 +15,7 @@ read laptop
 if [ $laptop = "y" ]; then
     echo "Install packages for laptop"
     yay -S --noconfirm --needed \
-        la-capitane-icon-theme \
+        la-capitaine-icon-theme \
         open-vm-tools
 elif [ $laptop = "n" ]; then
     echo "Skip laptop packages"
@@ -70,7 +68,7 @@ read aur
 if [ $aur = "y" ]; then
     yay -S --noconfirm --needed \
         slack-desktop ttf-nanum \
-        hiri \
+	mailspring \
         pcloud-drive \
         youtube-dl-gui-git \
         gnome-terminal-transparency \
@@ -94,7 +92,3 @@ fi
 # Rust
 echo "Start setting Rust"
 curl https://sh.rustup.rs -sSf | sh
-
-# Nim
-echo "Start setting Nim"
-curl https://nim-lang.org/choosenim/init.sh -sSf | sh
