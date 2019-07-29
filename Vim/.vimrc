@@ -20,7 +20,7 @@ set cindent
 set nu
 
 " Highlight
-set cursorline
+"set cursorline
 
 " On
 syntax on
