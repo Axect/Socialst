@@ -7,7 +7,9 @@ yay -S --noconfirm --needed \
     julia sagemath dlang pandoc pandoc-citeproc \
     zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting \
     youtube-dl sagemath-jupyter fd tree\
-    ttf-fira-code ttf-ubuntu-font-family
+    ttf-fira-code ttf-ubuntu-font-family \
+    system-config-printer cups hplip \
+    powerline powerline-fonts
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop

@@ -101,6 +101,17 @@ if [ $input_method -eq 1 ]; then
     fi
 elif [ $input_method -eq 2 ]; then
     if [ ! -d "$HOME/.xprofile" ]; then
-        ln -s $SOCIASLT/UIM/xprofile $HOME/.xprofile
+        ln -s $SOCIALST/UIM/xprofile $HOME/.xprofile
     fi
+fi
+
+# Typora
+echo "Setup for typora? [y/n]"
+read typora
+
+if [ $typora = "y" ]; then
+    rm $HOME/.config/Typora/themes/whitey.css
+    ln -s $SOCIALST/Typora/themes/whitey.css $HOME/.config/Typora/themes/whitey.css
+elif [ $typora = "n" ]; then
+    echo "Finish"
 fi

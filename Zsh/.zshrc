@@ -313,3 +313,6 @@ alias eleden_jupyter="ssh -N -f -L localhost:8407:localhost:8407 kavis@Eleden"
 alias perox_doc="RUSTDOCFLAGS='--html-in-header katex-header.html' cargo doc --no-deps"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+powerline-daemon -q
+. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
