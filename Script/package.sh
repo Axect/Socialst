@@ -9,7 +9,7 @@ yay -S --noconfirm --needed \
     youtube-dl sagemath-jupyter fd tree\
     ttf-fira-code ttf-ubuntu-font-family \
     system-config-printer cups hplip \
-    powerline powerline-fonts
+    powerline powerline-fonts ncdu
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
