@@ -12,6 +12,7 @@
 @import url('https://fonts.googleapis.com/css?family=Song+Myung');
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR');
 @import url('https://fonts.googleapis.com/css?family=Gugi');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap');
 
 html {
 	font-size: 19px;
@@ -22,7 +23,7 @@ html, body {
 	background: #fefefe;
 }
 body {
-	font-family: "Fira Sans", "Noto Serif KR";
+  font-family: 'Ubuntu';
 	color: #333;
 	line-height: 1.4;
 	text-align: justify;
@@ -104,7 +105,7 @@ blockquote {
 }
 code,
 pre {
-	font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+	font-family: "Ubuntu Mono", monospace;
 	font-size: .9em;
 	background: white;
 }

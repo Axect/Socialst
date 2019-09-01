@@ -316,3 +316,8 @@ alias perox_doc="RUSTDOCFLAGS='--html-in-header katex-header.html' cargo doc --n
 
 #powerline-daemon -q
 #. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# ==============================================================================
+# OpenBLAS
+# ==============================================================================
+export LD_LIBRARY_PATH=/opt/OpenBlas/lib/:$LD_LIBRARY_PATH
