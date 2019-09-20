@@ -37,7 +37,7 @@ if [ $common = "y" ]; then
         easytag \
         flameshot \
         eog \
-        pdfsam gscan2pdf \
+        pdfsam gscan2pdf
 elif [ $common = "n" ]; then
     echo "Skip common programs"
 fi
