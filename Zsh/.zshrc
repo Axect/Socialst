@@ -321,3 +321,8 @@ alias perox_doc="RUSTDOCFLAGS='--html-in-header katex-header.html' cargo doc --n
 # OpenBLAS
 # ==============================================================================
 export LD_LIBRARY_PATH=/opt/OpenBlas/lib/:$LD_LIBRARY_PATH
+
+# ==============================================================================
+# Project manager
+# ==============================================================================
+alias prm=". $HOME/zbin/prm/prm.sh"

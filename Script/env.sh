@@ -36,7 +36,7 @@ fi
 
 # Spacevim
 echo "What kinds of vim do you want to use?"
-echo "1. Vim, 2. Spacevim"
+echo "1. Vim, 2. Spacevim, 3. Neovim"
 
 read vim
 
@@ -52,6 +52,14 @@ elif [ $vim -eq 1 ]; then
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     ln -s $SOCIALST/Vim/.vimrc $HOME/.vimrc
     echo "Complete vim setup!"
+elif [ $vim -eq 3 ]; then
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    if [ ! -d "$HOME/.config/nvim" ]; then
+        mkdir $HOME/.config/nvim
+    fi
+    ln -s $SOCIALST/NeoVim/init.vim $HOME/.config/nvim/init.vim
+    echo "Complete to setup neovim"
 fi
 
 # tmux
