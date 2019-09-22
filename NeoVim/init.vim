@@ -232,4 +232,26 @@ silent! nmap <F4> :NERDTreeToggle<CR>
 silent! map <F3> :NERDTreeFind<CR>
 let g:NERDTreeMapActivateNode="<F3>"
 
+" Buftabline
+:nnoremap <C-N> :bnext<CR>
+:nnoremap <C-P> :bprev<cr>
+:nnoremap <C-D> :bdelete!<CR>
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
+
+" Terminal
+nmap <C-T> :terminal<CR>
+:tnoremap <A-t> <C-\><C-n>
+:tnoremap <A-Left> <C-\><C-n><C-w>h
+:tnoremap <A-Down> <C-\><C-n><C-w>j
+:tnoremap <A-Up> <C-\><C-n><C-w>k
+:tnoremap <A-Right> <C-\><C-n><C-w>l
+
+" Move
+:nnoremap <A-Left> <C-w>h
+:nnoremap <A-Down> <C-w>j
+:nnoremap <A-Up> <C-w>k
+:nnoremap <A-Right> <C-w>l
+
 hi Normal guibg=NONE ctermbg=NONE
