@@ -233,8 +233,8 @@ silent! map <F3> :NERDTreeFind<CR>
 let g:NERDTreeMapActivateNode="<F3>"
 
 " Buftabline
-:nnoremap <C-N> :bnext<CR>
-:nnoremap <C-P> :bprev<cr>
+:nnoremap <C-Right> :bnext<CR>
+:nnoremap <C-Left> :bprev<cr>
 :nnoremap <C-D> :bdelete!<CR>
 
 " Tagbar
