@@ -59,18 +59,14 @@ elif [ $common = "n" ]; then
     echo "Skip hep programs"
 fi
 
-echo "Install ROOT jupyter kernel.."
-cp -r $HOME/.rootnb/kernels/root $HOME/.local/share/jupyter/kernels/./
-echo "Successfully installed!"
-
 # AUR
 echo "Do you want to install common programs in AUR? [y/n]"
 read aur
 
 if [ $aur = "y" ]; then
     yay -S --noconfirm --needed \
-        slack-desktop ttf-nanum \
-	mailspring \
+        slack-desktop ttf-nanum ttf-cascadia-code \
+	    mailspring \
         pcloud-drive \
         youtube-dl-gui-git \
         gnome-terminal-transparency \
@@ -79,17 +75,6 @@ if [ $aur = "y" ]; then
         typora miniconda3
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
-fi
-
-# MATLAB
-echo "Do you want to install matlab jupyter kernel? [y/n]"
-read mlab
-
-if [ $mlab = "y" ]; then
-    echo "Install matlab jupyter kernel..."
-    yay -S --noconfirm --needed \
-        matlab-engine-for-python
-    pip install --user matlab_kernel
 fi
 
 # Rust

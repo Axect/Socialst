@@ -21,6 +21,10 @@ set shortmess+=c
 " always show signcolumns
 "set signcolumn=yes
 
+" Naturla split
+set splitbelow
+set splitright
+
 " Set clipboard
 set clipboard=unnamedplus
 
