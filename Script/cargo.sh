@@ -1,9 +1,6 @@
 # Hyperfine
 cargo install hyperfine
 
-# fd
-cargo install fd
-
 # loc
 cargo install loc
 

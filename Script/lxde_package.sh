@@ -2,8 +2,9 @@
 ## Necessary
 echo "Install Necessary programs for CLI environment"
 yay -S --noconfirm --needed \
+    gvim neovim \
     texlive-most texlive-lang tk gcc-fortran r jupyter-notebook \
-    python-pip python-numpy python-scipy python-matplotlib npm \
+    python-pip python-numpy python-scipy python-matplotlib python-neovim npm \
     julia sagemath dlang pandoc pandoc-citeproc \
     zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting \
     youtube-dl sagemath-jupyter fd tree\
@@ -17,7 +18,6 @@ read laptop
 if [ $laptop = "y" ]; then
     echo "Install packages for laptop"
     yay -S --noconfirm --needed \
-        la-capitaine-icon-theme \
         open-vm-tools
 elif [ $laptop = "n" ]; then
     echo "Skip laptop packages"
@@ -31,14 +31,12 @@ if [ $common = "y" ]; then
     echo "Install common programs"
     yay -S --noconfirm --needed \
         uim \
-        zathura-ps zathura-pdf-poppler zathura-djvu zathura-cb \
         cmus \
         filezilla \
         easytag \
         flameshot \
         eog \
-        pdfsam gscan2pdf \
-        code
+        pdfsam gscan2pdf
 elif [ $common = "n" ]; then
     echo "Skip common programs"
 fi
@@ -67,10 +65,9 @@ read aur
 if [ $aur = "y" ]; then
     yay -S --noconfirm --needed \
         slack-desktop ttf-nanum ttf-cascadia-code \
-	    mailspring \
+	mailspring \
         pcloud-drive \
         youtube-dl-gui-git \
-        gnome-terminal-transparency \
         masterpdfeditor \
         vmware-workstation \
         typora miniconda3
