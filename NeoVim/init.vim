@@ -28,6 +28,11 @@ set splitright
 " Set clipboard
 set clipboard=unnamedplus
 
+" Set unicode
+set tenc=korea
+set enc=utf-8
+set fileencodings=utf-8,euc-kr
+
 " Indent
 set autoindent
 
@@ -220,6 +225,7 @@ let g:comfortable_motion_no_default_key_mappings = 1
 " Color scheme
 colorscheme tender
 let g:airline_theme='tender'
+let g:airline_powerline_fonts = 1
 set background=dark
 
 " Markdown Preview
