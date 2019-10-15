@@ -10,7 +10,8 @@ yay -S --noconfirm --needed \
     youtube-dl sagemath-jupyter fd tree\
     ttf-fira-code ttf-ubuntu-font-family \
     system-config-printer cups hplip \
-    powerline powerline-fonts ncdu
+    powerline powerline-fonts ncdu \
+    synapse
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
@@ -18,6 +19,7 @@ read laptop
 if [ $laptop = "y" ]; then
     echo "Install packages for laptop"
     yay -S --noconfirm --needed \
+        komorebi \
         open-vm-tools
 elif [ $laptop = "n" ]; then
     echo "Skip laptop packages"
@@ -31,11 +33,8 @@ if [ $common = "y" ]; then
     echo "Install common programs"
     yay -S --noconfirm --needed \
         uim \
-        cmus \
         filezilla \
         easytag \
-        flameshot \
-        eog \
         pdfsam gscan2pdf
 elif [ $common = "n" ]; then
     echo "Skip common programs"

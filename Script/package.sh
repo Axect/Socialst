@@ -18,6 +18,7 @@ if [ $laptop = "y" ]; then
     echo "Install packages for laptop"
     yay -S --noconfirm --needed \
         la-capitaine-icon-theme \
+        komorebi \
         open-vm-tools
 elif [ $laptop = "n" ]; then
     echo "Skip laptop packages"
@@ -73,7 +74,7 @@ if [ $aur = "y" ]; then
         gnome-terminal-transparency \
         masterpdfeditor \
         vmware-workstation \
-        typora miniconda3
+        typora
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
