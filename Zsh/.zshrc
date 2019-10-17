@@ -323,4 +323,5 @@ export LD_LIBRARY_PATH=/opt/OpenBlas/lib/:$LD_LIBRARY_PATH
 # ==============================================================================
 # Project manager
 # ==============================================================================
-alias prm=". $HOME/zbin/prm/prm.sh"
+alias peroxide="cd $HOME/Documents/Project/Rust_Project/Peroxide"
+alias nscool="cd $HOME/Documents/Project/Research/NSCool"
