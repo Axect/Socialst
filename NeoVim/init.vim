@@ -103,6 +103,9 @@ Plug 'junegunn/vim-slash'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
+" Latex
+Plug 'lervag/vimtex'
+
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.

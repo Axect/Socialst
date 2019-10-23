@@ -274,6 +274,7 @@ alias latexinit="cp $HOME/Socialst/Templates/Latex_Template/* ./"
 alias remarkinit="cp -r $HOME/Socialst/Templates/Remark_Template/* ./"
 alias eisvogelinit="cp $HOME/Socialst/Templates/Eisvogel_Template/template.md ./"
 alias pylabinit="cp $HOME/Socialst/Templates/Pylab_Template/plot.py ./"
+alias eisvogel_academy="cp $HOME/Socialst/Templates/Eisvogel_Template/academy.md ./"
 
 # ==============================================================================
 # Eisvogel
@@ -309,6 +310,8 @@ fi
 alias eleden_jupyter="ssh -N -f -L localhost:8407:localhost:8407 kavis@Eleden"
 
 alias perox_doc="RUSTDOCFLAGS='--html-in-header katex-header.html' cargo doc --no-deps"
+alias perox_check="cargo check --all-features"
+alias perox_bt="cargo build --all-features && cargo test --all-features"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
