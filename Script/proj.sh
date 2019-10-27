@@ -29,6 +29,7 @@ if [ ! -d "$PROGRAMMING" ]; then
   git clone "${AXECT}JS"
   git clone "${AXECT}Scheme"
   git clone "${AXECT}Racket"
+  git clone "${AXECT}Zig"
 fi
 
 if [ ! -d "$PROJECT" ]; then
@@ -68,6 +69,7 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}Music_Tournament"
   git clone "${AXECT}Peroxide_Gitbook"
   git clone "${AXECT}Peroxide_Doc"
+  git clone "${AXECT}Rustube"
 
   cd "$PROJECT/Go_Project"
   git clone "${AXECT}RGE"
@@ -113,5 +115,6 @@ if [ ! -d "$TEMPLATE" ]; then
     git clone "${AXECT}Eisvogel_Template"
     git clone "${AXECT}Latex_Template"
     git clone "${AXECT}Remark_Template"
+    git clone "${AXECT}Mail_Signature"
     cd "$HOME/Documents"
 fi
