@@ -6,11 +6,12 @@ yay -S --noconfirm --needed \
     python-pip python-numpy python-scipy python-matplotlib npm \
     julia sagemath dlang pandoc pandoc-citeproc \
     zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting \
-    youtube-dl sagemath-jupyter fd tree\
+    youtube-dl ffmpeg sagemath-jupyter fd tree\
     ttf-fira-code ttf-ubuntu-font-family \
     system-config-printer cups hplip \
     powerline powerline-fonts ncdu \
-    netcdf
+    netcdf \
+    the_silver_searcher
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
@@ -18,9 +19,10 @@ read laptop
 if [ $laptop = "y" ]; then
     echo "Install packages for laptop"
     yay -S --noconfirm --needed \
-        la-capitaine-icon-theme \
-        komorebi \
-        open-vm-tools
+        open-vm-tools \
+        chrome-gnome-shell \
+        synapse
+
 elif [ $laptop = "n" ]; then
     echo "Skip laptop packages"
 fi
@@ -34,13 +36,10 @@ if [ $common = "y" ]; then
     yay -S --noconfirm --needed \
         uim \
         zathura-ps zathura-pdf-poppler zathura-djvu zathura-cb \
-        cmus \
-        filezilla \
-        easytag \
-        flameshot \
-        eog \
-        pdfsam gscan2pdf \
-        code
+        cmus filezilla easytag flameshot \
+        eog pdfsam gscan2pdf \
+        code imagewriter \
+        onlyoffice-desktopeditors
 elif [ $common = "n" ]; then
     echo "Skip common programs"
 fi
@@ -69,6 +68,7 @@ read aur
 if [ $aur = "y" ]; then
     yay -S --noconfirm --needed \
         slack-desktop ttf-nanum ttf-cascadia-code \
+        la-capitaine-icon-theme \
 	    mailspring \
         pcloud-drive \
         youtube-dl-gui-git \
@@ -80,6 +80,3 @@ elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
 
-# Rust
-echo "Start setting Rust"
-curl https://sh.rustup.rs -sSf | sh
