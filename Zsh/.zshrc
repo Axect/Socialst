@@ -328,3 +328,8 @@ export LD_LIBRARY_PATH=/opt/OpenBlas/lib/:$LD_LIBRARY_PATH
 # ==============================================================================
 alias peroxide="cd $HOME/Documents/Project/Rust_Project/Peroxide"
 alias nscool="cd $HOME/Documents/Project/Research/NSCool"
+
+# ==============================================================================
+# Spacemacs
+# ==============================================================================
+alias emnw="emacs -nw"

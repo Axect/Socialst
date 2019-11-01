@@ -9,12 +9,14 @@
     "go.vetOnSave": "package",
     "julia.executablePath": "/usr/bin/julia",
     // "workbench.colorTheme": "Feather",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "vscode-icons",
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
     "editor.fontWeight": "500",
     "editor.autoClosingBrackets": "languageDefined",
+    "remote.SSH.enableHostsExplorer": true,
+    "remote.SSH.configFile": "/home/rakhan/.ssh/config",
     // "workbench.colorCustomizations": {
     //     "activityBar.foreground": "#10c4ed",
     //     "badge.background": "#10c4ed",
@@ -43,7 +45,6 @@
         "activityBarBadge.background": "#ff0734"
     },
     "window.menuBarVisibility": "toggle",
-    "material-icon-theme.showUpdateMessage": false,
     "workbench.colorTheme": "One Dark Pro",
     "git.autofetch": true,
     // Better Align
@@ -82,28 +83,14 @@
         "*.latex": "pdf",
         "*.ladot": "dot"
     },
-    "rust.mode": "legacy",
-    "rust.cargoHomePath": "/home/kavis/.cargo/",
-    "rust.rustup": {
-        "toolchain": "nightly-x86_64-unknown-linux-gnu"
-    },
     "explorer.confirmDragAndDrop": false,
     "liveServer.settings.donotShowInfoMsg": true,
-    "d.servedPath": "/home/kavis/.local/share/code-d/bin/serve-d",
-    // fortran
-    "fortran.gfortranExecutable": "/usr/bin/gfortran",
-    "fortran.includePaths": [
-        "/usr/include",
-        "/usr"
-    ],
-    "fortran.symbols": [
-        "function",
-        "subroutine"
-    ],
     "typescript.locale": "ko",
     "explorer.confirmDelete": false,
     "editor.snippetSuggestions": "top",
     "terminal.integrated.rendererType": "dom",
     "[markdown]": {},
-    "liveServer.settings.donotVerifyTags": true
+    "liveServer.settings.donotVerifyTags": true,
+    "remote.SSH.showLoginTerminal": true,
+    "rust-analyzer.highlightingOn": true
 }

@@ -89,12 +89,24 @@ if [ ! -d "$HOME/.config/Code" ]; then
   mkdir -p "$HOME/.config/Code"
 fi
 
+if [ ! -d "$HOME/.config/Code\ -\ OSS" ]; then
+  mkdir -p "$HOME/.config/Code\ -\ OSS"
+fi
+
 if [ ! -d "$HOME/.config/Code/User/snippets/" ]; then
   mkdir -p "$HOME/.config/Code/User/snippets"
 fi
 
+if [ ! -d "$HOME/.config/Code\ -\ OSS/User/snippets/" ]; then
+  mkdir -p "$HOME/.config/Code\ -\ OSS/User/snippets"
+fi
+
 if [ ! -d "$HOME/.config/Code/User/snippets/socialst.code-snippets" ]; then
   ln -s $SOCIALST/Code/socialst.code-snippets $HOME/.config/Code/User/snippets/socialst.code-snippets
+fi
+
+if [ ! -d "$HOME/.config/Code\ -\ OSS/User/snippets/socialst.code-snippets" ]; then
+  ln -s $SOCIALST/Code/socialst.code-snippets $HOME/.config/Code\ -\ OSS/User/snippets/socialst.code-snippets
 fi
 
 # Xprofile
