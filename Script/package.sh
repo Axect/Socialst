@@ -6,8 +6,8 @@ yay -S --noconfirm --needed \
     python-pip python-numpy python-scipy python-matplotlib npm \
     julia sagemath dlang pandoc pandoc-citeproc \
     zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting \
-    youtube-dl ffmpeg sagemath-jupyter fd tree\
-    ttf-fira-code ttf-ubuntu-font-family \
+    youtube-dl ffmpeg sagemath-jupyter fd tree \
+    ttf-fira-code ttf-ubuntu-font-family ttf-cascadia-code \
     system-config-printer cups hplip \
     powerline powerline-fonts ncdu \
     netcdf \
@@ -67,7 +67,7 @@ read aur
 
 if [ $aur = "y" ]; then
     yay -S --noconfirm --needed \
-        slack-desktop ttf-nanum ttf-cascadia-code \
+        slack-desktop ttf-nanum \
         la-capitaine-icon-theme \
 	    mailspring \
         pcloud-drive \
