@@ -285,6 +285,9 @@ md2book() {
 md2report() {
   pandoc $1.md -o $1.pdf --from markdown --template eisvogel --listings
 }
+md2reportbib() {
+  pandoc --bibliography=ref.bib $1.md -o $1.pdf --from markdown --template eisvogel --listings
+}
 md2pdf() {
     pandoc $1.md --pdf-engine=xelatex -o $1.pdf --from markdown --template eisvogel --listings
 }
@@ -333,3 +336,18 @@ alias nscool="cd $HOME/Documents/Project/Research/NSCool"
 # Spacemacs
 # ==============================================================================
 alias emnw="emacs -nw"
+
+# ==============================================================================
+# MESA
+# ==============================================================================
+export MESASDK_ROOT="$HOME/zbin/mesasdk"
+source $MESASDK_ROOT/bin/mesasdk_init.sh
+export MESA_DIR="$HOME/zbin/mesa-r12115"
+export OMP_NUM_THREADS=4
+
+# ==============================================================================
+# dStar
+# ==============================================================================
+export DSTAR_LIB_DIR="$HOME/Documents/Test/dStar/lib"
+export DSTAR_INC="$HOME/Documents/Test/dStar/include"
+export DSTAR_DIR="$HOME/Documents/Test/dStar"
