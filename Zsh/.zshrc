@@ -273,7 +273,7 @@ export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ROOTSYS/lib
 alias latexinit="cp $HOME/Socialst/Templates/Latex_Template/* ./"
 alias remarkinit="cp -r $HOME/Socialst/Templates/Remark_Template/* ./"
 alias eisvogelinit="cp $HOME/Socialst/Templates/Eisvogel_Template/template.md ./"
-alias pylabinit="cp $HOME/Socialst/Templates/Pylab_Template/plot.py ./"
+alias ncplotinit="cp $HOME/Socialst/Templates/PyPlot_Template/nc_plot.py ./"
 alias eisvogel_academy="cp $HOME/Socialst/Templates/Eisvogel_Template/academy.md ./"
 
 # ==============================================================================
