@@ -10,7 +10,7 @@ yay -S --noconfirm --needed \
     ttf-fira-code ttf-ubuntu-font-family ttf-cascadia-code \
     system-config-printer cups hplip \
     powerline powerline-fonts ncdu \
-    netcdf \
+    netcdf python-netcdf4 \
     the_silver_searcher
 
 echo "Do you want to install packages for Linux laptop?"
@@ -38,8 +38,7 @@ if [ $common = "y" ]; then
         zathura-ps zathura-pdf-poppler zathura-djvu zathura-cb \
         cmus filezilla easytag flameshot \
         eog pdfsam gscan2pdf \
-        code imagewriter \
-        onlyoffice-desktopeditors
+        code imagewriter
 elif [ $common = "n" ]; then
     echo "Skip common programs"
 fi
@@ -70,12 +69,15 @@ if [ $aur = "y" ]; then
         slack-desktop ttf-nanum \
         la-capitaine-icon-theme \
 	    mailspring \
-        pcloud-drive \
+        ncview \
         youtube-dl-gui-git \
         gnome-terminal-transparency \
         masterpdfeditor \
         vmware-workstation \
-        typora
+        typora \
+        megasync megatools \
+        gitkraken \
+        onlyoffice-bin
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
