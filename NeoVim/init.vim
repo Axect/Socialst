@@ -110,7 +110,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'lervag/vimtex'
 
 " Snippets
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 
 call plug#end()
 
