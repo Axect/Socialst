@@ -47,7 +47,7 @@ fi
 echo "Do you want to install High energy physics related programs? [y/n]"
 read hep
 
-if [ $common = "y" ]; then
+if [ $hep = "y" ]; then
     echo "Install HEP programs"
     yay -S --noconfirm --needed \
         root \
@@ -56,7 +56,7 @@ if [ $common = "y" ]; then
         pythia8 \
         cern-vdt \
         lhapdf
-elif [ $common = "n" ]; then
+elif [ $hep = "n" ]; then
     echo "Skip hep programs"
 fi
 
