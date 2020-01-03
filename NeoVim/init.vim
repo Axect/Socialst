@@ -75,6 +75,9 @@ Plug 'jpalardy/vim-slime'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Julia
+Plug 'JuliaEditorSupport/julia-vim'
+
 " Color scheme
 "Plug 'rakr/vim-one'
 "Plug 'kristijanhusak/vim-hybrid-material'
