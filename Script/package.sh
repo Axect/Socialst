@@ -11,7 +11,8 @@ yay -S --noconfirm --needed \
     system-config-printer cups hplip \
     powerline powerline-fonts ncdu \
     netcdf python-netcdf4 \
-    the_silver_searcher
+    the_silver_searcher \
+    cmake
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
