@@ -1,5 +1,7 @@
 # ~/.zshrc
 
+export TERM=xterm-256color
+
 # not running interactively then bail
 [[ $- != *i* ]] && return
 

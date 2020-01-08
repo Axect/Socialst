@@ -12,7 +12,7 @@ yay -S --noconfirm --needed \
     powerline powerline-fonts ncdu \
     netcdf python-netcdf4 \
     the_silver_searcher \
-    cmake
+    cmake gdb clang
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
@@ -20,30 +20,14 @@ read laptop
 if [ $laptop = "y" ]; then
     echo "Install packages for laptop"
     yay -S --noconfirm --needed \
-        open-vm-tools \
         chrome-gnome-shell \
-        synapse
-
+        okular code imagewriter pdfsam gscan2pdf easytag filezilla flameshot \
+        zathura-ps zathura-pdf-poppler zathura-djvu zathura-cb \
+        synapse uim
 elif [ $laptop = "n" ]; then
     echo "Skip laptop packages"
 fi
 
-## Common Programs
-echo "Do you want to install common programs in Official Repo? [y/n]"
-read common
-
-if [ $common = "y" ]; then
-    echo "Install common programs"
-    yay -S --noconfirm --needed \
-        uim \
-        zathura-ps zathura-pdf-poppler zathura-djvu zathura-cb \
-        cmus filezilla easytag flameshot \
-        eog pdfsam gscan2pdf \
-        code imagewriter
-elif [ $common = "n" ]; then
-    echo "Skip common programs"
-fi
-  
 # HEP
 echo "Do you want to install High energy physics related programs? [y/n]"
 read hep
@@ -74,12 +58,23 @@ if [ $aur = "y" ]; then
         youtube-dl-gui-git \
         gnome-terminal-transparency \
         masterpdfeditor \
-        vmware-workstation \
         typora \
         megasync megatools \
         gitkraken \
-        onlyoffice-bin
+        onlyoffice-bin \
+        notion-app
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
 
+# VMware
+echo "Do you want to install vmware? [y/n]"
+read vm
+
+if [ $vm = "y" ]; then
+    yay -S --noconfirm --needed \
+        open-vm-tools \
+        vmware-workstation
+elif [ $vm = "n" ]; then
+    echo "Skip VMware"
+fi
