@@ -12,7 +12,8 @@ yay -S --noconfirm --needed \
     powerline powerline-fonts ncdu \
     netcdf python-netcdf4 \
     the_silver_searcher \
-    cmake gdb clang
+    cmake gdb clang \
+    neovim python-neovim xclip
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
@@ -23,7 +24,8 @@ if [ $laptop = "y" ]; then
         chrome-gnome-shell \
         okular code imagewriter pdfsam gscan2pdf easytag filezilla flameshot \
         zathura-ps zathura-pdf-poppler zathura-djvu zathura-cb \
-        synapse uim
+        synapse uim \
+	gnome-tweaks firefox-developer-edition firefox-developer-edition-i18n-ko
 elif [ $laptop = "n" ]; then
     echo "Skip laptop packages"
 fi
