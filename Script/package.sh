@@ -13,7 +13,8 @@ yay -S --noconfirm --needed \
     netcdf python-netcdf4 \
     the_silver_searcher \
     cmake gdb clang \
-    neovim python-neovim xclip
+    neovim python-neovim xclip \
+    ttf-liberation noto-fonts noto-fonts-emoji noto-fonts-extra
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
