@@ -1,5 +1,5 @@
 {
-    // 64-bit cmd if available, otherwise 32-bit
+        // 64-bit cmd if available, otherwise 32-bit
     // "terminal.integrated.shell.windows": "C:\\Windows\\sysnative\\cmd.exe",
     //"terminal.integrated.shell.windows": "C:\\Windows\\sysnative\\bash.exe"
     "git.enableSmartCommit": true,
@@ -92,5 +92,13 @@
     "[markdown]": {},
     "liveServer.settings.donotVerifyTags": true,
     "remote.SSH.showLoginTerminal": true,
-    "rust-analyzer.highlightingOn": true
+    "rust-analyzer.highlightingOn": true,
+    "sync.gist": "cb6f8860ee060ba6cc7745a94a10d52e",
+    "editor.tabCompletion": "on",
+    "sync.autoUpload": true,
+    "rust-analyzer.cargo-watch.arguments": "--all-features",
+    "openInApplication.applications": {
+        "pdf" : "okular"
+    },
+    "window.zoomLevel": 0
 }
