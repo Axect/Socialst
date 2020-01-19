@@ -46,7 +46,7 @@ function zsrc() {
 
 #al-info
 
-EDITOR="vim"
+EDITOR="nvim"
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
@@ -342,14 +342,14 @@ alias emnw="emacs -nw"
 # ==============================================================================
 # MESA
 # ==============================================================================
-export MESASDK_ROOT="$HOME/zbin/mesasdk"
-source $MESASDK_ROOT/bin/mesasdk_init.sh
-export MESA_DIR="$HOME/zbin/mesa-r12115"
-export OMP_NUM_THREADS=16
+#export MESASDK_ROOT="$HOME/zbin/mesasdk"
+#source $MESASDK_ROOT/bin/mesasdk_init.sh
+#export MESA_DIR="$HOME/zbin/mesa-r12115"
+#export OMP_NUM_THREADS=16
 
 # ==============================================================================
 # dStar
 # ==============================================================================
-export DSTAR_LIB_DIR="$HOME/Documents/Test/dStar/lib"
-export DSTAR_INC="$HOME/Documents/Test/dStar/include"
-export DSTAR_DIR="$HOME/Documents/Test/dStar"
+#export DSTAR_LIB_DIR="$HOME/Documents/Test/dStar/lib"
+#export DSTAR_INC="$HOME/Documents/Test/dStar/include"
+#export DSTAR_DIR="$HOME/Documents/Test/dStar"
