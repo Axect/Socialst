@@ -6,7 +6,7 @@ yay -S --noconfirm --needed \
     python-pip python-numpy python-scipy python-matplotlib npm \
     julia sagemath dlang pandoc pandoc-citeproc \
     zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting \
-    youtube-dl ffmpeg sagemath-jupyter fd tree \
+    youtube-dl ffmpeg sagemath-jupyter fd tree htop\
     ttf-fira-code ttf-ubuntu-font-family ttf-cascadia-code \
     system-config-printer cups hplip \
     powerline powerline-fonts ncdu \
