@@ -70,6 +70,7 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}Peroxide_Gitbook"
   git clone "${AXECT}Peroxide_Doc"
   git clone "${AXECT}Rustube"
+  git clone "${AXECT}Woroxide"
 
   cd "$PROJECT/Go_Project"
   git clone "${AXECT}RGE"
