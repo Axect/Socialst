@@ -62,7 +62,7 @@ if [ $aur = "y" ]; then
         gnome-terminal-transparency \
         masterpdfeditor \
         typora \
-        megasync megatools \
+        megasync megatools nautilus-megasync \
         gitkraken \
         onlyoffice-bin \
         notion-app
