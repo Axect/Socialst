@@ -353,3 +353,5 @@ alias emnw="emacs -nw"
 #export DSTAR_LIB_DIR="$HOME/Documents/Test/dStar/lib"
 #export DSTAR_INC="$HOME/Documents/Test/dStar/include"
 #export DSTAR_DIR="$HOME/Documents/Test/dStar"
+
+alias wordtest="cd $HOME/Documents/Project/Rust_Project/Woroxide && cargo run --release && cd -"
