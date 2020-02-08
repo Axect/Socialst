@@ -3,8 +3,8 @@
 echo "Install Necessary programs for CLI environment"
 yay -S --noconfirm --needed \
     texlive-most texlive-lang tk gcc-fortran r jupyter-notebook \
-    python-pip python-numpy python-scipy python-matplotlib npm \
-    julia sagemath dlang pandoc pandoc-citeproc \
+    python-pip python-numpy python-scipy python-matplotlib python-pandas \ 
+    npm julia sagemath dlang pandoc pandoc-citeproc \
     zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting \
     youtube-dl ffmpeg sagemath-jupyter fd tree htop\
     ttf-fira-code ttf-ubuntu-font-family ttf-cascadia-code \
