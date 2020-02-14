@@ -3,8 +3,8 @@
 echo "Install Necessary programs for CLI environment"
 yay -S --noconfirm --needed \
     texlive-most texlive-lang tk gcc-fortran r jupyter-notebook \
-    python-pip python-numpy python-scipy python-matplotlib python-pandas \ 
-    npm julia sagemath dlang pandoc pandoc-citeproc \
+    python-pip python-numpy python-scipy python-matplotlib python-pandas\
+    npm julia sagemath dlang pandoc pandoc-citeproc gvim \
     zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting \
     youtube-dl ffmpeg sagemath-jupyter fd tree htop\
     ttf-fira-code ttf-ubuntu-font-family ttf-cascadia-code \
@@ -14,7 +14,8 @@ yay -S --noconfirm --needed \
     the_silver_searcher \
     cmake gdb clang \
     neovim python-neovim xclip \
-    ttf-liberation noto-fonts noto-fonts-emoji noto-fonts-extra
+    ttf-liberation noto-fonts noto-fonts-emoji noto-fonts-extra \
+    ttf-jetbrains-mono
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
@@ -62,7 +63,8 @@ if [ $aur = "y" ]; then
         gnome-terminal-transparency \
         masterpdfeditor \
         typora \
-        megasync megatools nautilus-megasync \
+		yandex-disk \
+		yandex-disk-indicator \
         gitkraken \
         onlyoffice-bin \
         notion-app
