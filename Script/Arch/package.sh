@@ -27,7 +27,8 @@ if [ $laptop = "y" ]; then
         okular code imagewriter pdfsam gscan2pdf easytag filezilla flameshot \
         zathura-ps zathura-pdf-poppler zathura-djvu zathura-cb \
         synapse uim \
-	gnome-tweaks firefox-developer-edition firefox-developer-edition-i18n-ko
+        gnome-tweaks firefox-developer-edition firefox-developer-edition-i18n-ko \
+        thunderbird thunderbird-i18n-ko
 elif [ $laptop = "n" ]; then
     echo "Skip laptop packages"
 fi
@@ -57,14 +58,13 @@ if [ $aur = "y" ]; then
     yay -S --noconfirm --needed \
         slack-desktop ttf-nanum \
         la-capitaine-icon-theme \
-	    mailspring \
         ncview \
         youtube-dl-gui-git \
         gnome-terminal-transparency \
         masterpdfeditor \
+        insync \
+        insync-nautilus \
         typora \
-		yandex-disk \
-		yandex-disk-indicator \
         gitkraken \
         onlyoffice-bin \
         notion-app
