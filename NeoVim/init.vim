@@ -57,7 +57,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Indent
-Plug 'junegunn/vim-easy-align'
+"Plug 'junegunn/vim-easy-align'
 
 " Nerdtree
 Plug 'scrooloose/nerdtree'
@@ -111,6 +111,9 @@ Plug 'lervag/vimtex'
 
 " Snippets
 " Plug 'SirVer/ultisnips'
+
+" Startify
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 

@@ -10,7 +10,7 @@ fi
 
 # zshrc
 echo "What kinds of zsh do you want to use?"
-echo "1. Custom zsh, 2. oh-my-zsh"
+echo "1. Custom zsh, 2. oh-my-zsh, 3. skip"
 
 read choose_zsh
 
@@ -32,6 +32,8 @@ elif [ $choose_zsh -eq 2 ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     ln -s $SOCIALST/Zsh/ohmyzshrc $HOME/.zshrc
     echo "Complete zsh Setup!"
+else
+    echo "Skip zsh Setup!"
 fi
 
 # Spacevim
@@ -85,33 +87,41 @@ if [ ! -d "$HOME/.config/zathura" ]; then
 fi
 
 # Code
-if [ ! -d "$HOME/.config/Code" ]; then
-  mkdir -p "$HOME/.config/Code"
-fi
+echo "Do you want to setup for VSCode? [y/n]"
 
-if [ ! -d "$HOME/.config/Code\ -\ OSS" ]; then
-  mkdir -p "$HOME/.config/Code\ -\ OSS"
-fi
+read code
 
-if [ ! -d "$HOME/.config/Code/User/snippets/" ]; then
-  mkdir -p "$HOME/.config/Code/User/snippets"
-fi
+if [ $code = "y" ]; then
+    if [ ! -d "$HOME/.config/Code" ]; then
+        mkdir -p "$HOME/.config/Code"
+    fi
 
-if [ ! -d "$HOME/.config/Code\ -\ OSS/User/snippets/" ]; then
-  mkdir -p "$HOME/.config/Code\ -\ OSS/User/snippets"
-fi
+    if [ ! -d "$HOME/.config/Code\ -\ OSS" ]; then
+        mkdir -p "$HOME/.config/Code\ -\ OSS"
+    fi
 
-if [ ! -d "$HOME/.config/Code/User/snippets/socialst.code-snippets" ]; then
-  ln -s $SOCIALST/Code/socialst.code-snippets $HOME/.config/Code/User/snippets/socialst.code-snippets
-fi
+    if [ ! -d "$HOME/.config/Code/User/snippets/" ]; then
+        mkdir -p "$HOME/.config/Code/User/snippets"
+    fi
 
-if [ ! -d "$HOME/.config/Code\ -\ OSS/User/snippets/socialst.code-snippets" ]; then
-  ln -s $SOCIALST/Code/socialst.code-snippets $HOME/.config/Code\ -\ OSS/User/snippets/socialst.code-snippets
+    if [ ! -d "$HOME/.config/Code\ -\ OSS/User/snippets/" ]; then
+        mkdir -p "$HOME/.config/Code\ -\ OSS/User/snippets"
+    fi
+
+    if [ ! -d "$HOME/.config/Code/User/snippets/socialst.code-snippets" ]; then
+        ln -s $SOCIALST/Code/socialst.code-snippets $HOME/.config/Code/User/snippets/socialst.code-snippets
+    fi
+
+    if [ ! -d "$HOME/.config/Code\ -\ OSS/User/snippets/socialst.code-snippets" ]; then
+        ln -s $SOCIALST/Code/socialst.code-snippets $HOME/.config/Code\ -\ OSS/User/snippets/socialst.code-snippets
+    fi
+else
+    echo "Skip code setup"
 fi
 
 # Xprofile
 echo "What kinds of input method do you want to use?"
-echo "1. ibus, 2. uim"
+echo "1. ibus, 2. uim, 3. skip"
 
 read input_method
 
@@ -123,6 +133,8 @@ elif [ $input_method -eq 2 ]; then
     if [ ! -d "$HOME/.xprofile" ]; then
         ln -s $SOCIALST/UIM/xprofile $HOME/.xprofile
     fi
+else
+    echo "Skip input method setup"
 fi
 
 # Typora
