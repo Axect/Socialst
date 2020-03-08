@@ -1,13 +1,30 @@
 # Socialst (Axect's Customization Repo)
 
-## Use
+## Usage
 
+### Use whole custom environments
 
-### Vim
+* Execute `Socialst/Script/env.sh`
+
+### Vim / Neovim / Spacevim
+
+The main vim environment is neovim.
 
 * If you want to classical vim, then copy my `Vim/.vimrc`
 * If you want to Spacevim, then copy my `SpaceVim/init.toml` to `~/.SpaceVim.d/init.toml`
 * If you want to use neovim, then copy my `NeoVim/init.vim` to `~/.config/nvim/init.vim`
+
+#### Setup Environment for Neovim
+
+```sh
+# 1. Link neovim config file (You should have ~/.config/nvim directory)
+ln -s $HOME/Socialst/Neovim/init.vim $HOME/.config/nvim/init.vim
+
+# 2. Install coc-extensions
+sh $HOME/Socialst/Script/coc.sh
+```
+
+* To use more `coc-extensions`, refer [coc-extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions)
 
 ### ZSH
 

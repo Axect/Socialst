@@ -276,6 +276,9 @@ nmap <C-T> :terminal<CR>
 :nnoremap <A-Up> <C-w>k
 :nnoremap <A-Right> <C-w>l
 
+" File Explorer
+nmap <space>e :CocCommand explorer<CR>
+
 hi Normal guibg=NONE ctermbg=NONE
 
 " Coc-snippets
