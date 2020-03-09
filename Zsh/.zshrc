@@ -357,5 +357,6 @@ alias emnw="emacs -nw"
 alias wordtest="cd $HOME/Documents/Project/Rust_Project/Woroxide && cargo run --release && cd -"
 
 # ==============================================================================
-# GALPROP
+# RUST
 # ==============================================================================
+alias cargo_native='RUSTFLAGS="-C target-cpu=native" cargo build --release'
