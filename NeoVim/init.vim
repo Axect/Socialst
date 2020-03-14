@@ -115,6 +115,9 @@ Plug 'lervag/vimtex'
 " Startify
 Plug 'mhinz/vim-startify'
 
+" Zig
+Plug 'ziglang/zig.vim'
+
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.

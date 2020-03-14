@@ -360,3 +360,5 @@ alias wordtest="cd $HOME/Documents/Project/Rust_Project/Woroxide && cargo run --
 # RUST
 # ==============================================================================
 alias cargo_native='RUSTFLAGS="-C target-cpu=native" cargo build --release'
+
+export PATH=$PATH:$HOME/zbin/zig/build/bin
