@@ -15,8 +15,7 @@ yay -S --noconfirm --needed \
     cmake gdb clang \
     neovim python-neovim xclip \
     ttf-liberation noto-fonts noto-fonts-emoji noto-fonts-extra \
-    ttf-jetbrains-mono \
-    sof-firmware
+    ttf-jetbrains-mono
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
@@ -29,7 +28,8 @@ if [ $laptop = "y" ]; then
         zathura-ps zathura-pdf-poppler zathura-djvu zathura-cb \
         synapse uim \
         gnome-tweaks firefox-developer-edition firefox-developer-edition-i18n-ko \
-        thunderbird thunderbird-i18n-ko
+        thunderbird thunderbird-i18n-ko \
+        sof-firmware audacious
 elif [ $laptop = "n" ]; then
     echo "Skip laptop packages"
 fi
