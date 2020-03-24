@@ -118,6 +118,9 @@ Plug 'mhinz/vim-startify'
 " Zig
 Plug 'ziglang/zig.vim'
 
+" Toml
+Plug 'cespare/vim-toml'
+
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.

@@ -359,6 +359,17 @@ alias wordtest="cd $HOME/Documents/Project/Rust_Project/Woroxide && cargo run --
 # ==============================================================================
 # RUST
 # ==============================================================================
-alias cargo_native='RUSTFLAGS="-C target-cpu=native" cargo build --release'
+alias cargo_fast='RUSTFLAGS="-C target-cpu=native" cargo build --release'
+alias cargo_asm='RUSTFLAGS="--emit=asm" cargo build --release'
+alias run_fast='RUSTFLAGS="-C target-cpu=native" cargo run --release'
 
+# ==============================================================================
+# Zig
+# ==============================================================================
 export PATH=$PATH:$HOME/zbin/zig/build/bin
+
+
+# ==============================================================================
+# Google drive
+# ==============================================================================
+alias gdrive="cd $HOME/Insync/edeftg@gmail.com/Google\ Drive"
