@@ -29,7 +29,8 @@ if [ $laptop = "y" ]; then
         synapse uim \
         gnome-tweaks firefox-developer-edition firefox-developer-edition-i18n-ko \
         thunderbird thunderbird-i18n-ko \
-        sof-firmware audacious
+        sof-firmware audacious \
+        simplescreenrecorder
 elif [ $laptop = "n" ]; then
     echo "Skip laptop packages"
 fi
