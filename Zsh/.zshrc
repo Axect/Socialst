@@ -354,7 +354,12 @@ alias emnw="emacs -nw"
 #export DSTAR_INC="$HOME/Documents/Test/dStar/include"
 #export DSTAR_DIR="$HOME/Documents/Test/dStar"
 
-alias wordtest="cd $HOME/Documents/Project/Rust_Project/Woroxide && cargo run --release && cd -"
+
+# ==============================================================================
+# Woroxide
+# ==============================================================================
+alias wordtest="cd $HOME/Documents/Project/Rust_Project/Woroxide && run_fast && cd -"
+alias wordupdate="cd $HOME/Documents/Project/Rust_Project/Woroxide && code . && cd -"
 
 # ==============================================================================
 # RUST
@@ -362,6 +367,7 @@ alias wordtest="cd $HOME/Documents/Project/Rust_Project/Woroxide && cargo run --
 alias cargo_fast='RUSTFLAGS="-C target-cpu=native" cargo build --release'
 alias cargo_asm='RUSTFLAGS="--emit=asm" cargo build --release'
 alias run_fast='RUSTFLAGS="-C target-cpu=native" cargo run --release'
+alias test_fast='RUSTFLAGS="-C target-cpu=native" cargo test --release'
 
 # ==============================================================================
 # Zig

@@ -49,6 +49,9 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 
+" Tab in json
+autocmd FileType json setlocal shiftwidth=2 tabstop=2 expandtab
+
 " ----------------------------------------------------------
 " Plugins
 " ----------------------------------------------------------
@@ -120,6 +123,10 @@ Plug 'ziglang/zig.vim'
 
 " Toml
 Plug 'cespare/vim-toml'
+
+" Note
+Plug 'xolox/vim-notes'
+Plug 'xolox/vim-misc'
 
 call plug#end()
 
