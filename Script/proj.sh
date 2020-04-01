@@ -65,10 +65,12 @@ if [ ! -d "$PROJECT" ]; then
 
   cd "$PROJECT/Rust_Project"
   git clone "${AXECT}Peroxide"
+  git clone "${AXECT}Puruspe"
   git clone "${AXECT}Bench"
   git clone "${AXECT}Music_Tournament"
   git clone "${AXECT}Peroxide_Gitbook"
   git clone "${AXECT}Peroxide_Doc"
+  git clone "${AXECT}Peroxide_Gallery"
   git clone "${AXECT}Rustube"
   git clone "${AXECT}Woroxide"
 
@@ -101,6 +103,7 @@ if [ ! -d "$PROJECT" ]; then
 
   cd "$PROJECT/Machine_Learning"
   git clone "${AXECT}ML_Project"
+  git clone "${AXECT}ML2020"
 
   cd "$PROJECT/R_Project"
   git clone "${AXECT}R_Yeji"
