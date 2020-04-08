@@ -15,7 +15,8 @@ yay -S --noconfirm --needed \
     cmake gdb clang \
     neovim python-neovim xclip \
     ttf-liberation noto-fonts noto-fonts-emoji noto-fonts-extra \
-    ttf-jetbrains-mono
+    ttf-jetbrains-mono \
+    git-lfs
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
@@ -29,7 +30,7 @@ if [ $laptop = "y" ]; then
         synapse uim \
         gnome-tweaks firefox-developer-edition firefox-developer-edition-i18n-ko \
         thunderbird thunderbird-i18n-ko \
-        sof-firmware audacious \
+        audacious \
         simplescreenrecorder
 elif [ $laptop = "n" ]; then
     echo "Skip laptop packages"
@@ -62,14 +63,14 @@ if [ $aur = "y" ]; then
         la-capitaine-icon-theme \
         ncview \
         youtube-dl-gui-git \
-        gnome-terminal-transparency \
         masterpdfeditor \
         insync \
         insync-nautilus \
-        typora \
         gitkraken \
         onlyoffice-bin \
         notion-app
+        #gnome-terminal-transparency \
+        #typora \
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
