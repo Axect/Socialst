@@ -63,12 +63,12 @@ if [ $aur = "y" ]; then
         la-capitaine-icon-theme \
         ncview \
         youtube-dl-gui-git \
-        masterpdfeditor \
         insync \
         insync-nautilus \
         gitkraken \
         onlyoffice-bin \
         notion-app
+        #masterpdfeditor \
         #gnome-terminal-transparency \
         #typora \
 elif [ $aur = "n" ]; then

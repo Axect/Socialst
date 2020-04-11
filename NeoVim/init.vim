@@ -128,6 +128,9 @@ Plug 'cespare/vim-toml'
 Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc'
 
+" Chapel
+Plug 'fsouza/chapel.vim'
+
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.
