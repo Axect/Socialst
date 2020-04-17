@@ -131,6 +131,9 @@ Plug 'xolox/vim-misc'
 " Chapel
 Plug 'fsouza/chapel.vim'
 
+" Nim
+Plug 'zah/nim.vim'
+
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.

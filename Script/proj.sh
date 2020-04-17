@@ -35,6 +35,7 @@ fi
 if [ ! -d "$PROJECT" ]; then
   mkdir $PROJECT
   cd $PROJECT
+  mkdir "Blog"
   mkdir "Haskell_Project"
   mkdir "D_Project"
   mkdir "Rust_Project"
@@ -50,7 +51,11 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}Euler"
   git clone "${AXECT}Academy"
 
-  cd "Haskell_Project"
+  cd "$PROJECT/Blog"
+  git clone "${AXECT}Axect_Blog"
+  git clone "${AXECT}Axect_Blog_Gen"
+
+  cd "$PROJECT/Haskell_Project"
   git clone "${AXECT}HNumeric"
   git clone "${AXECT}Hubble"
   git clone "${AXECT}HTEPS"
@@ -104,6 +109,7 @@ if [ ! -d "$PROJECT" ]; then
   cd "$PROJECT/Machine_Learning"
   git clone "${AXECT}ML_Project"
   git clone "${AXECT}ML2020"
+  git clone "${AXECT}ML_with_Rust"
 
   cd "$PROJECT/R_Project"
   git clone "${AXECT}R_Yeji"
