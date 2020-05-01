@@ -96,7 +96,7 @@ Plug 'yuttie/comfortable-motion.vim'
 
 " Markdown
 Plug 'iamcco/mathjax-support-for-mkdp'
-Plug 'iamcco/markdown-preview.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 
 " Code completion
 Plug 'Raimondi/delimitMate'
@@ -260,13 +260,11 @@ let g:airline_powerline_fonts = 1
 set background=dark
 
 " Markdown Preview
-let g:mkdp_path_to_chrome = "google-chrome-beta"
-let g:mkdp_browserfunc = 'MKDP_browserfunc_default'
 let g:mkdp_auto_start = 1
 let g:mkdp_auto_open = 1
 let g:mkdp_auto_close = 1
-let g:mkdp_refresh_slow = 0
-let g:mkdp_command_for_global = 0
+let g:mkdp_browser = 'firefox-developer-edition'
+nmap <C-p> <Plug>MarkdownPreviewToggle
 
 " Nerdtree
 silent! nmap <F4> :NERDTreeToggle<CR>
