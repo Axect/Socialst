@@ -16,7 +16,8 @@ yay -S --noconfirm --needed \
     neovim python-neovim xclip \
     ttf-liberation noto-fonts noto-fonts-emoji noto-fonts-extra \
     ttf-jetbrains-mono \
-    git-lfs jupyterlab
+    git-lfs jupyterlab \
+    bashtop
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
