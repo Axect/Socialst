@@ -260,7 +260,7 @@ let g:airline_powerline_fonts = 1
 set background=dark
 
 " Markdown Preview
-let g:mkdp_auto_start = 1
+let g:mkdp_auto_start = 0
 let g:mkdp_auto_open = 1
 let g:mkdp_auto_close = 1
 let g:mkdp_browser = 'firefox-developer-edition'

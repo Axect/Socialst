@@ -316,7 +316,7 @@ alias eleden_jupyter="ssh -N -f -L localhost:8407:localhost:8407 kavis@Eleden"
 
 alias perox_doc="RUSTDOCFLAGS='--html-in-header katex-header.html' cargo doc --no-deps"
 alias perox_check="cargo check --all-features"
-alias perox_bt="cargo build --all-features && cargo test --all-features"
+alias perox_bt="cargo build --release --all-features && cargo test --release --all-features"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -342,17 +342,17 @@ alias emnw="emacs -nw"
 # ==============================================================================
 # MESA
 # ==============================================================================
-#export MESASDK_ROOT="$HOME/zbin/mesasdk"
-#source $MESASDK_ROOT/bin/mesasdk_init.sh
-#export MESA_DIR="$HOME/zbin/mesa-r12115"
-#export OMP_NUM_THREADS=16
+export MESASDK_ROOT="$HOME/zbin/mesasdk"
+source $MESASDK_ROOT/bin/mesasdk_init.sh
+export MESA_DIR="$HOME/zbin/mesa-r12778"
+export OMP_NUM_THREADS=12
 
 # ==============================================================================
 # dStar
 # ==============================================================================
-#export DSTAR_LIB_DIR="$HOME/Documents/Test/dStar/lib"
-#export DSTAR_INC="$HOME/Documents/Test/dStar/include"
-#export DSTAR_DIR="$HOME/Documents/Test/dStar"
+export DSTAR_LIB_DIR="$HOME/Documents/Test/dStar/lib"
+export DSTAR_INC="$HOME/Documents/Test/dStar/include"
+export DSTAR_DIR="$HOME/Documents/Test/dStar"
 
 
 # ==============================================================================
@@ -374,8 +374,18 @@ alias test_fast='RUSTFLAGS="-C target-cpu=native" cargo test --release'
 # ==============================================================================
 export PATH=$PATH:$HOME/zbin/zig/build/bin
 
-
 # ==============================================================================
 # Google drive
 # ==============================================================================
 alias gdrive="cd $HOME/Insync/edeftg@gmail.com/Google\ Drive"
+
+# ==============================================================================
+# Deno
+# ==============================================================================
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+# ==============================================================================
+# Ruby
+# ==============================================================================
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
