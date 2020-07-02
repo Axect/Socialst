@@ -1,18 +1,34 @@
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 @import url('https://fonts.googleapis.com/css?family=Righteous');
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
 @import url('https://fonts.googleapis.com/css?family=Caveat');
 @import url('https://fonts.googleapis.com/css?family=Kalam');
-@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
-@import url('https://fonts.googleapis.com/css?family=Economica');
-@import url('https://fonts.googleapis.com/css?family=Lora');
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
-@import url('https://fonts.googleapis.com/css?family=East+Sea+Dokdo');
 @import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
-@import url('https://fonts.googleapis.com/css?family=Song+Myung');
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR');
-@import url('https://fonts.googleapis.com/css?family=Gugi');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: 'Mapo';
+    font-style: normal;
+    font-display: auto;
+    font-weight: normal;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff') format('woff'); 
+}
+
+@font-face {
+  font-family: 'Mapo';
+  font-style: normal;
+  font-display: auto;
+  font-weight: bold;
+  unicode-range: U+0020-U+007E,U+1100-U+11F9,U+3000-U+303F,U+3131-U+318E,U+327F-U+327F,U+AC00-U+D7A3,U+FF01-U+FF60;
+  src: url("./whitey/SeoulHangangEB.woff") format("woff");
+}
+
+@font-face { 
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
 
 html {
 	font-size: 19px;
@@ -23,7 +39,7 @@ html, body {
 	background: #fefefe;
 }
 body {
-  font-family: 'Ubuntu';
+    font-family: 'Ubuntu', 'Mapo';
 	color: #333;
 	line-height: 1.4;
 	text-align: justify;
@@ -63,7 +79,7 @@ h3 {
 h1, 
 h2, 
 h3{
-	font-family: "Righteous", "Do Hyeon";
+	font-family: "GmarketSansBold";
 }
 
 h1,
