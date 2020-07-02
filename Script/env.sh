@@ -143,7 +143,7 @@ read typora
 
 if [ $typora = "y" ]; then
     rm $HOME/.config/Typora/themes/whitey.css
-    ln -s $SOCIALST/Typora/themes/whitey.css $HOME/.config/Typora/themes/whitey.css
+    ln -s $SOCIALST/Typora/whitey.css $HOME/.config/Typora/themes/whitey.css
 elif [ $typora = "n" ]; then
     echo "Finish"
 fi
