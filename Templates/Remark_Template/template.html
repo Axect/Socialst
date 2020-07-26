@@ -63,8 +63,8 @@ fn main() {
 
     </textarea>
     <!-- <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
     <script src="./remark-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
     <!-- <script src="./MathJax.js" type="text/javascript"></script> -->
     <script>
       var slideshow = remark.create({
@@ -76,10 +76,17 @@ fn main() {
           highlightSpans: 'true'
       });
 
+      // Setup MathJax
       MathJax.Hub.Config({
           tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
           skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
           }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
       });
 
       MathJax.Hub.Configured();
