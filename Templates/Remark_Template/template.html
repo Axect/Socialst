@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Neutron Star Cooling</title>
+    <title>Template</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="socialst.css">
   </head>
@@ -12,10 +12,10 @@
 layout: true
 <div class="my-header">
   <p class="align_left"><img src="images/yonsei_logo.png" style="height: 30px;"/></p>
-  <p class="align_right"><b>Numerical implementation of Neutron star cooling</b></p>
+  <p class="align_right"><b>Header</b></p>
 </div>
 <div class="my-footer">
-  <p class="align_right"><b>2018.01.10 Yonsei HEP-COSMO</b></p>
+  <p class="align_right"><b>2020.07.26 Yonsei HEP-COSMO</b></p>
   <p class="align_left"><b>Tae Geun Kim</b></p>
 </div>
 
@@ -23,7 +23,7 @@ layout: true
 
 class: center, middle
 
-# Numerical implementation of <br/>Neutron star cooling
+# Title
 
 <h3 style="color: darkblue">Tae Geun Kim</h3>
 
@@ -49,13 +49,32 @@ class: center, middle
 
 ---
 
+```rust
+extern crate peroxide;
+use peroxide::*;
+
+fn main() {
+    let a = AD1::new(1f64, 0f64);
+    a.print();
+}
+```
+
+---
+
     </textarea>
     <!-- <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
     <script src="./remark-latest.min.js"></script>
     <!-- <script src="./MathJax.js" type="text/javascript"></script> -->
     <script>
-      var slideshow = remark.create();
+      var slideshow = remark.create({
+          ratio: '4:3',
+
+          highlightLanguage: 'rust',
+          highlightStyle: 'monokai',
+          highlightLines: 'true',
+          highlightSpans: 'true'
+      });
 
       MathJax.Hub.Config({
           tex2jax: {

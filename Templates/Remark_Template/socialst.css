@@ -1,36 +1,32 @@
-@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 @import url('https://fonts.googleapis.com/css?family=Righteous');
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
 @import url('https://fonts.googleapis.com/css?family=Caveat');
 @import url('https://fonts.googleapis.com/css?family=Kalam');
-@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
-@import url('https://fonts.googleapis.com/css?family=Economica');
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700;800&display=swap');;
 
 @font-face{
-    font-family:"Bebas Neue W01 Regular";
-    src:url("bebas_neue/Fonts/1444649/3d9ec9a9-76a2-4cfe-b376-76e7340c3b50.eot?#iefix");
-    src:url("bebas_neue/Fonts/1444649/3d9ec9a9-76a2-4cfe-b376-76e7340c3b50.eot?#iefix") format("eot"),url("bebas_neue/Fonts/1444649/e0d6f852-5401-4bbf-9672-47a50c5c87c6.woff2") format("woff2"),url("Fonts/1444649/7fedd582-6ae3-4850-be2f-4acae2e74fa5.woff") format("woff"),url("Fonts/1444649/d6e08ef3-40db-4ac3-82df-f062f55a72f5.ttf") format("truetype");
+  font-family: "Cascadia Code";
+  src:url("./fonts/CascadiaCode.woff2")
 }
 
 body { 
-    font-family: 'Slabo 27px'; 
+    font-family: 'Recursive', sans-serif; 
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Righteous';
-  font-weight: normal;
+  font-family: 'Oxanium', cursive;
+  font-weight: bold;
   text-shadow: 1px 2px 2px grey;
 }
 
 .remark-code, .remark-inline-code { 
-    font-family: 'Ubuntu Mono'; 
+    font-family: 'Cascadia Code'; 
 }
 
 .remark-slide-number {
-  font-size: 12pt;
+  font-size: 11pt;
   margin-bottom: 12px;
   margin-right: 10px;
   color: #555555; /* white */
@@ -71,8 +67,8 @@ h1, h2, h3, h4, h5 {
 
 /* Header/Footer stuff */
 div.my-header {
-    background-color: rgb(0, 45, 247);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#6b81ff), color-stop(0%,#3d6aff), color-stop(0%,#ffffff), color-stop(10%,#ffffff), color-stop(25%,rgb(0, 58, 247)), color-stop(100%,rgb(0, 25, 247)));
+    background-color: rgb(76, 78, 85);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(10%,#feffff), color-stop(25%,rgb(180, 180, 189)), color-stop(50%,rgb(74, 73, 95)), color-stop(75%, rgb(37, 47, 100)), color-stop(100%, rgb(16, 26, 161)));
     position: fixed;
     top: 0px;
     left: 0px;
@@ -84,7 +80,7 @@ div.my-header {
 div.my-header p {
     top: -7px;
     position: relative;
-    font-family: 'Caveat';
+    font-family: 'Quantico', sans-serif;
     font-size: 10pt;
     color: white;
     margin-right:10px;
@@ -97,7 +93,8 @@ div.my-header p.align_left img {
 }
 
 div.my-footer {
-    background-color: rgb(0, 58, 247);
+    background-color: rgb(76, 78, 85);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgb(16, 26, 161)), color-stop(10%,#251d75), color-stop(25%,rgb(33, 33, 114)), color-stop(50%,rgb(35, 36, 73)), color-stop(75%, rgb(59, 57, 88)), color-stop(100%, rgb(46, 46, 46)));
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -107,7 +104,7 @@ div.my-footer {
 
 div.my-footer p {
     font-size: 10pt;
-    font-family: 'Caveat';
+    font-family: 'Quantico', sans-serif;
     color: white;
     position: relative;
     bottom: 12px;
