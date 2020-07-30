@@ -65,13 +65,13 @@ elif [ $vim -eq 3 ]; then
 fi
 
 # tmux
-#if [ ! -d "$HOME/.tmux.conf.local" ]; then
-#  cd $HOME
-#  git clone https://github.com/gpakosz/.tmux.git
-#  ln -s -f .tmux/.tmux.conf
-#  ln -s $SOCIALST/Tmux/.tmux.conf.local $HOME/.tmux.conf.local
-#  echo "Complete tmux Setup!"
-#fi
+if [ ! -d "$HOME/.tmux.conf.local" ]; then
+  cd $HOME
+  git clone https://github.com/gpakosz/.tmux.git
+  ln -s -f .tmux/.tmux.conf
+  ln -s $SOCIALST/Tmux/.tmux.conf.local $HOME/.tmux.conf.local
+  echo "Complete tmux Setup!"
+fi
 
 # Eisvogel
 if [ ! -d "$HOME/.pandoc" ]; then
