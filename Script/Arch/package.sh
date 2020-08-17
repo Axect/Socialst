@@ -26,11 +26,10 @@ if [ $laptop = "y" ]; then
     echo "Install packages for laptop"
     yay -S --noconfirm --needed \
         chrome-gnome-shell \
-        okular code imagewriter pdfsam gscan2pdf easytag filezilla flameshot \
+        okular code imagewriter pdfsam gscan2pdf easytag filezilla \
         zathura-ps zathura-pdf-poppler zathura-djvu zathura-cb \
-        synapse uim \
-        gnome-tweaks firefox-developer-edition firefox-developer-edition-i18n-ko \
-        thunderbird thunderbird-i18n-ko \
+        synapse uim gnome-tweaks \
+        firefox-developer-edition firefox-developer-edition-i18n-ko \
         audacious \
         simplescreenrecorder
 elif [ $laptop = "n" ]; then
