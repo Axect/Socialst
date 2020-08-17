@@ -90,6 +90,8 @@ Plug 'jacoborus/tender.vim'
 "Plug 'whatyouhide/vim-gotham'
 "Plug 'tyrannicaltoucan/vim-quantum'
 "Plug 'KeitaNakamura/neodark.vim'
+"Plug 'endel/vim-github-colorscheme'
+"Plug 'junegunn/seoul256.vim'
 
 " Scroll
 Plug 'yuttie/comfortable-motion.vim'
@@ -256,6 +258,8 @@ let g:comfortable_motion_no_default_key_mappings = 1
 " Color scheme
 colorscheme tender
 let g:airline_theme='tender'
+"let g:seoul256_background=253
+"colo seoul256-light
 let g:airline_powerline_fonts = 1
 set background=dark
 

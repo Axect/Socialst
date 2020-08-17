@@ -210,7 +210,7 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
     ;;
 esac
 
-export TERMINAL="/usr/bin/gnome-terminal"
+export TERMINAL="gnome-terminal"
 
 # ==============================================================================
 # Aliases
@@ -390,3 +390,8 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 # Ruby
 # ==============================================================================
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+
+# ==============================================================================
+# Gogh
+# ==============================================================================
+alias gogh='bash -c  "$(wget -qO- https://git.io/vQgMr)"'

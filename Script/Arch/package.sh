@@ -68,9 +68,9 @@ if [ $aur = "y" ]; then
         gitkraken \
         onlyoffice-bin \
         notion-app
+        gnome-terminal-transparency \
+        typora 
         #masterpdfeditor \
-        #gnome-terminal-transparency \
-        #typora \
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
