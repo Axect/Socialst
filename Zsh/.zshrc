@@ -343,17 +343,17 @@ alias emnw="emacs -nw"
 # ==============================================================================
 # MESA
 # ==============================================================================
-export MESASDK_ROOT="$HOME/zbin/mesasdk"
-source $MESASDK_ROOT/bin/mesasdk_init.sh
-export MESA_DIR="$HOME/zbin/mesa-r12778"
-export OMP_NUM_THREADS=12
+#export MESASDK_ROOT="$HOME/zbin/mesasdk"
+#source $MESASDK_ROOT/bin/mesasdk_init.sh
+#export MESA_DIR="$HOME/zbin/mesa-r12778"
+#export OMP_NUM_THREADS=12
 
 # ==============================================================================
 # dStar
 # ==============================================================================
-export DSTAR_LIB_DIR="$HOME/Documents/Test/dStar/lib"
-export DSTAR_INC="$HOME/Documents/Test/dStar/include"
-export DSTAR_DIR="$HOME/Documents/Test/dStar"
+#export DSTAR_LIB_DIR="$HOME/Documents/Test/dStar/lib"
+#export DSTAR_INC="$HOME/Documents/Test/dStar/include"
+#export DSTAR_DIR="$HOME/Documents/Test/dStar"
 
 
 # ==============================================================================
