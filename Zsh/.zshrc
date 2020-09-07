@@ -243,7 +243,7 @@ alias gitu='git add . && git commit && git push'
 # ==============================================================================
 #export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 #export SPARK_HOME="$HOME/zbin/spark-2.3.0-bin-hadoop2.7/"
-export CHPL_HOME="$HOME/zbin/chapel-1.19.0"
+export CHPL_HOME="$HOME/zbin/chapel-1.22.1"
 export PATH="$PATH:$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 #export PATH="$PATH:$SPARK_HOME/bin"
@@ -395,3 +395,13 @@ export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 # Gogh
 # ==============================================================================
 alias gogh='bash -c  "$(wget -qO- https://git.io/vQgMr)"'
+
+# ==============================================================================
+# Nim
+# ==============================================================================
+alias nimc='nim c -d:release -d:danger'
+
+# ==============================================================================
+# Chapel
+# ==============================================================================
+alias chapelblas='chapel -O -I/opt/OpenBLAS/include -L/opt/OpenBLAS/lib -lopenblas'
