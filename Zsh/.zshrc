@@ -404,4 +404,4 @@ alias nimc='nim c -d:release -d:danger'
 # ==============================================================================
 # Chapel
 # ==============================================================================
-alias chapelblas='chapel -O -I/opt/OpenBLAS/include -L/opt/OpenBLAS/lib -lopenblas'
+alias chplblas='chpl -O -I/opt/OpenBLAS/include -L/opt/OpenBLAS/lib -lopenblas'
