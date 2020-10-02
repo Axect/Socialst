@@ -17,7 +17,7 @@ read choose_zsh
 if [ $choose_zsh -eq 1 ]; then
     if [ ! -d "$HOME/.zshrc" ]; then
         echo "Create .zshrc file"
-    elif [ -d "$HOME/.zshrc" ]; then
+    else
         echo "Backup original .zshrc to .zshrc.old"
         mv $HOME/.zshrc $HOME/.zshrc.old
     fi
