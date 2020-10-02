@@ -25,7 +25,7 @@ read laptop
 if [ $laptop = "y" ]; then
     echo "Install packages for laptop"
     yay -S --noconfirm --needed \
-        okular code imagewriter pdfsam gscan2pdf easytag filezilla \
+        okular imagewriter pdfsam gscan2pdf easytag filezilla \
         zathura-ps zathura-pdf-poppler zathura-djvu zathura-cb \
         synapse uim \
         firefox-developer-edition firefox-developer-edition-i18n-ko \
@@ -68,7 +68,8 @@ if [ $aur = "y" ]; then
         insync-nautilus \
         gitkraken \
         notion-app \
-        typora 
+        typora \
+        visual-studio-code-bin
         #masterpdfeditor \
         #onlyoffice-bin \
         #gnome-terminal-transparency \
