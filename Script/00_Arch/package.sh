@@ -17,7 +17,7 @@ yay -S --noconfirm --needed \
     ttf-liberation noto-fonts noto-fonts-emoji noto-fonts-extra \
     ttf-jetbrains-mono \
     git-lfs jupyterlab \
-    bashtop
+    bashtop exa
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
@@ -67,7 +67,7 @@ if [ $aur = "y" ]; then
         insync \
         insync-nautilus \
         gitkraken \
-        notion-app
+        notion-app \
         typora 
         #masterpdfeditor \
         #onlyoffice-bin \

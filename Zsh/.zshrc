@@ -333,7 +333,7 @@ alias perox_bt="cargo build --release --all-features && cargo test --release --a
 # ==============================================================================
 # OpenBLAS
 # ==============================================================================
-export LD_LIBRARY_PATH=/opt/OpenBlas/lib/:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/:$LD_LIBRARY_PATH
 
 # ==============================================================================
 # Project manager
