@@ -17,7 +17,8 @@ yay -S --noconfirm --needed \
     ttf-liberation noto-fonts noto-fonts-emoji noto-fonts-extra \
     ttf-jetbrains-mono \
     git-lfs jupyterlab \
-    bashtop exa
+    bashtop exa \
+    hugo
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop

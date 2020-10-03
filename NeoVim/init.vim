@@ -112,7 +112,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
 " Latex
-Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex'
 
 " Snippets
 " Plug 'SirVer/ultisnips'
