@@ -170,7 +170,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
 
 #set powersavings for display:
-exec --no-startup-id xset s 480 dpms 600 600 600
+exec --no-startup-id xset s 900 dpms 1200 1500 1800
 
 # Desktop notifications
 exec --no-startup-id /usr/bin/dunst
