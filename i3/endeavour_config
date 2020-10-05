@@ -126,7 +126,11 @@ set $ws6 "🟣"
 set $ws7 "🟤"
 set $ws8 "⚫"
 
-bindsym $mod+s exec --no-startup-id ~/.config/i3/scripts/empty_workspace.sh
+#bindsym $mod+s exec --no-startup-id ~/.config/i3/scripts/empty_workspace.sh
+
+bindsym $mod+m exec xrandr --output eDP1 --off
+bindsym $mod+shift+m exec xrandr --output DP2 --auto --right-of eDP1
+bindsym $mod+p move workspace to output right
 
 set $firstMonitor HDMI1
 set $secondMonitor HDMI2
@@ -347,7 +351,7 @@ bindsym $mod+n exec "/usr/bin/thunar"
 bindsym Print exec "scrot ~/%Y-%m-%d-%T-screenshot.png"
 
 # Redirect sound to headphones
-bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
+bindsym $mod+s exec "/usr/local/bin/switch-audio-port"
 
 # rofi bindings simple menu
 #bindsym F9 exec rofi -modi drun -show drun -lines 7
