@@ -27,7 +27,7 @@ if [ $laptop = "y" ]; then
     echo "Install packages for laptop"
     yay -S --noconfirm --needed \
         okular imagewriter pdfsam gscan2pdf easytag filezilla \
-        zathura-ps zathura-pdf-poppler zathura-djvu zathura-cb \
+        zathura-ps zathura-pdf-mupdf zathura-djvu zathura-cb \
         synapse uim \
         firefox-developer-edition firefox-developer-edition-i18n-ko \
         audacious \
