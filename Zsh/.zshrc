@@ -46,7 +46,7 @@ function zsrc() {
 
 #al-info
 
-EDITOR="nvim"
+export EDITOR="nvim"
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
