@@ -2,8 +2,6 @@
 # zathurarc
 
 # settings
-set window-height 1024
-set window-width 768
 set adjust-open width
 # set show-scrollbars true
 set first-page-column 2
