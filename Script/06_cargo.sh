@@ -12,3 +12,9 @@ cargo install evcxr_repl evcxr_jupyter
 
 # runner
 cargo install runner
+
+# cargo-edit
+cargo install cargo-edit
+
+# cargo-update
+cargo install cargo-update
