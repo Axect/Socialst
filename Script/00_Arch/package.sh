@@ -70,7 +70,9 @@ if [ $aur = "y" ]; then
         gitkraken \
         notion-app \
         typora \
-        visual-studio-code-bin
+        visual-studio-code-bin \
+        mailspring \
+        minetime
         #masterpdfeditor \
         #onlyoffice-bin \
         #gnome-terminal-transparency \
