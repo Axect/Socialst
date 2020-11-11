@@ -31,7 +31,8 @@ if [ $laptop = "y" ]; then
         synapse uim \
         firefox-developer-edition firefox-developer-edition-i18n-ko \
         audacious \
-        simplescreenrecorder
+        simplescreenrecorder \
+        vivaldi vivaldi-ffmpeg-codecs
         #chrome-gnome-shell \
         #gnome-tweaks \
 elif [ $laptop = "n" ]; then
