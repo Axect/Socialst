@@ -1,7 +1,7 @@
 ---
 mainfont: "NanumMyeongjo"
 monofont: "Cascadia Code"
-sansfont: "NanumSquareB"
+sansfont: "NanumSquareRoundB"
 fontsize: "10pt"
 title: "Template"
 author: [Tae Geun Kim]
