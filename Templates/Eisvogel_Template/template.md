@@ -1,11 +1,11 @@
 ---
-mainfont: "NanumMyeongjo"
+mainfont: "Noto Serif CJK KR"
 monofont: "Cascadia Code"
 sansfont: "NanumSquareRoundB"
 fontsize: "10pt"
 title: "Template"
 author: [Tae Geun Kim]
-date: 2020-07-24
+date: 2020-12-14
 subject: "Markdown"
 keywords: [Markdown, Example]
 subtitle: "Should modify this"
