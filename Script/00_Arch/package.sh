@@ -32,9 +32,10 @@ if [ $laptop = "y" ]; then
         firefox-developer-edition firefox-developer-edition-i18n-ko \
         audacious \
         simplescreenrecorder \
-        vivaldi vivaldi-ffmpeg-codecs
-        #chrome-gnome-shell \
+        sof-firmware
         #gnome-tweaks \
+        #chrome-gnome-shell \
+        #vivaldi vivaldi-ffmpeg-codecs
 elif [ $laptop = "n" ]; then
     echo "Skip laptop packages"
 fi
