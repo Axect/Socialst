@@ -65,7 +65,6 @@ if [ $aur = "y" ]; then
     yay -S --noconfirm --needed \
         slack-desktop ttf-nanum \
         la-capitaine-icon-theme \
-        ncview \
         youtube-dl-gui-git \
         insync \
         insync-nautilus \
@@ -78,6 +77,7 @@ if [ $aur = "y" ]; then
         #masterpdfeditor \
         #onlyoffice-bin \
         #gnome-terminal-transparency \
+        #ncview \
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
