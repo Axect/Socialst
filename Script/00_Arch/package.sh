@@ -73,7 +73,8 @@ if [ $aur = "y" ]; then
         typora \
         visual-studio-code-bin \
         mailspring \
-        minetime
+        minetime \
+        edex-ui-bin
         #masterpdfeditor \
         #onlyoffice-bin \
         #gnome-terminal-transparency \
