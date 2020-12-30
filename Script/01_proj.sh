@@ -2,6 +2,7 @@
 PROGRAMMING="$HOME/Documents/Programming"
 PROJECT="$HOME/Documents/Project"
 TEMPLATE="$HOME/Documents/Template"
+TEST="$HOME/Documents/Test"
 AXECT="https://github.com/Axect/"
 
 if [ ! -d "$PROGRAMMING" ]; then
@@ -132,4 +133,8 @@ if [ ! -d "$TEMPLATE" ]; then
     git clone "${AXECT}Remark_Template"
     git clone "${AXECT}Mail_Signature"
     cd "$HOME/Documents"
+fi
+
+if [ ! -d "$TEST" ]; then
+    git clone "${AXECT}Test"
 fi
