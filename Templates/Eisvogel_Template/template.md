@@ -5,7 +5,7 @@ sansfont: "NanumSquareRoundB"
 fontsize: "10pt"
 title: "Template"
 author: [Tae Geun Kim]
-date: 2020-12-14
+date: 2021-01-06
 subject: "Markdown"
 keywords: [Markdown, Example]
 subtitle: "Should modify this"
@@ -26,6 +26,10 @@ header-includes:
 ...
 
 \newpage\null\thispagestyle{empty}\newpage
+
+\tableofcontents
+
+\newpage
 
 # Start
 
