@@ -52,7 +52,11 @@ if [ $hep = "y" ]; then
         fastjet \
         pythia8 \
         cern-vdt \
-        lhapdf
+        lhapdf \
+        cython \
+        python-wheel \
+        python-astropy \
+        python-h5py
 elif [ $hep = "n" ]; then
     echo "Skip hep programs"
 fi
