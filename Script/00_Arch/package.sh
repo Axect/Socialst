@@ -18,7 +18,8 @@ yay -S --noconfirm --needed \
     ttf-jetbrains-mono \
     git-lfs jupyterlab \
     bashtop exa \
-    hugo
+    hugo \
+    lld sccache
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
