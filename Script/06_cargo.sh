@@ -1,3 +1,5 @@
+cp ../Cargo/config.toml $HOME/.cargo/config.toml
+
 # Hyperfine
 cargo install hyperfine
 
