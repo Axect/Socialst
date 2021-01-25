@@ -259,6 +259,7 @@ export PATH="$PATH:$HOME/go/bin/"
 #export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin/"
 export MANPATH="$MANPATH:$CHPL_HOME/man"
 #export CARP_DIR="$HOME/zbin/Carp"
+export SCCACHE_DIR="$HOME/.cache/sccache"
 
 
 # ==============================================================================
@@ -377,6 +378,9 @@ alias cargo_fast='RUSTFLAGS="-C target-cpu=native" cargo build --release'
 alias cargo_asm='RUSTFLAGS="--emit=asm" cargo build --release'
 alias run_fast='RUSTFLAGS="-C target-cpu=native" cargo run --release'
 alias test_fast='RUSTFLAGS="-C target-cpu=native" cargo test --release'
+alias make_target='mkdir target && \
+sudo mount -t tmpfs none ./target && \
+cat /proc/mounts | rg "$(pwd)" | sudo tee -a /etc/fstab'
 
 # ==============================================================================
 # Zig

@@ -8,6 +8,7 @@ set hidden
 set nobackup
 set nowritebackup
 set noswapfile
+set mouse=a
 
 " Better display for messages
 set cmdheight=2
@@ -135,6 +136,9 @@ Plug 'fsouza/chapel.vim'
 
 " Nim
 Plug 'zah/nim.vim'
+
+" Capnproto
+Plug 'cstrahan/vim-capnp'
 
 call plug#end()
 
