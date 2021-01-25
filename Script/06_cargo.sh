@@ -20,3 +20,6 @@ cargo install cargo-edit
 
 # cargo-update
 cargo install cargo-update
+
+# measureme
+cargo install --git https://github.com/rust-lang/measureme crox flamegraph summarize
