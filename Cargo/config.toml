@@ -4,5 +4,6 @@ rustc-wrapper = "/usr/bin/sccache"
 [target.x86_64-unknown-linux-gnu]
 rustflags = [
     "-C", "link-arg=-fuse-ld=lld", 
-    "-C", "target-cpu=native"
+    "-C", "target-cpu=native",
+    "--emit=asm"
 ]

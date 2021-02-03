@@ -140,6 +140,9 @@ Plug 'zah/nim.vim'
 " Capnproto
 Plug 'cstrahan/vim-capnp'
 
+" V
+Plug 'ollykel/v-vim'
+
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.
