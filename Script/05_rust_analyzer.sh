@@ -2,6 +2,7 @@ if [ -d "$HOME/zbin" ]; then
     cd $HOME/zbin
 else
     mkdir $HOME/zbin
+    mkdir $HOME/zlib
     cd $HOME/zbin
 fi
 
