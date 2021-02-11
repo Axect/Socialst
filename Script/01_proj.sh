@@ -49,6 +49,7 @@ if [ ! -d "$PROJECT" ]; then
   mkdir "Machine_Learning"
   mkdir "R_Project"
   mkdir "Nim_Project"
+  mkdir "Julia_Project"
 
   git clone "${AXECT}Euler"
   git clone "${AXECT}Academy"
@@ -121,6 +122,9 @@ if [ ! -d "$PROJECT" ]; then
 
   cd "$PROJECT/Nim_Project"
   git clone "${AXECT}NiMusic"
+
+  cd "$PROJECT/Julia_Project"
+  git clone "${AXECT}Acalc.jl"
 
   cd "$PROJECT"
 fi
