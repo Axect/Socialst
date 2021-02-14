@@ -386,6 +386,7 @@ cat /proc/mounts | rg "$(pwd)" | sudo tee -a /etc/fstab'
 # Zig
 # ==============================================================================
 export PATH=$PATH:$HOME/zbin/zig/build/bin
+alias zig_fast="zig build-exe -O ReleaseFast -target x86_64-linux-gnu"
 
 # ==============================================================================
 # Google drive
@@ -412,6 +413,7 @@ alias gogh='bash -c  "$(wget -qO- https://git.io/vQgMr)"'
 # Nim
 # ==============================================================================
 alias nimc='nim c -d:release -d:danger'
+alias nimblas='nim c -d:release -d:danger -d:openblas'
 
 # ==============================================================================
 # Chapel

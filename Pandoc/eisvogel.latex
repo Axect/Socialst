@@ -146,6 +146,7 @@ $endif$
 \usepackage{cancel}
 \usepackage{booktabs}
 \usepackage{tensor}
+\usepackage{wrapfig}
 %\usepackage{biblatex}
 %\usepackage[mj=utbt]{CJKutf8}
 \usepackage[shortlabels]{enumitem}
@@ -208,6 +209,7 @@ $endif$
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\M}{\{1,\cdots,M\}}
 \newcommand{\Data}{\{(X_i, Y_i)\}^n_{i=1}}
+\newcommand{\qed}{\hfill\blacksquare}
 
 %% - Stats
 \renewcommand{\P}{\mathbf{P}}
