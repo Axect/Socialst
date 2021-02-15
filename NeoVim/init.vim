@@ -322,3 +322,7 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+
+" Julia
+let g:latex_to_unicode_file_types='$^'
+let g:latex_to_unicode_file_types_blacklist = '.*'
