@@ -243,7 +243,7 @@ alias gitu='git add . && git commit && git push'
 # ==============================================================================
 #export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 #export SPARK_HOME="$HOME/zbin/spark-2.3.0-bin-hadoop2.7/"
-export CHPL_HOME="$HOME/zbin/chapel-1.22.1"
+#export CHPL_HOME="$HOME/zbin/chapel-1.22.1"
 export PATH="$PATH:$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 #export PATH="$PATH:$SPARK_HOME/bin"
