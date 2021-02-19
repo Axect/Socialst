@@ -1,5 +1,7 @@
-using PackageCompiler, IJulia
-using Flux, Plots, DifferentialEquations, JuMP, Zygote, BenchmarkTools, NCDataFrame, DataFrames
+using PackageCompiler, IJulia, BenchmarkTools
+using Flux, Plots, DifferentialEquations, JuMP
+using NCDataFrame, DataFrames, Distributions, QuadGK, LsqFit
+using ForwardDiff, Zygote
 
 create_sysimage([:Flux,
                  :Plots,
@@ -8,7 +10,11 @@ create_sysimage([:Flux,
                  :Zygote,
                  :BenchmarkTools,
                  :NCDataFrame,
-                 :DataFrames
-                ], sysimage_path="/home/xteca/zlib/sys_fpdj.so")
+                 :DataFrames,
+                 :Distributions,
+                 :QuadGK,
+                 :ForwardDiff,
+                 :LsqFit
+                ], sysimage_path="/home/xteca/zlib/sys_science.so")
 
-IJulia.installkernel("Julia FPDJ", "--sysimage=/home/xteca/zlib/sys_fpdj.so")
+IJulia.installkernel("Julia Science", "--sysimage=/home/xteca/zlib/sys_science.so")
