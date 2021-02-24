@@ -3,6 +3,8 @@ using Flux, Plots, DifferentialEquations, JuMP
 using NCDataFrame, DataFrames, Distributions, QuadGK, LsqFit
 using ForwardDiff, Zygote
 
+zlib = joinpath(homedir(), "zlib/sys_science.so")
+
 create_sysimage([:Flux,
                  :Plots,
                  :DifferentialEquations,
@@ -14,7 +16,8 @@ create_sysimage([:Flux,
                  :Distributions,
                  :QuadGK,
                  :ForwardDiff,
-                 :LsqFit
-                ], sysimage_path="/home/xteca/zlib/sys_science.so")
+                 :LsqFit,
+                 :LoopVectorization
+                ], sysimage_path=zlib)
 
-IJulia.installkernel("Julia Science", "--sysimage=/home/xteca/zlib/sys_science.so")
+IJulia.installkernel("Julia Science", "--sysimage=$zlib")

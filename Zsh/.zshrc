@@ -280,6 +280,7 @@ alias ncplotinit="cp $HOME/Socialst/Templates/PyPlot_Template/nc_plot.py ./"
 alias ipcplotinit="cp $HOME/Socialst/Templates/PyPlot_Template/ipc_plot.py ./"
 alias eisvogel_academy="cp $HOME/Socialst/Templates/Eisvogel_Template/academy.md ./"
 alias eisvogel_geometry="cp $HOME/Socialst/Templates/Eisvogel_Template/geometry.md ./"
+alias benchjulia="cp $HOME/Socialst/Templates/Julia_Template/bench.jl ./"
 
 # ==============================================================================
 # Eisvogel
