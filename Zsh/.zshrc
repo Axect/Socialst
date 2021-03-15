@@ -215,10 +215,21 @@ export TERMINAL="gnome-terminal"
 # ==============================================================================
 # Aliases
 # ==============================================================================
-alias l='ls'
-alias la='ls -A'
-alias ll='ls -lA'
-alias ls='ls --color=auto'
+alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
+alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
+alias ll='exa -l --color=always --group-directories-first --icons'  # long format
+alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
+alias l.="exa -a | egrep '^\.'"                                     # show only dotfiles
+
+alias cat='bat --style header --style rules --style snip --style changes --style header'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias hw='hwinfo --short'                                   # Hardware Info
+alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB (expac must be installed)
+alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'			# List amount of -git packages
+
 alias upd='sudo pacman -Syyu'
 alias pac='sudo pacman --color auto'
 alias merge='xrdb -merge ~/.Xresources'
@@ -229,6 +240,10 @@ alias cp="cp -i"                                                # Confirm before
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias SSHFORWARDLIST="ps aux | grep ssh"
+
+# Get the error messages from journalctl
+alias jctl="journalctl -p 3 -xb"
+
 
 # Git
 alias gaa="git add --all"

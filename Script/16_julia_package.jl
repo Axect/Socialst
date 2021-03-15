@@ -1,6 +1,7 @@
 import Pkg
 Pkg.update()
 Pkg.add("DataFrames")
+Pkg.add("BenchmarkTools")
 Pkg.add("Distributions")
 Pkg.add("Pluto")
 Pkg.add("Flux")
