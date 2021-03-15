@@ -19,7 +19,8 @@ yay -S --noconfirm --needed \
     git-lfs jupyterlab \
     bashtop exa \
     hugo \
-    lld sccache
+    lld sccache \
+    hyperfine
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
@@ -77,10 +78,10 @@ if [ $aur = "y" ]; then
         notion-app \
         typora \
         visual-studio-code-bin \
-        mailspring \
         minetime \
-        edex-ui-bin
-        #masterpdfeditor \
+        masterpdfeditor
+        #mailspring \
+        #edex-ui-bin
         #onlyoffice-bin \
         #gnome-terminal-transparency \
         #ncview \

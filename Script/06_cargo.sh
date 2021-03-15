@@ -1,7 +1,7 @@
 ln -s $HOME/Socialst/Cargo/config.toml $HOME/.cargo/config.toml
 
 # Hyperfine
-cargo install hyperfine
+#cargo install hyperfine
 
 # loc
 cargo install loc
