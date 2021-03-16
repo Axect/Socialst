@@ -441,3 +441,8 @@ alias chplblas='chpl -O -I/opt/OpenBLAS/include -L/opt/OpenBLAS/lib -lopenblas'
 # PYRS
 # ==============================================================================
 export VIRTUAL_ENV='$HOME/zbin/pyrs'
+
+# ==============================================================================
+# Julia
+# ==============================================================================
+alias juliasci='julia -J /home/xteca/zlib/sys_science.so'
