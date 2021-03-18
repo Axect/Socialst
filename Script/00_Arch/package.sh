@@ -73,14 +73,14 @@ if [ $aur = "y" ]; then
         la-capitaine-icon-theme \
         youtube-dl-gui-git \
         insync \
-        insync-nautilus \
         gitkraken \
         notion-app \
         typora \
         visual-studio-code-bin \
         minetime \
-        masterpdfeditor
-        #mailspring \
+        masterpdfeditor \
+        mailspring
+        #insync-nautilus \
         #edex-ui-bin
         #onlyoffice-bin \
         #gnome-terminal-transparency \
