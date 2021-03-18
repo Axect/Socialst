@@ -20,7 +20,8 @@ yay -S --noconfirm --needed \
     bashtop exa \
     hugo \
     lld sccache \
-    hyperfine
+    hyperfine \
+    bat
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
