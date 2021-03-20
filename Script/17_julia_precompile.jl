@@ -19,7 +19,8 @@ create_sysimage([:Flux,
                  :ForwardDiff,
                  :LsqFit,
                  :LoopVectorization,
-                 :Gadfly
+                 :Gadfly,
+                 :GLM
                 ], sysimage_path=zlib)
 
 IJulia.installkernel("Julia Science", "--sysimage=$zlib")
