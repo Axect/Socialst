@@ -1,14 +1,14 @@
 using PackageCompiler, IJulia, BenchmarkTools
-using Flux, Plots, DifferentialEquations, JuMP
+using Flux, Plots, JuMP
 using NCDataFrame, DataFrames, Distributions, QuadGK, LsqFit
 using ForwardDiff, Zygote
 using LoopVectorization, Gadfly
+using GLM, MLDatasets, CUDA
 
-zlib = joinpath(homedir(), "zlib/sys_science.so")
+zlib = joinpath(homedir(), "zlib/sys_ml.so")
 
 create_sysimage([:Flux,
                  :Plots,
-                 :DifferentialEquations,
                  :JuMP,
                  :Zygote,
                  :BenchmarkTools,
@@ -21,7 +21,8 @@ create_sysimage([:Flux,
                  :LoopVectorization,
                  :Gadfly,
                  :GLM,
-                 :MLDatasets
+                 :MLDatasets,
+                 :CUDA
                 ], sysimage_path=zlib)
 
-IJulia.installkernel("Julia Science", "--sysimage=$zlib")
+IJulia.installkernel("Julia ML", "--sysimage=$zlib")

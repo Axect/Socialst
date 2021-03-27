@@ -446,3 +446,4 @@ export VIRTUAL_ENV='$HOME/zbin/pyrs'
 # Julia
 # ==============================================================================
 alias juliasci='julia -J /home/xteca/zlib/sys_science.so'
+alias juliaml='julia -J /home/xteca/zlib/sys_ml.so'
