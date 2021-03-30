@@ -275,6 +275,7 @@ export PATH="$PATH:$HOME/go/bin/"
 export MANPATH="$MANPATH:$CHPL_HOME/man"
 #export CARP_DIR="$HOME/zbin/Carp"
 export SCCACHE_DIR="$HOME/.cache/sccache"
+export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 
 
 # ==============================================================================
