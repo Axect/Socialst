@@ -80,7 +80,8 @@ if [ $aur = "y" ]; then
         visual-studio-code-bin \
         minetime \
         masterpdfeditor \
-        mailspring
+        zoom
+        #mailspring
         #insync-nautilus \
         #edex-ui-bin
         #onlyoffice-bin \
