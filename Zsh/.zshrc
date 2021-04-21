@@ -449,3 +449,20 @@ export VIRTUAL_ENV='$HOME/zbin/pyrs'
 # ==============================================================================
 alias juliasci='julia -J /home/xteca/zlib/sys_science.so'
 alias juliaml='julia -J /home/xteca/zlib/sys_ml.so'
+
+# ==============================================================================
+# nnn
+# ==============================================================================
+export NNN_BMS='d:~/Documents;D:~/Downloads/;g:~/Insync/edeftg@gmail.com/Google Drive/;b:~/Insync/edeftg@gmail.com/Google Drive/Books;u:~/Insync/edeftg@gmail.com/Google Drive/Business'
+export NNN_COLORS="2136"
+export NNN_TRASH=1
+export NNN_FIFO=/tmp/nnn.fifo
+export NNN_PLUG='f:finder;o:fzopen;p:pdfview;d:diffs;t:nmount'
+nnn_cd()                                                                                                   
+{
+    if ! [ -z "$NNN_PIPE" ]; then
+        printf "%s\0" "0c${PWD}" > "${NNN_PIPE}" !&
+    fi  
+}
+
+trap nnn_cd EXIT
