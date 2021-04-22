@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Template</title>
+    <title>Window Header</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="socialst.css">
+    <link rel="stylesheet" type="text/css" href="additional.css">
   </head>
   <body>
     <textarea id="source">
@@ -15,7 +16,7 @@ layout: true
   <p class="align_right"><b>Header</b></p>
 </div>
 <div class="my-footer">
-  <p class="align_right"><b>2020.07.26 Yonsei HEP-COSMO</b></p>
+  <p class="align_right"><b>2021.04.23 ML Study</b></p>
   <p class="align_left"><b>Tae Geun Kim</b></p>
 </div>
 
@@ -25,6 +26,8 @@ class: center, middle
 
 # Title
 
+<h4 style="color:brown">Subtitle</h4>
+
 <h3 style="color: darkblue">Tae Geun Kim</h3>
 
 ---
@@ -33,33 +36,107 @@ class: center, middle
 
 --
 
-* What can be done by perceptron?
+* What is the Linear regression?
 
 --
 
-* What can't be done by perceptron?
+* Estimate procedure
 
 --
 
-* Linear Regression
-
---
-
-* Multi Layer Perceptron
+* Test procedure
 
 ---
 
-```rust
-extern crate peroxide;
-use peroxide::*;
+class: center, middle
 
-fn main() {
-    let a = AD1::new(1f64, 0f64);
-    a.print();
-}
-```
+# What is the Linear regression?
 
 ---
+
+class: split-70
+
+### Is this plot linear regression?
+
+.left-column[
+<div id="boxshadow" style="width:90%">
+  <img src="images/linear_reg_xkcd.png" alt="simple" style="width:100%"/>
+  <figcaption style="text-align: center;"><b>Fig.1</b> Linear Regression...?</figcaption>
+</div>
+]
+
+--
+
+.right-column[
+  **Trivially linear regression!**
+]
+
+---
+
+class: split-30
+
+### Is this plot linear regression?
+
+.right-column[
+<div id="boxshadow" style="width:100%">
+  <img src="images/xkcd_lam_10_5_plot.png" alt="gaussian" style="width:100%"/>
+  <figcaption style="text-align: center;"><b>Fig.2</b> Non-Linear Regression...?</figcaption>
+</div>
+]
+
+--
+
+.left-column[
+  It seems not linear...
+]
+
+--
+
+.left-column[
+  But it is still linear regression!
+]
+
+---
+
+class: center, middle
+
+# Estimate Procedure
+
+---
+
+### Estimate Procedure
+
+There are three ways to estimate parameter `\(\beta\)` :
+
+--
+
+1. Ordinary Least Square (OLS)
+
+--
+$$\hat{\beta} = \underset{\beta}{\text{argmin}} \,RSS(\beta)$$
+
+--
+
+2. Maximum Likelihood Estimation (MLE)
+
+--
+$$\hat{\beta} = \underset{\beta}{\text{argmax}} \,P(Y|X,\beta)$$
+
+--
+
+3. Bayesian Inference
+
+---
+
+.center[
+<div class="animated-border-quote">
+  <blockquote>
+    Hi
+  </blockquote>
+</div>
+]
+
+
 
     </textarea>
     <!-- <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script> -->
