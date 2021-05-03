@@ -471,5 +471,5 @@ trap nnn_cd EXIT
 # Remark & Decktape
 # ==============================================================================
 remark2pdf() {
-    decktape -s 1280x720 --chrome-path /usr/bin/google-chrome-beta https://127.0.0.1:500/$1.html $1.pdf
+    decktape -s 1280x720 --chrome-path /usr/bin/google-chrome-beta http://127.0.0.1:5500/$1.html $1.pdf
 }
