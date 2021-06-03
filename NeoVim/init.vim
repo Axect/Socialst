@@ -149,6 +149,9 @@ Plug 'qnighy/lalrpop.vim'
 " pest
 Plug 'pest-parser/pest.vim'
 
+" Tree-sitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.
