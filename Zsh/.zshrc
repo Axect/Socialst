@@ -473,3 +473,10 @@ trap nnn_cd EXIT
 remark2pdf() {
     decktape -s 1280x720 --chrome-path /usr/bin/google-chrome-beta http://127.0.0.1:5500/$1.html $1.pdf
 }
+
+# ==============================================================================
+# Pythia
+# ==============================================================================
+pythia8() {
+    g++ $1.cc -o $1 `pythia8-config --cppflags --libs`
+}
