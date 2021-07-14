@@ -35,7 +35,8 @@ if [ $laptop = "y" ]; then
         firefox-developer-edition firefox-developer-edition-i18n-ko \
         audacious \
         simplescreenrecorder \
-        sof-firmware
+        sof-firmware \
+        peazip-gtk2-bin
         #gnome-tweaks \
         #chrome-gnome-shell \
         #vivaldi vivaldi-ffmpeg-codecs
