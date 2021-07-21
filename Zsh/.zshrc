@@ -480,3 +480,15 @@ remark2pdf() {
 pythia8() {
     g++ $1.cc -o $1 `pythia8-config --cppflags --libs`
 }
+
+# ==============================================================================
+# Eazy-py
+# ==============================================================================
+export EAZYCODE="$HOME/zbin/eazy-py/eazy-photoz"
+
+# ==============================================================================
+# Firefly
+# ==============================================================================
+export FF_DIR="$HOME/zbin/firefly_release"
+export PYTHONPATH="$HOME/zbin/firefly_release/python:$PYTHONPATH"
+export STELLARPOPMODELS_DIR="$HOME/zbin/firefly_release/stellar_population_models"
