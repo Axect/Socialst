@@ -6,6 +6,7 @@ yay -S --noconfirm --needed \
     python-pip python-numpy python-scipy python-matplotlib python-pandas\
     npm julia sagemath dlang pandoc pandoc-citeproc gvim \
     zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting \
+    zsh-completions fzf \
     youtube-dl ffmpeg sagemath-jupyter fd tree htop\
     ttf-fira-code ttf-ubuntu-font-family ttf-cascadia-code \
     system-config-printer cups hplip \
@@ -20,8 +21,7 @@ yay -S --noconfirm --needed \
     bashtop exa \
     hugo \
     lld sccache \
-    hyperfine \
-    bat
+    hyperfine bat dust sd zoxide-bin tokei tealdeer
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop

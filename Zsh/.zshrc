@@ -492,3 +492,8 @@ export EAZYCODE="$HOME/zbin/eazy-py/eazy-photoz"
 export FF_DIR="$HOME/zbin/firefly_release"
 export PYTHONPATH="$HOME/zbin/firefly_release/python:$PYTHONPATH"
 export STELLARPOPMODELS_DIR="$HOME/zbin/firefly_release/stellar_population_models"
+
+# ==============================================================================
+# zoxide
+# ==============================================================================
+eval "$(zoxide init zsh)"
