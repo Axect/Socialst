@@ -36,7 +36,8 @@ if [ $laptop = "y" ]; then
         audacious \
         simplescreenrecorder \
         sof-firmware \
-        peazip-gtk2-bin
+        peazip-gtk2-bin \
+        mdbook
         #gnome-tweaks \
         #chrome-gnome-shell \
         #vivaldi vivaldi-ffmpeg-codecs

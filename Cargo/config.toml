@@ -8,5 +8,6 @@ rustflags = [
     "-C", "opt-level=3",
     "-C", "target-cpu=native",
     "-C", "target-feature=+avx2,+fma",
+    "-C", "incremental=true",
     "--emit=asm"
 ]
