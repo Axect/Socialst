@@ -150,12 +150,12 @@ Plug 'qnighy/lalrpop.vim'
 Plug 'pest-parser/pest.vim'
 
 " Tree-sitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Haskell
-Plug 'enomsg/vim-haskellconcealplus'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'vim-syntastic/syntastic'
+"Plug 'enomsg/vim-haskellconcealplus'
+"Plug 'neovimhaskell/haskell-vim'
+"Plug 'vim-syntastic/syntastic'
 "Plug 'itchyny/vim-haskell-indent'
 "Plug 'mpickering/hlint-refactor-vim'
 "Plug 'lspitzner/brittany'
