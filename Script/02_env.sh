@@ -121,7 +121,7 @@ fi
 
 # Xprofile
 echo "What kinds of input method do you want to use?"
-echo "1. ibus, 2. uim, 3. skip"
+echo "1. ibus, 2. uim, 3. kime, 4. skip"
 
 read input_method
 
@@ -133,6 +133,14 @@ elif [ $input_method -eq 2 ]; then
     if [ ! -d "$HOME/.xprofile" ]; then
         ln -s $SOCIALST/UIM/xprofile $HOME/.xprofile
     fi
+elif [ $input_method -eq 3 ]; then
+    if [ ! -d "$HOME/.xprofile" ]; then
+        ln -s $SOCIALST/KIME/xprofile $HOME/.xprofile
+    fi
+    if [ ! -d "$HOME/.config/kime" ]; then
+        mkdir $HOME/.config/kime
+    fi
+    ln -s $SOCIALST/KIME/config.yaml $HOME/.config/kime/config.yaml
 else
     echo "Skip input method setup"
 fi
