@@ -21,7 +21,8 @@ yay -S --noconfirm --needed \
     bashtop exa \
     hugo \
     lld sccache \
-    hyperfine bat dust sd zoxide-bin tokei tealdeer
+    hyperfine bat dust sd zoxide-bin tokei tealdeer \
+    kime-bin
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
