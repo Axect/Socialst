@@ -1,7 +1,9 @@
+export XIM='uim'
 export GTK_IM_MODULE='uim'
 export QT_IM_MODULE='uim'
-uim-xim &
+exec uim-xim &
 export XMODIFIERS='@im=uim'
+exec uim-toolbar-gtk3-systray &
 xmodmap -e 'remove mod1 = Alt_R'
 xmodmap -e 'keycode 108 = Hangul'
 xmodmap -e 'remove control = Control_R'
