@@ -38,7 +38,8 @@ if [ $laptop = "y" ]; then
         simplescreenrecorder \
         sof-firmware \
         peazip-gtk2-bin \
-        mdbook
+        mdbook \
+        pdfarranger img2pdf
         #gnome-tweaks \
         #chrome-gnome-shell \
         #vivaldi vivaldi-ffmpeg-codecs
