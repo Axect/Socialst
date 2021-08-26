@@ -39,7 +39,8 @@ if [ $laptop = "y" ]; then
         sof-firmware \
         peazip-gtk2-bin \
         mdbook \
-        pdfarranger img2pdf
+        pdfarranger img2pdf \
+        photoqt
         #gnome-tweaks \
         #chrome-gnome-shell \
         #vivaldi vivaldi-ffmpeg-codecs
