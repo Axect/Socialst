@@ -4,7 +4,7 @@ echo "Install Necessary programs for CLI environment"
 yay -S --noconfirm --needed \
     texlive-most texlive-lang tk gcc-fortran r jupyter-notebook \
     python-pip python-numpy python-scipy python-matplotlib python-pandas\
-    npm julia sagemath dlang pandoc pandoc-citeproc gvim \
+    npm sagemath dlang pandoc pandoc-citeproc gvim \
     zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting \
     zsh-completions fzf \
     youtube-dl ffmpeg sagemath-jupyter fd tree htop\
@@ -22,7 +22,8 @@ yay -S --noconfirm --needed \
     hugo \
     lld sccache \
     hyperfine bat dust sd zoxide-bin tokei tealdeer \
-    kime-bin
+    kime-bin \
+    julia-bin
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
