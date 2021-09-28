@@ -2,7 +2,7 @@ using PackageCompiler, IJulia, BenchmarkTools
 using Flux, Plots, DifferentialEquations, JuMP
 using NCDataFrame, DataFrames, Distributions, QuadGK, LsqFit
 using ForwardDiff, Zygote
-using LoopVectorization, Gadfly
+using LoopVectorization
 
 zlib = joinpath(homedir(), "zlib/sys_science.so")
 
@@ -19,7 +19,7 @@ create_sysimage([:Flux,
                  :ForwardDiff,
                  :LsqFit,
                  :LoopVectorization,
-                 :Gadfly,
+#                 :Gadfly,
                  :GLM,
                  :MLDatasets
                 ], sysimage_path=zlib)
