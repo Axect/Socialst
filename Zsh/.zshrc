@@ -304,16 +304,24 @@ alias benchjulia="cp $HOME/Socialst/Templates/Julia_Template/bench.jl ./"
 # Eisvogel
 # ==============================================================================
 md2book() {
-  pandoc $1.md -o $1.pdf --from markdown --template eisvogel --listings --top-level-division=chapter
+    filename=$1
+    filename=${filename%.*}
+    pandoc $1 -o $filename.pdf --from markdown --template eisvogel --listings --top-level-division=chapter
 }
 md2report() {
-  pandoc $1.md -o $1.pdf --from markdown --template eisvogel --listings
+    filename=$1
+    filename=${filename%.*}
+    pandoc $1 -o $filename.pdf --from markdown --template eisvogel --listings
 }
 md2reportbib() {
-  pandoc --bibliography=ref.bib $1.md -o $1.pdf --from markdown --template eisvogel --listings
+    filename=$1
+    filename=${filename%.*}
+    pandoc --bibliography=ref.bib $1 -o $filename --from markdown --template eisvogel --listings
 }
 md2pdf() {
-    pandoc $1.md --pdf-engine=xelatex -o $1.pdf --from markdown --template eisvogel --listings
+    filename=$1
+    filename=${filename%.*}
+    pandoc $1 --pdf-engine=xelatex -o $filename.pdf --from markdown --template eisvogel --listings
 }
 
 javawrapper() {
@@ -322,7 +330,9 @@ javawrapper() {
 }
 
 chpllin() {
-  chpl -O -o bin/$1 $1.chpl
+    filename=$1
+    filename=${filename%.*}
+    chpl -O -o bin/$filename $1
 }
 
 ###-tns-completion-start-###
@@ -513,3 +523,13 @@ export BLACKHAWK_PATH="$HOME/zbin/blackhawk_v2.0"
 # ==============================================================================
 export GLB_DIR="/usr/local/"
 export SNOWGLOBES="$HOME/zbin/snowglobes"
+
+# ==============================================================================
+# StackUsage
+# ==============================================================================
+cppdebug() {
+    filename=$(basename -- $1)
+    filename=${filename%%.*}
+    g++ -o "bin/$filename" -fstack-usage $1
+    bat "bin/$filename.su"
+}

@@ -160,6 +160,8 @@ Plug 'pest-parser/pest.vim'
 "Plug 'mpickering/hlint-refactor-vim'
 "Plug 'lspitzner/brittany'
 
+" Vimspector
+Plug 'puremourning/vimspector'
 
 call plug#end()
 
