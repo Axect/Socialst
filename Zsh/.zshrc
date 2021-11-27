@@ -525,7 +525,7 @@ export GLB_DIR="/usr/local/"
 export SNOWGLOBES="$HOME/zbin/snowglobes"
 
 # ==============================================================================
-# StackUsage
+# C++ Tools
 # ==============================================================================
 cppdebug() {
     filename=$(basename -- $1)
