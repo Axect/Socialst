@@ -544,6 +544,6 @@ cpprun() {
 cppasm() {
     filename=$(basename -- $1)
     filename=${filename%%.*}
-    g++ -O3 -S -o "bin/${filename}.s" $1
-    bat bin/${filename}.s
+    g++ -O3 -S -o "bin/${filename}.asm" $1
+    bat bin/${filename}.asm
 }
