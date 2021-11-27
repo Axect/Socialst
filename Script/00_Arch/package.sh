@@ -23,7 +23,7 @@ yay -S --noconfirm --needed \
     lld sccache \
     hyperfine bat dust sd zoxide-bin tokei tealdeer \
     kime-bin \
-    julia-bin
+    julia-bin valgrind
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
