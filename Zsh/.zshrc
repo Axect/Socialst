@@ -537,7 +537,7 @@ cppdebug() {
 cpprun() {
     filename=$(basename -- $1)
     filename=${filename%%.*}
-    g++ -O3 -o "bin/$filename" -fstack-usage $1
+    g++ -O3 -o "bin/$filename" $1
     ./bin/$filename
 }
 

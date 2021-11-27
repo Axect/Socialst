@@ -22,8 +22,8 @@ yay -S --noconfirm --needed \
     hugo \
     lld sccache \
     hyperfine bat dust sd zoxide-bin tokei tealdeer \
-    kime-bin \
-    julia-bin valgrind
+    julia-bin \
+    valgrind fmt
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
