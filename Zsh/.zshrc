@@ -537,8 +537,14 @@ cppdebug() {
 cpprun() {
     filename=$(basename -- $1)
     filename=${filename%%.*}
-    g++ -O3 -o "bin/$filename" $1
+    g++ -O3 -o "bin/$filename" $1 $2
     ./bin/$filename
+}
+
+cppbuild() {
+    filename=$(basename -- $1)
+    filename=${filename%%.*}
+    g++ -O3 -o "bin/$filename" $1 $2
 }
 
 cppasm() {
@@ -546,4 +552,10 @@ cppasm() {
     filename=${filename%%.*}
     g++ -O3 -S -o "bin/${filename}.asm" $1
     bat bin/${filename}.asm
+}
+
+export CXXFLAGS="-g -std=c++20"
+
+countdown() {
+    termdown -v en -c 10 $1
 }
