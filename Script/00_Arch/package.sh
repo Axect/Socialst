@@ -84,11 +84,11 @@ if [ $aur = "y" ]; then
         notion-app \
         typora \
         visual-studio-code-bin \
-        minetime \
         masterpdfeditor \
         zoom \
-        google-chrome-beta
-        #mailspring
+        google-chrome-beta \
+        mailspring
+        #minetime \
         #insync-nautilus \
         #edex-ui-bin
         #onlyoffice-bin \
