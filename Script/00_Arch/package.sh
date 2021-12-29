@@ -23,7 +23,8 @@ yay -S --noconfirm --needed \
     lld sccache \
     hyperfine bat dust sd zoxide-bin tokei tealdeer \
     julia-bin \
-    valgrind fmt
+    valgrind fmt \
+    docker docker-compose
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
