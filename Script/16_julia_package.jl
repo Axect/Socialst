@@ -1,31 +1,30 @@
 import Pkg
 Pkg.update()
-Pkg.add("DataFrames")
-Pkg.add("BenchmarkTools")
-Pkg.add("Distributions")
-Pkg.add("Pluto")
-Pkg.add("Flux")
-Pkg.add("Zygote")
-Pkg.add("ForwardDiff")
-Pkg.add("IJulia")
-Pkg.add("PlutoUI")
-Pkg.add("DifferentialEquations")
-Pkg.add("JuMP")
-Pkg.add("GLPK")
-Pkg.add("PackageCompiler")
-Pkg.add("SymPy")
-Pkg.add("Plots")
-#Pkg.add("Luxor")
-Pkg.add("CSV")
-#Pkg.add("NCDatasets")
-Pkg.add("Latexify")
-Pkg.add("DSP")
-Pkg.add("NCDataFrame")
-Pkg.add("QuadGK")
-Pkg.add("LsqFit")
-Pkg.add("LoopVectorization")
-#Pkg.add("Gadfly")
-Pkg.add("GLM")
-Pkg.add("MLDatasets")
-#Pkg.add("Neptune")
-Pkg.add("GR_jll")
+
+Pkg.add([
+    "Flux",
+    "Plots",
+    "JLD2",
+    "FileIO",
+    "DataFrames",
+    "NCDataFrame",
+    "DifferentialEquations",
+    "JuMP",
+    "Pluto",
+    "Distributions",
+    "BenchmarkTools",
+    "Zygote",
+    "IJulia",
+    "PlutoUI",
+    "GLPK",
+    "PackageCompiler",
+    "SymPy",
+    "CSV",
+    "Latexify",
+    "DSP",
+    "QuadGK",
+    "LsqFit",
+    "LoopVectorization",
+    "GLM",
+    "MLDatasets"
+])
