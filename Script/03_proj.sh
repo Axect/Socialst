@@ -29,7 +29,7 @@ if [ ! -d "$PROGRAMMING" ]; then
   git clone "${AXECT}Sage"
   git clone "${AXECT}JS"
   git clone "${AXECT}Scheme"
-  git clone "${AXECT}TypeScript"
+#  git clone "${AXECT}TypeScript"
   git clone "${AXECT}Racket"
   git clone "${AXECT}Zig"
 fi
