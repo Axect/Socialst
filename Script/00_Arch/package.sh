@@ -27,7 +27,8 @@ yay -S --noconfirm --needed \
     valgrind fmt \
     docker docker-compose \
     libxau libxi libxss libxtst libxcursor libxcomposite libxdamage libxfixes\
-    libxrandr libxrender mesa-libgl  alsa-lib libglvnd
+    libxrandr libxrender mesa-libgl  alsa-lib libglvnd \
+    p7zip
     # sagemath-jupyter
     # pandoc-citeproc
 
