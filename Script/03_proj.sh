@@ -110,6 +110,7 @@ if [ ! -d "$PROJECT" ]; then
 
   cd "$PROJECT/Research"
   git clone "${AXECT}NSCool"
+  git clone "${AXECT}WhiteEagle"
 
   cd "$PROJECT/Machine_Learning"
   git clone "${AXECT}ML_Project"

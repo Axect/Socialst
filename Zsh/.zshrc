@@ -276,6 +276,7 @@ export MANPATH="$MANPATH:$CHPL_HOME/man"
 #export CARP_DIR="$HOME/zbin/Carp"
 export SCCACHE_DIR="$HOME/.cache/sccache"
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+export PYTHONPATH="$HOME/anaconda3"
 
 
 # ==============================================================================
@@ -500,7 +501,6 @@ export EAZYCODE="$HOME/zbin/eazy-py/eazy-photoz"
 # Firefly
 # ==============================================================================
 export FF_DIR="$HOME/zbin/firefly_release"
-export PYTHONPATH="$HOME/zbin/firefly_release/python:$PYTHONPATH"
 export STELLARPOPMODELS_DIR="$HOME/zbin/firefly_release/stellar_population_models"
 
 # ==============================================================================
@@ -562,3 +562,8 @@ export CXXFLAGS="-g -std=c++20"
 countdown() {
     termdown -v en -c 10 $1
 }
+
+# ==============================================================================
+# Anaconda
+# ==============================================================================
+export PATH="/home/xteca/anaconda3/bin:$PATH"

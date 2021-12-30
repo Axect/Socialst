@@ -4,10 +4,11 @@ echo "Install Necessary programs for CLI environment"
 yay -S --noconfirm --needed \
     texlive-most texlive-lang tk gcc-fortran r jupyter-notebook \
     python-pip python-numpy python-scipy python-matplotlib python-pandas\
-    npm sagemath dlang pandoc pandoc-citeproc gvim \
+    npm dlang pandoc gvim \
+    sagemath sagetex sagemath-doc \
     zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting \
     zsh-completions fzf \
-    youtube-dl ffmpeg sagemath-jupyter fd tree htop\
+    youtube-dl ffmpeg fd tree htop\
     ttf-fira-code ttf-ubuntu-font-family ttf-cascadia-code \
     system-config-printer cups hplip \
     powerline powerline-fonts ncdu \
@@ -21,10 +22,14 @@ yay -S --noconfirm --needed \
     bashtop exa \
     hugo \
     lld sccache \
-    hyperfine bat dust sd zoxide-bin tokei tealdeer \
+    hyperfine bat dust sd zoxide tokei tealdeer \
     julia-bin \
     valgrind fmt \
-    docker docker-compose
+    docker docker-compose \
+    libxau libxi libxss libxtst libxcursor libxcomposite libxdamage libxfixes\
+    libxrandr libxrender mesa-libgl  alsa-lib libglvnd
+    # sagemath-jupyter
+    # pandoc-citeproc
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
