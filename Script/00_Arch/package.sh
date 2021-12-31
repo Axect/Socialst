@@ -48,7 +48,8 @@ if [ $laptop = "y" ]; then
         peazip-gtk2-bin \
         mdbook \
         pdfarranger img2pdf \
-        photoqt
+        photoqt \
+        gnome-keyring
         #gnome-tweaks \
         #chrome-gnome-shell \
         #vivaldi vivaldi-ffmpeg-codecs
