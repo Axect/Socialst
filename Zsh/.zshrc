@@ -567,3 +567,32 @@ countdown() {
 # Anaconda
 # ==============================================================================
 export PATH="/home/xteca/anaconda3/bin:$PATH"
+
+# ==============================================================================
+# Julia Docker
+# ==============================================================================
+julia() {
+    if [ $# -eq 0 ]
+    then
+        docker exec -it julia_sci julia
+    else
+        THREAD=1
+        while [ $# -gt 0 ]; do
+            case "$1" in
+                -t*)
+                    THREAD="$2"
+                    shift
+                    shift
+                    ;;
+                *)
+                    JLFILE="$1"
+                    shift
+                    ;;
+            esac
+        done
+        prefix="/home/xteca/workspace/julia_sci/"
+        newpwd="${PWD#$prefix}"
+        fixedfile="$newpwd/$JLFILE"
+        docker exec -it julia_sci julia -t $THREAD $fixedfile
+    fi
+}
