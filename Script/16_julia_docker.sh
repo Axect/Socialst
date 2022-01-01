@@ -7,4 +7,4 @@ sh run.sh $HOME
 cd -
 
 mkdir $HOME/.zsh_fn
-cp $HOME/Socialst/Zsh/julia.zsh $HOME/.zsh_fn/julia.zsh
+ln -s $HOME/Socialst/Zsh/julia.zsh $HOME/.zsh_fn/julia.zsh

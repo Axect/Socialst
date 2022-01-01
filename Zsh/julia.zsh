@@ -31,14 +31,15 @@ julia() {
         done
         if [ "${#JLFILE}" -eq 0 ]; then
             fixedfile=""
+            wdcmd=""
         else
             prefix="$HOME/"
-            newpwd="/home/quokka/${PWD#$prefix}"
+            wdcmd=" -w /home/quokka/${PWD#$prefix}"
         fi
         total="$ARGSTR$JLFILE"
         total="$(echo -e $total | sed -e 's/[[:space:]]*$//')"
-        cmd="docker exec -w $newpwd -it julia_sci julia $total"
-        echo $cmd
+        cmd="docker exec$wdcmd -it julia_sci julia $total"
+        #echo $cmd
         eval $cmd
     fi
 }
