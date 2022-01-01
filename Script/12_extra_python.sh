@@ -11,7 +11,8 @@ pip install --user manim
 pip install --user statsmodels
 
 # For Optimization
-pip install --user numba, pythran
+pip install --user numba
+pip install --user pythran
 
 # Coconut
 pip install --user coconut
