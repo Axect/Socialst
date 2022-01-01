@@ -603,13 +603,12 @@ julia() {
             fixedfile=""
         else
             prefix="$HOME/"
-            newpwd="${PWD#$prefix}"
-            fixedfile="$newpwd/$JLFILE"
+            newpwd="/home/quokka/${PWD#$prefix}"
         fi
-        total="$ARGSTR$fixedfile"
+        total="$ARGSTR$JLFILE"
         total="$(echo -e $total | sed -e 's/[[:space:]]*$//')"
-        cmd="docker exec -it julia_sci julia $total"
-        #echo $cmd
+        cmd="docker exec -w $newpwd -it julia_sci julia $total"
+        echo $cmd
         eval $cmd
     fi
 }
