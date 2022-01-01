@@ -590,9 +590,9 @@ julia() {
                     ;;
             esac
         done
-        prefix="/home/xteca/workspace/julia_sci/"
+        prefix="$HOME"
         newpwd="${PWD#$prefix}"
-        fixedfile="$newpwd/$JLFILE"
+        fixedfile="./$newpwd/$JLFILE"
         docker exec -it julia_sci julia -t $THREAD $fixedfile
     fi
 }
