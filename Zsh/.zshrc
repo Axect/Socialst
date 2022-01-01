@@ -572,17 +572,26 @@ export PATH="/home/xteca/anaconda3/bin:$PATH"
 # Julia Docker
 # ==============================================================================
 julia() {
-    if [ $# -eq 0 ]
-    then
+    if [ $# -eq 0 ]; then
         docker exec -it julia_sci julia
     else
-        THREAD=1
+        ARGSTR=""
+        JLFILE=""
         while [ $# -gt 0 ]; do
             case "$1" in
-                -t*)
-                    THREAD="$2"
+                --help|-h)
+                    ARGSTR+="$1 "
                     shift
-                    shift
+                    ;;
+                --*|-*)
+                    if [[ "$1" != *=* ]]; then
+                        ARGSTR+="$1 $2 "
+                        shift
+                        shift
+                    else
+                        ARGSTR+="$1 "
+                        shift
+                    fi
                     ;;
                 *)
                     JLFILE="$1"
@@ -590,9 +599,17 @@ julia() {
                     ;;
             esac
         done
-        prefix="$HOME"
-        newpwd="${PWD#$prefix}"
-        fixedfile="./$newpwd/$JLFILE"
-        docker exec -it julia_sci julia -t $THREAD $fixedfile
+        if [ "${#JLFILE}" -eq 0 ]; then
+            fixedfile=""
+        else
+            prefix="$HOME/"
+            newpwd="${PWD#$prefix}"
+            fixedfile="$newpwd/$JLFILE"
+        fi
+        total="$ARGSTR$fixedfile"
+        total="$(echo -e $total | sed -e 's/[[:space:]]*$//')"
+        cmd="docker exec -it julia_sci julia $total"
+        #echo $cmd
+        eval $cmd
     fi
 }
