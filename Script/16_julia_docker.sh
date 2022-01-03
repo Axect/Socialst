@@ -3,6 +3,7 @@ git clone https://github.com/Axect/JuliaDocker
 cd -
 cd $HOME/zbin/JuliaDocker
 sh build.sh
+mkdir -p $HOME/workspace/julia_sci
 sh run.sh $HOME/workspace/julia_sci
 cd -
 
