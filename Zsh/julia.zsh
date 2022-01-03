@@ -33,7 +33,7 @@ julia() {
             fixedfile=""
             wdcmd=""
         else
-            prefix="$HOME/"
+            prefix="$HOME/workspace/julia_sci/"
             wdcmd=" -w /home/quokka/${PWD#$prefix}"
         fi
         total="$ARGSTR$JLFILE"
