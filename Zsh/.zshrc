@@ -374,7 +374,7 @@ countdown() {
 # ==============================================================================
 # Julia Docker
 # ==============================================================================
-#ZSHFN=$HOME/.zsh_fn
-#if [ -d $ZSHFN ]; then
-#    source $ZSHFN/*.zsh
-#fi
+ZSHFN=$HOME/.zsh_fn
+if [ -d $ZSHFN ]; then
+    source $ZSHFN/*.zsh
+fi
