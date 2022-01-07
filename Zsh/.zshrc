@@ -256,7 +256,7 @@ alias chplblas='chpl -O -I/opt/OpenBLAS/include -L/opt/OpenBLAS/lib -lopenblas'
 # ==============================================================================
 # PYRS
 # ==============================================================================
-export VIRTUAL_ENV='$HOME/zbin/pyrs'
+#export VIRTUAL_ENV='$HOME/zbin/pyrs'
 
 # ==============================================================================
 # Julia
