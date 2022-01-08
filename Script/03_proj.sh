@@ -4,6 +4,7 @@ PROJECT="$HOME/Documents/Project"
 TEMPLATE="$HOME/Documents/Template"
 TEST="$HOME/Documents/Test"
 AXECT="https://github.com/Axect/"
+SYTEARK="https://github.com/SYTEARK/"
 
 if [ ! -d "$PROGRAMMING" ]; then
   mkdir $PROGRAMMING
@@ -50,6 +51,7 @@ if [ ! -d "$PROJECT" ]; then
   mkdir "R_Project"
   mkdir "Nim_Project"
   mkdir "Julia_Project"
+  mkdir "SYTEARK"
 
   git clone "${AXECT}Euler"
   git clone "${AXECT}Academy"
@@ -126,6 +128,9 @@ if [ ! -d "$PROJECT" ]; then
 
   cd "$PROJECT/Julia_Project"
   git clone "${AXECT}Acalc.jl"
+
+  cd "$PROJECT/SYTEARK"
+  git clone "${SYTEARK}ML2021"
 
   cd "$PROJECT"
 fi
