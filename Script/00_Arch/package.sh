@@ -17,7 +17,7 @@ yay -S --noconfirm --needed \
     cmake gdb clang \
     neovim python-neovim xclip \
     ttf-liberation noto-fonts noto-fonts-emoji noto-fonts-extra \
-    ttf-jetbrains-mono \
+    ttf-jetbrains-mono noto-fonts-cjk \
     git-lfs jupyterlab \
     bashtop exa \
     hugo \
