@@ -95,7 +95,8 @@ if [ $aur = "y" ]; then
         masterpdfeditor \
         zoom \
         google-chrome-beta \
-        mailspring
+        mailspring \
+        weylus-bin
         #minetime \
         #insync-nautilus \
         #edex-ui-bin
