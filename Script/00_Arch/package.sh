@@ -19,7 +19,7 @@ yay -S --noconfirm --needed \
     ttf-liberation noto-fonts noto-fonts-emoji noto-fonts-extra \
     ttf-jetbrains-mono noto-fonts-cjk \
     git-lfs jupyterlab \
-    bashtop exa \
+    exa btop \
     hugo \
     lld sccache \
     hyperfine bat dust sd zoxide tokei tealdeer \
