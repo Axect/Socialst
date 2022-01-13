@@ -79,7 +79,7 @@ export MANPATH="$MANPATH:$CHPL_HOME/man"
 #export CARP_DIR="$HOME/zbin/Carp"
 export SCCACHE_DIR="$HOME/.cache/sccache"
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
-#export PYTHONPATH="$HOME/anaconda3"
+export PYTHONPATH="$HOME/anaconda3"
 
 
 # ==============================================================================
@@ -285,7 +285,8 @@ trap nnn_cd EXIT
 # Remark & Decktape
 # ==============================================================================
 remark2pdf() {
-    decktape -s 1280x720 --chrome-path /usr/bin/google-chrome-beta http://127.0.0.1:5500/$1.html $1.pdf
+    noext=${1%%.*}
+    decktape -s 1280x720 --chrome-path /usr/bin/google-chrome-beta http://127.0.0.1:5500/$noext.html $noext.pdf
 }
 
 # ==============================================================================
@@ -369,7 +370,7 @@ countdown() {
 # ==============================================================================
 # Anaconda
 # ==============================================================================
-#export PATH="/home/xteca/anaconda3/bin:$PATH"
+export PATH="$HOME/anaconda3/bin:$PATH"
 
 # ==============================================================================
 # Julia Docker
@@ -378,3 +379,8 @@ ZSHFN=$HOME/.zsh_fn
 if [ -d $ZSHFN ]; then
     source $ZSHFN/*.zsh
 fi
+
+# ==============================================================================
+# For PyTorch
+# ==============================================================================
+export PATH_DATASETS="$HOME/zdata/"
