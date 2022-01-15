@@ -49,6 +49,18 @@ $bg: #fff;
       position: relative;
       z-index: 1;
     }
+    ul {
+      margin: 1em;
+      padding: 0;
+    }
+    ol {
+      margin: 1em;
+      padding: 0;
+    }
+    li {
+      text-align:left;
+      margin-top: 1em;
+    }
   }
 }
 
