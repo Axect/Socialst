@@ -114,10 +114,27 @@ ul {
 ol {
 	padding-left: 1.2em;
 }
+
 blockquote {
-	margin-left: 1em;
-	padding-left: 1em;
-	border-left: 1px solid #ddd;
+  background-color: #fff;
+  border: solid 2px #757575;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1em;
+  position: relative;
+  width:100%;
+}
+blockquote cite {
+  display: block;
+  font-style: italic;
+  text-align: right;
+}
+blockquote cite:before {
+  content: "- ";
+}
+blockquote > * {
+  position: relative;
+  z-index: 1;
 }
 code,
 pre {

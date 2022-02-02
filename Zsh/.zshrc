@@ -418,7 +418,7 @@ alias zig_fast="zig build-exe -O ReleaseFast -target x86_64-linux-gnu"
 # ==============================================================================
 # Google drive
 # ==============================================================================
-alias gdrive="cd $HOME/Insync/edeftg@gmail.com/Google\ Drive"
+alias gdrive="cd $HOME/Insync/axect@outlook.kr/Google\ Drive"
 
 # ==============================================================================
 # Deno
