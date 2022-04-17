@@ -569,10 +569,10 @@ export PATH="$HOME/anaconda3/bin:$PATH"
 # ==============================================================================
 # Julia Docker
 # ==============================================================================
-ZSHFN=$HOME/.zsh_fn
-if [ -d $ZSHFN ]; then
-    source $ZSHFN/*.zsh
-fi
+#ZSHFN=$HOME/.zsh_fn
+#if [ -d $ZSHFN ]; then
+#    source $ZSHFN/*.zsh
+#fi
 
 # ==============================================================================
 # For PyTorch
