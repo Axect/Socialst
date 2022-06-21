@@ -274,7 +274,7 @@ export MANPATH="$MANPATH:$CHPL_HOME/man"
 #export CARP_DIR="$HOME/zbin/Carp"
 export SCCACHE_DIR="$HOME/.cache/sccache"
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
-export PYTHONPATH="$HOME/anaconda3"
+#export PYTHONPATH="$HOME/anaconda3"
 
 # ==============================================================================
 # HEP
@@ -564,7 +564,7 @@ countdown() {
 # ==============================================================================
 # Anaconda
 # ==============================================================================
-export PATH="$HOME/anaconda3/bin:$PATH"
+#export PATH="$HOME/anaconda3/bin:$PATH"
 
 # ==============================================================================
 # Julia Docker
@@ -584,7 +584,6 @@ export PATH_DATASETS="$HOME/zdata/"
 # ==============================================================================
 alias random_present="cd $HOME/Documents/Project/SYTEARK/ML2022/week08/random_present/ && run_fast && cd -"
 
-
 # ==============================================================================
 # Ruby
 # ==============================================================================
@@ -592,3 +591,10 @@ export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin"
 draw_tree() {
     rsyntaxtree -n serif "$(cat $1)"
 }
+
+# ==============================================================================
+# PyEnv
+# ==============================================================================
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
