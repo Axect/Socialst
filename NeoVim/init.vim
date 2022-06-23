@@ -163,6 +163,9 @@ Plug 'pest-parser/pest.vim'
 " Vimspector
 Plug 'puremourning/vimspector'
 
+" Copilot
+Plug 'github/copilot.vim'
+
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -346,3 +349,7 @@ let g:coc_snippet_next = '<tab>'
 " Julia
 let g:latex_to_unicode_file_types='$^'
 let g:latex_to_unicode_file_types_blacklist = '.*'
+
+
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
