@@ -64,15 +64,6 @@ elif [ $vim -eq 3 ]; then
     echo "Complete to setup neovim"
 fi
 
-# tmux
-if [ ! -d "$HOME/.tmux.conf.local" ]; then
-  cd $HOME
-  git clone https://github.com/gpakosz/.tmux.git
-  ln -s -f .tmux/.tmux.conf
-  ln -s $SOCIALST/Tmux/.tmux.conf.local $HOME/.tmux.conf.local
-  echo "Complete tmux Setup!"
-fi
-
 # Eisvogel
 if [ ! -d "$HOME/.pandoc" ]; then
   mkdir -p $HOME/.pandoc/templates
@@ -84,39 +75,6 @@ fi
 if [ ! -d "$HOME/.config/zathura" ]; then
   mkdir -p "$HOME/.config/zathura"
   ln -s $SOCIALST/Zathura/zathurarc $HOME/.config/zathura/zathurarc
-fi
-
-# Code
-echo "Do you want to setup for VSCode? [y/n]"
-
-read code
-
-if [ $code = "y" ]; then
-    if [ ! -d "$HOME/.config/Code" ]; then
-        mkdir -p "$HOME/.config/Code"
-    fi
-
-    if [ ! -d "$HOME/.config/Code\ -\ OSS" ]; then
-        mkdir -p "$HOME/.config/Code\ -\ OSS"
-    fi
-
-    if [ ! -d "$HOME/.config/Code/User/snippets/" ]; then
-        mkdir -p "$HOME/.config/Code/User/snippets"
-    fi
-
-    if [ ! -d "$HOME/.config/Code\ -\ OSS/User/snippets/" ]; then
-        mkdir -p "$HOME/.config/Code\ -\ OSS/User/snippets"
-    fi
-
-    if [ ! -d "$HOME/.config/Code/User/snippets/socialst.code-snippets" ]; then
-        ln -s $SOCIALST/Code/socialst.code-snippets $HOME/.config/Code/User/snippets/socialst.code-snippets
-    fi
-
-    if [ ! -d "$HOME/.config/Code\ -\ OSS/User/snippets/socialst.code-snippets" ]; then
-        ln -s $SOCIALST/Code/socialst.code-snippets $HOME/.config/Code\ -\ OSS/User/snippets/socialst.code-snippets
-    fi
-else
-    echo "Skip code setup"
 fi
 
 # Xprofile
@@ -145,13 +103,62 @@ else
     echo "Skip input method setup"
 fi
 
-# Typora
-echo "Setup for typora? [y/n]"
-read typora
-
-if [ $typora = "y" ]; then
-    rm $HOME/.config/Typora/themes/whitey.css
-    ln -s $SOCIALST/Typora/whitey.css $HOME/.config/Typora/themes/whitey.css
-elif [ $typora = "n" ]; then
-    echo "Finish"
+# Zellij
+if [ ! -d "$HOME/.config/zellij" ]; then
+  mkdir -p "$HOME/.config/zellij"
+  ln -s $SOCIALST/Zellij/config.yaml $HOME/.config/zellij/config.yaml
 fi
+
+## tmux
+#if [ ! -d "$HOME/.tmux.conf.local" ]; then
+#  cd $HOME
+#  git clone https://github.com/gpakosz/.tmux.git
+#  ln -s -f .tmux/.tmux.conf
+#  ln -s $SOCIALST/Tmux/.tmux.conf.local $HOME/.tmux.conf.local
+#  echo "Complete tmux Setup!"
+#fi
+
+## Typora
+#echo "Setup for typora? [y/n]"
+#read typora
+#
+#if [ $typora = "y" ]; then
+#    rm $HOME/.config/Typora/themes/whitey.css
+#    ln -s $SOCIALST/Typora/whitey.css $HOME/.config/Typora/themes/whitey.css
+#elif [ $typora = "n" ]; then
+#    echo "Finish"
+#fi
+
+## Code
+#echo "Do you want to setup for VSCode? [y/n]"
+#
+#read code
+#
+#if [ $code = "y" ]; then
+#    if [ ! -d "$HOME/.config/Code" ]; then
+#        mkdir -p "$HOME/.config/Code"
+#    fi
+#
+#    if [ ! -d "$HOME/.config/Code\ -\ OSS" ]; then
+#        mkdir -p "$HOME/.config/Code\ -\ OSS"
+#    fi
+#
+#    if [ ! -d "$HOME/.config/Code/User/snippets/" ]; then
+#        mkdir -p "$HOME/.config/Code/User/snippets"
+#    fi
+#
+#    if [ ! -d "$HOME/.config/Code\ -\ OSS/User/snippets/" ]; then
+#        mkdir -p "$HOME/.config/Code\ -\ OSS/User/snippets"
+#    fi
+#
+#    if [ ! -d "$HOME/.config/Code/User/snippets/socialst.code-snippets" ]; then
+#        ln -s $SOCIALST/Code/socialst.code-snippets $HOME/.config/Code/User/snippets/socialst.code-snippets
+#    fi
+#
+#    if [ ! -d "$HOME/.config/Code\ -\ OSS/User/snippets/socialst.code-snippets" ]; then
+#        ln -s $SOCIALST/Code/socialst.code-snippets $HOME/.config/Code\ -\ OSS/User/snippets/socialst.code-snippets
+#    fi
+#else
+#    echo "Skip code setup"
+#fi
+
