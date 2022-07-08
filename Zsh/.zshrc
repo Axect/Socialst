@@ -600,3 +600,12 @@ draw_tree() {
 #eval "$(pyenv init -)"
 
 source /home/xteca/.config/broot/launcher/bash/br
+
+# ==============================================================================
+# Zellij
+# ==============================================================================
+zell() {
+    filename=$(basename -- $1)
+    filename=${filename%%.*}
+    zellij --layout $HOME/Socialst/Zellij/$filename.yaml
+}
