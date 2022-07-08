@@ -22,11 +22,14 @@ template:
         plugin:
           location: "zellij:status-bar"
 tabs:
-  - direction: Vertical
+  - name: "work"
+    focus: true
+    direction: Vertical
     parts:
       - direction: Horizontal
         run:
           command: { cmd: zsh, args: ["-c", "cd ~/Documents/Project/Research/axion_pbh/white_owl && nvim"] }
+        focus: true
       - direction: Horizontal
         parts:
           - direction: Vertical
@@ -34,4 +37,12 @@ tabs:
               command: { cmd: zsh, args: ["-c", "cd ~/Documents/Project/Research/axion_pbh/white_owl && broot"] }
           - direction: Vertical
             run:
-              command: { cmd: btm }
+              command: { cmd: zsh, args: ["-c", "cd ~/Documents/Project/Research/axion_pbh/white_owl && zsh"] }
+  - name: "perf"
+    direction: Vertical
+    run:
+      command: { cmd: btm }
+  - name: "git"
+    direction: Vertical
+    run:
+      command: { cmd: zsh, args: ["-c", "cd ~/Documents/Project/Research/axion_pbh/white_owl && gitui"] }
