@@ -106,8 +106,8 @@ fi
 # Zellij
 if [ ! -d "$HOME/.config/zellij" ]; then
   mkdir -p "$HOME/.config/zellij"
-  ln -s $SOCIALST/Zellij/config.yaml $HOME/.config/zellij/config.yaml
 fi
+ln -s $SOCIALST/Zellij/config.yaml $HOME/.config/zellij/config.yaml
 
 ## tmux
 #if [ ! -d "$HOME/.tmux.conf.local" ]; then

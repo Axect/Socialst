@@ -1,140 +1,170 @@
 # Socialst (Axect's Customization Repo)
 
-## Usage
+You can setup new arch linux laptop or desktop easily with `Socialst`
 
-### Use whole custom environments
+## Setup new Arch laptop or desktop
 
-* Execute `Socialst/Script/env.sh`
-
-### Vim / Neovim / Spacevim
-
-The main vim environment is neovim.
-
-* If you want to classical vim, then copy my `Vim/.vimrc`
-* If you want to Spacevim, then copy my `SpaceVim/init.toml` to `~/.SpaceVim.d/init.toml`
-* If you want to use neovim, then copy my `NeoVim/init.vim` to `~/.config/nvim/init.vim`
-
-#### Setup Environment for Neovim
-
-```sh
-# 1. Link neovim config file (You should have ~/.config/nvim directory)
-ln -s $HOME/Socialst/Neovim/init.vim $HOME/.config/nvim/init.vim
-
-# 2. Install coc-extensions
-sh $HOME/Socialst/Script/coc.sh
-```
-
-* To use more `coc-extensions`, refer [coc-extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions)
-
-### ZSH
-
-Environment Settings for below programs :
-
-* zsh
-* Oh-my-zsh
-* Npm
-* Java
-* Chapel
-* Rust
-* Haskell
-* Nim
-* Stack
-* fzf
-* Heptools
-    * ROOT
-* miniconda
-
-And there are auto template generators
-
-* `latexinit` : Latex template
-* `remarkinit` : RemarkJS template
-* `eisvogelinit` : Eisvogel template
-* `pylabinit` : Matplotlib template
-
-There are useful aliases for Arch linux
-
-* `upd` : `sudo pacman -Syyu`
-* `pac` : `sudo pacman --color auto`
-* `mirrors` : `sudo reflector --score 100 --fastest 25 --sort rate --save /etc/pacman.d/mirrorlist --verbose`
-* `cp` : `cp -i`
-* `df` : `df -h`
-* `ls` : `ls -lA`
-
-### LaTeX
-
-Style File. Just copy my `LaTeX/Socialst.sty` to your latex project folder and type:
-
-```LaTeX
-\usepackage{Socialst}
-```
-
-### Visual Studio Code
-
-Setting file. Copy to your vs code setting file directory.
-
-### Script
-
-To copy my whole github.
-
-### Pandoc
-
-To use Eisvogel pandoc template.
-
-First, you should install pandoc and texlive
-
-```sh
-# Arch
-yaourt -S pandoc
-yaourt -S texlive-most texlive-lang
-
-# Fedora
-sudo dnf install pandoc
-sudo dnf install texlive-scheme-full
-
-# Ubuntu
-sudo apt-get install pandoc
-sudo apt-get install texlive-full
-```
-
-Second, you need this repository
-
+1. Clone this repo at your home directory (check : `echo $HOME`)
 ```sh
 git clone https://github.com/Axect/Socialst
-
-# if you already have,
-cd ~/Socialst
-git pull
 ```
 
-Third, you should make pandoc template directory
-
+2. Go to Script directory
 ```sh
-cd ~
-mkdir -p .pandoc/templates
+cd Socialst/Script
 ```
 
-Fourth, copy my `eisvogel.latex` file (it includes kotex)
-
+3. Go to `00_Arch` directory
 ```sh
-cp ~/Socialst/Pandoc/eisvogel.latex ~/.pandoc/templates/./
+cd 00_Arch
 ```
 
-Fiveth, copy my `.zshrc` file or just copy `eisvogelinit` and `md2pdf`
-
+4. Install `yay` (If you already installed `yay` then skip this process)
 ```sh
-cp ~/Socialst/Zsh/.zshrc ~/.zshrc
+sh yay.sh
 ```
 
-Finally, source zshrc
-
+5. Install packages
 ```sh
-source ~/.zshrc
+sh package.sh
 ```
 
-**Usage**
+6. Go back to Script directory
+```sh
+cd ..
+```
 
-1. Go to Folder
-2. `eisvogelinit`
-3. Change file name (template.md to other)
-4. `md2report file_name` (no .md needed)
-    * or `md2book file_name` : Book scheme
+7. Execute shell script files sequentially
+    1. `01_env.sh` : Setup for zsh, vim, eisvogel, zathura, input method, zellij
+        * Recommend : Custom zsh, Neovim, UIM
+    2. `02_git.sh` : Configure git with an option: `credential.helper store`
+    3. `03_proj.sh` : Clone whole projects for `https://github.com/Axect` (It is just for my convenience - You don't need to execute this file)
+    4. `04_rust.sh` : Setup rust via `rustup`
+    5. `05_rust_analyzer.sh` : Install rust analyzer
+    6. `06_cargo.sh` : Install useful applications via `cargo`
+    7. `07_coc.sh` : If you chose 'Neovim' in `01_env.sh`, then this script provided setup for `Coc`
+    8. `08_nim.sh` : Install nim via `choosenim`
+    9. `09_rprofile.sh` : Change R repo to Seoul (If you are not korean, this script file may be harmful)
+    10. `10_R.sh` : Install useful R packages
+    11. `11_npm.sh` : Create `.npm-global` directory and prefix
+    12. `12_extra_python.sh` : Install extra useful python packages via `pip`
+    13. `13_file.sh` : Make nautilus default file manager (If you don't use nautilus, it may be harmful)
+    14. `14_openblas.sh` : Download & Make `OpenBLAS` to `/opt` directory (You should have `$HOME/zbin` directory before executing this)
+    15. `15_root_jupyter.sh` : Install ROOT jupyter kernel
+    16. `16_julia_docker.sh` : Julia docker setup (Deprecated)
+    17. `17_julia_package.jl` : Install julia packages (Execute by `julia 17_julia_package.jl`)
+    18. `18_haskell.sh` : Install haskell via `ghcup`
+    19. `19_xkcd.sh` : Setup xkcd font for matplotlib
+    20. `20_npm_package.sh` : Install useful npm packages 
+
+8. After hook
+    * If you set UIM in `sh 01_env.sh`, then you should configure UIM via `uim-pref-gtk`. If you are korean, then refer [Arch UIM Setup](https://wiki.archlinux.org/title/Localization_(%ED%95%9C%EA%B5%AD%EC%96%B4)/Korean_(%ED%95%9C%EA%B5%AD%EC%96%B4)#uim-byeoru). If you finish setup, then should logout or reboot.
+
+9. Useful commands (alias & zsh functions)
+    * Git
+        * `gitu` : `git add . && git commit && git push`
+    * Latex
+        * `latexinit` : Generate initial latex files from `Socialst/Templates/Latex_Template/`
+    * Remark
+        * `remarkinit` : Generate remark files from `Socialst/Templates/Remark_Template/`
+        * `remark2pdf` : Generate PDF file from remark slide show
+    * Eisvogel (Pandoc)
+        * `eisvogelinit` : Generate pandoc files from `Socialst/Templates/Eisvogel_Template/`
+        * `md2pdf FILENAME` : Generate PDF file from markdown file
+    * Python
+        * `ncplotinit` : Template for matplotlib + netCDF4
+    * C++
+        * `cppdebug FILENAME` : Compile & Debug via `-fstack-usage`
+        * `cpprun FILENAME` : Compile & Run with `-O3`
+        * `cppbuild FILENAME` : Compile with `-O3`
+        * `cppasm FILENAME` : Compile & Generate `.asm`
+    * Tools
+        * `countdown TIME` : Countdown in terminal via `termdown`
+        * `zell FILENAME` : `zellij --layout $HOME/Socialst/Zellij/$FILENAME.yaml`
+
+## Setup for non Arch user
+
+Although you are not Arch user, you can setup with Socialst.
+
+1. Zsh
+    * Pre-requisites
+        * `zsh`
+        * `zsh-history-substring-search`
+        * `zsh-autosuggestions`
+        * `zsh-syntax-highlighting`
+        * `zsh-completions`
+        * `fzf`
+    * Setup
+        ```sh
+        # Backup .zshrc file (if exists)
+        mv $HOME/.zshrc $HOME/.zshrc.old
+
+        # Create link to Socialst
+        ln -s $HOME/Socialst/Zsh/.zshrc $HOME/.zshrc
+
+        # Make zsh default
+        chsh -s `which zsh`
+        ```
+
+2. Neovim
+    * Pre-requisites
+        * `neovim`
+        * `python-neovim`
+        * `xclip`
+        * `powerline`
+        * `powerline-fonts`
+    * Setup
+        ```sh
+        # Download vim-plug
+        curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+        # Create .config/nvim directory if not exists
+        if [ ! -d "$HOME/.config/nvim" ]; then
+            mkdir $HOME/.config/nvim
+        fi
+
+        # Create symbolic link to Socialst
+        ln -s $SOCIALST/NeoVim/init.vim $HOME/.config/nvim/init.vim
+        ```
+
+3. Eisvogel
+    * Pre-requisites
+        * `texlive`
+        * `pandoc`
+    * Setup
+        ```sh
+        mkdir -p $HOME/.pandoc/templates
+        ln -s $SOCIALST/Pandoc/eisvogel.latex $HOME/.pandoc/templates/eisvogel.latex
+        ```
+
+4. Zellij
+    * Pre-requisites
+        * `rust`
+        * `cargo`
+        * Above Zsh setup
+    * Setup
+        ```sh
+        # Install Zellij
+        cargo install zellij
+
+        # For key binding
+        if [ ! -d "$HOME/.config/zellij" ]; then
+          mkdir -p "$HOME/.config/zellij"
+        fi
+        ln -s $SOCIALST/Zellij/config.yaml $HOME/.config/zellij/config.yaml
+        ```
+
+5. Other available shell scripts (For almost all of linux distros)
+    * `02_git.sh` : Configure git with an option: `credential.helper store`
+    * `04_rust.sh` : Setup rust via `rustup`
+    * `06_cargo.sh` : Install useful applications via `cargo`
+    * `07_coc.sh` : If you chose 'Neovim' in `01_env.sh`, then this script provided setup for `Coc`
+    * `08_nim.sh` : Install nim via `choosenim`
+    * `11_npm.sh` : Create `.npm-global` directory and prefix
+    * `12_extra_python.sh` : Install extra useful python packages via `pip`
+    * `14_openblas.sh` : Download & Make `OpenBLAS` to `/opt` directory (You should have `$HOME/zbin` directory before executing this)
+    * `15_root_jupyter.sh` : Install ROOT jupyter kernel
+    * `20_npm_package.sh` : Install useful npm packages 
+
+
