@@ -599,7 +599,7 @@ draw_tree() {
 #export PATH="$PYENV_ROOT/bin:$PATH"
 #eval "$(pyenv init -)"
 
-source /home/xteca/.config/broot/launcher/bash/br
+source "$HOME/.config/broot/launcher/bash/br"
 
 # ==============================================================================
 # Zellij
