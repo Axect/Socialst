@@ -48,7 +48,8 @@ if [ $laptop = "y" ]; then
         sof-firmware \
         mdbook \
         pdfarranger img2pdf \
-        gnome-keyring
+        gnome-keyring \
+        telegram-desktop
         #gnome-tweaks \
         #chrome-gnome-shell \
         #vivaldi vivaldi-ffmpeg-codecs
@@ -71,8 +72,8 @@ if [ $hep = "y" ]; then
         lhapdf \
         cython \
         python-wheel \
-        python-astropy \
         python-h5py
+        #python-astropy \
 elif [ $hep = "n" ]; then
     echo "Skip hep programs"
 fi
@@ -106,14 +107,14 @@ elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
 
-# VMware
-echo "Do you want to install vmware? [y/n]"
-read vm
-
-if [ $vm = "y" ]; then
-    yay -S --noconfirm --needed \
-        open-vm-tools \
-        vmware-workstation
-elif [ $vm = "n" ]; then
-    echo "Skip VMware"
-fi
+## VMware
+#echo "Do you want to install vmware? [y/n]"
+#read vm
+#
+#if [ $vm = "y" ]; then
+#    yay -S --noconfirm --needed \
+#        open-vm-tools \
+#        vmware-workstation
+#elif [ $vm = "n" ]; then
+#    echo "Skip VMware"
+#fi
