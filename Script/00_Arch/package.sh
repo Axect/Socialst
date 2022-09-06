@@ -46,10 +46,8 @@ if [ $laptop = "y" ]; then
         audacious \
         simplescreenrecorder \
         sof-firmware \
-        peazip-gtk2-bin \
         mdbook \
         pdfarranger img2pdf \
-        photoqt \
         gnome-keyring
         #gnome-tweaks \
         #chrome-gnome-shell \
@@ -96,7 +94,7 @@ if [ $aur = "y" ]; then
         masterpdfeditor \
         zoom \
         google-chrome-beta \
-        mailspring \
+	microsoft-edge-beta-bin \
         weylus-bin
         #minetime \
         #insync-nautilus \
