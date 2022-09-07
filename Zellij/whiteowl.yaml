@@ -28,16 +28,16 @@ tabs:
     parts:
       - direction: Horizontal
         run:
-          command: { cmd: zsh, args: ["-c", "cd ~/Documents/Project/Research/axion_pbh/white_owl && nvim"] }
+          command: { cmd: zsh, args: ["-c", "cd ~/Documents/Project/Research/white_owl && nvim"] }
         focus: true
       - direction: Horizontal
         parts:
           - direction: Vertical
             run:
-              command: { cmd: zsh, args: ["-c", "cd ~/Documents/Project/Research/axion_pbh/white_owl && broot"] }
+              command: { cmd: zsh, args: ["-c", "cd ~/Documents/Project/Research/white_owl && broot"] }
           - direction: Vertical
             run:
-              command: { cmd: zsh, args: ["-c", "cd ~/Documents/Project/Research/axion_pbh/white_owl && zsh"] }
+              command: { cmd: zsh, args: ["-c", "cd ~/Documents/Project/Research/white_owl && zsh"] }
   - name: "perf"
     direction: Vertical
     run:
@@ -45,4 +45,4 @@ tabs:
   - name: "git"
     direction: Vertical
     run:
-      command: { cmd: zsh, args: ["-c", "cd ~/Documents/Project/Research/axion_pbh/white_owl && gitui"] }
+      command: { cmd: zsh, args: ["-c", "cd ~/Documents/Project/Research/white_owl && gitui"] }
