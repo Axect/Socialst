@@ -83,9 +83,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'JuliaEditorSupport/julia-vim'
 
 " Color scheme
-"Plug 'rakr/vim-one'
+Plug 'rakr/vim-one'
 "Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'jacoborus/tender.vim'
+"Plug 'jacoborus/tender.vim'
 "Plug 'sjl/badwolf'
 "Plug 'NLKNguyen/papercolor-theme'
 "Plug 'whatyouhide/vim-gotham'
@@ -286,12 +286,15 @@ let g:qs_highlight_on_keys = ['f', 'F']
 let g:comfortable_motion_no_default_key_mappings = 1
 
 " Color scheme
-colorscheme tender
-let g:airline_theme='tender'
+let g:airline_theme='one'
 "let g:seoul256_background=253
 "colo seoul256-light
 let g:airline_powerline_fonts = 1
+let g:one_allow_italics = 1
 set background=dark
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors
+colorscheme one
 
 " Markdown Preview
 let g:mkdp_auto_start = 0
