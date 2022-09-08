@@ -2,6 +2,10 @@
 
 You can setup new arch linux laptop or desktop easily with `Socialst`
 
+## Note for Updates
+
+[RELEASES.md](./RELEASES.md)
+
 ## Setup new Arch laptop or desktop
 
 1. Clone this repo at your home directory (check : `echo $HOME`)
