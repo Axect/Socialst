@@ -13,10 +13,11 @@ git config --global credential.helper store
 echo "Do you want to setup SSH key? (y/n)"
 
 mkdir ~/.ssh
+cd ~/.ssh
 export SOCIALST="$HOME/Socialst"
 cp $SOCIALST/Git/config ~/.ssh/config
-echo "Type `github` to first question and skip other questions"
-ssh-keygen -t ed25519-sk -C "$useremail"
+echo "[Do] Type 'github' to first question and skip other questions"
+ssh-keygen -t ecdsa -C "$useremail"
 xclip -sel clip < ~/.ssh/github.pub
 
 echo "[Completed] SSH key copied to clipboard"
