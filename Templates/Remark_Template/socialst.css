@@ -1,11 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Righteous');
-@import url('https://fonts.googleapis.com/css?family=Caveat');
-@import url('https://fonts.googleapis.com/css?family=Kalam');
+/* @import url('https://fonts.googleapis.com/css?family=Righteous'); */
+/* @import url('https://fonts.googleapis.com/css?family=Caveat'); */
+/* @import url('https://fonts.googleapis.com/css?family=Kalam'); */
 @import url('https://fonts.googleapis.com/css2?family=Quantico:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;500;600;700;800&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* @import url('https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css');
+@import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css');
+@import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
 
 @font-face{
   font-family: "Cascadia Code";
@@ -16,10 +22,16 @@ body {
     font-family: 'PT Sans', sans-serif; 
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Oxanium', cursive;
-  font-weight: bold;
+h1, h2, h3 {
+  font-family: 'Oxanium';
+  /* font-weight: bold; */
   text-shadow: 1px 2px 2px grey;
+}
+
+h4, h5 {
+  font-family: 'Oxanium';
+  /* font-weight: bold; */
+  text-shadow: 1px 1px 1px grey;
 }
 
 .remark-code, .remark-inline-code { 
@@ -128,6 +140,11 @@ div.my-footer p {
 
 .left-column {float:left}
 .right-column {float:right}
+.middle-column {
+  float:unset;
+  clear: both;
+  text-align: center;
+}
 
 .split-30 .left-column {width: 30%}
 .split-30 .right-column {width: 70%}
@@ -190,4 +207,31 @@ div.my-footer p {
     top: 0 !important;
     left: 0 !important;
   }
+}
+
+table {
+  border-collapse: collapse;
+  margin: 15px 15px;
+  min-width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+  background-color: rgba(0, 0, 139, 0.9);
+  color: #ffffff;
+  text-align: center;
+}
+
+th, td {
+  padding: 12px 15px;
+}
+
+th {
+  font-family: "Oxanium", sans-serif;
+  font-size: 0.75em;
+}
+
+td {
+  font-family: "Gowun Batang";
+  font-size: 0.7em;
 }
