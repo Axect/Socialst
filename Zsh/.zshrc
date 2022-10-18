@@ -609,3 +609,11 @@ zell() {
     filename=${filename%%.*}
     zellij --layout $HOME/Socialst/Zellij/$filename.yaml
 }
+
+# ==============================================================================
+# XZ with LZMA
+# ==============================================================================
+xzma16() {
+    tar -cf - $1 | xz --lzma2=dict=1536Mi,nice=273 -c - > $1.tar.xz
+}
+
