@@ -166,6 +166,12 @@ Plug 'puremourning/vimspector'
 " Copilot
 Plug 'github/copilot.vim'
 
+"" CommentBox
+"Plug 'LudoPinelli/comment-box.nvim'
+
+" vsnip
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -355,6 +361,10 @@ let g:coc_snippet_next = '<tab>'
 let g:latex_to_unicode_file_types='$^'
 let g:latex_to_unicode_file_types_blacklist = '.*'
 
-
+" Copilot
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
+
+" vsnip setting
+imap <expr> <C-k>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-k>'
+smap <expr> <C-k>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-k>'
