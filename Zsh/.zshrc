@@ -608,7 +608,7 @@ source "$HOME/.config/broot/launcher/bash/br"
 zell() {
     filename=$(basename -- $1)
     filename=${filename%%.*}
-    zellij --layout $HOME/Socialst/Zellij/$filename.yaml
+    zellij --layout $HOME/Socialst/Zellij/$filename.kdl
 }
 
 # ==============================================================================

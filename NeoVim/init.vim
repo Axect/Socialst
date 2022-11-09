@@ -172,6 +172,10 @@ Plug 'github/copilot.vim'
 " vsnip
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
+
+" KDL
+Plug 'imsnif/kdl.vim'
+
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.
