@@ -11,14 +11,14 @@ layout {
     tab name="work" focus=true split_direction="Vertical" {
         pane split_direction="Vertical" {
             pane name="editor" command="/usr/bin/zsh" focus=true {
-                args "-c" "cd ~/Documents/Project/Research/white_owl && nvim"
+                args "-c" "cd ~/Documents/Project/Rust_Project/Zellaygen && nvim"
             }
             pane split_direction="Horizontal" {
                 pane name="files" command="/usr/bin/zsh" {
-                    args "-c" "cd ~/Documents/Project/Research/white_owl && broot"
+                    args "-c" "cd ~/Documents/Project/Rust_Project/Zellaygen && broot"
                 }
                 pane name="shell" command="/usr/bin/zsh" {
-                    args "-c" "cd ~/Documents/Project/Research/white_owl && /usr/bin/zsh"
+                    args "-c" "cd ~/Documents/Project/Rust_Project/Zellaygen && /usr/bin/zsh"
                 }
             }
         }
@@ -29,9 +29,9 @@ layout {
     tab name="git" {
         pane name="git" {
             command "/usr/bin/zsh"
-            args "-c" "cd ~/Documents/Project/Research/white_owl && gitui"
+            args "-c" "cd ~/Documents/Project/Rust_Project/Zellaygen && gitui"
         }
     }
 }
-session_name "whiteowl"
+session_name "zellaygen"
 attach_to_session true
