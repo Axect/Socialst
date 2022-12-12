@@ -89,24 +89,24 @@ if [ $aur = "y" ]; then
         youtube-dl-gui-git \
         insync \
         gitkraken \
-        notion-app \
         typora \
         visual-studio-code-bin \
         masterpdfeditor \
         zoom \
-        google-chrome-beta \
-	microsoft-edge-beta-bin \
-        weylus-bin
+	    microsoft-edge-beta-bin \
+        weylus-bin \
+        ncview \
+        birdtray
+        #google-chrome-beta \
+        #notion-app \
         #minetime \
         #insync-nautilus \
         #edex-ui-bin
         #onlyoffice-bin \
         #gnome-terminal-transparency \
-        #ncview \
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
-
 ## VMware
 #echo "Do you want to install vmware? [y/n]"
 #read vm
