@@ -29,7 +29,8 @@ yay -S --noconfirm --needed \
     libxau libxi libxss libxtst libxcursor libxcomposite libxdamage libxfixes\
     libxrandr libxrender mesa-libgl  alsa-lib libglvnd \
     p7zip \
-    broot bottom zellij screen
+    broot bottom zellij screen \
+    github-cli
     # sagemath-jupyter
     # pandoc-citeproc
 
