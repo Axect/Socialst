@@ -618,10 +618,10 @@ xzma16() {
     tar -cf - $1 | xz --lzma2=dict=1536Mi,nice=273 -c - > $1.tar.xz
 }
 
-# ============================================================================
-# Enzyme Oxide
-# ============================================================================
-export LLVM_SYS_130_PREFIX=$HOME/.cache/enzyme/rustc-1.57.0-src/build/x86_64-unknown-linux-gnu/llvm
-export LD_LIBRARY_PATH=$HOME/.cache/enzyme/Enzyme-0.0.26/enzyme/build/Enzyme:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$HOME/.cache/enzyme/rustc-1.57.0-src/build/x86_64-unknown-linux-gnu/llvm/build/lib/:$LD_LIBRARY_PATH
+# ==============================================================================
+# Custom git
+# ==============================================================================
+gitcl() {
+    git clone git@github.com:Axect/$1.git
+}
 

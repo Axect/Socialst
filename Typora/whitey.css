@@ -20,7 +20,7 @@
   font-display: auto;
   font-weight: bold;
   unicode-range: U+0020-U+007E,U+1100-U+11F9,U+3000-U+303F,U+3131-U+318E,U+327F-U+327F,U+AC00-U+D7A3,U+FF01-U+FF60;
-  src: url("./whitey/SeoulHangangEB.woff") format("woff");
+  src: url("./fonts/SeoulHangangEB.woff") format("woff");
 }
 
 @font-face { 

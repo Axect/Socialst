@@ -29,7 +29,8 @@ yay -S --noconfirm --needed \
     libxau libxi libxss libxtst libxcursor libxcomposite libxdamage libxfixes\
     libxrandr libxrender mesa-libgl  alsa-lib libglvnd \
     p7zip \
-    broot bottom zellij screen
+    broot bottom zellij screen \
+    github-cli
     # sagemath-jupyter
     # pandoc-citeproc
 
@@ -89,24 +90,24 @@ if [ $aur = "y" ]; then
         youtube-dl-gui-git \
         insync \
         gitkraken \
-        notion-app \
         typora \
         visual-studio-code-bin \
         masterpdfeditor \
         zoom \
-        google-chrome-beta \
-	microsoft-edge-beta-bin \
-        weylus-bin
+	    microsoft-edge-beta-bin \
+        weylus-bin \
+        ncview \
+        birdtray
+        #google-chrome-beta \
+        #notion-app \
         #minetime \
         #insync-nautilus \
         #edex-ui-bin
         #onlyoffice-bin \
         #gnome-terminal-transparency \
-        #ncview \
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
-
 ## VMware
 #echo "Do you want to install vmware? [y/n]"
 #read vm
