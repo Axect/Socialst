@@ -40,7 +40,7 @@ read laptop
 if [ $laptop = "y" ]; then
     echo "Install packages for laptop"
     yay -S --noconfirm --needed \
-        okular imagewriter pdfsam gscan2pdf easytag filezilla \
+        okular pdfsam gscan2pdf easytag filezilla \
         zathura-ps zathura-pdf-mupdf zathura-djvu zathura-cb \
         synapse uim foliate \
         firefox-developer-edition firefox-developer-edition-i18n-ko \
@@ -50,7 +50,8 @@ if [ $laptop = "y" ]; then
         mdbook \
         pdfarranger img2pdf \
         gnome-keyring \
-        telegram-desktop
+        telegram-desktop \
+	#imagewriter
         #gnome-tweaks \
         #chrome-gnome-shell \
         #vivaldi vivaldi-ffmpeg-codecs
