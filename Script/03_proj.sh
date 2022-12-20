@@ -59,6 +59,8 @@ if [ ! -d "$PROJECT" ]; then
   cd "$PROJECT/Blog"
   git clone "${AXECT}blog"
   git clone "${AXECT}axect.github.io"
+  git clone "${AXECT}Notes"
+  git clone "${AXECT}Slides"
 
   cd "$PROJECT/Haskell_Project"
   git clone "${AXECT}HNumeric"
@@ -74,6 +76,7 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}FPTools"
 
   cd "$PROJECT/Rust_Project"
+  git clone "${AXECT}advent-of-code-2022"
   git clone "${AXECT}Acalc"
   git clone "${AXECT}Peroxide"
   git clone "${AXECT}Puruda"
@@ -83,8 +86,9 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}Peroxide_Doc"
   git clone "${AXECT}Peroxide_Gallery"
   git clone "${AXECT}Rustube"
-  git clone "${AXECT}Woroxide"
   git clone "${AXECT}Scientific_Bench"
+  git clone "${AXECT}Woroxide"
+  git clone "${AXECT}Yonsei-Flexible"
 
   cd "$PROJECT/Go_Project"
   git clone "${AXECT}RGE"
@@ -113,12 +117,15 @@ if [ ! -d "$PROJECT" ]; then
   cd "$PROJECT/Research"
   git clone "${AXECT}NSCool"
   git clone "${AXECT}WhiteEagle"
+  git clone "${AXECT}white_owl"
+  git clone "${AXECT}fig_for_paper"
 
   cd "$PROJECT/Machine_Learning"
   git clone "${AXECT}ML_Project"
   git clone "${AXECT}ML2020"
   git clone "${AXECT}ML_with_Rust"
   git clone "${AXECT}NMC2020"
+  git clone "${AXECT}MLTest"
 
   cd "$PROJECT/R_Project"
   git clone "${AXECT}R_Yeji"
