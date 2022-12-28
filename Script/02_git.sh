@@ -26,7 +26,7 @@ sleep 1
 echo "[Do] Paste SSH key in 'Key' field"
 # Sleep for 5 seconds
 sleep 5
-firefox-developer-edition "https://github.com/settings/ssh/new"
+firefox "https://github.com/settings/ssh/new"
 
 #ssh-add ~/.ssh/github
 ssh -T git@github.com
