@@ -16,3 +16,6 @@ pip install --user pythran
 
 # Coconut
 pip install --user coconut
+
+# SciencePlots
+pip install --user SciencePlots
