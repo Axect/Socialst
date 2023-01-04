@@ -1,9 +1,6 @@
 from netCDF4 import Dataset
 import matplotlib.pyplot as plt
-
-# Use latex
-plt.rc('text', usetex=True)
-plt.rc('font', family='serif')
+import scienceplots
 
 # Import netCDF file
 ncfile = './data.nc'
@@ -14,16 +11,22 @@ var = data.variables
 x = var['x'][:]
 y = var['y'][:]  
 
-# Prepare Plot
-plt.figure(figsize=(10,6), dpi=300)
-plt.title(r"Title", fontsize=16)
-plt.xlabel(r'$x$', fontsize=14)
-plt.ylabel(r'$y$', fontsize=14)
+# Plot params
+pparam = dict(
+    xlabel = r'$x$',
+    ylabel = r'$y$',
+    title = r"Title",
+    xscale = 'linear',
+    yscale = 'linear',
+    xlim = (0, 1),
+    ylim = (0, 1),
+)
 
-# Plot with Legends
-plt.plot(x, y, label=r'$y=x$')
-
-# Other options
-plt.legend(fontsize=12)
-plt.grid()
-plt.savefig("plot.png", dpi=300)
+# Plot
+with plt.style.context(["science", "nature"]):
+    fig, ax = plt.subplots()
+    ax.autoscale(tight=True)
+    ax.set(**pparam)
+    ax.plot(x, y, label=r'$y=x$')
+    ax.legend()
+    fig.savefig('plot.png', dpi=300, bbox_inches='tight')
