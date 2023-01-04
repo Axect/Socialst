@@ -53,6 +53,10 @@ set tabstop=4
 " Tab in json
 autocmd FileType json setlocal shiftwidth=2 tabstop=2 expandtab
 
+" Fold
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
 " ----------------------------------------------------------
 " Plugins
 " ----------------------------------------------------------
@@ -150,7 +154,7 @@ Plug 'qnighy/lalrpop.vim'
 Plug 'pest-parser/pest.vim'
 
 " Tree-sitter
-"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Haskell
 "Plug 'enomsg/vim-haskellconcealplus'
@@ -372,3 +376,6 @@ let g:copilot_no_tab_map = v:true
 " vsnip setting
 imap <expr> <C-k>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-k>'
 smap <expr> <C-k>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-k>'
+
+" Fold setting
+autocmd BufReadPost,FileReadPost * normal zR

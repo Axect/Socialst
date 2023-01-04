@@ -23,7 +23,6 @@ yay -S --noconfirm --needed \
     hugo \
     lld sccache \
     hyperfine bat dust sd zoxide tokei tealdeer \
-    julia-bin \
     valgrind fmt \
     docker docker-compose \
     libxau libxi libxss libxtst libxcursor libxcomposite libxdamage libxfixes\
@@ -33,6 +32,7 @@ yay -S --noconfirm --needed \
     github-cli
     # sagemath-jupyter
     # pandoc-citeproc
+    #julia-bin \
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
@@ -42,8 +42,7 @@ if [ $laptop = "y" ]; then
     yay -S --noconfirm --needed \
         okular pdfsam gscan2pdf easytag filezilla \
         zathura-ps zathura-pdf-mupdf zathura-djvu zathura-cb \
-        synapse uim foliate \
-        firefox-developer-edition firefox-developer-edition-i18n-ko \
+        synapse foliate \
         audacious \
         simplescreenrecorder \
         sof-firmware \
@@ -56,6 +55,8 @@ if [ $laptop = "y" ]; then
         #gnome-tweaks \
         #chrome-gnome-shell \
         #vivaldi vivaldi-ffmpeg-codecs
+        #firefox-developer-edition firefox-developer-edition-i18n-ko \
+	#uim
 elif [ $laptop = "n" ]; then
     echo "Skip laptop packages"
 fi
