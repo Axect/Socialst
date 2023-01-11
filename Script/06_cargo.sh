@@ -7,7 +7,7 @@ ln -s $HOME/Socialst/Cargo/config.toml $HOME/.cargo/config.toml
 cargo install loc
 
 # Tectonic
-cargo install tectonic
+#cargo install tectonic
 
 # evcxr
 cargo install evcxr_repl evcxr_jupyter
