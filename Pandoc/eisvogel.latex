@@ -260,7 +260,8 @@ $if(mathspec)$
     \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
   \fi
 $else$
-  \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+    \setmathfont{latinmodern-math.otf}[Scale=MatchLowercase]
+    \setmathfont{$mathfont$}[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]
 $endif$
 $endif$
 $if(CJKmainfont)$

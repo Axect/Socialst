@@ -16,7 +16,7 @@ engine:
       behavior:
         Mode: Math
       result: ConsumeIfProcessed
-    Super-Space:
+    C-Space:
       behavior:
         Toggle:
           - Hangul
