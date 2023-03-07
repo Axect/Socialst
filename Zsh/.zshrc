@@ -343,11 +343,9 @@ fi
 # ==============================================================================
 # SSH Portforwarding
 # ==============================================================================
-alias eleden_pluto="ssh -N -f -L localhost:8407:localhost:8407 kavis@Eleden"
+#alias eleden_pluto="ssh -N -f -L localhost:8407:localhost:8407 kavis@Eleden"
 alias eleden_jupyter="ssh -N -f -L localhost:8408:localhost:8408 kavis@Eleden"
-alias eleden_code="ssh -N -f -L localhost:8409:localhost:8409 kavis@Eleden"
-alias eleden_code2="ssh -N -f -L localhost:54321:localhost:54321 kavis@Eleden"
-alias eleden_code_web="ssh -N -f -L localhost:5500:localhost:5500 kavis@Eleden"
+alias eleden_lab="ssh -N -f -L localhost:8409:localhost:8409 kavis@Eleden"
 alias command_code="ssh -N -f -L localhost:8409:localhost:8409 axect@CommandCenter"
 alias command_jupyter="ssh -N -f -L localhost:8408:localhost:8408 axect@CommandCenter"
 alias command_pluto="ssh -N -f -L localhost:8407:localhost:8407 axect@CommandCenter"
