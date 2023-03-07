@@ -50,7 +50,8 @@ if [ $laptop = "y" ]; then
         pdfarranger img2pdf \
         gnome-keyring \
         telegram-desktop \
-	kime
+        kime \
+        thunderbird-i18n-ko
 	#imagewriter
         #gnome-tweaks \
         #chrome-gnome-shell \
@@ -100,7 +101,8 @@ if [ $aur = "y" ]; then
 	    microsoft-edge-beta-bin \
         weylus-bin \
         ncview \
-        birdtray
+        birdtray \
+        mathpix-snipping-tool
         #google-chrome-beta \
         #notion-app \
         #minetime \
