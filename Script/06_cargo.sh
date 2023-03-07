@@ -25,4 +25,4 @@ cargo install cargo-update
 cargo install --git https://github.com/rust-lang/measureme crox flamegraph summarize
 
 # gitui
-cargo install gitui
+#cargo install gitui
