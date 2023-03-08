@@ -54,8 +54,10 @@ set tabstop=4
 autocmd FileType json setlocal shiftwidth=2 tabstop=2 expandtab
 
 " Fold
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
+"set foldmethod=expr
+"set foldexpr=nvim_treesitter#foldexpr()
+autocmd FileType * setlocal foldmethod=expr
+autocmd FileType rust setlocal foldmethod=indent
 
 " ----------------------------------------------------------
 " Plugins
@@ -350,13 +352,6 @@ nmap <C-T> :terminal<CR>
 nmap <space>e :CocCommand explorer<CR>
 
 hi Normal guibg=NONE ctermbg=NONE
-
-" Coc-snippets
-" inoremap <silent><expr> <TAB>
-"       \ pumvisible() ? coc#_select_confirm() :
-"       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-"       \ <SID>check_back_space() ? "\<TAB>" :
-"       \ coc#refresh()
 
 function! s:check_back_space() abort
   let col = col('.') - 1
