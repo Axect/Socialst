@@ -102,7 +102,8 @@ if [ $aur = "y" ]; then
         weylus-bin \
         ncview \
         birdtray \
-        mathpix-snipping-tool
+        mathpix-snipping-tool \
+        trilium-bin
         #google-chrome-beta \
         #notion-app \
         #minetime \
