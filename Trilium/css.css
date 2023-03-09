@@ -2,9 +2,8 @@
 /*                                   MELON 4                                     */
 /*                      by https://github.com/raphwriter/                        */ 
 /*          A Theme For Trilium Notes (https://github.com/zadam/trilium)         */
+/*                Customized by Axect (https://github.com/Axect)                 */
 /* ============================================================================= */
-
-
 
 /* ----------------------------------------------------------------------------- */
 /* FONT DECLARATIONS
@@ -138,7 +137,7 @@ span.edited-note-line small {
 
 #content :is(p, blockquote, table) {
   font-family: var(--main-font-family-sans);
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 140%;
 }
 
@@ -149,8 +148,6 @@ span.edited-note-line small {
 
 #content blockquote {
   font-style: normal;
-  font-size: 1rem;
-  line-height: 140%;
 }
 
 #content blockquote :is(ol, ul) {
@@ -158,7 +155,7 @@ span.edited-note-line small {
 }
 
 #content blockquote span.math-tex {
-  font-size: 1.1rem;   
+  font-size: 1.2rem;   
 }
 
 
