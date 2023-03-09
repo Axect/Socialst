@@ -103,7 +103,8 @@ if [ $aur = "y" ]; then
         ncview \
         birdtray \
         mathpix-snipping-tool \
-        trilium-bin
+        trilium-bin \
+        drawio-desktop-bin
         #google-chrome-beta \
         #notion-app \
         #minetime \
