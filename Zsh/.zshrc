@@ -623,3 +623,6 @@ gitcl() {
     git clone git@github.com:Axect/$1.git
 }
 
+export HDF5_DISABLE_VERSION_CHECK=1
+
+source /home/xteca/.config/broot/launcher/bash/br
