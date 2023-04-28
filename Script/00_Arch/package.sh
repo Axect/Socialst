@@ -29,7 +29,8 @@ yay -S --noconfirm --needed \
     libxrandr libxrender mesa-libgl  alsa-lib libglvnd \
     p7zip \
     broot bottom zellij screen \
-    github-cli
+    github-cli \
+    glow
     # sagemath-jupyter
     # pandoc-citeproc
     #julia-bin \
@@ -51,7 +52,8 @@ if [ $laptop = "y" ]; then
         gnome-keyring \
         telegram-desktop \
         kime \
-        thunderbird-i18n-ko
+        thunderbird-i18n-ko \
+        typst
 	#imagewriter
         #gnome-tweaks \
         #chrome-gnome-shell \
