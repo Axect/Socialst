@@ -623,6 +623,13 @@ gitcl() {
     git clone git@github.com:Axect/$1.git
 }
 
+# ==============================================================================
+# PDF to PNG
+# ==============================================================================
+pdf2png() {
+    pdftoppm -png -r 300 $1 $1
+}
+
 export HDF5_DISABLE_VERSION_CHECK=1
 
 source /home/xteca/.config/broot/launcher/bash/br
