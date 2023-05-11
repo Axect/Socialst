@@ -182,6 +182,9 @@ Plug 'hrsh7th/vim-vsnip-integ'
 " KDL
 Plug 'imsnif/kdl.vim'
 
+" Typst
+Plug 'kaarmu/typst.vim'
+
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.

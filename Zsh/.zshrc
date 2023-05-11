@@ -290,6 +290,7 @@ export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ROOTSYS/lib
 alias latexinit="cp $HOME/Socialst/Templates/Latex_Template/* ./"
 alias remarkinit="cp -r $HOME/Socialst/Templates/Remark_Template/* ./"
 alias eisvogelinit="cp $HOME/Socialst/Templates/Eisvogel_Template/template.md ./"
+alias typstinit="cp $HOME/Socialst/Templates/Typst_Template/* ./"
 alias ncplotinit="cp $HOME/Socialst/Templates/PyPlot_Template/nc_plot.py ./"
 alias pqplotinit="cp $HOME/Socialst/Templates/PyPlot_Template/pq_plot.py ./"
 alias xkcdplotinit="cp $HOME/Socialst/Templates/PyPlot_Template/xkcd_plot.py ./"
