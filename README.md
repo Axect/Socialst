@@ -23,9 +23,9 @@ cd Socialst/Script
 cd 00_Arch
 ```
 
-4. Install `yay` (If you already installed `yay` then skip this process)
+4. Install `paru` and prerequisites (`base-devel`)
 ```sh
-sh yay.sh
+sh paru.sh
 ```
 
 5. Install packages
@@ -40,7 +40,7 @@ cd ..
 
 7. Execute shell script files sequentially
     1. `01_env.sh` : Setup for zsh, vim, eisvogel, zathura, input method, zellij
-        * Recommend : Custom zsh, Neovim, UIM
+        * Recommend : Custom zsh, Neovim, Kime or UIM
     2. `02_git.sh` : Configure git with an option: `credential.helper store`
     3. `03_proj.sh` : Clone whole projects for `https://github.com/Axect` (It is just for my convenience - You don't need to execute this file)
     4. `04_rust.sh` : Setup rust via `rustup`
@@ -63,6 +63,7 @@ cd ..
 
 8. After hook
     * If you set UIM in `sh 01_env.sh`, then you should configure UIM via `uim-pref-gtk`. If you are korean, then refer [Arch UIM Setup](https://wiki.archlinux.org/title/Localization_(%ED%95%9C%EA%B5%AD%EC%96%B4)/Korean_(%ED%95%9C%EA%B5%AD%EC%96%B4)#uim-byeoru). If you finish setup, then should logout or reboot.
+    * Broot may bother you after start new zsh session. In terminal, type `broot` and install. And it may modify zshrc so, remove new lines including broot in `.zshrc`
 
 9. Useful commands (alias & zsh functions)
     * Git
@@ -75,6 +76,8 @@ cd ..
     * Eisvogel (Pandoc)
         * `eisvogelinit` : Generate pandoc files from `Socialst/Templates/Eisvogel_Template/`
         * `md2pdf FILENAME` : Generate PDF file from markdown file
+    * Typst
+        * `typstinit` : Generate typst template files from `Socialst/Templates/Typst_Template/`
     * Python
         * `ncplotinit` : Template for matplotlib + netCDF4
     * C++
