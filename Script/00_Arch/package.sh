@@ -53,7 +53,7 @@ if [ $laptop = "y" ]; then
         telegram-desktop \
         kime \
         thunderbird-i18n-ko \
-        typst kitty
+        typst kitty mochi-appimage
 	#imagewriter
         #gnome-tweaks \
         #chrome-gnome-shell \
