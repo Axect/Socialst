@@ -106,7 +106,8 @@ if [ $aur = "y" ]; then
         birdtray \
         mathpix-snipping-tool \
         trilium-bin \
-        drawio-desktop-bin
+        drawio-desktop-bin \
+        hoffice
         #google-chrome-beta \
         #notion-app \
         #minetime \
