@@ -53,7 +53,7 @@ if [ $laptop = "y" ]; then
         telegram-desktop \
         kime \
         thunderbird-i18n-ko \
-        typst kitty mochi-appimage
+        typst kitty
 	#imagewriter
         #gnome-tweaks \
         #chrome-gnome-shell \
@@ -107,7 +107,8 @@ if [ $aur = "y" ]; then
         mathpix-snipping-tool \
         trilium-bin \
         drawio-desktop-bin \
-        hoffice
+        hoffice \
+        mochi-appimage
         #google-chrome-beta \
         #notion-app \
         #minetime \
