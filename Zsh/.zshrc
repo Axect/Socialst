@@ -633,4 +633,4 @@ pdf2png() {
 
 export HDF5_DISABLE_VERSION_CHECK=1
 
-source /home/xteca/.config/broot/launcher/bash/br
+source $HOME/.config/broot/launcher/bash/br
