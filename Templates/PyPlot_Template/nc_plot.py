@@ -29,4 +29,4 @@ with plt.style.context(["science", "nature"]):
     ax.set(**pparam)
     ax.plot(x, y, label=r'$y=x$')
     ax.legend()
-    fig.savefig('plot.png', dpi=300, bbox_inches='tight')
+    fig.savefig('plot.png', dpi=600, bbox_inches='tight')
