@@ -30,7 +30,8 @@ paru -S --noconfirm --needed \
     p7zip \
     broot bottom zellij screen \
     github-cli \
-    glow lazygit git-delta
+    glow lazygit git-delta \
+    jupyter-console 
     # sagemath-jupyter
     # pandoc-citeproc
     #julia-bin \
