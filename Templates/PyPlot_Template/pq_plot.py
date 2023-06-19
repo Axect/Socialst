@@ -1,9 +1,6 @@
-import matplotlib.pyplot as plt
 import pandas as pd
-
-# Use latex
-plt.rc('text', usetex=True)
-plt.rc('font', family='serif')
+import matplotlib.pyplot as plt
+import scienceplots
 
 # Import parquet file
 df = pd.read_parquet('data.parquet')
@@ -12,16 +9,22 @@ df = pd.read_parquet('data.parquet')
 x = df['x']
 y = df['y']
 
-# Prepare Plot
-plt.figure(figsize=(10,6), dpi=300)
-plt.title(r"Title", fontsize=16)
-plt.xlabel(r'$x$', fontsize=14)
-plt.ylabel(r'$y$', fontsize=14)
+# Plot params
+pparam = dict(
+    xlabel = r'$x$',
+    ylabel = r'$y$',
+    title = r"Title",
+    xscale = 'linear',
+    yscale = 'linear',
+    xlim = (0, 1),
+    ylim = (0, 1),
+)
 
-# Plot with Legends
-plt.plot(x, y, label=r'$y=x$')
-
-# Other options
-plt.legend(fontsize=12)
-plt.grid()
-plt.savefig("plot.png", dpi=300)
+# Plot
+with plt.style.context(["science", "nature"]):
+    fig, ax = plt.subplots()
+    ax.autoscale(tight=True)
+    ax.set(**pparam)
+    ax.plot(x, y, label=r'$y=x$')
+    ax.legend()
+    fig.savefig('plot.png', dpi=600, bbox_inches='tight')
