@@ -633,4 +633,7 @@ pdf2png() {
 
 export HDF5_DISABLE_VERSION_CHECK=1
 
-source $HOME/.config/broot/launcher/bash/br
+# ==============================================================================
+# Python venv
+# ==============================================================================
+alias activate_venv="source $HOME/zbin/venv/bin/activate"

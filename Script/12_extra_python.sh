@@ -1,3 +1,5 @@
+source $HOME/zbin/venv/bin/activate
+
 # For Root C++ kernel
 pip install --user metakernel
 
@@ -19,3 +21,5 @@ pip install --user coconut
 
 # SciencePlots
 pip install --user SciencePlots
+
+deactivate
