@@ -31,7 +31,8 @@ paru -S --noconfirm --needed \
     broot bottom zellij screen \
     github-cli \
     glow lazygit git-delta \
-    jupyter-console python-pyarrow 
+    jupyter-console python-pyarrow \
+    miniconda3
     # sagemath-jupyter
     # pandoc-citeproc
     #julia-bin \

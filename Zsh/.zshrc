@@ -636,4 +636,12 @@ export HDF5_DISABLE_VERSION_CHECK=1
 # ==============================================================================
 # Python venv
 # ==============================================================================
-alias activate_venv="source $HOME/zbin/venv/bin/activate"
+#alias activate_venv="source $HOME/zbin/venv/bin/activate"
+
+# ==============================================================================
+# Miniconda
+# ==============================================================================
+activate_conda() {
+    source /opt/miniconda3/etc/profile.d/conda.sh
+    conda activate
+}
