@@ -118,4 +118,7 @@ ln -s $SOCIALST/Kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 ln -s $SOCIALST/Kitty/colors.conf $HOME/.config/kitty/colors.conf
 
 # Python venv
-python -m venv $HOME/zbin/venv
+#python -m venv $HOME/zbin/venv
+
+# PDM
+alias activate="source .venv/bin/activate"
