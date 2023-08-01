@@ -641,7 +641,12 @@ export HDF5_DISABLE_VERSION_CHECK=1
 # ==============================================================================
 # Miniconda
 # ==============================================================================
-activate_conda() {
-    source /opt/miniconda3/etc/profile.d/conda.sh
-    conda activate
-}
+#activate_conda() {
+#    source /opt/miniconda3/etc/profile.d/conda.sh
+#    conda activate
+#}
+
+# ==============================================================================
+# PDM
+# ==============================================================================
+alias activate="source .venv/bin/activate"
