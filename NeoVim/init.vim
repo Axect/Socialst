@@ -185,6 +185,9 @@ Plug 'imsnif/kdl.vim'
 " Typst
 Plug 'kaarmu/typst.vim'
 
+" Wakatime stat
+Plug 'wakatime/vim-wakatime'
+
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -377,3 +380,6 @@ smap <expr> <C-k>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-k
 
 " Fold setting
 autocmd BufReadPost,FileReadPost * normal zR
+
+" Vim slime
+let g:slime_target = "zellij"
