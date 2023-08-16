@@ -273,8 +273,9 @@ export PATH="$PATH:$HOME/go/bin/"
 export MANPATH="$MANPATH:$CHPL_HOME/man"
 #export CARP_DIR="$HOME/zbin/Carp"
 export SCCACHE_DIR="$HOME/.cache/sccache"
-export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+#export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 #export PYTHONPATH="$HOME/anaconda3"
+#export PATH="$HOME/.juliaup/bin:$PATH"
 
 # ==============================================================================
 # HEP
@@ -292,6 +293,7 @@ alias remarkinit="cp -r $HOME/Socialst/Templates/Remark_Template/* ./"
 alias eisvogelinit="cp $HOME/Socialst/Templates/Eisvogel_Template/template.md ./"
 alias typstinit="cp $HOME/Socialst/Templates/Typst_Template/* ./"
 alias typstslideinit="cp -r $HOME/Socialst/Templates/Typst_Slide/* ./"
+alias typstposterinit="cp -r $HOME/Socialst/Templates/Typst_Poster/* ./"
 alias ncplotinit="cp $HOME/Socialst/Templates/PyPlot_Template/nc_plot.py ./"
 alias pqplotinit="cp $HOME/Socialst/Templates/PyPlot_Template/pq_plot.py ./"
 alias xkcdplotinit="cp $HOME/Socialst/Templates/PyPlot_Template/xkcd_plot.py ./"
