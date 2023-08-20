@@ -110,7 +110,8 @@ if [ $aur = "y" ]; then
         trilium-bin \
         drawio-desktop-bin \
         hoffice \
-        mochi-appimage
+        mochi-appimage \
+        gromit-mpx-git
         #google-chrome-beta \
         #notion-app \
         #minetime \
