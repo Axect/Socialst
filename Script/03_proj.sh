@@ -77,12 +77,12 @@ if [ ! -d "$PROJECT" ]; then
 
   cd "$PROJECT/Rust_Project"
   git clone "${AXECT}advent-of-code-2022"
-  git clone "${AXECT}Acalc"
+  #git clone "${AXECT}Acalc"
   git clone "${AXECT}Peroxide"
   git clone "${AXECT}Puruda"
   git clone "${AXECT}Puruspe"
   git clone "${AXECT}Bench"
-  git clone "${AXECT}Music_Tournament"
+  #git clone "${AXECT}Music_Tournament"
   git clone "${AXECT}Peroxide_Doc"
   git clone "${AXECT}Peroxide_Gallery"
   git clone "${AXECT}Rustube"
@@ -119,6 +119,7 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}WhiteEagle"
   git clone "${AXECT}white_owl"
   git clone "${AXECT}fig_for_paper"
+  git clone "${AXECT}white_owl_prac"
 
   cd "$PROJECT/Machine_Learning"
   git clone "${AXECT}ML_Project"
@@ -137,9 +138,9 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}Acalc.jl"
 
   cd "$PROJECT/SYTEARK"
-  git clone "${SYTEARK}ML2021"
+  git clone "${SYTEARK}ML2022"
 
-  cd "$PROJECT"
+  cd "$HOME/Documents"
 fi
 
 if [ ! -d "$TEMPLATE" ]; then

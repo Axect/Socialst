@@ -1,1 +1,1 @@
-curl -sSL https://pdm.fming.dev/dev/install-pdm.py | python3 -
+curl -sSL "https://pdm.fming.dev/install-pdm.py" | python3 -

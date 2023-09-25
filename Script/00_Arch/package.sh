@@ -2,7 +2,7 @@
 ## Necessary
 echo "Install Necessary programs for CLI environment"
 paru -S --noconfirm --needed \
-    texlive-most texlive-lang tk gcc-fortran r jupyter-notebook \
+    texlive texlive-lang tk gcc-fortran r jupyter-notebook \
     python-pip python-numpy python-scipy python-matplotlib python-pandas\
     npm dlang pandoc gvim \
     sagemath sagetex sagemath-doc \
@@ -95,16 +95,13 @@ if [ $aur = "y" ]; then
     paru -S --noconfirm --needed \
         slack-desktop ttf-nanum \
         la-capitaine-icon-theme \
-        youtube-dl-gui-git \
         insync \
         gitkraken \
         typora \
         visual-studio-code-bin \
         masterpdfeditor \
         zoom \
-	    microsoft-edge-beta-bin \
-        weylus-bin \
-        ncview \
+	microsoft-edge-beta-bin \
         birdtray \
         mathpix-snipping-tool \
         trilium-bin \
@@ -112,6 +109,8 @@ if [ $aur = "y" ]; then
         hoffice \
         mochi-appimage \
         gromit-mpx-git
+        #weylus-bin \
+        #ncview \
         #google-chrome-beta \
         #notion-app \
         #minetime \
@@ -119,6 +118,7 @@ if [ $aur = "y" ]; then
         #edex-ui-bin
         #onlyoffice-bin \
         #gnome-terminal-transparency \
+        #youtube-dl-gui-git \
 elif [ $aur = "n" ]; then
     echo "Skip AUR"
 fi
