@@ -658,3 +658,5 @@ alias activate="source .venv/bin/activate"
 # nvitop
 # ==============================================================================
 alias nvitop="pipx run nvitop"
+
+eval "$(atuin init zsh)"
