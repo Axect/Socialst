@@ -32,7 +32,8 @@ paru -S --noconfirm --needed \
     github-cli \
     glow lazygit git-delta \
     jupyter-console python-pyarrow \
-    mold
+    mold \
+    python-pipx
     # sagemath-jupyter
     # pandoc-citeproc
     #julia-bin \
