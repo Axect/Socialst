@@ -8,10 +8,10 @@ paru -S --noconfirm --needed \
     sagemath sagetex sagemath-doc \
     zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting \
     zsh-completions fzf \
-    youtube-dl ffmpeg fd tree htop\
+    youtube-dl ffmpeg tree htop\
     ttf-fira-code ttf-ubuntu-font-family ttf-cascadia-code \
     system-config-printer cups hplip \
-    powerline powerline-fonts ncdu \
+    powerline powerline-fonts \
     netcdf python-netcdf4 \
     the_silver_searcher \
     cmake gdb clang \
@@ -19,10 +19,8 @@ paru -S --noconfirm --needed \
     ttf-liberation noto-fonts noto-fonts-emoji noto-fonts-extra \
     ttf-jetbrains-mono noto-fonts-cjk \
     git-lfs jupyterlab \
-    exa btop \
     hugo \
     lld sccache \
-    hyperfine bat dust sd zoxide tokei tealdeer \
     valgrind fmt \
     docker docker-compose \
     libxau libxi libxss libxtst libxcursor libxcomposite libxdamage libxfixes\
@@ -33,7 +31,9 @@ paru -S --noconfirm --needed \
     glow lazygit git-delta \
     jupyter-console python-pyarrow \
     mold \
-    python-pipx
+    python-pipx \
+    fd ncdu bat dust hyperfine zoxide sd tokei tealdeer exa btop \
+    gping ripgrep mcfly
     # sagemath-jupyter
     # pandoc-citeproc
     #julia-bin \
