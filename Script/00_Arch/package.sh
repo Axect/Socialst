@@ -33,7 +33,7 @@ paru -S --noconfirm --needed \
     mold \
     python-pipx \
     fd ncdu bat dust hyperfine zoxide sd tokei tealdeer exa btop \
-    gping ripgrep mcfly curlie
+    gping ripgrep mcfly curlie nerd-fonts
     # sagemath-jupyter
     # pandoc-citeproc
     #julia-bin \
