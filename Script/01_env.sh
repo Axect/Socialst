@@ -4,8 +4,8 @@ AXECT="https://github.com/Axect"
 
 # Socialst
 if [ ! -d "$SOCIALST" ]; then
-  cd $HOME
-  git clone "${AXECT}/Socialst"
+	cd $HOME
+	git clone "${AXECT}/Socialst"
 fi
 
 # zshrc
@@ -15,67 +15,71 @@ echo "1. Custom zsh, 2. oh-my-zsh, 3. skip"
 read choose_zsh
 
 if [ $choose_zsh -eq 1 ]; then
-    if [ ! -d "$HOME/.zshrc" ]; then
-        echo "Create .zshrc file"
-    else
-        echo "Backup original .zshrc to .zshrc.old"
-        mv $HOME/.zshrc $HOME/.zshrc.old
-    fi
-    ln -s $SOCIALST/Zsh/.zshrc $HOME/.zshrc
-    chsh -s `which zsh`
-    echo "Complete zsh Setup!"
+	if [ ! -d "$HOME/.zshrc" ]; then
+		echo "Create .zshrc file"
+	else
+		echo "Backup original .zshrc to .zshrc.old"
+		mv $HOME/.zshrc $HOME/.zshrc.old
+	fi
+	ln -s $SOCIALST/Zsh/.zshrc $HOME/.zshrc
+	chsh -s $(which zsh)
+	echo "Complete zsh Setup!"
 elif [ $choose_zsh -eq 2 ]; then
-    if [ -d "$HOME/.zshrc" ]; then
-        echo "Backup original .zshrc to .zshrc.old"
-        mv $HOME/.zshrc $HOME/.zshrc.old
-    fi
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    ln -s $SOCIALST/Zsh/ohmyzshrc $HOME/.zshrc
-    echo "Complete zsh Setup!"
+	if [ -d "$HOME/.zshrc" ]; then
+		echo "Backup original .zshrc to .zshrc.old"
+		mv $HOME/.zshrc $HOME/.zshrc.old
+	fi
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	ln -s $SOCIALST/Zsh/ohmyzshrc $HOME/.zshrc
+	echo "Complete zsh Setup!"
 else
-    echo "Skip zsh Setup!"
+	echo "Skip zsh Setup!"
 fi
 
 # Spacevim
 echo "What kinds of vim do you want to use?"
-echo "1. Vim, 2. Spacevim, 3. Neovim"
+echo "1. Vim, 2. Spacevim, 3. Neovim, 4. Lazyvim, 5. Skip"
 
 read vim
 
 if [ $vim -eq 2 ]; then
-    if [ ! -d "$HOME/.SpaceVim" ]; then
-        curl -sLf https://spacevim.org/install.sh | bash
-        mkdir $HOME/.SpaceVim.d
-        ln -s $SOCIALST/SpaceVim/init.toml $HOME/.SpaceVim.d/init.toml
-        echo "Complete spacevim Setup!"
-    fi
+	if [ ! -d "$HOME/.SpaceVim" ]; then
+		curl -sLf https://spacevim.org/install.sh | bash
+		mkdir $HOME/.SpaceVim.d
+		ln -s $SOCIALST/SpaceVim/init.toml $HOME/.SpaceVim.d/init.toml
+		echo "Complete spacevim Setup!"
+	fi
 elif [ $vim -eq 1 ]; then
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    ln -s $SOCIALST/Vim/.vimrc $HOME/.vimrc
-    echo "Complete vim setup!"
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	ln -s $SOCIALST/Vim/.vimrc $HOME/.vimrc
+	echo "Complete vim setup!"
 elif [ $vim -eq 3 ]; then
-    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    if [ ! -d "$HOME/.config/nvim" ]; then
-        mkdir $HOME/.config/nvim
-    fi
-    ln -s $SOCIALST/NeoVim/init.vim $HOME/.config/nvim/init.vim
-    ln -s $SOCIALST/NeoVim/.vsnip $HOME/.vsnip
-    echo "Complete to setup neovim"
+	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	if [ ! -d "$HOME/.config/nvim" ]; then
+		mkdir $HOME/.config/nvim
+	fi
+	ln -s $SOCIALST/NeoVim/init.vim $HOME/.config/nvim/init.vim
+	ln -s $SOCIALST/NeoVim/.vsnip $HOME/.vsnip
+	echo "Complete to setup neovim"
+elif [ $vim -eq 4 ]; then
+	git clone https://github.com/Axect/lazyvim_template ~/.config/nvim
+else
+	echo "Skip vim setup!"
 fi
 
 # Eisvogel
 if [ ! -d "$HOME/.pandoc" ]; then
-  mkdir -p $HOME/.pandoc/templates
-  ln -s $SOCIALST/Pandoc/eisvogel.latex $HOME/.pandoc/templates/eisvogel.latex
-  echo "Complete Eisvogel Setup!"
+	mkdir -p $HOME/.pandoc/templates
+	ln -s $SOCIALST/Pandoc/eisvogel.latex $HOME/.pandoc/templates/eisvogel.latex
+	echo "Complete Eisvogel Setup!"
 fi
 
 # Zathura
 if [ ! -d "$HOME/.config/zathura" ]; then
-  mkdir -p "$HOME/.config/zathura"
-  ln -s $SOCIALST/Zathura/zathurarc $HOME/.config/zathura/zathurarc
+	mkdir -p "$HOME/.config/zathura"
+	ln -s $SOCIALST/Zathura/zathurarc $HOME/.config/zathura/zathurarc
 fi
 
 # Xprofile
@@ -85,34 +89,34 @@ echo "1. ibus, 2. uim, 3. kime, 4. skip"
 read input_method
 
 if [ $input_method -eq 1 ]; then
-    if [ ! -d "$HOME/.xprofile" ]; then
-        ln -s $SOCIALST/IBUS/xprofile $HOME/.xprofile
-    fi
+	if [ ! -d "$HOME/.xprofile" ]; then
+		ln -s $SOCIALST/IBUS/xprofile $HOME/.xprofile
+	fi
 elif [ $input_method -eq 2 ]; then
-    if [ ! -d "$HOME/.xprofile" ]; then
-        ln -s $SOCIALST/UIM/xprofile $HOME/.xprofile
-    fi
+	if [ ! -d "$HOME/.xprofile" ]; then
+		ln -s $SOCIALST/UIM/xprofile $HOME/.xprofile
+	fi
 elif [ $input_method -eq 3 ]; then
-    if [ ! -d "$HOME/.xprofile" ]; then
-        ln -s $SOCIALST/KIME/xprofile $HOME/.xprofile
-    fi
-    if [ ! -d "$HOME/.config/kime" ]; then
-        mkdir $HOME/.config/kime
-    fi
-    ln -s $SOCIALST/KIME/config.yaml $HOME/.config/kime/config.yaml
+	if [ ! -d "$HOME/.xprofile" ]; then
+		ln -s $SOCIALST/KIME/xprofile $HOME/.xprofile
+	fi
+	if [ ! -d "$HOME/.config/kime" ]; then
+		mkdir $HOME/.config/kime
+	fi
+	ln -s $SOCIALST/KIME/config.yaml $HOME/.config/kime/config.yaml
 else
-    echo "Skip input method setup"
+	echo "Skip input method setup"
 fi
 
 # Zellij
 if [ ! -d "$HOME/.config/zellij" ]; then
-  mkdir -p "$HOME/.config/zellij"
+	mkdir -p "$HOME/.config/zellij"
 fi
 ln -s $SOCIALST/Zellij/config.kdl $HOME/.config/zellij/config.kdl
 
 # Kitty
 if [ ! -d "$HOME/.config/kitty" ]; then
-  mkdir -p "$HOME/.config/kitty"
+	mkdir -p "$HOME/.config/kitty"
 fi
 ln -s $SOCIALST/Kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 ln -s $SOCIALST/Kitty/colors.conf $HOME/.config/kitty/colors.conf
