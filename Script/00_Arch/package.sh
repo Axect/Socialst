@@ -107,7 +107,8 @@ if [ $aur = "y" ]; then
 		drawio-desktop-bin \
 		hoffice \
 		mochi-appimage \
-		gromit-mpx-git
+		gromit-mpx-git \
+		localsend-bin
 	#weylus-bin \
 	#ncview \
 	#google-chrome-beta \
