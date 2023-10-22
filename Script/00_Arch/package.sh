@@ -31,7 +31,8 @@ paru -S --noconfirm --needed \
 	python-pipx \
 	fd ncdu bat dust hyperfine zoxide sd tokei tealdeer exa btop \
 	gping ripgrep mcfly curlie nerd-fonts \
-	python-black
+	python-black \
+	chafa xdotool
 # sagemath-jupyter
 # pandoc-citeproc
 #julia-bin \
