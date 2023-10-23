@@ -42,8 +42,8 @@ set nu
 set cursorline
 
 " on
-syntax on
 filetype plugin indent on
+syntax enable
 
 " Tab to space
 set expandtab
@@ -383,3 +383,7 @@ autocmd BufReadPost,FileReadPost * normal zR
 
 " Vim slime
 let g:slime_target = "zellij"
+
+"" Vimtex
+"let g:vimtex_view_general_viewer = 'okular'
+"let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'

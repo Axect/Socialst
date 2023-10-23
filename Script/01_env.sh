@@ -61,6 +61,7 @@ elif [ $vim -eq 3 ]; then
 		mkdir $HOME/.config/nvim
 	fi
 	ln -s $SOCIALST/NeoVim/init.vim $HOME/.config/nvim/init.vim
+	ln -s $SOCIALST/NeoVim/coc-settings.json $HOME/.config/nvim/coc-settings.json
 	ln -s $SOCIALST/NeoVim/.vsnip $HOME/.vsnip
 	echo "Complete to setup neovim"
 elif [ $vim -eq 4 ]; then

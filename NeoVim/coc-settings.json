@@ -1,0 +1,14 @@
+{
+  "texlab.build.executable": "tectonic",
+  "texlab.build.args": [
+    "-X",
+    "compile",
+    "%f",
+    "--synctex",
+    "--keep-logs",
+    "--keep-intermediates"
+  ],
+  "texlab.build.onSave": true,
+  "rust-analyzer.cargo.features": "all",
+  "rust-analyzer.inlayHints.typeHints.enable": true
+}
