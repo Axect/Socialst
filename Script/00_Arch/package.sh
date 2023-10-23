@@ -32,7 +32,8 @@ paru -S --noconfirm --needed \
 	fd ncdu bat dust hyperfine zoxide sd tokei tealdeer exa btop \
 	gping ripgrep mcfly curlie nerd-fonts \
 	python-black \
-	chafa xdotool
+	chafa xdotool \
+    tectonic
 # sagemath-jupyter
 # pandoc-citeproc
 #julia-bin \
