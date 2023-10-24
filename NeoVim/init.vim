@@ -188,6 +188,9 @@ Plug 'kaarmu/typst.vim'
 " Wakatime stat
 Plug 'wakatime/vim-wakatime'
 
+" Typora
+Plug 'wookayin/vim-typora'
+
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.
