@@ -18,7 +18,7 @@ paru -S --noconfirm --needed \
 	ttf-jetbrains-mono noto-fonts-cjk \
 	git-lfs jupyterlab \
 	hugo \
-	lld sccache \
+	lld sccache mold \
 	valgrind fmt \
 	docker docker-compose \
 	libxau libxi libxss libxtst libxcursor libxcomposite libxdamage libxfixes libxrandr libxrender mesa-libgl alsa-lib libglvnd \
@@ -27,7 +27,6 @@ paru -S --noconfirm --needed \
 	github-cli \
 	glow lazygit git-delta \
 	jupyter-console python-pyarrow \
-	mold \
 	python-pipx \
 	fd ncdu bat dust hyperfine zoxide sd tokei tealdeer exa btop \
 	gping ripgrep mcfly curlie nerd-fonts \
