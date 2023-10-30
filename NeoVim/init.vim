@@ -53,11 +53,14 @@ set tabstop=4
 " Tab in json
 autocmd FileType json setlocal shiftwidth=2 tabstop=2 expandtab
 
+" Conceal
+set conceallevel=2
+
 " Fold
 "set foldmethod=expr
 "set foldexpr=nvim_treesitter#foldexpr()
-autocmd FileType * setlocal foldmethod=expr
-autocmd FileType rust setlocal foldmethod=indent
+"autocmd FileType * setlocal foldmethod=expr
+"autocmd FileType rust setlocal foldmethod=indent
 
 " ----------------------------------------------------------
 " Plugins
@@ -183,7 +186,8 @@ Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'imsnif/kdl.vim'
 
 " Typst
-Plug 'kaarmu/typst.vim'
+"Plug 'kaarmu/typst.vim'
+Plug 'SeniorMars/typst.nvim'
 
 " Wakatime stat
 Plug 'wakatime/vim-wakatime'

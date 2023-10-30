@@ -10,5 +10,9 @@
   ],
   "texlab.build.onSave": true,
   "rust-analyzer.cargo.features": "all",
-  "rust-analyzer.inlayHints.typeHints.enable": true
+  "rust-analyzer.inlayHints.typeHints.enable": true,
+  "markdownlint.config": {
+    "default": true,
+    "line_length": false
+  }
 }
