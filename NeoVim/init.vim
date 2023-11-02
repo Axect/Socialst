@@ -195,6 +195,12 @@ Plug 'wakatime/vim-wakatime'
 " Typora
 Plug 'wookayin/vim-typora'
 
+" Rust
+Plug 'neovim/nvim-lspconfig'
+Plug 'simrat39/rust-tools.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'mfussenegger/nvim-dap'
+
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.
