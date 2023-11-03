@@ -65,6 +65,36 @@ elif [ $vim -eq 3 ]; then
 	ln -s $SOCIALST/NeoVim/.vsnip $HOME/.vsnip
 	echo "Complete to setup neovim"
 elif [ $vim -eq 4 ]; then
+    # Check .config/nvim & backup
+    if [ -d "$HOME/.config/nvim" ]; then
+        echo "Backup original .config/nvim to .config/nvim.old"
+        mv $HOME/.config/nvim $HOME/.config/nvim.old
+    fi
+    # Check .vim & backup
+    if [ -d "$HOME/.vim" ]; then
+        echo "Backup original .vim to .vim.old"
+        mv $HOME/.vim $HOME/.vim.old
+    fi
+    # Check .vimrc & backup
+    if [ -d "$HOME/.vimrc" ]; then
+        echo "Backup original .vimrc to .vimrc.old"
+        mv $HOME/.vimrc $HOME/.vimrc.old
+    fi
+    # Check .local/share/nvim & backup
+    if [ -d "$HOME/.local/share/nvim" ]; then
+        echo "Backup original .local/share/nvim to .local/share/nvim.old"
+        mv $HOME/.local/share/nvim $HOME/.local/share/nvim.old
+    fi
+    # Check .local/state/nvim & backup
+    if [ -d "$HOME/.local/state/nvim" ]; then
+        echo "Backup original .local/state/nvim to .local/state/nvim.old"
+        mv $HOME/.local/state/nvim $HOME/.local/state/nvim.old
+    fi
+    # Check .cache/nvim & backup
+    if [ -d "$HOME/.cache/nvim" ]; then
+        echo "Backup original .cache/nvim to .cache/nvim.old"
+        mv $HOME/.cache/nvim $HOME/.cache/nvim.old
+    fi
 	git clone https://github.com/Axect/lazyvim_template ~/.config/nvim
 else
 	echo "Skip vim setup!"
