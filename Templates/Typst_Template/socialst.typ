@@ -101,3 +101,11 @@
 #let exercise(header, body, number: none) = {
     thmenv("Exercise", header, body, number: number)
 }
+
+#let centeralize(body) = {
+  align(center)[
+    #block(width: 100%)[
+      #body
+    ]
+  ]
+}
