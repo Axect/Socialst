@@ -572,10 +572,10 @@ countdown() {
 # ==============================================================================
 # Julia Docker
 # ==============================================================================
-#ZSHFN=$HOME/.zsh_fn
-#if [ -d $ZSHFN ]; then
-#    source $ZSHFN/*.zsh
-#fi
+ZSHFN=$HOME/.zsh_fn
+if [ -d $ZSHFN ]; then
+    source $ZSHFN/julia.zsh
+fi
 
 # ==============================================================================
 # For PyTorch
@@ -664,3 +664,17 @@ alias nvitop="pipx run nvitop"
 # ==============================================================================
 eval "$(mcfly init zsh)"
 export MCFLY_PROMPT="❯"
+
+# ==============================================================================
+# Rustag
+# ==============================================================================
+rtg() {
+  RUSTAG=$(rustag $@)
+  
+  # RUSTAG contains "Error" then just print else cd $(RUSTAG)
+  if [[ $RUSTAG == *"Error"* ]]; then
+    echo $RUSTAG
+  else
+    cd $RUSTAG
+  fi
+}
