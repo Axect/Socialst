@@ -5,8 +5,7 @@ paru -S --noconfirm --needed \
 	texlive texlive-lang tk gcc-fortran r jupyter-notebook \
 	python-pip python-numpy python-scipy python-matplotlib python-pandas npm dlang pandoc gvim \
 	sagemath sagetex sagemath-doc \
-	zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting \
-	zsh-completions fzf \
+	zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting zsh-completions fzf \
 	youtube-dl ffmpeg tree htop ttf-fira-code ttf-ubuntu-font-family ttf-cascadia-code \
 	system-config-printer cups hplip \
 	powerline powerline-fonts \
@@ -17,7 +16,7 @@ paru -S --noconfirm --needed \
 	ttf-liberation noto-fonts noto-fonts-emoji noto-fonts-extra \
 	ttf-jetbrains-mono noto-fonts-cjk \
 	git-lfs jupyterlab \
-	hugo \
+	hugo zola \
 	lld sccache mold \
 	valgrind fmt \
 	docker docker-compose \
@@ -32,7 +31,7 @@ paru -S --noconfirm --needed \
 	gping ripgrep mcfly curlie nerd-fonts \
 	python-black \
 	chafa xdotool \
-    tectonic
+  tectonic kime
 # sagemath-jupyter
 # pandoc-citeproc
 #julia-bin \
@@ -53,8 +52,6 @@ if [ $laptop = "y" ]; then
 		pdfarranger img2pdf \
 		gnome-keyring \
 		telegram-desktop \
-		kime \
-		thunderbird-i18n-ko \
 		typst kitty
 	#imagewriter
 	#gnome-tweaks \
@@ -109,7 +106,8 @@ if [ $aur = "y" ]; then
 		hoffice \
 		mochi-appimage \
 		gromit-mpx-git \
-		localsend-bin
+		localsend-bin \
+    bluemail
 	#weylus-bin \
 	#ncview \
 	#google-chrome-beta \
