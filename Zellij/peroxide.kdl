@@ -29,7 +29,7 @@ layout {
     tab name="git" {
         pane name="git" {
             command "/usr/bin/zsh"
-            args "-c" "cd ~/Documents/Project/Rust_Project/Peroxide && gitui"
+            args "-c" "cd ~/Documents/Project/Rust_Project/Peroxide && lazygit"
         }
     }
 }
