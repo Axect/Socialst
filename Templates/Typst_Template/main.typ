@@ -5,7 +5,7 @@
   authors: (
     (name: "Tae-Geun Kim", email: "tg.kim@yonsei.ac.kr", affiliation: "Yonsei University", major: "Department of Physics"),
   ),
-  date: "May 11, 2023",
+  date: "Feb 6, 2024",
 )
 
 // Display inline code in a small box
@@ -26,6 +26,9 @@
   radius: 4pt,
   width: 100%,
 )
+
+#let bs = [#h(0cm) $backslash$ #h(0cm)]
+#set enum(numbering: (it => math.italic[#numbering("(a)", it)]))
 
 #outline(indent: true)
 
