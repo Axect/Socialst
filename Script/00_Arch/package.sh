@@ -31,7 +31,8 @@ paru -S --noconfirm --needed \
 	gping ripgrep mcfly curlie nerd-fonts \
 	python-black \
 	chafa xdotool \
-  tectonic kime
+  tectonic kime \
+  solaar
 # sagemath-jupyter
 # pandoc-citeproc
 #julia-bin \
