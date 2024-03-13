@@ -39,6 +39,8 @@
   set heading(numbering: "1.")
   set math.equation(numbering: "(1)")
 
+  //set text(font: "IBM Plex Sans KR")
+
   body
 }
 
