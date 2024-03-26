@@ -219,7 +219,7 @@ alias ll='exa -al --color=always --group-directories-first' # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.="exa -a | egrep '^\.'"                             # show only dotfiles
 
-alias cat='bat --style header --style rules --style snip --style changes --style header'
+alias cat='bat --style header --style snip --style changes --style header'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -722,3 +722,5 @@ run_galprop() {
 
   $GALPROP/GALPROP-$GALPROP_VERSION/bin/galprop -r $r -g $g -f $f -o $o
 }
+
+eval $(thefuck --alias)
