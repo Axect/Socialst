@@ -4,6 +4,7 @@ PROJECT="$HOME/Documents/Project"
 TEMPLATE="$HOME/Documents/Template"
 TEST="$HOME/Documents/Test"
 AXECT="https://github.com/Axect/"
+YONSEI="https://github.com/Yonsei-HEP-COSMO/"
 SYTEARK="https://github.com/SYTEARK/"
 
 if [ ! -d "$PROGRAMMING" ]; then
@@ -52,13 +53,17 @@ if [ ! -d "$PROJECT" ]; then
   #mkdir "Nim_Project"
   mkdir "Julia_Project"
   mkdir "SYTEARK"
+  mkdir "Quantum"
+  mkdir "Web"
 
   git clone "${AXECT}Euler"
   git clone "${AXECT}Academy"
 
   cd "$PROJECT/Blog"
-  git clone "${AXECT}blog"
+  git clone "${AXECT}hugo_blog"
+  git clone "${AXECT}zola_blog"
   git clone "${AXECT}axect.github.io"
+  git clone "${AXECT}cv"
   git clone "${AXECT}Notes"
   git clone "${AXECT}Slides"
 
@@ -88,7 +93,12 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}Rustube"
   git clone "${AXECT}Scientific_Bench"
   git clone "${AXECT}Woroxide"
+  git clone "${AXECT}Zellaygen"
   git clone "${AXECT}Yonsei-Flexible"
+  git clone "${AXECT}Rugfield"
+  git clone "${AXECT}Radient"
+  git clone "${AXECT}Forger"
+  git clone "${AXECT}KDE_from_scratch"
 
   #cd "$PROJECT/Go_Project"
   #git clone "${AXECT}RGE"
@@ -116,17 +126,25 @@ if [ ! -d "$PROJECT" ]; then
 
   cd "$PROJECT/Research"
   git clone "${AXECT}NSCool"
-  git clone "${AXECT}WhiteEagle"
   git clone "${AXECT}white_owl"
   git clone "${AXECT}fig_for_paper"
   git clone "${AXECT}white_owl_prac"
+  git clone "${AXECT}EIT_anomaly"
+  git clone "${YONSEI}DeeLeMa"
+  git clone "${AXECT}Posita"
+  git clone "${AXECT}Posita_test"
 
   cd "$PROJECT/Machine_Learning"
-  git clone "${AXECT}ML_Project"
-  git clone "${AXECT}ML2020"
-  git clone "${AXECT}ML_with_Rust"
-  git clone "${AXECT}NMC2020"
+  #git clone "${AXECT}ML_Project"
+  #git clone "${AXECT}ML2020"
+  #git clone "${AXECT}ML_with_Rust"
+  #git clone "${AXECT}NMC2020"
+  git cloen "${AXECT}ESL_Study"
   git clone "${AXECT}MLTest"
+  git clone "${AXECT}Anomaly_thresholding"
+  git clone "${AXECT}Noisy_Regression"
+  git clone "${AXECT}DeepONet_from_scratch"
+  git clone "${AXECT}Noisy_Candle"
 
   #cd "$PROJECT/R_Project"
   #git clone "${AXECT}R_Yeji"
@@ -139,6 +157,14 @@ if [ ! -d "$PROJECT" ]; then
 
   cd "$PROJECT/SYTEARK"
   git clone "${SYTEARK}ML2022"
+
+  cd "$PROJECT/Quantum"
+  git clone "${AXECT}QuantumAlgorithms"
+
+  cd "$PROJECT/Web"
+  git clone "${YONSEI}zola-HEP-COSMO"
+  git clone "${YONSEI}Yonsei-HEP-COSMO.github.io"
+  git clone "${YONSEI}Yonsei-Cosmo-Chalk"
 
   cd "$HOME/Documents"
 fi

@@ -724,3 +724,5 @@ run_galprop() {
 }
 
 eval $(thefuck --alias)
+
+source /home/xteca/.config/broot/launcher/bash/br

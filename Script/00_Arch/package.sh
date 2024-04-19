@@ -1,7 +1,7 @@
 # Official Repository
 ## Necessary
 echo "Install Necessary programs for CLI environment"
-paru -S --noconfirm --needed \
+paru -S --needed \
 	texlive texlive-lang tk gcc-fortran r jupyter-notebook \
 	python-pip python-numpy python-scipy python-matplotlib python-pandas npm dlang pandoc gvim \
 	sagemath sagetex sagemath-doc \
