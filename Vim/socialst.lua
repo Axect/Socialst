@@ -25,4 +25,13 @@ return {
 
   -- Comment box
   { "LudoPinelli/comment-box.nvim" },
+
+  -- Typst
+  {
+    {
+      "kaarmu/typst.vim",
+      ft = "typst",
+      lazy = false,
+    },
+  },
 }
