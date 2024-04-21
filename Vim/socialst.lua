@@ -6,7 +6,11 @@ return {
       "nvim-lua/plenary.nvim",
       "hrsh7th/nvim-cmp",
     },
-    config = function() require("codeium").setup {} end,
+    config = function()
+      --require("codeium").setup {}
+      vim.keymap.set("i", "<C-j>", function() return vim.fn["codeium#Accept"]() end, { expr = true, silent = true })
+    end,
+    lazy = false,
   },
 
   -- Rustacean
