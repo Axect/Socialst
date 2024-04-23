@@ -6,11 +6,11 @@ ln -s $HOME/Socialst/Cargo/config.toml $HOME/.cargo/config.toml
 # loc
 cargo install loc
 
-# Tectonic
-#cargo install tectonic
-
 # evcxr
-cargo install evcxr_repl evcxr_jupyter
+#cargo install evcxr_repl evcxr_jupyter
+
+# irust
+cargo install irust
 
 # runner
 cargo install runner
@@ -26,6 +26,3 @@ cargo install --git https://github.com/rust-lang/measureme crox flamegraph summa
 
 # Yonsei-flexible
 cargo install yonsei-flexible
-
-# gitui
-#cargo install gitui
