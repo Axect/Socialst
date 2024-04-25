@@ -54,7 +54,7 @@ if [ $laptop = "y" ]; then
 		pdfarranger img2pdf \
 		gnome-keyring \
 		telegram-desktop \
-		typst kitty
+		typst kitty marktext
 	#imagewriter
 	#gnome-tweaks \
 	#chrome-gnome-shell \
