@@ -110,7 +110,7 @@ if [ $aur = "y" ]; then
 		mochi-appimage \
 		gromit-mpx-git \
 		localsend-bin \
-    bluemail
+		bibtex-tidy
 	#weylus-bin \
 	#ncview \
 	#google-chrome-beta \
