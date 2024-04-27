@@ -31,9 +31,10 @@ paru -S --needed \
 	gping ripgrep mcfly curlie nerd-fonts \
 	python-black \
 	chafa xdotool \
-    tectonic kime \
-    solaar \
-    helix bash-language-server julia python-lsp-server rust-analyzer texlab
+  tectonic kime \
+  solaar \
+  helix bash-language-server julia python-lsp-server rust-analyzer texlab \
+  ttf-ibm-plex
 # sagemath-jupyter
 # pandoc-citeproc
 #julia-bin \
