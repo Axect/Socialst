@@ -106,7 +106,6 @@ if [ $aur = "y" ]; then
 		mathpix-snipping-tool \
 		trilium-bin \
 		drawio-desktop-bin \
-		hoffice \
 		mochi-appimage \
 		gromit-mpx-git \
 		localsend-bin \

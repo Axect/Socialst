@@ -16,6 +16,15 @@ return {
     lazy = false, -- This plugin is already lazy
   },
 
+  -- Crates.nvim
+  {
+      'saecki/crates.nvim',
+      tag = 'stable',
+      config = function()
+          require('crates').setup()
+      end,
+  },
+
   -- Wakatime
   { "wakatime/vim-wakatime", lazy = false },
 
