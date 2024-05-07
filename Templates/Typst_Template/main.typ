@@ -28,7 +28,7 @@
 )
 
 #let bs = [#h(0cm) $backslash$ #h(0cm)]
-#set enum(numbering: (it => math.italic[#numbering("(a)", it)]))
+#set enum(numbering: (it => text(style: "italic")[#numbering("(a)", it)]))
 
 #outline(indent: true)
 
