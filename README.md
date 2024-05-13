@@ -40,11 +40,12 @@ cd ..
 
 7. Execute shell script files sequentially
     1. `01_env.sh` : Setup for zsh, vim, eisvogel, zathura, input method, zellij
-        * Recommend : Custom zsh, Neovim, Kime or UIM
+        - Recommend : Custom zsh, Astronvim, Kime
     2. `02_git.sh` : Configure git with an option: `credential.helper store`
+        - Recommend action: `gh auth login`
     3. `03_proj.sh` : Clone whole projects for `https://github.com/Axect` (It is just for my convenience - You don't need to execute this file)
     4. `04_rust.sh` : Setup rust via `rustup`
-    5. `05_rust_analyzer.sh` : Install rust analyzer
+    5. `05_rust_analyzer.sh` : Install rust analyzer as a component of rustup
     6. `06_cargo.sh` : Install useful applications via `cargo`
     7. `07_coc.sh` : If you chose 'Neovim' in `01_env.sh`, then this script provided setup for `Coc`
     8. `08_nim.sh` : Install nim via `choosenim`
