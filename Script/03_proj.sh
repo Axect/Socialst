@@ -139,7 +139,7 @@ if [ ! -d "$PROJECT" ]; then
   #git clone "${AXECT}ML2020"
   #git clone "${AXECT}ML_with_Rust"
   #git clone "${AXECT}NMC2020"
-  git cloen "${AXECT}ESL_Study"
+  git clone "${AXECT}ESL_Study"
   git clone "${AXECT}MLTest"
   git clone "${AXECT}Anomaly_thresholding"
   git clone "${AXECT}Noisy_Regression"
