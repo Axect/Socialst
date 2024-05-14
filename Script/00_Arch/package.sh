@@ -34,7 +34,7 @@ paru -S --needed \
   tectonic kime \
   solaar \
   helix bash-language-server julia python-lsp-server rust-analyzer texlab \
-  ttf-ibm-plex yt-dlp
+  ttf-ibm-plex yt-dlp python-scienceplots
 # sagemath-jupyter
 # pandoc-citeproc
 #julia-bin \
