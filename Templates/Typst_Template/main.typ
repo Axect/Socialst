@@ -1,4 +1,5 @@
 #import "socialst.typ": *
+#import "alias.typ": *
 
 #show: project.with(
   title: "Title",

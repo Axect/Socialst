@@ -44,3 +44,7 @@
     $#d^(#n.at(0))#x$
   }
 }
+
+#let upbold(x) = {
+  $upright(bold(#x))$
+}
