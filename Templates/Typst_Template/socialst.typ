@@ -23,7 +23,16 @@
       columns: (1fr,) * calc.min(3, authors.len()),
       gutter: 1em,
       ..authors.map(author => align(center)[
-        *#author.name* \
+        #if author.keys().contains("orcid") {
+          grid(
+            columns: (8pt, auto, 8pt),
+            [],
+            [*#author.name*],
+            link("https://orcid.org/" + author.orcid)[#pad(left:2pt, top:-4pt, image("./ORCID_iD.svg", width:8pt))]
+          )
+        } else {
+          [*#author.name* \ ]
+        }
         _#author.major _ \
         _#author.affiliation _ \
         #link(
@@ -67,7 +76,7 @@
           radius: 3pt,
           width: 100%,
           align(left)[
-            *#env #counter(heading).display("1.1").#number #header*
+            *#env #number #header*
           ]
         )
         #v(7pt)
