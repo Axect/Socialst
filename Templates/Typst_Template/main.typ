@@ -4,7 +4,7 @@
 #show: project.with(
   title: "Title",
   authors: (
-    (name: "Tae-Geun Kim", email: "tg.kim@yonsei.ac.kr", affiliation: "Yonsei University", major: "Department of Physics"),
+    (name: "Tae-Geun Kim", email: "tg.kim@yonsei.ac.kr", affiliation: "Yonsei University", major: "Department of Physics", orcid: "0009-0000-4229-2935"),
   ),
   date: "Feb 6, 2024",
 )
@@ -30,6 +30,12 @@
 
 #let bs = [#h(0cm) $backslash$ #h(0cm)]
 #set enum(numbering: (it => text(style: "italic")[#numbering("(a)", it)]))
+
+#let appendix(body) = {
+  set heading(numbering: "A.1", supplement: [Appendix])
+  counter(heading).update(0)
+  body
+}
 
 #outline(indent: true)
 
