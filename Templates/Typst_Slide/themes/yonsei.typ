@@ -118,8 +118,13 @@
 
         // footer
         decoration("footer")[
-            #text(color, .6em)[#data.short-authors] #h(1fr)
-            #text(color, .6em)[#logical-slide.display()]
+            #grid(
+                columns: (1fr, 1fr, 1fr),
+                align: (left, center, right),
+                text(color, .6em)[#data.short-authors],
+                text(color, .6em)[#data.short-title],
+                text(color, .6em)[#logical-slide.display()]
+            )
         ]
     }
 
