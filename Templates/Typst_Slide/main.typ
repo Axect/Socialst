@@ -7,7 +7,8 @@
     title: "Title (Long to be expanded)",
     subtitle: "Subtitle (Long to be expanded)",
     short-title: "Shorter title for slide footer",
-    date: "February 7, 2024",
+    date: "October 23, 2024",
+    workshop: "KPS 2024 Fall Meeting",
     theme: yonsei-theme(),
 )
 

@@ -248,7 +248,8 @@
                 ..data.authors
             )
             #v(1em)
-            #data.date
+            #data.date \
+            #text(fill: color)[#data.workshop]
         ]
     }
 
@@ -331,6 +332,7 @@
     short-title: none,
     short-authors: none,
     date: none,
+    workshop: none,
     theme: slides-default-theme(),
     aspect-ratio: "16-9",
     handout: false,
@@ -355,6 +357,7 @@
         short-title: short-title,
         short-authors: short-authors,
         date: date,
+        workshop: workshop
     )
     let the-theme = theme(data)
     global-theme.update(the-theme)

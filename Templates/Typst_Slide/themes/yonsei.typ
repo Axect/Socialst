@@ -8,7 +8,7 @@
 #import "../slides.typ": *
 
 #let yonsei-theme(
-      color: rgb(0, 32, 91), watermark: "yonsei/yonsei_watermark.svg", logo: "yonsei/yonsei_logo.svg", secondlogo: "yonsei/yonsei_horizontal_logo.png", workshop: "Particle Physics and Cosmology 2023"
+      color: rgb(0, 32, 91), watermark: "yonsei/yonsei_watermark.svg", logo: "yonsei/yonsei_logo.svg", secondlogo: "yonsei/yonsei_horizontal_logo.png"
    ) = data => {
 
     let title-slide(slide-info, bodies) = {
@@ -42,7 +42,7 @@
               #image("./yonsei/yonsei_logo.svg", width: 10%)
             ]
             #data.date \
-            #text(fill: color)[#workshop]
+            #text(fill: color)[#data.workshop]
         ]
     }
 
