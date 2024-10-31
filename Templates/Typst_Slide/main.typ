@@ -1,5 +1,12 @@
 #import "slides.typ": *
 #import "themes/yonsei.typ": *
+#import "alias.typ": *
+
+#show link: underline
+
+#let yonsei = rgb(0, 32, 91);
+#let subheader(body) = text(weight: "bold", stretch: 75%)[#body];
+#let citep(body) = text(fill:luma(100), size:10pt)[[#body]];
 
 #show: slides.with(
     authors: ("Alice", text(fill: rgb(0, 32, 91), weight: "bold")[Tae-Geun Kim], "Bob"),
