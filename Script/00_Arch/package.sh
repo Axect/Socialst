@@ -1,7 +1,7 @@
 # Official Repository
 ## Necessary
 echo "Install Necessary programs for CLI environment"
-paru -S --needed \
+yay -S --needed \
   texlive texlive-lang tk gcc-fortran r jupyter-notebook \
   python-pip python-numpy python-scipy python-matplotlib python-pandas npm dlang pandoc gvim \
   sagemath sagetex sagemath-doc \
@@ -45,7 +45,7 @@ read laptop
 
 if [ $laptop = "y" ]; then
   echo "Install packages for laptop"
-  paru -S --noconfirm --needed \
+  yay -S --noconfirm --needed \
     okular pdfsam gscan2pdf easytag filezilla \
     zathura-ps zathura-pdf-mupdf zathura-djvu zathura-cb \
     synapse foliate \
@@ -74,7 +74,7 @@ read hep
 
 if [ $hep = "y" ]; then
   echo "Install HEP programs"
-  paru -S --noconfirm --needed \
+  yay -S --noconfirm --needed \
     root \
     hepmc \
     fastjet \
@@ -94,7 +94,7 @@ echo "Do you want to install common programs in AUR? [y/n]"
 read aur
 
 if [ $aur = "y" ]; then
-  paru -S --noconfirm --needed \
+  yay -S --noconfirm --needed \
     slack-desktop ttf-nanum \
     la-capitaine-icon-theme \
     insync \
@@ -111,7 +111,8 @@ if [ $aur = "y" ]; then
     mochi-appimage \
     gromit-mpx-git \
     localsend-bin \
-    bibtex-tidy
+    bibtex-tidy \
+    dropbox
   #weylus-bin \
   #ncview \
   #google-chrome-beta \
