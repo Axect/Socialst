@@ -148,6 +148,7 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}Noisy_Regression"
   git clone "${AXECT}DeepONet_from_scratch"
   git clone "${AXECT}Noisy_Candle"
+  git clone "${AXECT}pytorch_template"
 
   #cd "$PROJECT/R_Project"
   #git clone "${AXECT}R_Yeji"
