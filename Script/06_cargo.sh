@@ -26,3 +26,6 @@ cargo install --git https://github.com/rust-lang/measureme crox flamegraph summa
 
 # Yonsei-flexible
 cargo install yonsei-flexible
+
+# Nviwatch
+cargo install nviwatch

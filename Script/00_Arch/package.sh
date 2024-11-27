@@ -46,18 +46,17 @@ read laptop
 if [ $laptop = "y" ]; then
   echo "Install packages for laptop"
   yay -S --noconfirm --needed \
-    okular pdfsam gscan2pdf easytag filezilla \
-    zathura-ps zathura-pdf-mupdf zathura-djvu zathura-cb \
-    synapse foliate \
-    audacious \
+    okular audacious easytag \
+    gnome-keyring telegram-desktop filezilla \
+    typst sof-firmware \
+    zed \
+    pdfarranger pdfsam \
     simplescreenrecorder \
-    sof-firmware \
-    mdbook \
-    pdfarranger img2pdf \
-    gnome-keyring \
-    telegram-desktop \
-    typst kitty marktext \
-    zed
+  #kitty
+  #zathura-ps zathura-pdf-mupdf zathura-djvu zathura-cb \
+  #gscan2pdf \
+  #synapse foliate \
+  #mdbook img2pdf \
   #imagewriter
   #gnome-tweaks \
   #chrome-gnome-shell \
