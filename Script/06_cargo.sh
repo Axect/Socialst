@@ -6,6 +6,9 @@ ln -s $HOME/Socialst/Cargo/config.toml $HOME/.cargo/config.toml
 # loc
 cargo install loc
 
+# zellij
+cargo install zellij
+
 # evcxr
 #cargo install evcxr_repl evcxr_jupyter
 
