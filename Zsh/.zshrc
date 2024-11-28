@@ -602,8 +602,6 @@ draw_tree() {
 #export PATH="$PYENV_ROOT/bin:$PATH"
 #eval "$(pyenv init -)"
 
-source "$HOME/.config/broot/launcher/bash/br"
-
 # ==============================================================================
 # Zellij
 # ==============================================================================
@@ -662,8 +660,8 @@ alias nvitop="pipx run nvitop"
 # ==============================================================================
 # MCFLY
 # ==============================================================================
-eval "$(mcfly init zsh)"
-export MCFLY_PROMPT="❯"
+#eval "$(mcfly init zsh)"
+#export MCFLY_PROMPT="❯"
 
 # ==============================================================================
 # Rustag
@@ -693,36 +691,33 @@ alias pbpaste="xclip -selection clipboard -o"
 # ==============================================================================
 # GALPROP
 # ==============================================================================
-export GALPROP="$HOME/zbin/galprop_v57_release_r1"
-export GALPROP_VERSION="57.0.3032"
-export LD_LIBRARY_PATH="$GALPROP/lib/build/Minuit2/lib:$GALPROP/lib/build/galtoolslib-1.1.1006/lib:$GALPROP/lib/build/gsl-2.7/lib:$GALPROP/lib/build/xerces-c-3.2.3/lib:$GALPROP/lib/build/Healpix_3.50/auto/lib:$GALPROP/lib/build/CCfits-2.6/lib:$GALPROP/lib/build/wcslib-7.7/lib:$GALPROP/lib/build/cfitsio-4.0.0/lib:$LD_LIBRARY_PATH"
+#export GALPROP="$HOME/zbin/galprop_v57_release_r1"
+#export GALPROP_VERSION="57.0.3032"
+#export LD_LIBRARY_PATH="$GALPROP/lib/build/Minuit2/lib:$GALPROP/lib/build/galtoolslib-1.1.1006/lib:$GALPROP/lib/build/gsl-2.7/lib:$GALPROP/lib/build/xerces-c-3.2.3/lib:$GALPROP/lib/build/Healpix_3.50/auto/lib:$GALPROP/lib/build/CCfits-2.6/lib:$GALPROP/lib/build/wcslib-7.7/lib:$GALPROP/lib/build/cfitsio-4.0.0/lib:$LD_LIBRARY_PATH"
+#
+#run_galprop() {
+#  local OPTIND g f r o
+#
+#  g="$GALPROP/GALDEF"  # default value
+#  f="$GALPROP/FITS"    # default value
+#  r="example" # default value
+#  o=""        # required, no default
+#
+#  while getopts ":g:f:r:o:" opt; do
+#    case ${opt} in
+#      g) g=${OPTARG} ;;
+#      f) f=${OPTARG} ;;
+#      r) r=${OPTARG} ;;
+#      o) o=${OPTARG} ;;
+#      \?) echo "Invalid option: $OPTARG" 1>&2 ;;
+#    esac
+#  done
+#
+#  if [ -z "$o" ]; then
+#    echo "The -o argument is required."
+#    return 1
+#  fi
+#
+#  $GALPROP/GALPROP-$GALPROP_VERSION/bin/galprop -r $r -g $g -f $f -o $o
+#}
 
-run_galprop() {
-  local OPTIND g f r o
-
-  g="$GALPROP/GALDEF"  # default value
-  f="$GALPROP/FITS"    # default value
-  r="example" # default value
-  o=""        # required, no default
-
-  while getopts ":g:f:r:o:" opt; do
-    case ${opt} in
-      g) g=${OPTARG} ;;
-      f) f=${OPTARG} ;;
-      r) r=${OPTARG} ;;
-      o) o=${OPTARG} ;;
-      \?) echo "Invalid option: $OPTARG" 1>&2 ;;
-    esac
-  done
-
-  if [ -z "$o" ]; then
-    echo "The -o argument is required."
-    return 1
-  fi
-
-  $GALPROP/GALPROP-$GALPROP_VERSION/bin/galprop -r $r -g $g -f $f -o $o
-}
-
-eval $(thefuck --alias)
-
-source /home/xteca/.config/broot/launcher/bash/br
