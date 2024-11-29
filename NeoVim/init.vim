@@ -186,8 +186,8 @@ Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'imsnif/kdl.vim'
 
 " Typst
-"Plug 'kaarmu/typst.vim'
-Plug 'SeniorMars/typst.nvim'
+Plug 'kaarmu/typst.vim'
+"Plug 'SeniorMars/typst.nvim'
 
 " Wakatime stat
 Plug 'wakatime/vim-wakatime'
