@@ -721,3 +721,13 @@ alias pbpaste="xclip -selection clipboard -o"
 #  $GALPROP/GALPROP-$GALPROP_VERSION/bin/galprop -r $r -g $g -f $f -o $o
 #}
 
+# ==============================================================================
+# XFCE4 Presentation mode
+# ==============================================================================
+presentation_mode() {
+    xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -T
+}
+
+is_presentation_mode() {
+    xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -v
+}
