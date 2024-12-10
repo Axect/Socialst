@@ -731,3 +731,10 @@ presentation_mode() {
 is_presentation_mode() {
     xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -v
 }
+
+# ==============================================================================
+# uv NeoVim + Coc Setting
+# ==============================================================================
+uv_coc() {
+    uv pip install pynvim pylint black
+}
