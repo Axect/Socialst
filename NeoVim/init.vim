@@ -176,7 +176,7 @@ Plug 'puremourning/vimspector'
 Plug 'github/copilot.vim'
 
 "" CommentBox
-"Plug 'LudoPinelli/comment-box.nvim'
+Plug 'LudoPinelli/comment-box.nvim'
 
 " vsnip
 Plug 'hrsh7th/vim-vsnip'
