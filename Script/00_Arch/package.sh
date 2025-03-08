@@ -35,7 +35,8 @@ yay -S --needed \
   solaar \
   helix bash-language-server julia python-lsp-server rust-analyzer texlab \
   ttf-ibm-plex yt-dlp python-scienceplots \
-  pyright eslint
+  pyright eslint \
+  impression
 # sagemath-jupyter
 # pandoc-citeproc
 #julia-bin \
