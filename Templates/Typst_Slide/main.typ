@@ -1,44 +1,32 @@
-#import "slides.typ": *
-#import "themes/yonsei.typ": *
+#import "@preview/touying:0.6.1": *
+#import "simple.typ": *
 #import "alias.typ": *
+#import "@preview/lovelace:0.3.0": *
 
+#set text(font: "IBM Plex Sans")
+#show: simple-theme.with(
+  aspect-ratio: "16-9",
+  header: none,
+  footer: [Short Title],
+  primary: rgb(0, 32, 91),
+)
 #show link: underline
 
 #let yonsei = rgb(0, 32, 91);
 #let subheader(body) = text(weight: "bold", stretch: 75%)[#body];
 #let citep(body) = text(fill:luma(100), size:10pt)[[#body]];
 
-#show: slides.with(
-    authors: ("Alice", text(fill: rgb(0, 32, 91), weight: "bold")[Tae-Geun Kim], "Bob"),
-    short-authors: "Alice et al.",
-    title: "Title (Long to be expanded)",
-    subtitle: "Subtitle (Long to be expanded)",
-    short-title: "Shorter title for slide footer",
-    date: "October 23, 2024",
-    workshop: "KPS 2024 Fall Meeting",
-    theme: yonsei-theme(),
-)
+#title-slide[
+  #heading[#subheader[Title]]
+  #v(1em)
 
-#set text(font: "IBM Plex Sans", size: 18pt)
+  #text(yonsei)[#subheader[Tae-Geun Kim]]
 
-#slide(theme-variant: "title slide")
+  #image("./themes/yonsei/yonsei_logo.svg", width: 15%)
 
-#new-section("Primordial Black Hole")
+  #set text(size: 18pt)
 
-#slide(title: "Primordial Black Hole")[
+  #subheader[Seminar]
 
-]
-
-#slide(theme-variant: "wake up")[
-  Focus!
-]
-
-#new-section("References")
-
-#slide()[
-  #set text(size: 16pt)
-  #bibliography("ref.bib", title: [
-    #set text(size: 24pt, fill: rgb(0, 32, 91))
-    === Bibliography
-  ])
+  #subheader[2025.03.10]
 ]
