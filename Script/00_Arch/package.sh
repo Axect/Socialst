@@ -34,7 +34,7 @@ yay -S --needed \
   tectonic kime \
   solaar \
   helix bash-language-server julia python-lsp-server rust-analyzer texlab \
-  ttf-ibm-plex yt-dlp python-scienceplots \
+  ttf-ibm-plex yt-dlp python-scienceplots ttf-times-new-roman \
   pyright eslint \
   impression
 # sagemath-jupyter

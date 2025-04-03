@@ -30,7 +30,7 @@ set splitright
 set clipboard=unnamedplus
 
 " Set unicode
-set tenc=korea
+"set tenc=korea
 set enc=utf-8
 set fileencodings=utf-8,euc-kr
 
