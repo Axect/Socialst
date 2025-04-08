@@ -36,7 +36,7 @@ yay -S --needed \
   helix bash-language-server julia python-lsp-server rust-analyzer texlab \
   ttf-ibm-plex yt-dlp python-scienceplots ttf-times-new-roman \
   pyright eslint \
-  impression
+  impression unison pdf2svg
 # sagemath-jupyter
 # pandoc-citeproc
 #julia-bin \
@@ -53,6 +53,7 @@ if [ $laptop = "y" ]; then
     zed \
     pdfarranger pdfsam \
     simplescreenrecorder \
+    siyuan-appimage
   #kitty
   #zathura-ps zathura-pdf-mupdf zathura-djvu zathura-cb \
   #gscan2pdf \
