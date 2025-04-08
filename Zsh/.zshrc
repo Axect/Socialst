@@ -578,11 +578,6 @@ countdown() {
 #fi
 
 # ==============================================================================
-# For PyTorch
-# ==============================================================================
-export PATH_DATASETS="$HOME/zdata/"
-
-# ==============================================================================
 # For Presentation
 # ==============================================================================
 alias random_present="cd $HOME/Documents/Project/SYTEARK/ML2022/week08/random_present/ && run_fast && cd -"
@@ -738,3 +733,10 @@ is_presentation_mode() {
 uv_coc() {
     uv pip install pynvim pylint black
 }
+
+# ==============================================================================
+# LibTorch
+# ==============================================================================
+export LIBTORCH="$HOME/zbin/libtorch"
+export LIBTORCH_INCLUDE="$LIBTORCH"
+export LIBTORCH_LIB="$LIBTORCH"
