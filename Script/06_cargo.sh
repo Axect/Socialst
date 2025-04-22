@@ -35,3 +35,6 @@ cargo install nviwatch
 
 # Parquet-viewer
 cargo install parquet-viewer
+
+# Nc-to-Pq
+cargo install nc-to-pq
