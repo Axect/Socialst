@@ -32,3 +32,6 @@ cargo install yonsei-flexible
 
 # Nviwatch
 cargo install nviwatch
+
+# Parquet-viewer
+cargo install parquet-viewer
