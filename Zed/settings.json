@@ -30,5 +30,13 @@
     "mode": "dark",
     "light": "One Light",
     "dark": "One Dark"
+  },
+  "terminal": {
+    "detect_venv": {
+      "on": {
+        "directories": [".venv"],
+        "activate_script": "default"
+      }
+    }
   }
 }
