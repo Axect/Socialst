@@ -745,4 +745,4 @@ export LIBTORCH_LIB="$LIBTORCH"
 # OSPREY
 # ==============================================================================
 export BLACKHAWK_DIR="$HOME/tbin/blackhawk_v2.3"
-export PYTHIA_TABLES_DIR="$HOME/Insync/ax2ct@outlook.com/Google Drive/Research/I2025/OSPREY/98_data/pythia_new_table"
+export PYTHIA_TABLES_DIR="$HOME/Dropbox/Research/OSPREY/data/pythia_new_table"
