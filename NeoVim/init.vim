@@ -386,6 +386,9 @@ let g:latex_to_unicode_file_types_blacklist = '.*'
 " Copilot
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
+let g:copilot_filetypes = {
+        \ 'txt': v:false,
+      \ }
 
 " vsnip setting
 imap <expr> <C-k>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-k>'
