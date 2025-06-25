@@ -111,7 +111,7 @@
     }),
     config-colors(primary: foreground),
   )
-  set text(fill: foreground, size: 1.5em)
+  set text(fill: foreground, size: 1.75em)
   touying-slide(self: self, config: config, align(center + horizon, body))
 })
 
@@ -180,9 +180,9 @@
     ),
     config-methods(
       init: (self: none, body) => {
-        set text(size: 25pt)
+        set text(size: 24pt)
         show footnote.entry: set text(size: .6em)
-        show heading.where(level: 1): set text(1.4em)
+        show heading.where(level: 1): set text(1.25em)
 
         body
       },
