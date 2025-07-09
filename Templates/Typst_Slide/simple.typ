@@ -115,6 +115,18 @@
   touying-slide(self: self, config: config, align(center + horizon, body))
 })
 
+#let supplement-slide(config: (:), body) = touying-slide-wrapper(self => {
+  self = utils.merge-dicts(
+    self,
+    config-page(
+      header: none,
+      margin: (top: 1.25em, bottom: 1em, left: 1em, right: 1em)
+    ),
+    config-common(freeze-slide-counter: true),
+  )
+  touying-slide(self: self, config: config, body)
+})
+
 
 /// Touying simple theme.
 ///
