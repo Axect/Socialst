@@ -136,6 +136,7 @@ if [ ! -d "$PROJECT" ]; then
   git clone "${AXECT}Neural_Hamilton"
   git clone "${AXECT}HyperbolicLR"
   git clone "${AXECT}HNNKF"
+  git clone "${AXECT}OSPREY"
 
   cd "$PROJECT/Machine_Learning"
   #git clone "${AXECT}ML_Project"
