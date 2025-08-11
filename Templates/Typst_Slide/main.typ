@@ -75,7 +75,7 @@
 
   #subheader[Seminar]
 
-  #subheader[2025.06.26]
+  #subheader[2025.08.12]
 ]
 
 // ┌─────────────────────────────────────────────────────────┐
@@ -91,4 +91,16 @@
 
 #block(width: 100%)[
 
+]
+
+#focus-slide[
+  // #set page(background: image("./figs/background.png", width: 100%))
+  *Supplements*
+]
+
+#supplement-slide[
+  == Section Title <section-id>
+  #v(1em)
+
+  Hi
 ]
