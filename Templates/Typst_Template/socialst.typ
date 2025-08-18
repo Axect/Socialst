@@ -1,8 +1,10 @@
+#import "@preview/ctheorems:1.1.3": *
+
 #let project(title: "", authors: (), date: none, body) = {
   // Set the document's basic properties.
   set document(author: authors.map(author => author.name), title: title)
   set page(numbering: "1", number-align: center)
-  set text(font: "Linux Libertine", lang: "en")
+  set text(font: "Hahmlet")
   
   // Link
   show link: underline
@@ -53,70 +55,47 @@
   body
 }
 
-// Counter for theorems
-#let thmnum = state("num", 0)
 
-// Theorem environments
-#let thmenv(env, header, body, number: none) = {
-    if number == none {
-      thmnum.update(num => num + 1)
-    } else {
-      thmnum.update(num => number)
-    }
-    let number = thmnum.display(int)
-    block(
-      stroke: luma(200),
-      inset: 8pt,
-      radius: 4pt,
+#let yonsei = rgb(0, 32, 91);
+
+// ┌─────────────────────────────────────────────────────────┐
+//  Theorem Box
+// └─────────────────────────────────────────────────────────┘
+#let thm = thmbox.with(
+  inset: 0.65em,
+  stroke: luma(200) + 1pt,
+  namefmt: name => [
+    #set text(font: "Times New Roman", size: 16pt, weight: "bold", style: "italic")
+    (#name)
+  ],
+  titlefmt: title => [
+    #set text(font: "Times New Roman", size: 16pt, weight: "bold", style: "italic")
+    #title
+  ],
+  separator: [
+    #set text(size: 16pt)
+    #h(1fr) \
+  ],
+  bodyfmt: body => [
+    #set text(font: "Times New Roman", size: 16pt, style: "italic")
+    #block(
+      inset: (left: 0.5em, right: 0.5em, top: -0.5em),
       width: 100%,
-      align(left)[
-        #block(
-          inset: 0pt,
-          outset: 7pt,
-          radius: 3pt,
-          width: 100%,
-          align(left)[
-            *#env #number #header*
-          ]
-        )
-        #v(7pt)
-        #body
-      ]
-    )
-}
-
-#let def(header, body, number: none) = {
-    thmenv("Def", header, body, number: number)
-}
-
-#let thm(header, body, number: none) = {
-    thmenv("Thm", header, body, number: number)
-}
-
-#let lem(header, body, number: none) = {
-    thmenv("Lem", header, body, number: number)
-}
-
-#let cor(header, body, number: none) = {
-    thmenv("Cor", header, body, number: number)
-}
-
-#let prop(header, body, number: none) = {
-    thmenv("Prop", header, body, number: number)
-}
-
-#let note(header, body, number: none) = {
-    thmenv("Note", header, body, number: number)
-}
-
-#let exercise(header, body, number: none) = {
-    thmenv("Exercise", header, body, number: number)
-}
-
-#let centeralize(body) = {
-  align(center)[
-    #block(width: 100%)[
+    )[
       #body
     ]
   ]
-}
+)
+
+#let definition = thm(
+  "definition",
+  "Definition",
+)
+#let theorem = thm(
+  "theorem",
+  "Theorem",
+)
+#let example = thm(
+  "example",
+  "Example",
+)
