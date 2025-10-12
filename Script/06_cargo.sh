@@ -38,3 +38,6 @@ cargo install parquet-viewer
 
 # Nc-to-Pq
 cargo install nc-to-pq
+
+# Rustag
+cargo install rustag
