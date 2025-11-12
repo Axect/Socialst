@@ -69,7 +69,17 @@
 
   #text(yonsei)[#subheader[Tae-Geun Kim]]
 
-  #image("./themes/yonsei/yonsei_logo.svg", width: 15%)
+  //#image("./themes/yonsei/yonsei_logo.svg", width: 15%)
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 0.5em,
+    align(right)[
+      #image("./themes/Fudan_University_Logo.svg", height: 20%)
+    ],
+    align(left)[
+      #image("./themes/RIKEN_logo.png", height: 20%)
+    ]
+  )
 
   #set text(size: 18pt)
 

@@ -95,7 +95,7 @@ elif [ $vim -eq 4 ]; then
         echo "Backup original .cache/nvim to .cache/nvim.old"
         mv $HOME/.cache/nvim $HOME/.cache/nvim.old
     fi
-	git clone https://github.com/Axect/lazyvim_template ~/.config/nvim
+	git clone "https://github.com/Axect/lazyvim_template" ~/.config/nvim
 elif [ $vim -eq 5 ]; then
     # Check .config/nvim & backup
     if [ -d "$HOME/.config/nvim" ]; then
