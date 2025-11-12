@@ -71,13 +71,13 @@
 
   //#image("./themes/yonsei/yonsei_logo.svg", width: 15%)
   #grid(
-    columns: (1fr, 1fr),
+    columns: (51%, 49%),
     column-gutter: 0.5em,
     align(right)[
-      #image("./themes/Fudan_University_Logo.svg", height: 20%)
+      #image("./themes/Fudan_University_Logo.svg", height: 25%)
     ],
     align(left)[
-      #image("./themes/RIKEN_logo.png", height: 20%)
+      #image("./themes/RIKEN_logo.png", height: 25%)
     ]
   )
 
