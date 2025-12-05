@@ -8,13 +8,13 @@ if [ ! -d "$SOCIALST" ]; then
 	git clone "${AXECT}/Socialst"
 fi
 
-# zshrc
-echo "What kinds of zsh do you want to use?"
-echo "1. Custom zsh, 2. oh-my-zsh, 3. skip"
+# Shell setup
+echo "What kinds of shell do you want to use?"
+echo "1. Custom zsh, 2. oh-my-zsh, 3. fish, 4. skip"
 
-read choose_zsh
+read choose_shell
 
-if [ $choose_zsh -eq 1 ]; then
+if [ $choose_shell -eq 1 ]; then
 	if [ ! -d "$HOME/.zshrc" ]; then
 		echo "Create .zshrc file"
 	else
@@ -24,7 +24,7 @@ if [ $choose_zsh -eq 1 ]; then
 	ln -s $SOCIALST/Zsh/.zshrc $HOME/.zshrc
 	chsh -s $(which zsh)
 	echo "Complete zsh Setup!"
-elif [ $choose_zsh -eq 2 ]; then
+elif [ $choose_shell -eq 2 ]; then
 	if [ -d "$HOME/.zshrc" ]; then
 		echo "Backup original .zshrc to .zshrc.old"
 		mv $HOME/.zshrc $HOME/.zshrc.old
@@ -32,8 +32,42 @@ elif [ $choose_zsh -eq 2 ]; then
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	ln -s $SOCIALST/Zsh/ohmyzshrc $HOME/.zshrc
 	echo "Complete zsh Setup!"
+elif [ $choose_shell -eq 3 ]; then
+	# Check if fish is installed
+	if ! command -v fish >/dev/null 2>&1; then
+		echo "Fish is not installed. Please install fish first."
+		echo "Ubuntu/Debian: sudo apt install fish"
+		echo "Arch Linux: sudo pacman -S fish"
+		echo "macOS: brew install fish"
+	else
+		# Check if fish config directory exists
+		if [ ! -d "$HOME/.config/fish" ]; then
+			mkdir -p "$HOME/.config/fish"
+			echo "Create .config/fish directory"
+		else
+			# Backup existing config.fish if it exists
+			if [ -f "$HOME/.config/fish/config.fish" ]; then
+				echo "Backup original config.fish to config.fish.old"
+				mv "$HOME/.config/fish/config.fish" "$HOME/.config/fish/config.fish.old"
+			fi
+		fi
+
+		# Create symbolic link
+		ln -s "$SOCIALST/Fish/config.fish" "$HOME/.config/fish/config.fish"
+
+		# Install fisher and plugins
+		echo "Installing fisher and plugins..."
+		fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
+		fish -c "fisher install edc/bass"
+		fish -c "fisher install jorgebucaran/nvm.fish"
+		fish -c "fisher install jethrokuan/z"
+
+		# Change default shell to fish
+		chsh -s $(which fish)
+		echo "Complete fish Setup!"
+	fi
 else
-	echo "Skip zsh Setup!"
+	echo "Skip shell Setup!"
 fi
 
 # Spacevim
