@@ -48,9 +48,10 @@ end
 # No additional configuration needed - nvm command is available automatically
 set -gx NVM_DIR "$HOME/.nvm"
 
-# Directory jumping with z (installed via fisher)
+# Directory jumping with zoxide (smarter z alternative)
 # Usage: z <directory_name> to jump to frequently used directories
-# The plugin automatically tracks directory usage
+# zi for interactive selection
+zoxide init fish | source
 
 # ==============================================================================
 # OSPREY
@@ -88,3 +89,6 @@ function rtg
     echo "$output"
   end
 end
+
+# Add nvm default node to PATH (prepend to override system node)
+set -gx PATH ~/.nvm/versions/node/v25.1.0/bin $PATH
