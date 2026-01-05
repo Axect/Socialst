@@ -201,6 +201,10 @@ Plug 'simrat39/rust-tools.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'mfussenegger/nvim-dap'
 
+" Claude Code
+Plug 'folke/snacks.nvim'
+Plug 'coder/claudecode.nvim'
+
 call plug#end()
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -403,3 +407,21 @@ let g:slime_target = "zellij"
 " Vimtex
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+
+" ----------------------------------------------------------
+" Claude Code Setup
+" ----------------------------------------------------------
+lua << EOF
+require("claudecode").setup()
+EOF
+
+" Claude Code keymaps (using <leader>c to avoid conflict with coc)
+nnoremap <leader>cc <cmd>ClaudeCode<cr>
+nnoremap <leader>cf <cmd>ClaudeCodeFocus<cr>
+nnoremap <leader>cr <cmd>ClaudeCode --resume<cr>
+nnoremap <leader>cC <cmd>ClaudeCode --continue<cr>
+nnoremap <leader>cm <cmd>ClaudeCodeSelectModel<cr>
+nnoremap <leader>cb <cmd>ClaudeCodeAdd %<cr>
+vnoremap <leader>cs <cmd>ClaudeCodeSend<cr>
+nnoremap <leader>cA <cmd>ClaudeCodeDiffAccept<cr>
+nnoremap <leader>cd <cmd>ClaudeCodeDiffDeny<cr>
