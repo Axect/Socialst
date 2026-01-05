@@ -92,3 +92,4 @@ end
 
 # Add nvm default node to PATH (prepend to override system node)
 set -gx PATH ~/.nvm/versions/node/v25.1.0/bin $PATH
+set -gx CUDA_HOME /usr
