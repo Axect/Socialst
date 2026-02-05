@@ -3,19 +3,23 @@
 #import "alias.typ": *
 #import "@preview/lovelace:0.3.0": *
 #import "@preview/ctheorems:1.1.3": *
+#import "@preview/pinit:0.2.2": *
 #show: thmrules
 
-#set text(font: "IBM Plex Sans")
+#set text(font: "Pretendard")
 #show: simple-theme.with(
   aspect-ratio: "16-9",
   header: none,
-  footer: [Short Title],
+  footer-left: [Tae-Geun Kim],
+  footer-center: [Short Title],
   primary: rgb(0, 32, 91),
 )
 #show link: underline
 
 #let yonsei = rgb(0, 32, 91);
-#let subheader(body) = text(weight: "bold", stretch: 75%)[#body];
+#let blackheader(body) = text(weight: "black")[#body];
+#let ebheader(body) = text(weight: "extrabold")[#body];
+#let bheader(body) = text(weight: "bold")[#body];
 #let citep(body) = text(fill:luma(100), size:10pt)[[#body]];
 
 // ┌─────────────────────────────────────────────────────────┐
@@ -64,10 +68,10 @@
 //  Title Slide
 // └─────────────────────────────────────────────────────────┘
 #title-slide[
-  #heading[#subheader[Title]]
+  #heading[#ebheader[Presentation Title]]
   #v(1em)
 
-  #text(yonsei)[#subheader[Tae-Geun Kim]]
+  #text(yonsei)[#bheader[Tae-Geun Kim]]
 
   //#image("./themes/yonsei/yonsei_logo.svg", width: 15%)
   #grid(
@@ -83,9 +87,9 @@
 
   #set text(size: 18pt)
 
-  #subheader[Seminar]
+  #bheader[Seminar]
 
-  #subheader[2025.11.13]
+  #bheader[2026.02.05]
 ]
 
 // ┌─────────────────────────────────────────────────────────┐
@@ -94,13 +98,29 @@
 
 #focus-slide[
   // #set page(background: image("./figs/background.png", width: 100%))
-  *Hi*
+  #ebheader[Hello]
 ]
 
 == Slide Title
 
 #block(width: 100%)[
+  #set text(size: 18pt)
 
+  A simple #pin(1)highlighted text#pin(2).
+
+  #pinit-highlight(1,2)
+
+  #pinit-point-from(2)[It is simple.]
+]
+
+== Slide Title 2
+
+#block(width: 100%)[
+  #set text(size: 18pt)
+
+  $
+  E = m c^2
+  $
 ]
 
 #focus-slide[

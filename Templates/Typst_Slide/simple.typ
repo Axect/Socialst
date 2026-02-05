@@ -41,12 +41,27 @@
     ),
   )
   let footer(self) = {
-    v(.5em)
-    deco-format(
-      components.left-and-right(
-        utils.call-or-display(self, self.store.footer),
-        utils.call-or-display(self, self.store.footer-right),
-      ),
+    // Progress bar at the bottom (full width)
+    let primary-color = self.colors.primary
+    utils.touying-progress(ratio => {
+      place(
+        bottom + left,
+        dx: -1em,
+        rect(
+          width: ratio * 100% + 2em,
+          height: 3pt,
+          fill: primary-color,
+        )
+      )
+    })
+    // Three-column footer: left, center, right
+    set text(fill: gray, size: .5em)
+    v(0.3em)
+    grid(
+      columns: (1fr, 1fr, 1fr),
+      align(left, utils.call-or-display(self, self.store.footer-left)),
+      align(center, utils.call-or-display(self, self.store.footer-center)),
+      align(right, utils.call-or-display(self, self.store.footer-right)),
     )
   }
   let self = utils.merge-dicts(
@@ -101,14 +116,26 @@
 /// 
 /// - foreground (color): The foreground color of the slide. Default is `white`.
 #let focus-slide(config: (:), background: auto, foreground: white, body) = touying-slide-wrapper(self => {
+  let primary-color = self.colors.primary
+  let bg = if background == auto {
+    // Diagonal gradient: primary.lighten → primary.darken
+    gradient.linear(
+      primary-color.lighten(20%),
+      primary-color.darken(60%),
+      angle: 135deg
+    )
+  } else {
+    background
+  }
+  // Use background parameter instead of fill for gradient support
+  let bg-content = place(
+    top + left,
+    box(width: 200%, height: 200%, fill: bg)
+  )
   self = utils.merge-dicts(
     self,
     config-common(freeze-slide-counter: true),
-    config-page(fill: if background == auto {
-      self.colors.primary
-    } else {
-      background
-    }),
+    config-page(fill: none, margin: 2em, background: bg-content),
     config-colors(primary: foreground),
   )
   set text(fill: foreground, size: 1.75em)
@@ -153,7 +180,9 @@
 ///
 /// - header-right (content): The right part of the header. Default is `self.info.logo`.
 ///
-/// - footer (content): The footer of the slides. Default is `none`.
+/// - footer-left (content): The left part of the footer. Default is `none`.
+///
+/// - footer-center (content): The center part of the footer. Default is `none`.
 ///
 /// - footer-right (content): The right part of the footer. Default is `context utils.slide-counter.display() + " / " + utils.last-slide-number`.
 ///
@@ -168,7 +197,8 @@
     depth: self.slide-level,
   ),
   header-right: self => self.info.logo,
-  footer: none,
+  footer-left: none,
+  footer-center: none,
   footer-right: context utils.slide-counter.display() + " / " + utils.last-slide-number,
   primary: aqua.darken(50%),
   subslide-preamble: block(
@@ -210,7 +240,8 @@
     config-store(
       header: header,
       header-right: header-right,
-      footer: footer,
+      footer-left: footer-left,
+      footer-center: footer-center,
       footer-right: footer-right,
       subslide-preamble: subslide-preamble,
     ),
