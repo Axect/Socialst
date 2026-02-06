@@ -99,3 +99,15 @@ fish_add_path /home/xteca/.opencode/bin
 
 # Typst font path
 set -gx TYPST_FONT_PATHS "$HOME/.local/share/fonts"
+
+# ==============================================================================
+# Peroxide
+# ==============================================================================
+alias perox_doc="RUSTDOCFLAGS='--html-in-header katex-header.html' cargo doc --no-deps"
+alias perox_check="cargo check --all-features"
+alias perox_bt="cargo build --release --all-features && cargo test --release --all-features"
+
+# ==============================================================================
+# uv Python shared library (for PyO3)
+# ==============================================================================
+set -gx LD_LIBRARY_PATH $HOME/.local/share/uv/python/cpython-3.13.12-linux-x86_64-gnu/lib $LD_LIBRARY_PATH
