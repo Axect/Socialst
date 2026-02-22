@@ -90,8 +90,7 @@ function rtg
   end
 end
 
-# Add nvm default node to PATH (prepend to override system node)
-set -gx PATH ~/.nvm/versions/node/v25.1.0/bin $PATH
+# nvm.fish handles node PATH automatically
 set -gx CUDA_HOME /usr
 
 # opencode
@@ -111,3 +110,4 @@ alias perox_bt="cargo build --release --all-features && cargo test --release --a
 # uv Python shared library (for PyO3)
 # ==============================================================================
 set -gx LD_LIBRARY_PATH $HOME/.local/share/uv/python/cpython-3.13.12-linux-x86_64-gnu/lib $LD_LIBRARY_PATH
+export PATH="$HOME/.local/bin:$PATH"

@@ -31,7 +31,7 @@ yay -S --needed \
   gping ripgrep curlie nerd-fonts \
   python-black \
   chafa xdotool \
-  tectonic kime \
+  tectonic \
   solaar \
   helix bash-language-server julia python-lsp-server rust-analyzer texlab \
   ttf-ibm-plex yt-dlp python-scienceplots ttf-times-new-roman \
@@ -40,11 +40,12 @@ yay -S --needed \
 # sagemath-jupyter
 # pandoc-citeproc
 #julia-bin \
+# kime
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
 
-if [ $laptop = "y" ]; then
+if [ "$laptop" = "y" ]; then
   echo "Install packages for laptop"
   yay -S --noconfirm --needed \
     okular audacious easytag \
@@ -66,7 +67,7 @@ if [ $laptop = "y" ]; then
   #vivaldi vivaldi-ffmpeg-codecs
   #firefox-developer-edition firefox-developer-edition-i18n-ko \
   #uim
-elif [ $laptop = "n" ]; then
+elif [ "$laptop" = "n" ]; then
   echo "Skip laptop packages"
 fi
 
@@ -74,7 +75,7 @@ fi
 echo "Do you want to install High energy physics related programs? [y/n]"
 read hep
 
-if [ $hep = "y" ]; then
+if [ "$hep" = "y" ]; then
   echo "Install HEP programs"
   yay -S --noconfirm --needed \
     root \
@@ -87,7 +88,7 @@ if [ $hep = "y" ]; then
     python-wheel \
     python-h5py
   #python-astropy \
-elif [ $hep = "n" ]; then
+elif [ "$hep" = "n" ]; then
   echo "Skip hep programs"
 fi
 
@@ -95,7 +96,7 @@ fi
 echo "Do you want to install common programs in AUR? [y/n]"
 read aur
 
-if [ $aur = "y" ]; then
+if [ "$aur" = "y" ]; then
   yay -S --noconfirm --needed \
     slack-desktop ttf-nanum \
     la-capitaine-icon-theme \
@@ -125,7 +126,7 @@ if [ $aur = "y" ]; then
   #onlyoffice-bin \
   #gnome-terminal-transparency \
   #youtube-dl-gui-git \
-elif [ $aur = "n" ]; then
+elif [ "$aur" = "n" ]; then
   echo "Skip AUR"
 fi
 ## VMware
