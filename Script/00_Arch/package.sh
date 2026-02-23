@@ -2,17 +2,17 @@
 ## Necessary
 echo "Install Necessary programs for CLI environment"
 yay -S --needed \
-  texlive texlive-lang tk gcc-fortran r jupyter-notebook \
-  python-pip python-numpy python-scipy python-matplotlib python-pandas npm dlang pandoc gvim \
+  texlive texlive-lang tk gcc-fortran jupyter-notebook \
+  python-pip python-numpy python-scipy python-matplotlib python-pandas npm pandoc \
   sagemath sagetex sagemath-doc \
-  zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting zsh-completions fzf \
-  youtube-dl ffmpeg tree htop ttf-fira-code ttf-ubuntu-font-family ttf-cascadia-code \
+  fish fzf \
+  ffmpeg tree htop ttf-fira-code ttf-ubuntu-font-family ttf-cascadia-code \
   system-config-printer cups hplip \
-  powerline powerline-fonts \
+  foot \
   netcdf python-netcdf4 \
-  the_silver_searcher \
+  wl-clipboard \
   cmake gdb clang \
-  neovim python-neovim xclip \
+  neovim python-neovim \
   ttf-liberation noto-fonts noto-fonts-emoji noto-fonts-extra \
   ttf-jetbrains-mono noto-fonts-cjk \
   git-lfs jupyterlab \
@@ -20,27 +20,27 @@ yay -S --needed \
   lld sccache mold \
   valgrind fmt \
   docker docker-compose \
-  libxau libxi libxss libxtst libxcursor libxcomposite libxdamage libxfixes libxrandr libxrender mesa-libgl alsa-lib libglvnd \
+  alsa-lib libglvnd \
   p7zip \
-  broot bottom screen \
+  broot bottom \
   github-cli \
   glow lazygit git-delta \
   jupyter-console python-pyarrow \
   python-pipx \
-  fd ncdu bat dust hyperfine zoxide sd tokei tealdeer exa btop \
+  fd ncdu bat dust hyperfine zoxide sd tokei tealdeer eza btop \
   gping ripgrep curlie nerd-fonts \
   python-black \
-  chafa xdotool \
+  chafa \
   tectonic \
   solaar \
   helix bash-language-server julia python-lsp-server rust-analyzer texlab \
   ttf-ibm-plex yt-dlp python-scienceplots ttf-times-new-roman \
   pyright eslint \
-  impression pdf2svg
+  impression pdf2svg \
+  fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-hangul
 # sagemath-jupyter
 # pandoc-citeproc
 #julia-bin \
-# kime
 
 echo "Do you want to install packages for Linux laptop?"
 read laptop
@@ -54,7 +54,7 @@ if [ "$laptop" = "y" ]; then
     zed \
     pdfarranger pdfsam \
     simplescreenrecorder \
-    siyuan-appimage unison \
+    unison \
     otf-stix
   #kitty
   #zathura-ps zathura-pdf-mupdf zathura-djvu zathura-cb \
@@ -99,7 +99,6 @@ read aur
 if [ "$aur" = "y" ]; then
   yay -S --noconfirm --needed \
     slack-desktop ttf-nanum \
-    la-capitaine-icon-theme \
     insync \
     gitkraken \
     typora \
@@ -107,9 +106,7 @@ if [ "$aur" = "y" ]; then
     masterpdfeditor \
     zoom \
     microsoft-edge-beta-bin \
-    birdtray \
     mathpix-snipping-tool \
-    trilium-bin \
     drawio-desktop-bin \
     mochi-appimage \
     gromit-mpx-git \

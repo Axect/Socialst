@@ -15,9 +15,7 @@ echo "1. Custom zsh, 2. oh-my-zsh, 3. fish, 4. skip"
 read choose_shell
 
 if [ $choose_shell -eq 1 ]; then
-	if [ ! -d "$HOME/.zshrc" ]; then
-		echo "Create .zshrc file"
-	else
+	if [ -f "$HOME/.zshrc" ]; then
 		echo "Backup original .zshrc to .zshrc.old"
 		mv $HOME/.zshrc $HOME/.zshrc.old
 	fi
@@ -25,7 +23,7 @@ if [ $choose_shell -eq 1 ]; then
 	chsh -s $(which zsh)
 	echo "Complete zsh Setup!"
 elif [ $choose_shell -eq 2 ]; then
-	if [ -d "$HOME/.zshrc" ]; then
+	if [ -f "$HOME/.zshrc" ]; then
 		echo "Backup original .zshrc to .zshrc.old"
 		mv $HOME/.zshrc $HOME/.zshrc.old
 	fi
@@ -110,7 +108,7 @@ elif [ $vim -eq 4 ]; then
         mv $HOME/.vim $HOME/.vim.old
     fi
     # Check .vimrc & backup
-    if [ -d "$HOME/.vimrc" ]; then
+    if [ -f "$HOME/.vimrc" ]; then
         echo "Backup original .vimrc to .vimrc.old"
         mv $HOME/.vimrc $HOME/.vimrc.old
     fi
@@ -142,7 +140,7 @@ elif [ $vim -eq 5 ]; then
         mv $HOME/.vim $HOME/.vim.old
     fi
     # Check .vimrc & backup
-    if [ -d "$HOME/.vimrc" ]; then
+    if [ -f "$HOME/.vimrc" ]; then
         echo "Backup original .vimrc to .vimrc.old"
         mv $HOME/.vimrc $HOME/.vimrc.old
     fi
@@ -188,15 +186,15 @@ echo "1. ibus, 2. uim, 3. kime, 4. skip"
 read input_method
 
 if [ $input_method -eq 1 ]; then
-	if [ ! -d "$HOME/.xprofile" ]; then
+	if [ ! -f "$HOME/.xprofile" ]; then
 		ln -s $SOCIALST/IBUS/xprofile $HOME/.xprofile
 	fi
 elif [ $input_method -eq 2 ]; then
-	if [ ! -d "$HOME/.xprofile" ]; then
+	if [ ! -f "$HOME/.xprofile" ]; then
 		ln -s $SOCIALST/UIM/xprofile $HOME/.xprofile
 	fi
 elif [ $input_method -eq 3 ]; then
-	if [ ! -d "$HOME/.xprofile" ]; then
+	if [ ! -f "$HOME/.xprofile" ]; then
 		ln -s $SOCIALST/KIME/xprofile $HOME/.xprofile
 	fi
 	if [ ! -d "$HOME/.config/kime" ]; then
@@ -220,8 +218,3 @@ fi
 ln -s $SOCIALST/Kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 ln -s $SOCIALST/Kitty/colors.conf $HOME/.config/kitty/colors.conf
 
-# Python venv
-#python -m venv $HOME/zbin/venv
-
-# PDM
-alias activate="source .venv/bin/activate"

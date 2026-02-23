@@ -11,8 +11,8 @@ nvm install --lts
 nvm use --delete-prefix --lts
 nvm alias default lts/*
 
-# Install nvm.fish plugin for fish shell (run in fish)
-fish -c "fisher install jorgebucaran/nvm.fish"
-
 # Set default NVM version for fish shell
 fish -c "set -U nvm_default_version lts"
+
+# Global npm packages
+npm install -g decktape

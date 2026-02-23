@@ -1,3 +1,10 @@
+#!/bin/sh
+# R environment setup
+
+# Rprofile symlink
+ln -s $HOME/Socialst/R/Rprofile $HOME/.Rprofile
+
+# R packages
 sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"install.packages('Rcpp', repos='http://cran.rstudio.com/')\""
 sudo su - -c "R -e \"install.packages('RcppEigen', repos='http://cran.rstudio.com/')\""

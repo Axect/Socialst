@@ -6,8 +6,8 @@ echo "Input Github user email: "
 
 read useremail
 
-git config --global user.name $username
-git config --global user.email $useremail
+git config --global user.name "$username"
+git config --global user.email "$useremail"
 git config --global credential.helper store
 
 #echo "Do you want to setup SSH key? (y/n)"
