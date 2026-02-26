@@ -111,3 +111,10 @@ alias perox_bt="cargo build --release --all-features && cargo test --release --a
 # ==============================================================================
 set -gx LD_LIBRARY_PATH $HOME/.local/share/uv/python/cpython-3.13.12-linux-x86_64-gnu/lib $LD_LIBRARY_PATH
 export PATH="$HOME/.local/bin:$PATH"
+
+# ==============================================================================
+# Vast.ai SSH
+# ==============================================================================
+function vastssh
+    TERM=xterm-256color command ssh $argv
+end
