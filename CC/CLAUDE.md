@@ -32,6 +32,7 @@
 - Offload research, exploration, and parallel analysis to subagents.
 - For complex debugging, spawn a scout subagent to explore the full problem space before committing to a fix.
 - One focused task per subagent.
+- **Complex implementation pattern (Opus → Sonnet delegation)**: For complex plans, Opus (main agent) must first write a detailed implementation plan in markdown, then delegate each implementation step to Sonnet subagents (`model: "sonnet"`). The plan must include file paths, changes, dependencies, and test criteria.
 - When a translation task is requested, delegate it to a Sonnet subagent (`model: "sonnet"`).
 
 ## Autonomous Execution
