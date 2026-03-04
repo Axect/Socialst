@@ -50,3 +50,4 @@
 
 9. When asked to brainstorm or summarize previous work, confirm the scope before generating. If the user says 'summarize 3 projects', summarize exactly 3 — do not expand to a full synthesis unless asked.
 10. For multi-model brainstorming (MAGI pattern), always validate with ALL specified models (Gemini, Codex, etc.), not a subset. If a model fails, note the failure and use available fallbacks, but do not silently skip models.
+11. After completing a magi-researchers workflow, if the synthesis, explanation, or report output is written in English, immediately delegate a Sonnet subagent (`model: "sonnet"`) to produce a Korean translation saved as `*_ko.md` (e.g., `synthesis.md` → `synthesis_ko.md`). Do not wait for user request — this is automatic.
