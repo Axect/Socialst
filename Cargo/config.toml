@@ -5,7 +5,7 @@
 rustflags = [
   #  "-C", "link-arg=-fuse-ld=lld", 
     "-C", "link-arg=-fuse-ld=mold",
-    "-C", "llvm-args=-ffast-math",
+  #  "-C", "llvm-args=-fast-math",
     "-C", "opt-level=3",
     "-C", "target-cpu=native",
     "-C", "target-feature=+avx2,+fma",

@@ -1,4 +1,4 @@
-ln -s $HOME/Socialst/Cargo/config.toml $HOME/.cargo/config.toml
+#ln -s $HOME/Socialst/Cargo/config.toml $HOME/.cargo/config.toml
 
 # Hyperfine
 #cargo install hyperfine
@@ -41,3 +41,6 @@ cargo install nc-to-pq
 
 # Rustag
 cargo install rustag
+
+# rudu
+cargo install rudu
