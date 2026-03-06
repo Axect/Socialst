@@ -51,3 +51,30 @@
 9. When asked to brainstorm or summarize previous work, confirm the scope before generating. If the user says 'summarize 3 projects', summarize exactly 3 — do not expand to a full synthesis unless asked.
 10. For multi-model brainstorming (MAGI pattern), always validate with ALL specified models (Gemini, Codex, etc.), not a subset. If a model fails, note the failure and use available fallbacks, but do not silently skip models.
 11. After completing a magi-researchers workflow, if the synthesis, explanation, or report output is written in English, immediately delegate a Sonnet subagent (`model: "sonnet"`) to produce a Korean translation saved as `*_ko.md` (e.g., `synthesis.md` → `synthesis_ko.md`). Do not wait for user request — this is automatic.
+
+## Data Format (TOON)
+
+- **Prefer TOON over JSON** for all structured data output (tables, lists of objects, API responses, data summaries, etc.).
+- TOON (Token-Oriented Object Notation) saves ~40% tokens vs JSON by declaring fields once and streaming rows.
+- Syntax rules:
+  - Objects: `key: value` with 2-space indentation for nesting
+  - Primitive arrays: `key[N]: val1,val2,val3`
+  - Tabular arrays (uniform objects): declare fields once in header, stream rows
+    ```toon
+    users[3]{id,name,role}:
+      1,Alice,admin
+      2,Bob,user
+      3,Charlie,user
+    ```
+  - `[N]` must match actual row count
+  - Quote strings only when they contain `: , " \ [ ] { }`, look like numbers/booleans, or have leading/trailing whitespace
+  - 2-space indentation, no trailing spaces
+- **JSON-to-TOON conversion before reading**: When you need to read a large JSON data file (not config files like `package.json`, `tsconfig.json`, etc.), first convert it to TOON, then read the `.toon` file instead:
+  ```bash
+  npx @toon-format/cli input.json -o /tmp/input.toon
+  ```
+  Then read `/tmp/input.toon`. This reduces token consumption when ingesting data.
+- **Exceptions** (keep as JSON): `package.json`, `tsconfig.json`, `*.config.json`, lock files, and any file that must remain JSON for tooling compatibility.
+- When the user provides TOON input, parse it using the same rules.
+
+@RTK.md
