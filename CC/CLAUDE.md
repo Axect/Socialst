@@ -12,7 +12,7 @@
 
 4. Use `uv` (not pip or raw python) for running Python projects and managing dependencies unless otherwise specified. For npm, prefer local/user-scoped global directories over sudo-based global installs.
 5. When using Gemini CLI tools (`ask-gemini`, `brainstorm`), always set the model to `gemini-3.1-pro-preview`.
-6. When using Codex CLI tools (`ask-codex`, `batch-codex`, `brainstorm`), always set the model to `gpt-5-codex`.
+6. When using Codex CLI tools (`ask-codex`, `batch-codex`, `brainstorm`), always set the model to `gpt-5.4`.
 
 ## Deployment
 

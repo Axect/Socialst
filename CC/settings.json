@@ -39,6 +39,7 @@
       "Bash(uniq:*)",
       "Bash(cut:*)",
       "Bash(jq:*)",
+      "Bash(npx @toon-format/cli:*)",
       "Bash(curl:*)",
       "Bash(git fetch:*)",
       "Bash(git rev-parse:*)",
@@ -66,16 +67,32 @@
       "mcp__context7__query-docs"
     ]
   },
+  "model": "Opus",
   "statusLine": {
     "type": "command",
-    "command": "npx -y ccstatusline@latest",
-    "padding": 0
+    "command": "node /home/axect/.claude/plugins/cache/claude-dashboard/claude-dashboard/1.15.0/dist/index.js"
   },
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
     "magi-researchers@magi-researchers-marketplace": true,
     "pyright-lsp@claude-plugins-official": true,
-    "claude-dashboard@claude-dashboard": true
+    "claude-dashboard@claude-dashboard": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "writer@writer-marketplace": true
   },
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "effortLevel": "high",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/axect/.claude/hooks/rtk-rewrite.sh"
+          }
+        ]
+      }
+    ]
+  }
 }

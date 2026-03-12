@@ -93,9 +93,6 @@ end
 # nvm.fish handles node PATH automatically
 set -gx CUDA_HOME /usr
 
-# opencode
-fish_add_path /home/xteca/.opencode/bin
-
 # Typst font path
 set -gx TYPST_FONT_PATHS "$HOME/.local/share/fonts"
 
@@ -118,3 +115,10 @@ export PATH="$HOME/.local/bin:$PATH"
 function vastssh
     TERM=xterm-256color command ssh $argv
 end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+# mclaude
+alias mclaude-update="npx cc-mirror update mclaude --claude-version latest"
