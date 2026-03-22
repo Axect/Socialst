@@ -37,6 +37,7 @@ yay -S --needed \
   ttf-ibm-plex yt-dlp python-scienceplots ttf-times-new-roman \
   pyright eslint \
   impression pdf2svg \
+  mosh openssh tailscale earlyoom zellij \
   fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-hangul
 # sagemath-jupyter
 # pandoc-citeproc

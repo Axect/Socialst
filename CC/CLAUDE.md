@@ -77,4 +77,14 @@
 - **Exceptions** (keep as JSON): `package.json`, `tsconfig.json`, `*.config.json`, lock files, and any file that must remain JSON for tooling compatibility.
 - When the user provides TOON input, parse it using the same rules.
 
+## Optimizer HPO Ranges
+
+- **SPlus optimizer**: lr search range must be `[1e-3, 1e+0]` (log scale). SPlus has internal eigenvalue-based scaling, so the effective lr is much smaller than nominal. Never narrow this range.
+- In general, do not arbitrarily restrict HPO search ranges. Use wide ranges and let the sampler (TPE) find the optimum. Reference existing HPO configs in the user's projects for appropriate ranges.
+- **HPO epochs**: Always use **10 epochs** per trial for HPO, not the full training epoch count. After HPO, run the best config with full epochs. Set both `epochs` and `scheduler_config.max_iter` to 10 in the HPO run config.
+
+## PDF Export
+
+- To convert Markdown to PDF and save to Dropbox: `~/md2pdf.sh <input.md> [dropbox_subfolder]` (Pandoc + XeLaTeX, IBM Plex Sans KR, STIX Two Math). Output goes to `~/Dropbox/Magi/`.
+
 @RTK.md

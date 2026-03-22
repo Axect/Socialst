@@ -122,3 +122,11 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 # mclaude
 alias mclaude-update="npx cc-mirror update mclaude --claude-version latest"
+
+# claude-code
+alias claude-gang="claude --dangerously-skip-permissions"
+alias claude-morgen="claude --dangerously-skip-permissions --channels plugin:telegram@claude-plugins-official"
+set -gx MCP_TIMEOUT 3600000  # MCP server timeout: 1 hour (default 30s)
+
+# zellij remote session
+alias zj='zellij attach --create main'
