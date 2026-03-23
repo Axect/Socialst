@@ -85,6 +85,8 @@
 
 ## PDF Export
 
-- To convert Markdown to PDF and save to Dropbox: `~/md2pdf.sh <input.md> [dropbox_subfolder]` (Pandoc + XeLaTeX, IBM Plex Sans KR, STIX Two Math). Output goes to `~/Dropbox/Magi/`.
+- Use `/md2pdf-typora <input.md>` skill for all PDF conversion. Pipeline: pandoc (MD→HTML) + Chrome headless (HTML→PDF) with Typora Whitey theme.
+- **Auto-PDF for Korean reports**: When generating Korean markdown reports (`report_ko.md`, `synthesis_ko.md`, `explanation.md`, or any `*_ko.md`), automatically run `/md2pdf-typora` after writing the file and copy the PDF to `~/Dropbox/Magi/`.
+- Dropbox upload: after PDF generation, always `cp <output.pdf> ~/Dropbox/Magi/`.
 
 @RTK.md

@@ -53,9 +53,12 @@ Generate the Typst preamble:
 #show: project.with(
   title: "<extracted from first # heading or filename>",
   authors: (
-    (name: "Tae-Geun Kim", email: "axect@yonsei.ac.kr",
-     affiliation: "Yonsei University", major: "Department of Physics",
+    (name: "Tae-Geun Kim", marks: "a,b", email: "tgkim@fudan.edu.cn",
      orcid: "0009-0000-4229-2935"),
+  ),
+  affiliations: (
+    (mark: "a", name: "Key Laboratory of Nuclear Physics and Ion-beam Application (MOE), Institute of Modern Physics, Fudan University, Shanghai 200433, China"),
+    (mark: "b", name: "RIKEN Center for Interdisciplinary Theoretical and Mathematical Sciences (iTHEMS), Wako, Saitama 351-0198, Japan"),
   ),
   date: "<today's date in appropriate format>",
 )
@@ -63,6 +66,10 @@ Generate the Typst preamble:
 // Global table styling
 #show table: set align(center)
 #set table(align: center + horizon)
+
+// Line spacing
+#set par(leading: 1.0em)
+#set block(spacing: 1.2em)
 ```
 
 ### Heading Conversion
