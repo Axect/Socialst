@@ -1,11 +1,11 @@
 #import "@preview/ctheorems:1.1.3": *
 
-#let project(title: "", authors: (), date: none, body) = {
+#let project(title: "", authors: (), affiliations: (), date: none, body) = {
   // Set the document's basic properties.
   set document(author: authors.map(author => author.name), title: title)
   set page(numbering: "1", number-align: center)
-  set text(font: "Hahmlet")
-  
+  set text(font: ("IBM Plex Serif", "Noto Serif CJK KR"))
+
   // Link
   show link: underline
 
@@ -19,44 +19,60 @@
   // Author information.
   pad(
     top: 0.5em,
+    bottom: 0.3em,
+    x: 2em,
+    align(center)[
+      #for (i, author) in authors.enumerate() {
+        if i > 0 [, #h(0.3em)]
+        [*#author.name*]
+        if author.keys().contains("orcid") {
+          link("https://orcid.org/" + author.orcid)[#box(baseline: -1pt, image("./ORCID_iD.svg", width: 9pt))]
+        }
+        [#super(author.marks)]
+      }
+    ],
+  )
+
+  // Affiliation list
+  pad(
+    top: 0.2em,
     bottom: 0.5em,
     x: 2em,
-    grid(
-      columns: (1fr,) * calc.min(3, authors.len()),
-      gutter: 1em,
-      ..authors.map(author => align(center)[
-        #if author.keys().contains("orcid") {
-          grid(
-            columns: (8pt, auto, 8pt),
-            [],
-            [*#author.name*],
-            link("https://orcid.org/" + author.orcid)[#pad(left:2pt, top:-4pt, image("./ORCID_iD.svg", width:8pt))]
-          )
-        } else {
-          [*#author.name* \ ]
+    align(center)[
+      #set text(size: 9pt, style: "italic")
+      #for (i, aff) in affiliations.enumerate() {
+        [#super(aff.mark) #aff.name]
+        if i < affiliations.len() - 1 {
+          v(0.2em)
         }
-        _#author.major _ \
-        _#author.affiliation _ \
-        #link(
-          "mailto:" + author.email,
-        )
-      ]),
-    ),
+      }
+    ],
+  )
+
+  // Email
+  pad(
+    bottom: 1em,
+    align(center)[
+      #set text(size: 9pt)
+      #for (i, author) in authors.enumerate() {
+        if author.keys().contains("email") {
+          if i > 0 [, #h(0.5em)]
+          link("mailto:" + author.email)
+        }
+      }
+    ],
   )
 
   // Main body.
   set par(justify: true)
-  //show: columns.with(2, gutter: 1.3em)
   set heading(numbering: "1.")
   set math.equation(numbering: "(1)")
-
-  //set text(font: "IBM Plex Sans KR")
 
   body
 }
 
 
-#let yonsei = rgb(0, 32, 91);
+#let fudan = rgb(0, 47, 108);
 
 // ┌─────────────────────────────────────────────────────────┐
 //  Theorem Box

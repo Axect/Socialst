@@ -4,9 +4,13 @@
 #show: project.with(
   title: "Title",
   authors: (
-    (name: "Tae-Geun Kim", email: "tg.kim@yonsei.ac.kr", affiliation: "Yonsei University", major: "Department of Physics", orcid: "0009-0000-4229-2935"),
+    (name: "Tae-Geun Kim", marks: "a,b", email: "tgkim@fudan.edu.cn", orcid: "0009-0000-4229-2935"),
   ),
-  date: "Feb 6, 2024",
+  affiliations: (
+    (mark: "a", name: "Key Laboratory of Nuclear Physics and Ion-beam Application (MOE), Institute of Modern Physics, Fudan University, Shanghai 200433, China"),
+    (mark: "b", name: "RIKEN Center for Interdisciplinary Theoretical and Mathematical Sciences (iTHEMS), Wako, Saitama 351-0198, Japan"),
+  ),
+  date: "Mar 23, 2026",
 )
 
 // Display inline code in a small box
