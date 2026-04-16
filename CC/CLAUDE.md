@@ -3,6 +3,7 @@
 1. When editing any file, ALWAYS read the file first before making changes. Never assume file contents or structure.
 2. Do not attempt commands requiring sudo, TTY, or interactive input from the sandbox. If a step requires these, immediately tell the user to run it manually and provide the exact command.
 3. For simple, non-destructive tool usage (file reads, searches, small edits, running tests, etc.), proceed without asking for permission. Only ask for confirmation when performing destructive or hard-to-reverse actions (file deletion, large-scale modifications, force push, etc.).
+4. Never add Co-Authored-By or any co-author attribution to git commits unless explicitly asked.
 
 ## Code Changes
 
@@ -46,6 +47,11 @@
 - After ANY correction from the user, update memory files (e.g., `memory/lessons.md`) with the pattern and a rule to prevent recurrence.
 - Review relevant memory files at session start for the current project.
 
+## Reuse Project Conventions
+
+- Before writing any utility, grep the project for an existing implementation. Domain invariants (normalization stats, physical floors, unit conventions) live in those helpers.
+- Extend existing helpers rather than bypassing them. One-off reimplementations silently drop the constraints the helpers were built to enforce.
+
 ## Research Workflow
 
 9. When asked to brainstorm or summarize previous work, confirm the scope before generating. If the user says 'summarize 3 projects', summarize exactly 3 — do not expand to a full synthesis unless asked.
@@ -83,10 +89,20 @@
 - In general, do not arbitrarily restrict HPO search ranges. Use wide ranges and let the sampler (TPE) find the optimum. Reference existing HPO configs in the user's projects for appropriate ranges.
 - **HPO epochs**: Always use **10 epochs** per trial for HPO, not the full training epoch count. After HPO, run the best config with full epochs. Set both `epochs` and `scheduler_config.max_iter` to 10 in the HPO run config.
 
+## Long-Running Tasks (pueue)
+
+- For long-running tasks (e.g. deep learning training, large-scale data processing), use `pueue` so they persist beyond the Claude session. Create a group named after the current project and queue tasks into that group (e.g. `pueue group add HyperbolicLR && pueue add -g HyperbolicLR -- <command>`).
+- When multiple GPU tasks are running concurrently, **NEVER kill tasks belonging to other projects.** Even for tasks within the same project, always get user approval before killing.
+
 ## PDF Export
 
 - Use `/md2pdf-typora <input.md>` skill for all PDF conversion. Pipeline: pandoc (MD→HTML) + Chrome headless (HTML→PDF) with Typora Whitey theme.
-- **Auto-PDF for Korean reports**: When generating Korean markdown reports (`report_ko.md`, `synthesis_ko.md`, `explanation.md`, or any `*_ko.md`), automatically run `/md2pdf-typora` after writing the file and copy the PDF to `~/Dropbox/Magi/`.
-- Dropbox upload: after PDF generation, always `cp <output.pdf> ~/Dropbox/Magi/`.
+- **Auto-PDF for Korean reports**: When generating Korean markdown reports (`report_ko.md`, `synthesis_ko.md`, `explanation.md`, or any `*_ko.md`), automatically run `/md2pdf-typora` after writing the file and copy the PDF to `~/Dropbox/Magi/<연구폴더>/`.
+- Dropbox upload: after PDF generation, always `mkdir -p ~/Dropbox/Magi/<연구폴더>` then `cp <output.pdf> ~/Dropbox/Magi/<연구폴더>/`. 연구폴더 이름은 현재 작업 중인 프로젝트 디렉토리 이름 또는 연구 주제에서 유추한다 (예: `HyperbolicLR`, `PINN`, `CosmoFlow` 등).
+
+## Research Wiki
+
+- After completing a MAGI `/research` pipeline that generates output in `magi-researchers/outputs/`, suggest running `/wiki-ingest magi <output-path>` to ingest findings into the research wiki at `~/.research-wiki/`.
+- Wait for user approval before ingesting.
 
 @RTK.md
