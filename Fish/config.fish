@@ -54,6 +54,11 @@ set -gx NVM_DIR "$HOME/.nvm"
 zoxide init fish | source
 
 # ==============================================================================
+# NeuralSMEFT
+# ==============================================================================
+set -gx NEURALSMEFT_WEIGHTS_DIR "$HOME/Dropbox/Research/SMEFTML_DB/weights"
+
+# ==============================================================================
 # OSPREY
 # ==============================================================================
 set -gx BLACKHAWK_DIR "$HOME/zbin/blackhawk_v2.3"
@@ -126,6 +131,7 @@ alias mclaude-update="npx cc-mirror update mclaude --claude-version latest"
 # claude-code
 alias claude-gang="claude --dangerously-skip-permissions"
 alias claude-morgen="claude --dangerously-skip-permissions --channels plugin:telegram@claude-plugins-official"
+alias mclaude-gang="mclaude --dangerously-skip-permissions"
 set -gx MCP_TIMEOUT 3600000  # MCP server timeout: 1 hour (default 30s)
 
 # zellij remote session
