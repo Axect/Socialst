@@ -35,6 +35,23 @@
 - One focused task per subagent.
 - **Complex implementation pattern (Opus → Sonnet delegation)**: For complex plans, Opus (main agent) must first write a detailed implementation plan in markdown, then delegate each implementation step to Sonnet subagents (`model: "sonnet"`). The plan must include file paths, changes, dependencies, and test criteria.
 - When a translation task is requested, delegate it to a Sonnet subagent (`model: "sonnet"`).
+- **Chunked parallel translation for long markdown documents**: When translating a markdown document longer than ~300 lines (or ~30 KB), *always* split into section-aligned chunks and dispatch parallel Sonnet subagents. A single agent producing ~15–20k output tokens is bottlenecked by sequential token generation; parallelising N chunks reduces wall-clock roughly N-fold.
+  - **Splitting rule**: split on top-level H2 (`## `) boundaries with `sed -n 'start,endp'` into `/tmp/report_chunks/chunk{1..N}.md`. Target 80–150 lines per chunk; merge very short sections together, split very long ones (e.g. §4 methods) if they exceed ~200 lines.
+  - **Dispatch**: launch all agents in a single assistant turn with multiple `Agent` calls (use `run_in_background: true` for each) so they run concurrently.
+  - **Per-chunk prompt must include**:
+    1. Scope (which sections this chunk covers).
+    2. Rules to preserve LaTeX math verbatim, image/link paths verbatim, and English proper nouns inside Korean sentences (list explicit tokens: `DeCLA`, `Latent-TTR`, etc.).
+    3. Blockquote/heading translation conventions (e.g. `Misconception N →  오개념 N`, `Claim → 주장`, etc.).
+    4. Output path (`/tmp/report_chunks/chunk{k}_ko.md`).
+    5. Terse confirmation format ("chunkK_ko.md written (X KB, Y lines)") to keep the result message small.
+  - **Merge**: after all agents report done, `cat` the chunks in order into the final `*_ko.md` and verify line count roughly matches (Korean is usually 1.0–1.3× the English line count).
+  - **Verification**: spot-check that section boundaries align, LaTeX math is intact (grep for `$$`), and image paths survived (grep for `plots/`).
+- **ALWAYS verify subagent outputs before reporting to user.** Subagent reports describe intent, not reality — they may run in isolated worktrees, hit silent errors, or hallucinate results. Before telling the user what a subagent produced:
+  1. Check every file the subagent claims to have written/modified exists at the stated path (`ls` / `Read`).
+  2. For scripts that generate outputs (plots, JSON, reports), verify the output files exist and have non-zero size.
+  3. For numerical results the subagent reports (metrics, R², loss values), open the actual output file and confirm the numbers match — do not forward the subagent's prose summary as ground truth.
+  4. If any verification fails, re-run the step in the main agent or a fresh subagent. Never launder a subagent report into a user-facing claim without verification.
+  5. This rule is mandatory even when the subagent claims "completed successfully" or shows convincing output in its stdout — that output may be from a worktree or scratch location that does not persist.
 
 ## Autonomous Execution
 
