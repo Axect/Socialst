@@ -286,7 +286,7 @@ keybinds clear-defaults=true {
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-// theme "default"
+theme "tokyo-night-dark"
 
 // The name of the default layout to load on startup
 // Default: "default"
@@ -364,5 +364,9 @@ plugins {
     status-bar { path "status-bar"; }
     strider { path "strider"; }
     compact-bar { path "compact-bar"; }
+}
+
+load_plugins {
+    "file:~/.config/zellij/plugins/zellij-attention.wasm"
 }
 
