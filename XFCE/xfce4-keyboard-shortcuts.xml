@@ -39,7 +39,6 @@
       <property name="&lt;Super&gt;r" type="string" value="xfce4-appfinder -c">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="XF86WWW" type="string" value="exo-open --launch WebBrowser"/>
       <property name="XF86Mail" type="string" value="exo-open --launch MailReader"/>
       <property name="&lt;Alt&gt;F3" type="string" value="xfce4-appfinder">
         <property name="startup-notify" type="bool" value="true"/>
@@ -64,6 +63,7 @@
       <property name="&lt;Super&gt;d" type="string" value="xfce4-appfinder -c">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
+      <property name="&lt;Super&gt;w" type="string" value="exo-open --launch WebBrowser"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -200,20 +200,19 @@
       <property name="&lt;Super&gt;7" type="string" value="workspace_7_key"/>
       <property name="&lt;Super&gt;8" type="string" value="workspace_8_key"/>
       <property name="&lt;Super&gt;9" type="string" value="workspace_9_key"/>
-      <property name="&lt;Super&gt;&lt;Shift&gt;1" type="string" value="move_window_workspace_1_key"/>
-      <property name="&lt;Super&gt;&lt;Shift&gt;2" type="string" value="move_window_workspace_2_key"/>
-      <property name="&lt;Super&gt;&lt;Shift&gt;3" type="string" value="move_window_workspace_3_key"/>
-      <property name="&lt;Super&gt;&lt;Shift&gt;4" type="string" value="move_window_workspace_4_key"/>
-      <property name="&lt;Super&gt;&lt;Shift&gt;5" type="string" value="move_window_workspace_5_key"/>
-      <property name="&lt;Super&gt;&lt;Shift&gt;6" type="string" value="move_window_workspace_6_key"/>
-      <property name="&lt;Super&gt;&lt;Shift&gt;7" type="string" value="move_window_workspace_7_key"/>
-      <property name="&lt;Super&gt;&lt;Shift&gt;8" type="string" value="move_window_workspace_8_key"/>
-      <property name="&lt;Super&gt;&lt;Shift&gt;9" type="string" value="move_window_workspace_9_key"/>
       <property name="&lt;Super&gt;Left" type="string" value="tile_left_key"/>
       <property name="&lt;Super&gt;Right" type="string" value="tile_right_key"/>
-      <property name="&lt;Super&gt;Up" type="string" value="maximize_window_key"/>
       <property name="&lt;Super&gt;q" type="string" value="close_window_key"/>
-      <property name="&lt;Super&gt;f" type="string" value="fullscreen_key"/>
+      <property name="&lt;Super&gt;f" type="string" value="maximize_window_key"/>
+      <property name="&lt;Super&gt;&lt;Shift&gt;exclam" type="string" value="move_window_workspace_1_key"/>
+      <property name="&lt;Super&gt;&lt;Shift&gt;at" type="string" value="move_window_workspace_2_key"/>
+      <property name="&lt;Super&gt;&lt;Shift&gt;numbersign" type="string" value="move_window_workspace_3_key"/>
+      <property name="&lt;Super&gt;&lt;Shift&gt;dollar" type="string" value="move_window_workspace_4_key"/>
+      <property name="&lt;Super&gt;&lt;Shift&gt;percent" type="string" value="move_window_workspace_5_key"/>
+      <property name="&lt;Super&gt;&lt;Shift&gt;asciicircum" type="string" value="move_window_workspace_6_key"/>
+      <property name="&lt;Super&gt;&lt;Shift&gt;ampersand" type="string" value="move_window_workspace_7_key"/>
+      <property name="&lt;Super&gt;&lt;Shift&gt;asterisk" type="string" value="move_window_workspace_8_key"/>
+      <property name="&lt;Super&gt;&lt;Shift&gt;parenleft" type="string" value="move_window_workspace_9_key"/>
     </property>
   </property>
   <property name="providers" type="array">

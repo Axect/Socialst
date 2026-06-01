@@ -53,6 +53,11 @@ pull() {
 		mkdir -p "$XFCE_SRC"
 	fi
 
+	# Give xfconfd a moment to flush in-memory changes to disk.
+	# xfconfd batches writes with a few seconds of delay, so this needs
+	# to be generous. If pull misses the flush, just re-run it.
+	sleep 3
+
 	changed=0
 	for f in $FILES; do
 		src="$XFCE_SRC/$f"
