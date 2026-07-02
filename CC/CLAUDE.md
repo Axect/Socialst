@@ -5,6 +5,20 @@
 3. For simple, non-destructive tool usage (file reads, searches, small edits, running tests, etc.), proceed without asking for permission. Only ask for confirmation when performing destructive or hard-to-reverse actions (file deletion, large-scale modifications, force push, etc.).
 4. Never add Co-Authored-By or any co-author attribution to git commits unless explicitly asked.
 
+## Writing Style (No AI Tells)
+
+Applies to ALL prose you produce: chat replies, commit messages, code comments, reports, documentation, markdown files. The goal is writing that reads as human-authored, not LLM-generated. This OVERRIDES any default stylistic habit.
+
+1. **No em-dashes or en-dashes.** Never use the em-dash `—` or en-dash `–` anywhere. Use a comma, period, colon, parentheses, or restructure the sentence instead. A plain hyphen `-` is fine only for hyphenated words (e.g. `multi-step`) and CLI flags. If you catch yourself about to write an em-dash, replace it.
+2. **No antithesis cliché.** Avoid "not just X, but Y" and "It's not X, it's Y" inflated contrast constructions.
+3. **No filler transitions** such as "Moreover", "Furthermore", "Importantly", "It's worth noting that", "In today's world", "Let's dive in", "Certainly!", "Of course!".
+4. **No hype or marketing adjectives** such as "seamless", "robust", "powerful", "cutting-edge", "elevate", "unlock", "leverage" (as a verb), "delve", "tapestry", "realm", "landscape", "testament to".
+5. **No emoji** in commit messages, code, or technical writing unless the user explicitly asks.
+6. **No rule-of-three padding** (e.g. "fast, clean, and reliable" added only for rhythm) and no needless bolding of random phrases.
+7. Prefer plain, direct sentences. State the thing. Cut throat-clearing intros and summary outros that just restate what was already said.
+8. **No hard-wrapping in markdown.** Write every paragraph and list item as ONE continuous line, no matter how long. Never wrap prose at a fixed column width (72/80/100 chars). Insert a line break ONLY to separate paragraphs, list items, headings, or blocks. Applies to all .md output: documents, reports, READMEs, model/dataset cards, memory files, journal entries.
+9. **Comments and docstrings: write long, let tools complain.** Do NOT pre-calculate column width while writing. Write one full sentence (or semantic unit) per line, however long it gets. Then run the project's formatter/linter (`ruff format`, `ruff check`, `black`); only lines the tool actually flags (e.g. E501) get split, and the split goes at a clause boundary (colon, semicolon, comma, conjunction), never mid-phrase at the column limit. The tool is the sole authority on width; hand-wrapping in anticipation of it is forbidden.
+
 ## Code Changes
 
 3. Never remove packages, dependencies, or tools unless explicitly asked. If you think something should be removed, ask first and explain why.
@@ -12,8 +26,8 @@
 ## Package Management
 
 4. Use `uv` (not pip or raw python) for running Python projects and managing dependencies unless otherwise specified. For npm, prefer local/user-scoped global directories over sudo-based global installs.
-5. When using Gemini CLI tools (`ask-gemini`, `brainstorm`), always set the model to `gemini-3.1-pro-preview`.
-6. When using Codex CLI tools (`ask-codex`, `batch-codex`, `brainstorm`), always set the model to `gpt-5.4`.
+5. When using Gemini CLI tools (`ask-gemini`, `brainstorm`), always set the model to `gemini-3.5-flash`.
+6. When using Codex CLI tools (`ask-codex`, `batch-codex`, `brainstorm`), always set the model to `gpt-5.5`.
 
 ## Deployment
 

@@ -1,3 +1,9 @@
+// 세션 직렬화 끄기: 종료된 세션을 resurrect할 때 claude wrapper의
+// `script -c "command claude ..."` 인자가 공백으로 쪼개져
+// `script: unrecognized option '--dangerously-skip-permissions'` 에러가
+// 재발하는 것을 차단. 되돌리려면 true로 바꾸거나 이 줄을 지우면 됨(기본 ON).
+session_serialization false
+
 keybinds clear-defaults=true {
     normal {
         bind "Ctrl g" { SwitchToMode "locked"; }

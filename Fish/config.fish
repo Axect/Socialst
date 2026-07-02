@@ -134,5 +134,25 @@ alias claude-morgen="claude --dangerously-skip-permissions --channels plugin:tel
 alias mclaude-gang="mclaude --dangerously-skip-permissions"
 set -gx MCP_TIMEOUT 3600000  # MCP server timeout: 1 hour (default 30s)
 
+alias zai-gang="zai --dangerously-skip-permissions"
+
 # zellij remote session
 alias zj='zellij attach --create main'
+
+# Auto-attach zellij in interactive kitty sessions (공유 'main' 세션).
+# 창을 여러 개 여는 대신 한 창에서 zellij 탭으로 병렬 작업하기 위함.
+# SSH / VSCode / 이미 zellij 안인 경우는 제외. exec로 셸을 대체해 중첩 방지.
+# 비활성화하려면 이 블록을 주석 처리하면 됨 (수동 attach는 위의 `zj` 사용).
+if status is-interactive
+    and set -q KITTY_WINDOW_ID
+    and not set -q ZELLIJ
+    and not set -q SSH_CONNECTION
+    and test "$TERM_PROGRAM" != vscode
+    if type -q zellij
+        exec zellij attach --create main
+    end
+end
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/axect/.local/bin" $PATH
