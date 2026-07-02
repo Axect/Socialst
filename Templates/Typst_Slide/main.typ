@@ -12,7 +12,7 @@
     short-title: text(fill: white, weight: "bold")[Title],
     subtitle: [],
     author: text(weight: "bold")[Tae-Geun Kim (金泰瑾)],
-    date: text(size: 16pt, weight: "bold", number-type: "lining", number-width: "tabular")[2026.04.17],
+    date: text(size: 16pt, weight: "bold", number-type: "lining", number-width: "tabular")[2026.07.02],
     institution: [
       #grid(
         columns: 2,
