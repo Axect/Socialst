@@ -23,11 +23,16 @@
       #v(0.6em)
       #text(size: 16pt, weight: "bold")[Conference / Workshop Name]
     ],
-    logo: grid(
-      columns: 2,
-      column-gutter: 0.5em,
-      align(center + horizon, image("./logos/Fudan_University_Logo.svg", height: 1.3em)),
-      align(center + horizon, image("./logos/RIKEN_logo.png", height: 1.3em)),
+    logo: box(
+      fill: white,
+      radius: 0.35em,
+      inset: (x: 0.45em, y: 0.2em),
+      grid(
+        columns: 2,
+        column-gutter: 0.5em,
+        align(center + horizon, image("./logos/Fudan_University_Logo.svg", height: 1.1em)),
+        align(center + horizon, image("./logos/RIKEN_logo.png", height: 1.1em)),
+      ),
     ),
   ),
   config-colors(
@@ -86,6 +91,16 @@
 )
 #show link: underline
 
+#set list(
+  indent: 0.3em,
+  body-indent: 0.7em,
+  marker: (
+    box(baseline: -0.05em, rect(width: 0.45em, height: 0.45em, radius: 0.14em, fill: rgb(0, 32, 91))),
+    box(baseline: -0.08em, circle(radius: 0.18em, stroke: 1.4pt + rgb(100, 140, 200))),
+    box(baseline: 0.12em, rect(width: 0.45em, height: 0.14em, radius: 0.07em, fill: luma(140))),
+  ),
+)
+
 // ┌─────────────────────────────────────────────────────────┐
 //  Helpers
 // └─────────────────────────────────────────────────────────┘
@@ -127,10 +142,11 @@
 
 = Introduction
 
-== Motivation
-
-#block(width: 100%)[
+// Theme default is vertical centering (align: horizon).
+// For top-aligned content, use #slide(title: [...], align: top)[...] instead of a `==` heading.
+#slide(title: [Motivation], align: top)[
   #set text(size: 18pt)
+  #v(1em)
 
   - #subheader[Background]: Brief context of the research problem
 
@@ -209,7 +225,6 @@
     ],
     [
       #set text(size: 14pt)
-      #v(1.4em)
       #figure(
         rect(width: 95%, height: 70%, fill: luma(230), stroke: 1pt + luma(180))[
           #align(center + horizon)[_Right figure_]
@@ -248,11 +263,9 @@
   ]
 ]
 
-== Summary
-
-#block(width: 100%)[
+#slide(title: [Summary], align: top)[
   #set text(size: 18pt)
-  #v(0.5em)
+  #v(1em)
 
   - #subheader[Contribution 1] \
     Description of the first contribution.
