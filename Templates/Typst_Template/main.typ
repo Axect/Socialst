@@ -41,15 +41,30 @@
   body
 }
 
-#outline(indent: true)
+#outline(indent: auto)
 
-= Test1
-== Test1.1
+= Section
+== Subsection
 
-#def[Ordered Pair [Wolf 6.1]][
-    - (Intuitive) : For any two objects $a$ and $b$, the _ordered pair_ $(a,b)$ is a notation specifying the two objects $a$ and $b$, in that order.
-    - (Set-theoretic) : For any two objects $a$ and $b$, the _ordered pair_ $(a,b)$ is defined to be the set ${{a}, {a,b}}$.
+Body text. Display equations are numbered and match the text font:
+
+$
+integral_0^infinity e^(-x^2) dif x = sqrt(pi)/2.
+$
+
+#definition[Ordered Pair [Wolf 6.1]][
+  For any two objects $a$ and $b$, the _ordered pair_ $(a,b)$ is a notation
+  specifying the two objects in that order. Set-theoretically it is the set
+  ${{a}, {a,b}}$.
 ]
+
+#theorem[Pythagoras][
+  In a right triangle with legs $a, b$ and hypotenuse $c$, $a^2 + b^2 = c^2$.
+]
+
+Available environments: `definition`, `example`, `remark` (upright body) and
+`theorem`, `lemma`, `proposition`, `corollary` (italic body, the amsthm "plain"
+style). All of them inherit the document font and size.
 
 #pagebreak()
 
