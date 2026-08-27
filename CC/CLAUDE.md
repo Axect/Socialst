@@ -28,6 +28,7 @@ Applies to ALL prose you produce: chat replies, commit messages, code comments, 
 4. Use `uv` (not pip or raw python) for running Python projects and managing dependencies unless otherwise specified. For npm, prefer local/user-scoped global directories over sudo-based global installs.
 5. When using Gemini CLI tools (`ask-gemini`, `brainstorm`), always set the model to `gemini-3.5-flash`.
 6. When using Codex CLI tools (`ask-codex`, `batch-codex`, `brainstorm`), always set the model to `gpt-5.5`.
+- **Never create a Python venv (or any large build/cache tree) under `/tmp`.** On this workstation `/tmp` is a 16G tmpfs, so every file there consumes RAM directly, not disk. A single torch+CUDA venv is ~4.7 GB (`nvidia/*` 2.7 GB, `torch` 1.1 GB, `triton` 0.7 GB) and shows up as `Shmem` in `/proc/meminfo`, making `free -h` report several GB of phantom usage. Put scratch venvs and downloaded wheels on a real disk path (`~/.cache/<name>`, `~/scratch/<name>`, or inside the project dir) and set `UV_CACHE_DIR`/`TMPDIR` accordingly when a tool insists on `/tmp`. Small text scratch files in `/tmp` are fine.
 
 ## Deployment
 
@@ -47,19 +48,6 @@ Applies to ALL prose you produce: chat replies, commit messages, code comments, 
 - Offload research, exploration, and parallel analysis to subagents.
 - For complex debugging, spawn a scout subagent to explore the full problem space before committing to a fix.
 - One focused task per subagent.
-- **Complex implementation pattern (Opus → Sonnet delegation)**: For complex plans, Opus (main agent) must first write a detailed implementation plan in markdown, then delegate each implementation step to Sonnet subagents (`model: "sonnet"`). The plan must include file paths, changes, dependencies, and test criteria.
-- When a translation task is requested, delegate it to a Sonnet subagent (`model: "sonnet"`).
-- **Chunked parallel translation for long markdown documents**: When translating a markdown document longer than ~300 lines (or ~30 KB), *always* split into section-aligned chunks and dispatch parallel Sonnet subagents. A single agent producing ~15–20k output tokens is bottlenecked by sequential token generation; parallelising N chunks reduces wall-clock roughly N-fold.
-  - **Splitting rule**: split on top-level H2 (`## `) boundaries with `sed -n 'start,endp'` into `/tmp/report_chunks/chunk{1..N}.md`. Target 80–150 lines per chunk; merge very short sections together, split very long ones (e.g. §4 methods) if they exceed ~200 lines.
-  - **Dispatch**: launch all agents in a single assistant turn with multiple `Agent` calls (use `run_in_background: true` for each) so they run concurrently.
-  - **Per-chunk prompt must include**:
-    1. Scope (which sections this chunk covers).
-    2. Rules to preserve LaTeX math verbatim, image/link paths verbatim, and English proper nouns inside Korean sentences (list explicit tokens: `DeCLA`, `Latent-TTR`, etc.).
-    3. Blockquote/heading translation conventions (e.g. `Misconception N →  오개념 N`, `Claim → 주장`, etc.).
-    4. Output path (`/tmp/report_chunks/chunk{k}_ko.md`).
-    5. Terse confirmation format ("chunkK_ko.md written (X KB, Y lines)") to keep the result message small.
-  - **Merge**: after all agents report done, `cat` the chunks in order into the final `*_ko.md` and verify line count roughly matches (Korean is usually 1.0–1.3× the English line count).
-  - **Verification**: spot-check that section boundaries align, LaTeX math is intact (grep for `$$`), and image paths survived (grep for `plots/`).
 - **ALWAYS verify subagent outputs before reporting to user.** Subagent reports describe intent, not reality — they may run in isolated worktrees, hit silent errors, or hallucinate results. Before telling the user what a subagent produced:
   1. Check every file the subagent claims to have written/modified exists at the stated path (`ls` / `Read`).
   2. For scripts that generate outputs (plots, JSON, reports), verify the output files exist and have non-zero size.
@@ -87,7 +75,6 @@ Applies to ALL prose you produce: chat replies, commit messages, code comments, 
 
 9. When asked to brainstorm or summarize previous work, confirm the scope before generating. If the user says 'summarize 3 projects', summarize exactly 3 — do not expand to a full synthesis unless asked.
 10. For multi-model brainstorming (MAGI pattern), always validate with ALL specified models (Gemini, Codex, etc.), not a subset. If a model fails, note the failure and use available fallbacks, but do not silently skip models.
-11. After completing a magi-researchers workflow, if the synthesis, explanation, or report output is written in English, immediately delegate a Sonnet subagent (`model: "sonnet"`) to produce a Korean translation saved as `*_ko.md` (e.g., `synthesis.md` → `synthesis_ko.md`). Do not wait for user request — this is automatic.
 
 ## Data Format (TOON)
 

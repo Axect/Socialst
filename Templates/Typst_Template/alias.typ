@@ -48,3 +48,26 @@
 #let upbold(x) = {
   $upright(bold(#x))$
 }
+
+// ┌─────────────────────────────────────────────────────────┐
+//  Graph products
+// └─────────────────────────────────────────────────────────┘
+// The four standard products of graphs, with the symbols fixed by the reference
+// monograph (Hammack, Imrich & Klavzar, Handbook of Product Graphs, 2nd ed.,
+// CRC Press). Each product gets its own symbol precisely so that they cannot be
+// confused, which is why the names below say which one is meant:
+//
+//   cprod  Cartesian    G □ H   edge = change one coordinate by one step
+//   dprod  direct       G × H   also called the tensor or categorical product
+//   sprod  strong       G ⊠ H   the union of the Cartesian and direct products
+//   lprod  lexicographic G ∘ H  also written G[H]
+//
+// Older papers write × for the Cartesian product; since × now standardly means
+// the direct product, such titles have to be reread.
+//
+// math.class("binary", ...) is what supplies the operator spacing. Without it
+// Typst sets "P_L square P_L" as "P_L□P_L", which reads as a missing glyph.
+#let cprod = math.class("binary", sym.square)
+#let dprod = math.class("binary", sym.times)
+#let sprod = math.class("binary", "⊠")
+#let lprod = math.class("binary", sym.circle.small)

@@ -4,7 +4,9 @@
 #import "@preview/ctheorems:1.1.3": *
 #show: thmrules
 
-#set text(font: "Pretendard")
+// Pretendard covers Latin and Hangul; the hanja in the author name fall back to Noto Sans CJK KR,
+// which matches its weight instead of whatever the system picks.
+#set text(font: ("Pretendard", "Noto Sans CJK KR"))
 #show: stargazer-theme.with(
   aspect-ratio: "16-9",
   config-info(

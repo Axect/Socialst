@@ -17,7 +17,6 @@
   },
   "snippets.ultisnips.pythonPrompt": false,
   "coc.source.vimtex.filetypes": [
-    "tex",
-    "plaintex"
+    "tex"
   ]
 }
