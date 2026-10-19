@@ -139,6 +139,8 @@ alias zai-gang="zai --dangerously-skip-permissions"
 # zellij remote session
 alias zj='zellij attach --create main'
 
+alias agy-gang="agy '--dangerously-skip-permissions'"
+
 # Auto-attach zellij in interactive kitty sessions (공유 'main' 세션).
 # 창을 여러 개 여는 대신 한 창에서 zellij 탭으로 병렬 작업하기 위함.
 # SSH / VSCode / 이미 zellij 안인 경우는 제외. exec로 셸을 대체해 중첩 방지.

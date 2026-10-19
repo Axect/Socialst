@@ -1,8 +1,8 @@
 ## General Rules
 
 1. When editing any file, ALWAYS read the file first before making changes. Never assume file contents or structure.
-2. Do not attempt commands requiring sudo, TTY, or interactive input from the sandbox. If a step requires these, immediately tell the user to run it manually and provide the exact command.
-3. For simple, non-destructive tool usage (file reads, searches, small edits, running tests, etc.), proceed without asking for permission. Only ask for confirmation when performing destructive or hard-to-reverse actions (file deletion, large-scale modifications, force push, etc.).
+2. Do not attempt commands requiring sudo, TTY, or interactive input from the sandbox. Before declaring a prerequisite unavailable, use read-only checks of documented user-scoped installations and environment configuration. Do not bypass installation or credential approval requirements. If the prerequisite remains unavailable, block only the dependent operation, complete independent authorized work, and give the exact manual step needed.
+3. For non-destructive work within the user's request (file reads, searches, small edits, running tests, etc.), proceed without redundant permission questions. Preserve explicit approval gates in the applicable workflow, including confirmation for destructive or hard-to-reverse actions (file deletion, large-scale modifications, force push, etc.). A review or opinion request authorizes findings and proposed edits, not implementation.
 4. Never add Co-Authored-By or any co-author attribution to git commits unless explicitly asked.
 
 ## Writing Style (No AI Tells)
@@ -37,9 +37,9 @@ Applies to ALL prose you produce: chat replies, commit messages, code comments, 
 
 ## Problem Solving
 
-- **Diagnose before treating**: For any non-trivial task (3+ steps or architectural decisions), enter plan mode first. Investigate the FULL dependency chain — check version numbers, config values, data shapes, and the complete path from input to error. Present diagnosis with confidence levels before proposing fixes.
+- **Diagnose before treating**: For non-trivial tasks, form a short plan and investigate the relevant dependency chain before editing, including version numbers, configuration, data shapes, and the path from input to error. State the diagnosis and uncertainty before the fix. Planning alone does not require a user checkpoint; enter approval-gated plan mode when the user requests it or an explicit approval rule applies.
 - **Root cause, not symptoms**: Never fix the first plausible cause. If a fix feels like a band-aid, stop and dig deeper. Ask: "Am I fixing the symptom or the cause?"
-- **Re-plan on failure**: If an approach goes sideways, STOP immediately and re-plan. Do not keep pushing a failing strategy.
+- **Re-plan on failure**: Stop the failing approach, inspect the evidence, and revise the plan. Continue independently actionable work within the authorized scope. Pause for the user only when a required decision or approval is missing.
 - **Verify before done**: Never mark a task complete without proving it works — run tests, check output, demonstrate correctness. Ask: "Would a staff engineer approve this?"
 
 ## Subagent Strategy
@@ -59,11 +59,12 @@ Applies to ALL prose you produce: chat replies, commit messages, code comments, 
 
 - When given a clear bug report or failing test: just fix it. Don't ask for hand-holding.
 - Point at logs, errors, failing tests — then resolve them autonomously.
-- Minimize context switching for the user. Only ask when genuinely ambiguous.
+- Minimize context switching for the user. Resolve omissions from the conversation and project records first; ask only when materially different interpretations, a consequential choice, or a required approval remain unresolved.
+- An approval wait or external blocker applies to the dependent action, not independent authorized work. Report completed, approval-pending, and externally blocked deliverables separately; never label the whole task complete while required deliverables remain pending.
 
 ## Self-Improvement
 
-- After ANY correction from the user, update memory files (e.g., `memory/lessons.md`) with the pattern and a rule to prevent recurrence.
+- Apply user corrections to the current task immediately. Before persistent memory changes, identify the store and follow its write-approval policy. Do not treat a correction as approval to modify journals, curated compass entries, or promoted rules. Record a reusable pattern only through the applicable workflow.
 - Review relevant memory files at session start for the current project.
 
 ## Reuse Project Conventions
@@ -73,7 +74,7 @@ Applies to ALL prose you produce: chat replies, commit messages, code comments, 
 
 ## Research Workflow
 
-9. When asked to brainstorm or summarize previous work, confirm the scope before generating. If the user says 'summarize 3 projects', summarize exactly 3 — do not expand to a full synthesis unless asked.
+9. When asked to brainstorm or summarize previous work, follow the stated scope exactly. Resolve omissions from the conversation and project records first; ask only when materially different interpretations remain. If the user says 'summarize 3 projects', summarize exactly 3; do not expand to a full synthesis unless asked.
 10. For multi-model brainstorming (MAGI pattern), always validate with ALL specified models (Gemini, Codex, etc.), not a subset. If a model fails, note the failure and use available fallbacks, but do not silently skip models.
 
 ## Data Format (TOON)
@@ -122,5 +123,10 @@ Applies to ALL prose you produce: chat replies, commit messages, code comments, 
 
 - After completing a MAGI `/research` pipeline that generates output in `magi-researchers/outputs/`, suggest running `/wiki-ingest magi <output-path>` to ingest findings into the research wiki at `~/.research-wiki/`.
 - Wait for user approval before ingesting.
+
+## Typst Math Rules
+
+- **Subscript scoping before parentheses**: In Typst math mode, never write `D_"KL"(...)` or `q_theta(...)`. Without explicit grouping, Typst attaches the following parentheses to the subscript. Always group the subscript explicitly using parentheses: `D_("KL")(...)` and `q_(theta)(...)`.
+- **Inline fractions with escaped slash**: In Typst math mode, `$1/L$` renders as a vertical stacked fraction ($frac(1, L)$), disrupting inline line-height. For inline fractions, always escape the slash: `$1\/L$`, `$1\/L^2$`, `$e^(-L\/xi)$`.
 
 @RTK.md
