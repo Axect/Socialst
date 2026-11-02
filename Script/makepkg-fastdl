@@ -1,0 +1,117 @@
+#!/usr/bin/env bash
+# makepkg DLAGENT for http/https: download large files in parallel byte ranges.
+# Usage (from makepkg.conf DLAGENTS): makepkg-fastdl %u %o
+#
+# One TCP stream to GitHub is throttled hard on this network (measured 39 KB/s
+# single vs ~1.2 MB/s with 8 ranges on the same route), so files >= MIN_PARALLEL
+# bytes from servers that honour Range requests are fetched in NPARTS ranges.
+# Anything else falls back to the stock makepkg curl command.
+# GitHub hosts go through the airport proxy 127.0.0.1:7979 when it is listening
+# (same policy as update-omp / update-onorca). makepkg checks sha256sums afterwards.
+set -uo pipefail
+
+url=$1
+out=$2
+NPARTS=${MAKEPKG_FASTDL_PARTS:-8}
+MIN_PARALLEL=${MAKEPKG_FASTDL_MIN:-$((16 * 1024 * 1024))}
+
+log() { printf '  [fastdl] %s\n' "$*" >&2; }
+
+proxy_args=()
+host=${url#*://}
+host=${host%%/*}
+case $host in
+  github.com | *.github.com | *.githubusercontent.com)
+    if ss -ltn 2>/dev/null | grep -qE ':7979\s'; then
+      proxy_args=(-x http://127.0.0.1:7979)
+      log "using airport proxy 127.0.0.1:7979"
+    fi
+    ;;
+esac
+
+single() {
+  exec /usr/bin/curl -qgb "" -fLC - "${proxy_args[@]}" --retry 3 --retry-delay 3 -o "$out" "$url"
+}
+
+# -s without -S: dropped TLS handshakes and stalls are expected and retried; size
+# checks below and makepkg's checksum validation catch real failures.
+curl_opts=(-q -g -s -L --fail "${proxy_args[@]}" --connect-timeout 15)
+
+# Final response headers after redirects: size and Range support.
+headers=$(/usr/bin/curl "${curl_opts[@]}" --retry 20 --retry-all-errors --retry-delay 1 -I "$url" | tr -d '\r') || single
+last=$(awk 'BEGIN{RS="";} {blk=$0} END{print blk}' <<<"$headers")
+size=$(awk 'tolower($1)=="content-length:" {print $2}' <<<"$last" | tail -n1)
+ranges=$(awk 'tolower($1)=="accept-ranges:" {print tolower($2)}' <<<"$last" | tail -n1)
+
+if [[ ! $size =~ ^[0-9]+$ ]] || ((size < MIN_PARALLEL)) || [[ $ranges != bytes ]]; then
+  single
+fi
+
+# Some connections stall at ~0 B/s forever (seen: 6/8 ranges done in 20 s, 2 hung
+# for 14+ min). Abort a range attempt below STALL_BPS for STALL_SECS and resume it
+# from the bytes already received.
+STALL_BPS=${MAKEPKG_FASTDL_STALL_BPS:-32768}
+STALL_SECS=${MAKEPKG_FASTDL_STALL_SECS:-10}
+MAX_ATTEMPTS=${MAKEPKG_FASTDL_ATTEMPTS:-100}
+
+fetch_range() {
+  local f=$1 from=$2 to=$3 len=$(($3 - $2 + 1)) have attempt
+  : >"$f"
+  for ((attempt = 1; attempt <= MAX_ATTEMPTS; attempt++)); do
+    have=$(stat -c %s "$f")
+    ((have == len)) && return 0
+    ((have > len)) && return 1
+    /usr/bin/curl "${curl_opts[@]}" --speed-limit "$STALL_BPS" --speed-time "$STALL_SECS" \
+      -r "$((from + have))-$to" -o "$f.cur" "$url"
+    # Bytes from an aborted attempt are still a valid prefix of the requested range.
+    [[ -f $f.cur ]] && cat "$f.cur" >>"$f" && rm -f -- "$f.cur"
+    (($(stat -c %s "$f") < len)) && sleep 1
+  done
+  (($(stat -c %s "$f") == len))
+}
+
+part_dir="$out.fastdl"
+rm -rf -- "$part_dir"
+mkdir -p -- "$part_dir"
+cleanup() {
+  local p
+  for p in $(jobs -p); do
+    pkill -P "$p" 2>/dev/null
+    kill "$p" 2>/dev/null
+  done
+  rm -rf -- "$part_dir"
+}
+trap cleanup EXIT
+trap 'exit 130' INT TERM
+
+chunk=$(((size + NPARTS - 1) / NPARTS))
+log "$(awk -v s="$size" 'BEGIN{printf "%.1f", s/1048576}') MiB in $NPARTS parallel ranges"
+pids=()
+for ((i = 0; i < NPARTS; i++)); do
+  from=$((i * chunk))
+  to=$((from + chunk - 1))
+  ((to >= size)) && to=$((size - 1))
+  fetch_range "$part_dir/$i" "$from" "$to" &
+  pids+=($!)
+done
+
+t0=$SECONDS
+while [[ -n $(jobs -rp) ]]; do
+  got=$(find "$part_dir" -type f -printf '%s\n' | awk '{s+=$1} END{print s+0}')
+  printf '\r  [fastdl] %6.1f / %6.1f MiB' "$(awk -v g="$got" 'BEGIN{print g/1048576}')" \
+    "$(awk -v s="$size" 'BEGIN{print s/1048576}')" >&2
+  sleep 1
+done
+printf '\n' >&2
+
+failed=0
+for pid in "${pids[@]}"; do
+  wait "$pid" || failed=1
+done
+if ((failed)); then
+  log "parallel download failed after $MAX_ATTEMPTS attempts per range"
+  exit 1
+fi
+
+for ((i = 0; i < NPARTS; i++)); do cat "$part_dir/$i"; done >"$out"
+log "done in $((SECONDS - t0))s"

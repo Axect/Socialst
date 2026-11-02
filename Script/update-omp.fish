@@ -108,7 +108,6 @@ set -l sums_url "https://github.com/can1357/oh-my-pi/releases/download/$tag_name
 set -l target_dir (dirname "$omp_target")
 mkdir -p "$target_dir"
 set -l tmp_file "$target_dir/.omp.download.$fish_pid.tmp"
-set -l part_dir "$target_dir/.omp.parts.$fish_pid"
 
 set -l total_size (echo $release_json | jq -r --arg n "$asset_name" '.assets[] | select(.name == $n) | .size' 2>/dev/null)
 if not string match -qr '^[0-9]+$' -- "$total_size"
@@ -116,62 +115,24 @@ if not string match -qr '^[0-9]+$' -- "$total_size"
     exit 1
 end
 
-# GitHub is pinned to the slow Vultr exit in Clash Verge (BOX-VULTR, ~1 MB/s).
-# The airport (ninja-7979) is ~5 MB/s per stream but drops ~1/3 of TLS handshakes,
-# so download in parallel byte ranges through it and let curl retry failed handshakes.
-set -l proxy_args
-if ss -ltn 2>/dev/null | string match -qr ':7979\s'
-    set proxy_args -x http://127.0.0.1:7979
-    echo_info "Using airport proxy 127.0.0.1:7979"
-else
-    echo_warn "127.0.0.1:7979 not listening; using default route"
-end
-# -s without -S: handshake drops are expected and retried; size + SHA256 checks catch real failures.
-set -l curl_opts -s -L --fail $proxy_args --connect-timeout 15 --retry 20 --retry-all-errors --retry-delay 1
-
-set -l nparts 8
-set -l chunk (math --scale=0 "ceil($total_size / $nparts)")
-rm -rf "$part_dir"
-mkdir -p "$part_dir"
-
-echo_info "Downloading $asset_name ("(math --scale=1 "$total_size / 1048576")" MiB) in $nparts parallel ranges..."
+# makepkg-fastdl: parallel byte ranges with stall resume, airport proxy for GitHub.
+echo_info "Downloading $asset_name ("(math --scale=1 "$total_size / 1048576")" MiB)..."
 echo "  URL: $download_url"
 set -l t0 (date +%s)
-for i in (seq 0 (math $nparts - 1))
-    set -l from (math "$i * $chunk")
-    set -l to (math "min($from + $chunk, $total_size) - 1")
-    curl $curl_opts -r "$from-$to" -o "$part_dir/$i" "$download_url" &
-end
-
-while jobs -q
-    set -l files $part_dir/*
-    set -l got 0
-    if set -q files[1]
-        set got (math (stat -c %s $files | string join ' + '))
-    end
-    printf '\r  %5.1f / %5.1f MiB' (math "$got / 1048576") (math "$total_size / 1048576")
-    sleep 1
-end
-wait
-echo
-
+makepkg-fastdl "$download_url" "$tmp_file"
 set -l got 0
-for i in (seq 0 (math $nparts - 1))
-    if test -f "$part_dir/$i"
-        set got (math $got + (stat -c %s "$part_dir/$i"))
-    end
-end
+test -f "$tmp_file"; and set got (stat -c %s "$tmp_file")
 if test "$got" -ne "$total_size"
     echo_err "Download failed! ($got of $total_size bytes)"
-    rm -rf "$part_dir"
+    rm -f "$tmp_file"
     exit 1
 end
-
-cat (for i in (seq 0 (math $nparts - 1)); echo "$part_dir/$i"; end) >"$tmp_file"
-rm -rf "$part_dir"
 echo_info "Downloaded in "(math (date +%s) - $t0)"s"
 
-set -l expected_sha (curl $curl_opts "$sums_url" | string match -r "^[0-9a-f]{64}(?=\s+\*?$asset_name\$)")
+set -l sums_file "$tmp_file.sums"
+makepkg-fastdl "$sums_url" "$sums_file" 2>/dev/null
+set -l expected_sha (string match -r "^[0-9a-f]{64}(?=\s+\*?$asset_name\$)" <"$sums_file" 2>/dev/null)
+rm -f "$sums_file"
 if test -z "$expected_sha"
     echo_err "Could not read checksum for $asset_name from SHA256SUMS.txt"
     rm -f "$tmp_file"
