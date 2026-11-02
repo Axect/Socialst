@@ -129,4 +129,12 @@ Applies to ALL prose you produce: chat replies, commit messages, code comments, 
 - **Subscript scoping before parentheses**: In Typst math mode, never write `D_"KL"(...)` or `q_theta(...)`. Without explicit grouping, Typst attaches the following parentheses to the subscript. Always group the subscript explicitly using parentheses: `D_("KL")(...)` and `q_(theta)(...)`.
 - **Inline fractions with escaped slash**: In Typst math mode, `$1/L$` renders as a vertical stacked fraction ($frac(1, L)$), disrupting inline line-height. For inline fractions, always escape the slash: `$1\/L$`, `$1\/L^2$`, `$e^(-L\/xi)$`.
 
+## Decisions for the user (adash "정하실 것")
+
+Only when the user must decide something before the work can continue, end the reply with a section headed exactly `## 정하실 것` (`## Decisions` in English replies): a numbered list, one decision per item. When an item has discrete options, put them after a colon separated by ` / `, e.g. `1. 메일 발송일: 10-31(토) / 11-02(월)`. Omit the section when nothing needs deciding; never use it for summaries, status, next steps, or optional suggestions. If you need the answer to continue the current turn, use the AskUserQuestion tool instead.
+
 @RTK.md
+
+# Temporary files: ~/ai_tmp, never /tmp
+
+Put every temporary file or directory you create (scratch scripts, exports, downloads, test builds, logs, backups, intermediate data) under `~/ai_tmp/`, never under `/tmp`. Create it if missing and use one subfolder per task, e.g. `~/ai_tmp/<project>-<YYYYMMDD>-<topic>/`. This includes temp-file APIs: `mktemp -p ~/ai_tmp`, Python `tempfile.mkdtemp(dir=os.path.expanduser("~/ai_tmp"))`. On a remote host, use that host's `~/ai_tmp`. Only paths a tool fixes itself (sockets, `$XDG_RUNTIME_DIR`) are exempt. Delete your own scratch when the task is done; keep backups the user may need and say where they are.
